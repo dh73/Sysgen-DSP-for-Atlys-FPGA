@@ -1,0 +1,2600 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extarticle
+\begin_preamble
+%\date{}
+%\usepackage{setspace}
+%\doublespacing
+\newcommand{\TikZ}{Ti\textit{k}Z\xspace}
+\usepackage{tikz}
+\usetikzlibrary{dsp,chains}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+\newcommand{\z}{\mathpzc{z}}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing double
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1.54in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Part
+Antecedentes.
+\end_layout
+
+\begin_layout Section
+Procesamiento Digital de Señales.
+\end_layout
+
+\begin_layout Subsection
+Elementos de un sistema DSP.
+\end_layout
+
+\begin_layout Standard
+\noindent
+El procesamiento digital de señales es una de las tecnologías más vanguardistas
+ que ha marcado varios segmentos tecnológicos como las comunicaciones digitales,
+ ciencias médicas, diseño de radares, reproductores de música de alta fidelidad,
+ por nombrar sólo algunas.
+ Esta área se distingue de todas las demás dentro de las Ciencias de la
+ Computación, por el tipo de datos único que utiliza: 
+\series bold
+las señales 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "New1"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+El propósito principal de un sistema de procesamiento digital de señales
+ es manipular matemáticamente algún tipo de información tomada del mundo
+ real.
+ Dicha información es naturalmente analógica, es decir, la representación
+ de sus valores y funciones son continuos, por lo que necesita ser previamente
+ digitalizada antes de ser procesada.
+ Algunos ejemplos de señales comúnmente utilizados son voz, audio, video,
+ temperatura y presión.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Generalmente las operaciones que se realizan sobre dichas señales son adiciones,
+ sustracciones, multiplicaciones y divisiones, mismas que se deben ejecutar
+ muy rápidamente con el fin de generar una salida mucho más precisa
+\begin_inset CommandInset citation
+LatexCommand cite
+key "analog_devices"
+
+\end_inset
+
+.
+ Esto se hace para cumplir una amplia variedad de objetivos, tales como:
+ mejoras en la visualización de imágenes, reconocimiento y generación de
+ voz, compresión de datos para almacenamiento y transmisión, etc.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+El procesamiento digital de señales analógicas puede ser descrito en tres
+ etapas:
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing double
+\noindent
+La señal analógica es 
+\emph on
+digitalizada
+\emph default
+, es decir, se 
+\emph on
+muestrea
+\emph default
+ y cada muestra es a su vez, 
+\emph on
+cuantizada
+\emph default
+ a un número finito de bits.
+ Este proceso es llamado 
+\series bold
+conversión analógico-digital
+\series default
+.
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing double
+\noindent
+Los muestreos digitalizados son procesados por un 
+\emph on
+Procesador Digital de Señales
+\emph default
+.
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing double
+\noindent
+Las muestras resultantes de la etapa de procesamiento, se convierten de
+ nuevo a un formato 
+\emph on
+analógico
+\emph default
+ mediante alguna técnica de reconstrucción analógica (
+\series bold
+conversión digital-analógico
+\series default
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Un sistema se define como un dispositivo físico que realiza una operación
+ sobre una señal.
+ Por ejemplo, un filtro utilizado para disminuir el ruido y las interferencias
+ que distorsionan una señal deseada que transporta información a través
+ del sistema- En este caso, el filtro realiza ciertas operaciones sobre
+ la señal, que tienen el efecto de reducir (filtrar) el ruido y las interferenci
+as de la señal de información deseada 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Tratamiendo_senales"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+\noindent
+Un sistema DSP típico se muestra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Diagrama-a-bloques"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/fullblocks
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama a bloques de un Sistema de procesamiento Digital de Señales.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Diagrama-a-bloques"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Las secciones a continuación describen con más detalle, los teoremas y técnicas
+ fundamentales que intervienen en los sistemas DSP.
+\end_layout
+
+\begin_layout Subsubsection
+Teorema de muestreo.
+\end_layout
+
+\begin_layout Standard
+El 
+\emph on
+teorema de muestreo
+\emph default
+ establece que para una representación precisa de una señal 
+\begin_inset Formula $\mathbf{x(t)}$
+\end_inset
+
+ por sus muestras de tiempo 
+\begin_inset Formula $\mathbf{x(nT)}$
+\end_inset
+
+, dos condiciones deben cumplirse:
+\end_layout
+
+\begin_layout Itemize
+La señal 
+\begin_inset Formula $\mathbf{x(t)}$
+\end_inset
+
+ debe ser de banda limitada, es decir, su espectro de frecuencia debe ser
+ limitada para contener las frecuencias hasta cierta frecuencia máxima,
+ digamos 
+\begin_inset Formula $\mathbf{f_{max}}$
+\end_inset
+
+, y sin frecuencias más allá de eso.
+ Un espectro típico de banda limitada se muestra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Banda-de-espectro"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+La frecuencia de muestreo 
+\begin_inset Formula $\mathbf{f_{s}}$
+\end_inset
+
+debe ser elegida para ser al menos el doble de la frecuencia máxima 
+\begin_inset Formula $\mathbf{f_{s}}$
+\end_inset
+
+, es decir,
+\begin_inset Formula 
+\begin{equation}
+\mathbf{f_{s}\leq2f_{max}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+En términos del intervalo del tiempo de muestreo:
+\begin_inset Formula 
+\begin{equation}
+\mathbf{T\leq\frac{1}{2f_{max}}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/sampling_theorem
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Banda de espectro limitado típica 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "dsp_introduction"
+
+\end_inset
+
+.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Banda-de-espectro"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La velocidad de muestreo mínima permitida por el teorema de muestreo, que
+ es (4.1), es llamada 
+\emph on
+Tasa de muestreo de Nyquist.
+ 
+\emph default
+Para valores arbitrarios de 
+\begin_inset Formula $\mathbf{f_{s}}$
+\end_inset
+
+, la magnitud de 
+\begin_inset Formula $\mathbf{\mathbf{\frac{f_{s}}{2}}}$
+\end_inset
+
+ es llamada 
+\emph on
+Frecuencia de Nyquist
+\series bold
+.
+ 
+\series default
+\emph default
+Esta frecuencia también define
+\series bold
+ 
+\series default
+las frecuencias de corte de los filtros pasa bajas que se requieren en las
+ operaciones en DSP-.
+\end_layout
+
+\begin_layout Subsubsection
+Cuantización.
+\end_layout
+
+\begin_layout Standard
+El muestreo y la cuantización son requisitos indispensables para cualquier
+ operación de procesamiento digital en señales analógicas.
+ Una señal digital es una secuencia de números
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Esta secuencia es conocida como 
+\series bold
+Muestra.
+\end_layout
+
+\end_inset
+
+ en donde cada muestra es representada por un número finito de digitos
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+En el diseño de sistemas DSP, se dice que la señal es de 
+\series bold
+precisión finita
+\series default
+ cuando la representación está dada por un número finito de datos.
+\end_layout
+
+\end_inset
+
+.La cuantización es el proceso de convertir una señal discreta en el tiempo
+ de amplitud continua, a una señal digital, representando cada valor muestreado
+ como un número finito de digitos.
+ La Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Ejemplo-de-cuantización"
+
+\end_inset
+
+ muestra la representación gráfica de una señal cuantizada.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/quantization_example.eps
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Ejemplo de cuantización en una señal senoidal.
+ Los puntos marcados con una 
+\begin_inset Quotes fld
+\end_inset
+
+x
+\begin_inset Quotes frd
+\end_inset
+
+ representan la señal original, mientras que las coordenadas marcadas con
+ 
+\begin_inset Quotes fld
+\end_inset
+
+–
+\begin_inset Quotes frd
+\end_inset
+
+ muestran la señal cuantizada 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Ejemplo-de-cuantización"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Este proceso induce un error llamado 
+\emph on
+error de
+\emph default
+ 
+\emph on
+cuantización, 
+\emph default
+el cual se debe al cambio en la representación de la señal original, de
+ un valor continuo a un set de valores discretos.
+ En términos matemáticos, la operación de cuantización de las muestras 
+\begin_inset Formula $\mathit{\mathbf{x(n)}}$
+\end_inset
+
+ se denota como 
+\begin_inset Formula $\mathbf{Q[x(n)]}$
+\end_inset
+
+.
+ Tomando 
+\begin_inset Formula $\mathbf{x_{q}(n)}$
+\end_inset
+
+ como la secuencia de muestras cuantizadas, el sistema completo queda como:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathbf{x_{q}(n)}\mathbf{=Q[x(n)]}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El error de cuantización es representado por la secuencia 
+\begin_inset Formula $\mathbf{e_{q}(n)}$
+\end_inset
+
+, como la diferencia entre los valores cuantizados y el valor de la muestra
+ actual:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathbf{e_{q}x(n)=x_{q}(n)-x(n)}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Sistemas Discretos Lineales e Invariantes en el Tiempo..
+\end_layout
+
+\begin_layout Standard
+La relación entrada/salida de de los sistemas 
+\emph on
+Lineales e Invariantes en el Tiempo
+\emph default
+ (LTI, por sus siglas en inglés) está definida por la 
+\emph on
+convolución 
+\emph default
+en tiempo discreto de la respuesta del impulso finito aplicado a la entrada
+ del sistema.
+\end_layout
+
+\begin_layout Standard
+Los sistemas LTI pueden ser clasificados en dos tipos, dependiendo de si
+ su respuesta al impulso tiene duración finita o infinita, estos son:
+\emph on
+ Respuesta al Impulso Finito
+\emph default
+ (FIR, por sus siglas en inglés) o 
+\emph on
+Respuesta al Impulso Infinito
+\emph default
+ (IIR, por sus siglas en inglés).
+\end_layout
+
+\begin_layout Standard
+En términos matemáticos, se dice que un sistema es lineal cuando, por ejemplo,
+ dos señales de entrada 
+\begin_inset Formula $\mathbf{x_{1}(t)}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbf{x_{2}(t)}$
+\end_inset
+
+ tienen salidas 
+\begin_inset Formula $\mathbf{y_{1}(t)}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbf{y_{2}(t)}$
+\end_inset
+
+ respectivamente.
+ Entonces, la salida del sistema al impulso 
+\begin_inset Formula $\mathbf{\alpha_{1}x_{1}(t)+\alpha_{2}x_{2}(t)}$
+\end_inset
+
+ es 
+\begin_inset Formula $\mathbf{\alpha_{1}y_{1}(t)+\alpha_{2}y_{2}(t)}$
+\end_inset
+
+.
+ Es decir, cumplen con las reglas de 
+\emph on
+homogeneidad 
+\emph default
+y 
+\emph on
+superposición.
+\end_layout
+
+\begin_layout Standard
+También, un sistema es invariante en el tiempo cuando 
+\begin_inset Formula $\mathbf{y(t)}$
+\end_inset
+
+ es la salida correspondiente a 
+\begin_inset Formula $\mathbf{x(t)}$
+\end_inset
+
+, entonces para cada 
+\series bold
+𝜏
+\series default
+, 
+\begin_inset Formula $\mathrm{\mathbf{y(t-\tau)}}$
+\end_inset
+
+ es la salida que corresponde a 
+\begin_inset Formula $\mathbf{x(t-\tau)}$
+\end_inset
+
+.
+ Es decir, si agregamos un retraso a la entrada o salida, el resultado debe
+ ser exactamente el mismo.
+\end_layout
+
+\begin_layout Standard
+Además, los 
+\emph on
+sistemas LTI
+\series bold
+ 
+\series default
+\emph default
+deben ser causales, lo que significa que la salida del sistema no puede
+ anticipar la entrada del mismo, tal que, para todo impulso de entrada 
+\begin_inset Formula $\mathbf{\delta(t)}$
+\end_inset
+
+, la salida 
+\begin_inset Formula $\mathbf{h(t)=0}$
+\end_inset
+
+ mientras 
+\begin_inset Formula $\mathbf{t<0}$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Standard
+Otra característica que debe cumplir, es la de ser un sistema sin memoria.
+ Se dice que un sistema tiene memoria cuando la señal de salida depende
+ de las entradas pasadas y/o futuras.
+ Por ejemplo, la ecuación del cálculo del voltaje de un resistor representa
+ un sistema sin memoria dado que 
+\begin_inset Formula $\mathbf{v(t)=Ri(t)}$
+\end_inset
+
+, mientras que el voltaje en un capacitor representa un sistema con memoria
+ por su ecuación 
+\begin_inset Formula $\mathbf{v(t)=v(t_{0})+\int_{t_{0}}^{t}i(\tau)d\tau}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+En términos de hardware, todos los 
+\emph on
+sistemas LTI
+\emph default
+ pueden ser implementados a base de sumadores, multiplicadores y unidades
+ de retraso.
+ Estos sistemas son facilmente realizables dado que se basan a partir de
+ un número finito de elementos, como los antes mencionados.
+\end_layout
+
+\begin_layout Standard
+Las siguientes subsecciones resumen conceptos importantes que son utilizados
+ en cualquier aplicación y diseño de sistemas DSP.
+\end_layout
+
+\begin_layout Subsubsection
+Convolución.
+\end_layout
+
+\begin_layout Standard
+La convolución es la forma matemática de combinar dos señales para formar
+ una tercera.
+ Es la técnica más importante en el Procesamiento Digital de Señales.
+ Usando la estrategia de la descomposición del impulso, los sistemas pueden
+ ser descritos por una señal llamada 
+\emph on
+respuesta al impulso.
+
+\emph default
+ La convolución es importante porque relaciona las tres señales de interés:
+ la señal de entrada, la señal de salida y la señal de respuesta al impulso.
+ 
+\end_layout
+
+\begin_layout Standard
+Un punto fundamental a comprender de los sistemas DSP, es que estos trabajan
+ descompiniendo la señal de entrada en simples componentes aditivos, cada
+ uno de estos componentes se pasa a través de un sistema linear, y los component
+es de salida resultantes son sintetizados, o en otras palabras, sumados.
+ Esta descomposición se puede hacer de dos formas distintas: 
+\emph on
+Descomposición por impulsos
+\series bold
+ 
+\series default
+\emph default
+y 
+\emph on
+Descomposición por el método de Fourier.
+ 
+\emph default
+Cuando la Descomposición por impulsos es utilizada, el procedimiento se
+ puede describir matemáticamente utilizando la 
+\series bold
+convolución.
+\end_layout
+
+\begin_layout Standard
+Esta operación se basa en dos términos importantes en los sistemas DSP.
+ El primero es la 
+\series bold
+función delta, 
+\series default
+simbolizada por 
+\begin_inset Formula $\mathbf{\mathbf{\mathbf{\delta}[n]}}$
+\end_inset
+
+ .
+ La función delta es un impulso normalizado, que es, la muestra número cero
+ con un valor asignado de una unidad, mientras que las otras muestras tienen
+ asignadas un valor de cero.
+ Por esta razón, la función delta es llamada 
+\series bold
+unidad de impulso.
+
+\series default
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/delta.png
+	scale 90
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Función 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+delta graficada.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por otra parte, la 
+\series bold
+respuesta al impulso
+\series default
+ es la señal que existe en el sistema cuando una función delta es aplicada
+ a la entrada.
+ Si dos sistemas son diferentes en cualquier manera, ambos tendrán diferentes
+ respuestas al impulso.
+ Comunmente, las respuestas a la entrada y salida son llamadas 
+\begin_inset Formula $\mathbf{x[n]}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbf{y[n]}$
+\end_inset
+
+, la respuesta al impulso es usualmente llamada 
+\begin_inset Formula $\mathbf{h[n]}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/impulse.png
+	scale 90
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Función 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+de respuesta al impulso graficada.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En otras palabras, una señal de entrada 
+\begin_inset Formula $\mathbf{x[n]}$
+\end_inset
+
+ , entra en un sistema linear con una respuesta al impulso 
+\begin_inset Formula $\mathbf{h[n]}$
+\end_inset
+
+, resultando en una señal de salida 
+\begin_inset Formula $\mathbf{y[n]}$
+\end_inset
+
+ .
+ En forma matemática, la ecuación de convolución de una sola muestra queda
+ como se muestra a continuación:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathbf{y[n]=x[n]*y[n]}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tomando la ecuación 4.5 como guía, siendo 
+\begin_inset Formula $\mathbf{x[n]}$
+\end_inset
+
+ una señal de 
+\emph on
+N
+\emph default
+ puntos, desplazándose desde 0 a 
+\emph on
+N-1
+\emph default
+, y 
+\begin_inset Formula $\mathbf{h[n]}$
+\end_inset
+
+ una señal de 
+\emph on
+M
+\emph default
+ puntos desplazándose de 0 a 
+\emph on
+M-1
+\emph default
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "dspguide_conv"
+
+\end_inset
+
+ , la convolución de ambas señales es una señal 
+\emph on
+N+M-1
+\emph default
+ejecutándose desde 0 a 
+\emph on
+N+M-2
+\emph default
+, esto es:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathbf{y[i]=\sum_{j=0}^{M-1}h[j]}\mathbf{x[i-j]}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La ecuación anterior representa la definición formal de la convolución,
+ la cual también es conocida como la 
+\emph on
+suma de convolución
+\emph default
+ o 
+\emph on
+convolución discreta.
+\end_layout
+
+\begin_layout Standard
+Un ejemplo de la convolución tomando como vectores de entrada 
+\begin_inset Formula $\mathbf{\overrightarrow{v}_{actual}=[v_{1,}v_{2}...}\mathbf{v_{n}]}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbf{\overrightarrow{v}_{anterior}=[v_{n,}v_{n-1}...}\mathbf{v_{1}]}$
+\end_inset
+
+ se muestra en la 
+\series bold
+Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Convolución-de-dos"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+En el 
+\series bold
+Apéndice D
+\series default
+ se muestra el script interactivo que se puede ejecutar en el ambiente de
+ Matlab, el cual fue tomado de 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "eece_matlab"
+
+\end_inset
+
+ .
+ Este script muestra el resultado de la convolución discreta de dos impulsos
+ 
+\begin_inset Formula $\mathbf{y[n]=\delta[n]*\delta[n-1]}$
+\end_inset
+
+ , tomando como vector a 
+\begin_inset Formula $\mathbf{n=[1,0,1]}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/convolve.eps
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Convolución-de-dos"
+
+\end_inset
+
+Convolución de dos vectores en Matlab.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Filtros FIR.
+\end_layout
+
+\begin_layout Standard
+Un filtro digital de 
+\emph on
+Respuesta Finita al Impulso
+\emph default
+ (FIR) es un 
+\emph on
+sistema LTI
+\emph default
+ si es definido por un conjunto de coeficientes constantes.
+ La salida de un filtro FIR de órden (o longitud) 
+\series bold
+L
+\series default
+, a la respuesta de impulso unitario aplicado a la entrada 
+\begin_inset Formula $\mathbf{x[n]}$
+\end_inset
+
+, está dada por una versión finita de la ecuación de convolución, como se
+ muestra a continuación:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathbf{y[n]=f[n]*x[n]=\sum_{k=0}^{L-1}f[k]x[n-k]}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para un tren de impulsos en el dominio del tiempo a la entrada 
+\begin_inset Formula $\mathbf{x[n]}$
+\end_inset
+
+ , la ecuación queda como:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathbf{y[n]=b_{0}x(n)+b_{1}x(n-1)+...+b_{M-1}x(n-M+1)}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+=\mathbf{\sum_{k=0}^{M-1}b_{k}x(n-k)}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En otras palabras, la respuesta al impulso consiste sólo de respuesta en
+ los coeficientes, procedida y antecedida por ceros (el filtro producirá
+ una respuesta que irá decayendo a cero y se mantendrá en ese estado, de
+ ahí el nombre característico de este filtro).
+ Matemáticamente se puede expresar esta respuesta al impulso con la siguiente
+ ecuación:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathbf{h(n)=\begin{cases}
+b_{n}, & 0\leq n\leq M-1\\
+0, & otros
+\end{cases}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Gráficamente, esta ecuación se puede representar como se muestra en la 
+\series bold
+Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Respuesta-al-impulso"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/fir_filter_impulseresponse_gray.eps
+	scale 60
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Respuesta al impulso de un filtro FIR con 
+\begin_inset Formula $\mathbf{b_{0}=0.9}$
+\end_inset
+
+.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Respuesta-al-impulso"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Este tipo de filtros son más populares en cuanto a implementación, dado
+ que cuentan con características muy útiles, entre las cuales destacan:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\emph on
+Fase Lineal: 
+\series default
+\emph default
+Esta propiedad implica que la fase es una función lineal de la frecuencia,
+ Esto asegura que las señales de todas las frecuencias se retrasan en la
+ misma cantidad de tiempo, eliminando la posibilidad de distorsión de fase.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\emph on
+Estabilidad:
+\series default
+\emph default
+ Para una entrada finita, la salida siempre es finita, además son no recursivos,
+ es decir, no hay una conexión de retroalimentación envuelta en la estructura
+ del filtro.
+\end_layout
+
+\begin_layout Standard
+Existen muchos métodos de implementación de esto filtros, la estructura
+ más básica es conocida como 
+\emph on
+forma directa, 
+\emph default
+la cual consta de utilizar la ecuación en diferencia, no recursiva, mostrada
+ en (4.7)
+\begin_inset CommandInset citation
+LatexCommand cite
+key "fir_complete"
+
+\end_inset
+
+, lo que es equivalente a la sumatoria convolucional.
+ La estructura se muestra en la 
+\series bold
+Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Estructura-en-Forma"
+
+\end_inset
+
+
+\series default
+, el cual representa un filtro con un número de coeficientes 
+\begin_inset Formula $\mathbf{b_{0..3}+1}$
+\end_inset
+
+
+\series bold
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset CommandInset include
+LatexCommand input
+filename "misc/fir_filter_lyx.tex"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Estructura en Forma Directa de un Filtro FIR
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Estructura-en-Forma"
+
+\end_inset
+
+.
+ Imagen creada usando el paquete 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textup{Ti
+\backslash
+textit{k}Z}
+\end_layout
+
+\end_inset
+
+ de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+LaTeX
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En términos generales, existen cuatro formas básicas de implementación de
+ este tipo de filtros, las cuales son:
+\end_layout
+
+\begin_layout Itemize
+Método por ventanas (Rectangular, Barlett, Hanning, Hamming, Blackman y
+ Kaiser).
+\end_layout
+
+\begin_layout Itemize
+Muestreo en frecuencia.
+\end_layout
+
+\begin_layout Itemize
+Aproximación de Chebyshev y algoritmo de intercambio de Remez (conocido
+ como método de Rizado Constante).
+\end_layout
+
+\begin_layout Itemize
+Mínimos Cuadrados.
+\end_layout
+
+\begin_layout Standard
+La implementación más popular utilizada en FPGA es la del Método por Ventanas
+ debido a que muchos de los paquetes de software incluidos en las herramientas
+ de diseño de filtros, utilizan este método como el principal, lo cual recorta
+ el tiempo de desarrollo del mismo.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Filtros IIR.
+\end_layout
+
+\begin_layout Standard
+El sistema de Respuesta Infinita al Impulso (
+\emph on
+IIR
+\emph default
+ por sus siglas en inglés) se caracteriza por utilizar las muestras de la
+ señal de salida en instantes anteriores en adición a las muestras presentes
+ más las muestras pasadas de la misma función de salida, es decir, este
+ filtro cuenta con lazos de 
+\emph on
+retroalimentación 
+\emph default
+y 
+\emph on
+anticipación, 
+\emph default
+por lo que es conocido como un 
+\series bold
+sistema discreto recursivo
+\series default
+, a diferencia del filtro FIR que se caracteriza por ser 
+\series bold
+no recursivo
+\series default
+, esto significa que la función de salida del filtro puede continuar indefinidam
+ente aún cuando la entrada tienda a cero y permanezca en cero.
+\end_layout
+
+\begin_layout Standard
+El filtro IIR es un sistema de clase lineal, invariante en el tiempo que
+ se representa en función de una ecuación en diferencia:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+y\left[n\right]=\sum_{k=1}^{N}a_{k}y\left[n-k\right]+\sum_{k=0}^{M}b_{k}x\left[n-k\right]
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La primera suma representa la parte 
+\begin_inset Quotes eld
+\end_inset
+
+auto-regresiva
+\begin_inset Quotes erd
+\end_inset
+
+ o la parte IIR, y la segunda suma representa el 
+\begin_inset Quotes eld
+\end_inset
+
+promedio móvil
+\begin_inset Quotes erd
+\end_inset
+
+ o la parte FIR
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ECE423_lectures_IIR"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Estos filtros 
+\emph on
+IIR 
+\emph default
+tienen una relación con los demás filtros en tiempo continuo.
+ Ambos tienen respuesta al impulso de longitud infinita y son descritos
+ por funciones de transferencia racionales en el dominio de la frecuencia.
+ El método en que estos filtros se diseñan, a partir de estructuras discretas,
+ es usando métodos de aproximación numérica, como los métodos de 
+\emph on
+Chevysheb
+\emph default
+, 
+\emph on
+Butterworth
+\emph default
+ o 
+\emph on
+Bessel
+\emph default
+, además de que es posible utilizar un gran número de tablas pre diseñadas,
+ disponibles en los libros afines al tema en cuestión
+\begin_inset CommandInset citation
+LatexCommand cite
+key "iir_0"
+
+\end_inset
+
+ .
+ Dado que este tipo de filtros no serán utilizados en el marco metodológico
+ de este documento, sólo se abarcarán las características fundamentales
+ de ellos.
+\end_layout
+
+\begin_layout Standard
+El formato de implementación del filtro IIR utilizando el 
+\series bold
+\emph on
+método de Chevysheb
+\series default
+\emph default
+ minimiza la diferencia absoulta entre la respuesta en frecuencia ideal
+ y la actual sobre toda la banda de paso mediante la incorporación de rizo
+ uniforme en la banda de paso.
+ La transición desde la banda de paso hacia la banda de corte es más rápida
+ que en el formato 
+\emph on
+Butterworth.
+\end_layout
+
+\begin_layout Standard
+El filtro de 
+\series bold
+\emph on
+Butterworth 
+\series default
+\emph default
+representa la mejor aproximación de un filtro ideal pasa bajas en frecuencias
+ analógicas.
+ La respuesta en la banda de paso y la banda de corte es máximamente plana
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Xilinx_IIR_impl"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+El filtro de 
+\series bold
+\emph on
+Bessel 
+\series default
+\emph default
+no se puede implementar digitalmente utilizando muchas las herramientas
+ comerciales de modelado matemático, por esta razón, no es muy común en
+ el campo del diseño DSP.
+ Además, estos filtros requieren un órden más alto, por lo que la utilización
+ de elementos discretos para su implementación se dispara, volviendo al
+ filtro de 
+\emph on
+Bessel 
+\emph default
+muy complicado en términos de implementación.
+\end_layout
+
+\begin_layout Standard
+La estructura de un filtro IIR se puede representar mediante la ecuación
+ 
+\series bold
+(4.11)
+\series default
+, en donde se puede observar que es similar a tener un filtro FIR que comprende
+ los coeficientes de 
+\series bold
+b 
+\series default
+y otro filtro FIR inverso con los coeficientes de 
+\series bold
+a
+\series default
+, como se muestra en la 
+\series bold
+Figura
+\series default
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Estructura-IIR"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset CommandInset include
+LatexCommand input
+filename "misc/iir_filter_lyx.tex"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Estructura en Forma Directa de un Filtro IIR
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Estructura-IIR"
+
+\end_inset
+
+.
+ Imagen creada usando el paquete 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textup{Ti
+\backslash
+textit{k}Z}
+\end_layout
+
+\end_inset
+
+ de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+LaTeX
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Plataformas FPGA.
+\end_layout
+
+\begin_layout Subsection
+Descripción general.
+\end_layout
+
+\begin_layout Standard
+La Matriz de Compuertas Programables en Campo (FPGA) es un circuito integrado
+ reconfigurable que puede ser utilizado para diseñar circuitos digitales.
+ La configuración de la FPGA es normalmente especificada usando lenguajes
+ de descripción de hardware como SystemVerilog o VHDL y después es traducida,
+ mediante herramientas de síntesis, a un formato binario en el cual se encuentra
+ la información de ruteo e interconexiones necesarias para que el dispositivo
+ ejecute las funciones lógicas para el cual fue diseñado.
+ Esta propiedad de ser reconfigurable y poder ejecutar múltiples tareas
+ tan complejas o sencillas, de forma paralela, ofrece una significante ventaja
+ en muchas aplicaciones como por ejemplo en el diseño de circuitos integrados
+ donde a diferencia del prototipado con ASIC, en donde los diseñadores no
+ tienen la flexibilidad de hacer modificaciones al prototipo después de
+ que el chip ha sido manufacturado, en el FPGA es posible y muy común el
+ modificar algunas partes del circuito después de que el proyecto ha sido
+ concluido.
+\end_layout
+
+\begin_layout Standard
+\noindent
+La arquitectura de una FPGA se basa en Bloques de Matrices Configurables
+ (CLBs, por sus siglas en Inglés), las cuales proporcionan la lógica programable
+ y una jerarquía de interconexiones reconfigurables para interconectar los
+ CLBs entre sí.
+ Además de estos componentes básicos, las FPGA actuales contienen bloques
+ de memoria internos, controladores para interfaces externas de alta velocidad
+ como memorias DDR y bloques físicos de PCI Express, así como bloques optimizado
+s para operaciones de DSP, microprocesadores físicos y algunas funciones
+ especiales más, que dependen del enfoque o familia de la FPGA, todo esto
+ en el mismo silicio.
+\end_layout
+
+\begin_layout Standard
+La tendencia reciente en la tecnología FPGA es trabajar con arquitecturas
+ de hardware en alto nivel de abstracción, agregarle bloques DSP, procesadores
+ embebidos y transductores de alta velocidad para formar un Sistema Programable
+ en Chip completo (SoPC).
+ Además, las FPGA toman ventaja del paralelismo natural del hardware, ya
+ que exceden el poder computacional de los Procesadores Digitales de Señales,
+ rompiendo el paradigma de la ejecución secuencial y lograr un mayor rendimiento.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Una de las aplicaciones principales de las FPGA es poder ejecutar y modificar
+ arquitecturas digitales múltiples veces, hasta que se ha cumplido el objetivo
+ del prototipo que se estableció al principio, sin ser necesario recurrir
+ a los costosos procesos de fabricación de Circuitos Integrados personalizados.
+ Gracias a esto, se pueden implementar diseños de manera incremental e incluso
+ hacer cambios iterativamente en cuestión de horas en lugar de semanas.
+ También, debido a la creciente oferta de herramientas de diseño en alto
+ nivel, se ha decrementado la curva de aprendizaje y con frecuencia, estas
+ herramientas incluyen valiosas Propiedades Intelectuales (IP) para control
+ y procesamiento de señales avanzadas.
+\end_layout
+
+\begin_layout Standard
+Existe una numerosa cantidad de fabricantes pero sólo dos tipos de FPGAs:
+ Reprogramables (basadas en SRAM o Flash) y Programables una sola vez (OTP).
+ Las FPGAs basadas en SRAM necesitan una memoria de configuración y no retienen
+ los datos cuando son desconectadas de la fuente de alimentación.
+ Las que son basadas en Flash, no necesitan una memoria externa para almacenar
+ la configuración y la pueden mantener aún cuando el dispositivo no está
+ energizado.
+ Anteriormente, las FPGAs basadas en Flash tenían la característica de ser
+ OTP, pero hoy en día existen dispositivos basados en esta tecnología que
+ pueden ser reprogramados tales como las MAX 10 de Altera.
+\end_layout
+
+\begin_layout Standard
+\noindent
+En la próxima sección se cubrirá a detalle, la arquitectura de la familia
+ Spartan6 de Xilinx, ya que es esta la que se encuentra en el kit de desarrollo
+ Atlys de Digilent.
+\end_layout
+
+\begin_layout Subsection
+Estructura general de las FPGA.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Como se mencionó anteriormente, las FPGA modernas ofrecen una serie de component
+es que son de gran utilidad al momento de diseñar sistemas digitales.
+ Estos básicamente son:
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing double
+\noindent
+Bloques Lógicos Configurables (CLB) para poder implementar funciones lógicas
+ así como registros.
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing double
+\noindent
+Memoria en Chip (On-chip memory) que provee almacenamiento de datos dentro
+ del FPGA, generalmente es reducido dado que el área de construcción de
+ memoria en el silicio, tiende a ocupar gran parte de este.
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing double
+\noindent
+Propiedades Intelectuales físicas, tales como controladores Ethernet MAC,
+ Transductores, Multiplicadores optimizados, bloques DSP, Procesadores,
+ Controladores de memoria externa DDR, PCIe endpoint físico, etc.
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing double
+\noindent
+Recursos de manejo de reloj que generen las frecuencias necesarias para
+ controlar dispositivos como los antes mencionados y que además, puedan
+ ser distribuidos dentro de la FPGA.
+ Esto es muy importante al momento de diseñar sistemas con un alto índice
+ de transferencia de datos.
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing double
+\noindent
+Bloques de entrada y salida que comuniquen a la FPGA al mundo exterior.
+\end_layout
+
+\begin_layout Itemize
+\paragraph_spacing double
+\noindent
+Recursos de ruteo para proveer la interconectividad de los Bloques Lógicos
+ Configurables internos y las Propiedades Intelectuales.
+\end_layout
+
+\begin_layout Standard
+\noindent
+La 
+\series bold
+Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Arquitectura-general-de"
+
+\end_inset
+
+
+\series default
+ muestra la arquitectura típica de una FPGA con los bloques de construcción
+ básicos.
+ Es importante mencionar que algunos elementos como las Block RAM, bloques
+ DSP, controladores de memoria, etcétera, que se muestran en la imagen,
+ son construidos sobre el mismo silicio, sin quitarle espacio a los elementos
+ lógicos.
+ También cabe mencionar que, las Tablas de Búsqueda, mejor conocidas como
+ Look Up Tables (LUT) que hay dentro de los bloques lógicos son usadas para
+ crear funciones de lógica combinacional, pero también pueden ser configuradas
+ como memorias RAM o registros de desplazamiento.
+ Esta es una forma muy eficiente de inferir dichos registros sin tener que
+ usar los elementos de almacenamiento.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/fpga_arch.eps
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Arquitectura general de las FPGA 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "x6vs"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Arquitectura-general-de"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Arquitectura de la familia de FPGAs Xilinx Spartan-6.
+\end_layout
+
+\begin_layout Standard
+\noindent
+La familia Spartan-6 está fuertemente enfocada a proveer capacidades de
+ integración de sistemas con el menor costo posible para aplicaciones de
+ alto volumen, es decir, es una línea de dispositivos que tienen bloques
+ de comunicación de alta velocidad como PCI Express, controladores de memoria
+ externa DDR3 y Ethernet, entre otros.
+ Además de una vasta densidad de elementos lógicos y registros disponibles
+ que van desde 3,840 hasta 147,443 celdas lógicas, dependiendo del dispositivo
+ seleccionado por el diseñador.
+ Consume la mitad de la potencia comparado con la familia anterior de FPGAs
+ Spartan 3, gracias a que están construidas con una avanzada tecnología
+ de 45nm.
+ Esta línea de FPGAs son muy populares ya que son el balance óptimo entre
+ costo, potencia y rendimiento
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Xil_DS160"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+La innovación más notable en estas FPGA es la re estructuración de la arquitectu
+ra interna para implementar LUTs de 6 entradas y doble registro de salida
+ en cada LUT, esto significa que una sola LUT puede implementar funciones
+ lógicas de 
+\begin_inset Formula $2^{6}=64$
+\end_inset
+
+bits, como por ejemplo, una RAM de 64 bits o un registro de desplazamiento
+ de 32 bits.
+ Anteriormente, la arquitectura se basaba en LUTs de 4 entradas, como se
+ muestra a continuación.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+\noindent
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/6input.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+LUT de seis entradas 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "clb_ov"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Además, la familia Spartan-6 incluye bloques de memoria RAM (BRAM) de 18Kb,
+ una optimización de dispositivos DSP48A1 los cuales sirven para ejecutar
+ cálculos complejos de manera paralela, controladores físicos de memoria
+ SDRAM, bloques de manejo de reloj internos mejorados para poder generar
+ las frecuencias necesarias para controladores de alta velocidad, así como
+ opciones de configuración y seguridad de IP más avanzados.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+\noindent
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/blockd.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama a bloques de una FPGA Spartan-6 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "clb_ov"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Debido a la construcción en 45nm, se han podido incorporar una mayor cantidad
+ de CLBs en esta familia de FPGAs.
+ Los CLBs son los recursos lógicos principales necesarios para implementar
+ circuitos secuenciales y combinatorios.
+ Cada elemento CLB es conectado a una matriz de switches programables para
+ acceder a otra matriz de ruteo como se muestra en la Figura 4.
+ Cada elemento CLB contiene un par de SLICEs.
+ Estos dos SLICEs no tienen una conexión directa entre si.
+ Cada SLICE tiene un bloque de acarreo en cadena (carry chain).
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+\noindent
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/spartan_arch.eps
+	display false
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Bloque Lógico Configurable.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Cada SLICE contiene cuatro LUTs, cuatro elementos de almacenamiento (flip
+ flop), un amplio número de multiplexores y un bloque de acarreo lógico.
+ Esos elementos son usados por todos los SLICEs para proveer las funciones
+ lógicas, aritméticas y algunos tipos de memoria ROM.
+ Adicionalmente, algunos SLICEs pueden implementar dos funciones adicionales:
+ almacenar datos al adoptar la función de RAM distribuida y desplazar datos
+ adoptando la función de registro de desplazamiento de 32 bits.
+ Son llamados SLICEM (por Memoria), los comunes son llamados SLICEL (Por
+ Lógico).
+\end_layout
+
+\begin_layout Standard
+\noindent
+La Figura describe con detalle la arquitectura de cada SLICE en un CLB.
+ Los multiplexores antes mencionados sirven para proveer la conectividad
+ entre los recursos lógicos que rodean a los CLBs, mientras que la red de
+ elementos de acarreo en cadena dentro de los CLBs, hacen la función de
+ ruteo para generar sumadores lógicos más eficientes.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+\noindent
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/slice_struct.png
+	scale 90
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Estructura detallada de un SLICE 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "clb_ov"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Los dispositivos Spartan-6 cuentan con un gran número de memorias BRAM de
+ 18Kb, las cuales están construidas por dos memorias controladas independienteme
+nte de 9Kb cada una.
+ Estas memorias son colocadas en columnas, el número total de ellas depende
+ del tamaño del dispositivo Spartan-6.
+ Las memorias BRAM se pueden utilizar en cascada para habilitar implementaciones
+ de mayor tamaño de Kilo bits, con un pequeño impacto en el timing.
+ La Figura 6 muestra una BRAM en cascada con dos distintos puertos de lectura
+ y escritura.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/bram_block.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Block RAM de doble puerto 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "clb_ov"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Kit de desarollo Atlys de Digilent.
+\end_layout
+
+\begin_layout Standard
+El sistema de desarrollo Atlys fabricado por Digilent bajo el programa Xilinx
+ University Program es la plataforma seleccionada para cumplir con los objetivos
+ de esta investigación.
+ El kit Atlys es una plataforma avanzada para el desarollo de sistemas digitales.
+ Está basada en un dispositivo FPGA Xilinx Spartan-6 LX45, la familia LX
+ está optimizada para implementaciones lógicas de alto rendimiento
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Digilent_atlys"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Los periféricos que se incluyen son de gama alta, tales como controladores
+ Gigabit Ethernet, entrada y salida de video HDMI, memoria RAM DDR2 de 128
+ Megabytes de almacenamiento en un bus de 16 bits, además de puertos de
+ USB host y entrada y salida de audio a través de un códec AC97.
+ Este kit es compatible con toda la suite de diseño de Xilinx ISE, por lo
+ que se pueden implementar una gran variedad de diseños para diferentes
+ áreas de investigación con un costo relativamente bajo.
+\end_layout
+
+\begin_layout Standard
+Las principales características técnicas de esta plataforma se muestran
+ a continuación:
+\end_layout
+
+\begin_layout Itemize
+FPGA Spartan-6 LX45-3 con 6,822 slices, cada una contiene 4 LUTS de 6 entradas
+ y 8 flip-flops, con una frecuencia máxima de ejecución a 500MHz.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Para una mayor comprensión de estas catacterísitcas técnicas, referirse
+ a la sección 
+\series bold
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+4.3 Arquitectura de la familia de FPGAs Xilinx Spartan-6
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+ 
+\series default
+de este documento.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+58 DSP slices (elementos lógicos optimizados para operaciones de DSP).
+ 
+\end_layout
+
+\begin_layout Itemize
+Oscilador CMOS a 100 MHz como reloj base para PLL/DCM.
+\end_layout
+
+\begin_layout Itemize
+Códec de audio AC97 con líneas de entrada/salida de audio y ariculares.
+\end_layout
+
+\begin_layout Itemize
+Dos entradas y dos salidas de video HDMI.
+\end_layout
+
+\begin_layout Standard
+Entre algunas otras.
+ En la 
+\series bold
+Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Kit-de-desarrollo"
+
+\end_inset
+
+ 
+\series default
+se puede observar una imagen de esta plataforma.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/atlys_kit.eps
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Kit de desarrollo Atlys Spartan-6 de Digilent, obtenida del sitio web del
+ fabricante.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Kit-de-desarrollo"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Plataformas de Software para el diseño de sistemas DSP.
+\end_layout
+
+\begin_layout Subsection
+Introducción a MATLAB y Simulink.
+\end_layout
+
+\begin_layout Subsubsection
+MATLAB.
+\end_layout
+
+\begin_layout Standard
+\noindent
+El nombre de esta herramienta proviene de recortar y unir las palabras 
+\series bold
+MAT
+\series default
+rix 
+\series bold
+LAB
+\series default
+oratory (Laboratorio de Matrices), lo cual nos da una referencia de la metodolog
+ía que utiliza.
+ MATLAB es un sistema interactivo cuyo elemento básico son matrices las
+ cuales, no requieren ser dimensionadas.
+ Está enfocado a resolver problemas técnicos computacionales a través de
+ un ambiente completo donde los problemas y soluciones son expresados en
+ una notación matemática familiar
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Matlab_overview"
+
+\end_inset
+
+.
+ Además, la integración de herramientas para la adquisición de datos externos
+ tales como sonidos e imágenes, así como el análisis a través de aplicaciones
+ de visualización como gráficas, hacen de este lenguaje uno de los mas atractivo
+s en el área de las ciencias aplicadas.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Lo que hace de MATLAB una herramienta muy popular en el ámbito académico
+ e industrial, es la rapidez con la que se pueden implementar y resolver
+ algoritmos de mediana a gran complejidad.
+ Esto se debe en gran medida a la facilidad que brinda el intérprete interactivo
+ para crear scripts conocidos como Archivos-M (M-files, por sus siglas en
+ Inglés) que ayudan a describir sistemas con eficacia, así como el gran
+ número de funciones prediseñadas incluidas en los complementos conocidos
+ como 
+\begin_inset Quotes fld
+\end_inset
+
+cajas de herramienta
+\begin_inset Quotes frd
+\end_inset
+
+ o Toolboxes, los cuales contienen colecciones de funciones para un gran
+ rango de disciplinas tales como procesamiento de señales, sistemas de control,
+ redes neuronales, lógica difusa, por mencionar algunas.
+ Todo esto ayuda a que el usuario implemente sus modelos matemáticos en
+ cuestión de horas y no días, comparado con lenguajes compilados no interactivos
+ como C o Fortran.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/matlab_env.eps
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Interfaz Gráfica del Usuario de MATLAB.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+MATLAB es considerado un lenguaje de programación de alto nivel, debido
+ a la gran abstracción de datos con los que trabaja.
+ Algunas propiedades importantes de esta herramienta son:
+\end_layout
+
+\begin_layout Itemize
+\noindent
+El tipo de datos por defecto es una matriz de doble precisión, lo que significa
+ que se pueden representar números desde 0 a 
+\begin_inset Formula $1.7977e+308$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Es un lenguaje orientado a objetos, lo cual resulta en una mejora en el
+ manejo de la complejidad de aplicaciones y estructuras de datos.
+ 
+\end_layout
+
+\begin_layout Itemize
+Los algoritmos diseñados en este paquete de software, pueden ser convertidos
+ a código en lenguaje C, HDL y/o PLC, para ser ejecutados en dispositivos
+ embebidos.
+\end_layout
+
+\begin_layout Itemize
+Matlab en conjunto con simulink, tienen soporte para la herramienta de diseño
+ DSP de Xilinx, lo cual convierte a este ambiente en uno de los más atractivos
+ en este ámbito.
+\end_layout
+
+\begin_layout Subsubsection
+Simulink.
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Subsection
+Xilinx System Generator for DSP.
+\end_layout
+
+\begin_layout Subsection
+Introducción a Xilinx ISE y PlanAhead.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

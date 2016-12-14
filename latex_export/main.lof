@@ -1,0 +1,22 @@
+\select@language {spanish}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Diagrama a bloques de un Sistema de procesamiento Digital de Se\~{n}ales.}}{12}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Banda de espectro limitado t\'{\i }pica \cite {dsp_introduction}.}}{13}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Ejemplo de cuantizaci\'{o}n en una se\~{n}al senoidal. Los puntos marcados con una <<x>> representan la se\~{n}al original, mientras que las coordenadas marcadas con <<\textendash >> muestran la se\~{n}al cuantizada .}}{13}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Funci\'{o}n \foreignlanguage {english}{delta graficada.}}}{16}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Funci\'{o}n \foreignlanguage {english}{de respuesta al impulso graficada.}}}{16}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Convoluci\'{o}n de dos vectores en Matlab.}}{17}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Respuesta al impulso de un filtro FIR con $\mathbf {b_{0}=0.9}$. }}{18}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Estructura en Forma Directa de un Filtro FIR. Imagen creada usando el paquete \textup {Ti\textit {k}Z} de \LaTeX }}{19}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Arquitectura general de las FPGA \cite {x6vs}.}}{23}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces LUT de seis entradas \cite {clb_ov}.}}{24}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Diagrama a bloques de una FPGA Spartan-6 \cite {clb_ov}.}}{24}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Bloque L\'{o}gico Configurable.}}{25}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Estructura detallada de un SLICE \cite {clb_ov}.}}{26}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Block RAM de doble puerto \cite {clb_ov}.}}{27}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Interfaz Gr\'{a}fica del Usuario de MATLAB.}}{28}
+\contentsline {figure}{\numberline {9.1}{\ignorespaces Informaci\'{o}n digital convertida en un tren de impulsos .\cite {New1}}}{31}
+\contentsline {figure}{\numberline {9.2}{\ignorespaces Representaci\'{o}n gr\'{a}fica de una se\~{n}al producida por el efecto de \emph {retenci\'{o}n de orden cero}\textbf {\emph { }}en el proceso de transformaci\'{o}n A/D \cite {chapter_3}.}}{32}
+\contentsline {figure}{\numberline {9.3}{\ignorespaces Estructura de un DAC resistivo de ponderaci\'{o}n binaria. Imagen adaptada de: \cite {ad_resistive_one}}}{32}
+\contentsline {figure}{\numberline {9.4}{\ignorespaces Estructura de un DAC capacitivo de ponderaci\'{o}n binaria.}}{33}
+\contentsline {figure}{\numberline {9.5}{\ignorespaces DAC R-2R red en escalera.}}{33}
+\contentsline {figure}{\numberline {9.6}{\ignorespaces Modelo en NGSpice de un DAC ideal de 4 bits.}}{33}

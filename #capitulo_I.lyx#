@@ -1,0 +1,548 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extarticle
+\begin_preamble
+\date{}
+\usepackage{setspace}
+\doublespacing
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1.54in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Part
+\paragraph_spacing double
+Introducción.
+\end_layout
+
+\begin_layout Section
+\paragraph_spacing double
+Planteamiento del problema.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+Debido a la alta demanda de sistemas embebidos especialmente en la electrónica
+ de consumo, se ha tenido como consecuencia la necesidad de obtener equipos
+ con un mayor rendimiento pero a menor consumo de energía.
+ Esto ha estado forzando a los arquitectos de sistemas e ingenieros, a crear
+ técnicas de diseño más innovadoras que logren cumplir dichos objetivos
+ y los rigurosos requerimientos de las aplicaciones actuales, como por ejemplo
+ sistemas de transmisión de señales digitales que requieren una computación
+ intensiva de operaciones matemáticas que van desde simples operaciones
+ aritméticas, hasta operaciones complejas como filtrado de señales de audio
+ o detección de patrones de vídeo en tiempo real.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+Como los dispositivos DSP (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textit{
+\end_layout
+
+\end_inset
+
+Digital Signal Processor
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+) son integrados cada vez en más sistemas electrónicos como teléfonos inteligent
+es, cámaras de vídeo, reproductores de música, por mencionar algunos, además
+ de la complejidad que los prototipos actuales agregan, con las metodologías
+ de los SoC (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textit{
+\end_layout
+
+\end_inset
+
+System on a Chip
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+), el tiempo que tarda el sistema en salir al mercado es un factor importante.
+ Esto debe cumplirse lo mas rápido posible con el menor numero de fallos
+ o problemas que puedan causar impactos negativos al producto.
+ Esta situación afecta al tiempo del ciclo de diseño y validación del sistema,
+ reduciéndolo significativamente.
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+La manera en que se ha estado tratando de complementar esta necesidad es
+ resolviendo la mayor parte de los algoritmos en software.
+ Este puede dar flexibilidad, permitiendo cambios finales más rápidos y
+ sin tener que hacer modificaciones significativas, pero el desempeño es
+ pobre comparado con el hardware.
+ El software se ejecuta de manera secuencial mientras que el hardware lo
+ hace de una forma naturalmente paralela.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+Por otra parte, crear ASICs (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textit{
+\end_layout
+
+\end_inset
+
+Application Specific Integrated Circuit
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+), toma bastante tiempo debido al flujo de diseño de estos dispositivos
+ y además, una vez terminado el sistema y configurado sobre el ASIC, este
+ no se pude volver a modificar.
+ Es aquí donde las FPGA (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textit{
+\end_layout
+
+\end_inset
+
+Field Programmable Gate Array
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+) se convierten en una gran solución combinando las fortalezas del hardware
+ y del software.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+La idea de poner las operaciones aritméticas de los DSPs en hardware ha
+ sido estudiada durante mucho tiempo.
+ Es bien sabido que el desempeño de los algoritmos elaborados en hardware
+ comparados con aquellos en software, es muy superior.
+ Aquí es donde las FPGA pueden resolver el problema, debido a que combinan
+ lo mejor de las dos perspectivas.
+ El hardware reconfigurable de estos dispositivos ofrece un mayor rendimiento
+ y por consecuencia es significativamente más rápido que un DSP convencional.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+Con el fin de lograr la correcta adopción de estos dispositivos y explotar
+ las ventajas que tienen sobre los DSP tradicionales, es necesario contar
+ con sólidos conocimientos principalmente en metodologías de diseño digital
+ e implementación matemática de algoritmos en software avanzados.
+ Estos conocimientos deben impartirse desde la academia, puesto que es el
+ tiempo ideal en que el futuro ingeniero o arquitecto de sistemas puede
+ ir construyendo las habilidades necesarias para crear prototipos complejos
+ con margenes de error mínimos y de gran calidad.
+ El alumno debe comprender las ventajas y desventajas que tiene el implementar
+ las funciones de procesamiento digital en una FPGA, así como dominar determinad
+as destrezas: aritmética distribuida, manejo de los tipos de datos comunes
+ en los DSP como lo son números reales de punto fijo y punto flotante, enteros
+ con o sin signo y números fraccionarios, en hardware.
+ Así como técnicas de implementación y optimización en FPGAs, por mencionar
+ algunos, lo que le llevaría bastante tiempo.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+Teniendo como objetivo principal el recortar la curva de aprendizaje, las
+ empresas líderes en FPGAs como lo son Xilinx, Altera y Synopsys
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Se puede hablar de las herramientas de cada uno, y especificar que Synpsys
+ esta enfocado a la creacion de software para diseño de hardware, más no
+ en FPGAs en sí.
+\end_layout
+
+\end_inset
+
+ proporcionan un ambiente que puede interactuar con el software más popular
+ para la creación y prueba de algoritmos matemáticos: Matlab.
+ Esta herramienta añade una biblioteca de bloques a Simulink, la cual es
+ capaz de manejar todas las complicaciones de diseño mencionadas anteriormente,
+ de una manera mucho más sencilla y flexible.
+ De esta forma, el alumno puede comenzar a poner en práctica los tópicos
+ obtenidos en las materias enfocadas a Procesamiento Digital de Señales
+ y Diseño Digital, utilizando las plataformas de desarrollo disponibles
+ en su centro de estudio.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+Sin embargo, la falta de información específica para comenzar a ejecutar
+ algunos diseños sobre las plataformas con las cuenta su institución, puede
+ impactar negativamente al interés del alumno, haciendo que este encuentre
+ frustrante el hecho de implementar algunos proyectos en estas placas de
+ desarrollo.
+ Esto podría causar el desinterés en general sobre estas nuevas tendencias,
+ hasta el abandono total del tema, impactando negativamente en la futura
+ vida profesional del estudiante, ya que muchos de los conocimientos que
+ se pueden obtener al usar estas metodologías de diseño, son y serán plenamente
+ usados en la industria de los semiconductores.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+Este trabajo puede ser referencia para el diseño de algoritmos de procesamiento
+ digital de señales en FPGA, enfocándose, más no limitándose, al uso de
+ las plataformas de desarrollo de la división de electrónica.
+ Los prototipos didácticos que se explican en este trabajo, son ideales
+ para la comprensión de todos los factores técnicos que intervienen en la
+ implementación de sistemas complejos.
+ Además, se motiva al alumno a ir más allá de lo que aquí se describe, brindándo
+le las aptitudes adecuadas y la bibliografía necesaria para esto.
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+Por tal motivo, el estudiante será capaz de consolidar los conocimientos
+ adquiridos en su vida escolar, así como obtener la madurez para hacer investiga
+ciones por cuenta propia y lograr así aportar de una manera más significativa,
+ a resolver las problemáticas de los cada vez más complejos sistemas que
+ la tecnología desarrolla para mejorar la calidad de vida de las personas.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+No olvidar hablar de que el CETI puede ganar prestigio al tener este tipo
+ de implementaciones en sus curriculo, y el alumno puede tener más visión
+ sobre el panorama actual.
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+La complejidad de algoritmos que se estudian en el campo del procesamiento
+ digital de señales e imágenes han obligado al personal docente a cubrir
+ mayormente la parte teórica de las asignaturas en las que estos temas de
+ estudio se involucran, dejando a la puesta en práctica en términos de evaluacio
+nes de prototipos sencillos mediante el uso de software matemático como
+ Matlab.
+ Esto no es debido al docente, sino a los requerimientos que el diseño electróni
+co exige en este ámbito, es decir, el alumno necesita tener sólidos conocimiento
+s ya sea en el uso de microcontroladores, DSPs o FPGAs, así como emplear
+ tiempo suficiente para familiarizarse con los ámbientes de programación
+ de dichas plataformas de hardware o lenguajes involucrados así como conocer
+ las limitantes de cada una de las plataformas ya mencionadas.
+ Esto impacta negativamente en el interés de los alumnos por el hecho de
+ que estos.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Los FPGA son los dispositivos que mejor siguen la ley de Moore.
+ Han incrementado drásticamente el número de elementos lógicos programables
+ contenidos en el silicio en cada nueva generación que sale al mercado.
+ En la actualidad, estos dispositivos están revolucionando la manera en
+ que las principales industrias que crean o intervienen en la generación
+ de circuitos integrados como Intel, Qualcomm, Synopsys o Cadence, por mencionar
+ algunos, pueden concebir sistemas tan avanzados y complejos que pueden
+ emular todo un prototipo completo, es decir, Unidades de Procesamiento
+ Centrales, BIOS, y Sistemas Operativos, enfocando los esfuerzos a exploración
+ o refinación de arquitecturas de diseño, explotando la posibilidad de reconfigu
+ración y la gran densidad lógica de estos elementos.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Section
+Revisión de la literatura.
+\end_layout
+
+\begin_layout Section
+Propósito.
+\end_layout
+
+\begin_layout Subsection
+
+\lang spanish
+Objetivo general.
+\end_layout
+
+\begin_layout Itemize
+
+\lang spanish
+Implementar un sistema didáctico en hardware reconfigurable enfocado a procesami
+ento digital de imágenes utilizando la tarjeta de desarrollo Atlys.
+ 
+\end_layout
+
+\begin_layout Subsection
+
+\lang spanish
+Objetivos específicos.
+\end_layout
+
+\begin_layout Itemize
+
+\lang spanish
+Diseñar las propiedades intelectuales (IPs) básicas para el tratamiento
+ de imágenes utilizando los entornos de programación de Matlab® y Xilinx®.
+\end_layout
+
+\begin_layout Itemize
+
+\lang spanish
+Fundamentar los conceptos base del procesamiento digital de señales y técnicas
+ de implementación para dispositivos lógicos programables.
+\end_layout
+
+\begin_layout Itemize
+
+\lang spanish
+Demostrar el manejo de los niveles de abstracción para la conversión de
+ algoritmos matemáticos a hardware en FPGA.
+\end_layout
+
+\begin_layout Itemize
+
+\lang spanish
+Explicar los diferentes métodos de ejecución del hardware diseñado en Simulink,
+ sobre la tarjeta Atlys.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\lang spanish
+Justificar el uso de Matlab/Simulink® y Xilinx/ISE® para el diseño e implementac
+ión de algoritmos complejos en contraste con el uso tradicional de HDL puro.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Revisión de la literatura.
+\end_layout
+
+\begin_layout Standard
+TBD.
+\end_layout
+
+\begin_layout Section
+Propósito.
+\end_layout
+
+\begin_layout Subsection
+
+\lang spanish
+Objetivo general.
+\end_layout
+
+\begin_layout Itemize
+
+\lang spanish
+Describir el proceso de implementación de un sistema de procesamiento de
+ señales e imágenes mediante hardware reconfigurable basado en la tarjeta
+ Atlys.
+\end_layout
+
+\begin_layout Subsection
+
+\lang spanish
+Objetivos específicos.
+\end_layout
+
+\begin_layout Itemize
+
+\lang spanish
+Facilitar el diseño e implementación de un sistema de procesamiento de audio
+ en tiempo real, basado en el desarrollo de un algoritmo de eco, así como
+ un sistema de detección de bordes en una imagen
+\end_layout
+
+\begin_layout Itemize
+
+\lang spanish
+Mostrar la conversión de los algoritmos matemáticos básicos que intervienen
+ en el procesamiento de señales, a hardware en FPGA, haciendo uso de la
+ abstracción que proporciona Simulink®.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\lang spanish
+Describir las técnicas de implementación más eficientes para el diseño de
+ filtros FIR e IIR sobre la familia de FPGAs Spartan 6 contenida en la tarjeta
+ Atlys.
+\end_layout
+
+\begin_layout Itemize
+
+\lang spanish
+Diseñar las propiedades intelectuales (IPs) más comunes en el tratamiento
+ de señales tales como bloques de filtros FIR, IIR y convoluciones, utilizando
+ los entornos de programación de Matlab® y Xilinx®.
+\end_layout
+
+\begin_layout Itemize
+
+\lang spanish
+Explicar los diferentes métodos de ejecución del hardware diseñado en Simulink®,
+ sobre la tarjeta Atlys.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\lang spanish
+Justificar el uso de Matlab/Simulink® y Xilinx/ISE® para el diseño e implementac
+ión de algoritmos complejos en contraste con el uso tradicional de HDL puro.
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,635 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extarticle
+\begin_preamble
+\usepackage[numbered,framed]{matlab-prettifier}
+\lstset{style=Matlab-editor}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1.54in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Part*
+\start_of_appendix
+Apéndice A: Conversión Analógico-Digital.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part*
+Apéndice B: Conversión Digital-Analógico.
+\end_layout
+
+\begin_layout Standard
+Para convertir una señal digital a una analógica después de que se ha procesado
+ por el sistema DSP, se utiliza un conversor D/A (o DAC, por sus siglas
+ en inglés).
+ La manera en que este proceso se lleva a cabo es interpolando los datos
+ de las señales entre las muestras tomadas, es decir, aplicando una aproximación
+ sucesiva al valor de dichas muestras.
+\end_layout
+
+\begin_layout Standard
+La manera más sencilla de convertir una señal de analógico a digital, es
+ tomando las muestras de dicha señal desde la memoria donde el DSP las almacena,
+ y transformarlas en un tren de impulsos, como se muestra en la 
+\series bold
+Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Información-digital-convertida-1"
+
+\end_inset
+
+
+\series default
+.
+
+\series bold
+ 
+\series default
+Después, este mismo tren de pulsos, se hacer pasar por un filtro pasa bajas,
+ con la frecuencia de corte igual a la mitad de la frecuencia de muestreo,
+ cumpliendo el 
+\emph on
+Teorema de Nyquist
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/impulse_train.png
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Información digital convertida en un tren de impulsos 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Información-digital-convertida-1"
+
+\end_inset
+
+.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "New1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En otras palabras, la señal original y el tren de impulsos tendrán espectros
+ de frecuencia idénticos, lo cual cumple con la 
+\emph on
+frecuencia de Nyquist
+\emph default
+ anteriormente descrita.
+ En frecuencias más altas, el tren de impulsos contiene una duplicación
+ de la señal, mientras que la señal analógica original no contiene ninguna
+ información, suponiendo que el 
+\emph on
+aliasing
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Múltiples señales en tiempo continuo pueden producir series de muestras
+ idénticas.
+ A este fenómeno se le conoce como 
+\emph on
+Aliasing
+\emph default
+.
+ Cuando esto ocurre, el DAC no es capáz de regenerar la señal de salida
+ a menos que haya un filtro 
+\emph on
+anti-aliasing 
+\emph default
+de por medio, muestreando a una frecuencia mayor a la actual
+\begin_inset CommandInset citation
+LatexCommand cite
+key "EECS_247"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
+\series default
+\emph default
+no ocurrió.
+\end_layout
+
+\begin_layout Standard
+Mientras que este método es matemáticamente correcto, es dificil generar
+ esos trenes de pulsos tan estrechos entre si, utilizando componentes electrónic
+os.
+ Para poder manejar esta dificultad, la mayoría de los ADC operan manteniendo
+ el último valor de entrada hasta que se recibe otra muestra proveniente
+ del DSP.
+ A esto se le conoce como 
+\emph on
+retención de órden cero
+\emph default
+, el equivalente del proceso de 
+\emph on
+muestra y retención
+\series bold
+\emph default
+ 
+\series default
+del DAC.
+ La 
+\emph on
+retención de orden cero 
+\emph default
+produce una señal con apariencia de de escalera, como se muestra en la 
+\series bold
+Figura
+\series default
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Representación-gráfica-de-1"
+
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Información sacada de 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "chapter_3"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/staircase.png
+	scale 60
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Representación gráfica de una señal producida por el efecto de 
+\emph on
+retención de orden cero
+\series bold
+ 
+\series default
+\emph default
+en el proceso de transformación A/D 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "chapter_3"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Representación-gráfica-de-1"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hay diferentes formas de implementar estas conversiones D/A utilizando component
+es electrónicos discretos y circuitos integrados, por ejemplo
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Para obtener más información sobre este tema, se puede referir a 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "binary_dacs_analogdev"
+
+\end_inset
+
+, de donde se extrajo información de esta sección.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Ponderación binaria: 
+\series default
+Este DAC basado en resistores en modo voltaje es usualmente la implementación
+ más simple utilizada como referencia en los libros de texto (véase 
+\series bold
+Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Estructura-de-un-1"
+
+\end_inset
+
+
+\series default
+).
+ No es inherentemente monolítico y es muy dificil de fabricar de forma eficáz
+ en grandes masas.
+ Además, la salida del DAC utilizando el método de ponderación de voltaje
+ binaria, cambia con el código de entrada.
+ 
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/binary_res.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Estructura-de-un-1"
+
+\end_inset
+
+Estructura de un DAC resistivo de ponderación binaria.
+ Imagen adaptada de: 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ad_resistive_one"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Ponderación binaria capacitiva en aproximación sucesiva: 
+\series default
+El uso de una redistribución de carga capacitiva ofrece la ventaja de comportars
+e como un circuito de muestreo y retención (SHA, por sus siglas en inglés),
+ por lo cual, ningún circuito SHA externo o incluso, alguna construcción
+ monolítica SHA dentro del circuito integrado, es requerido al utilizar
+ esta estructura (véase 
+\series bold
+Figura
+\series default
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:capacitivo_ponderacion_binaria-1"
+
+\end_inset
+
+).
+ 
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/capacitive_dac.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:capacitivo_ponderacion_binaria-1"
+
+\end_inset
+
+Estructura de un DAC capacitivo de ponderación binaria.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+R-2R: 
+\series default
+Una de las estructuras más comunes de DACs es la muy conocida escalera R-2R,
+ la cual consiste en una red de resistores de sólo dos diferentes valores,
+ en una proporción de 2:1.
+ Un DAC de N bits requiere 2N resistores.
+ El voltaje de salida se mantiene siempre con la misma impedancia, (véase
+ 
+\series bold
+Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:DAC-R-2R-red-1"
+
+\end_inset
+
+
+\series default
+).
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/r2r.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:DAC-R-2R-red-1"
+
+\end_inset
+
+DAC R-2R red en escalera.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El voltaje salida de un DAC ideal se muestra en la 
+\series bold
+Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Modelo-en-NGSpice-1"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/ideal_dac.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Modelo-en-NGSpice-1"
+
+\end_inset
+
+Modelo en NGSpice de un DAC ideal de 4 bits.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part*
+Apéndice C: Script en Matlab de la Convolución de dos vectores de forma
+ interactiva.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "src/convolve_example.m"
+lstparams "style={Matlab-editor},basicstyle={\\mlttfamily\\scriptsize}"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

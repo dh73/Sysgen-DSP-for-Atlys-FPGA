@@ -1,0 +1,572 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass extarticle
+\begin_preamble
+\date{}
+\usepackage{setspace}
+\doublespacing
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1.54in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Part
+Antecedentes.
+\end_layout
+
+\begin_layout Section
+Descripción.
+\end_layout
+
+\begin_layout Section
+Tecnología FPGA.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+La Matriz de Compuertas Programables en Campo (FPGA) es un circuito integrado
+ reconfigurable que puede ser utilizado para diseñar circuitos digitales.
+ La configuración de la FPGA es normalmente especificada usando lenguajes
+ de descripción de hardware como SystemVerilog o VHDL y después es traducida,
+ mediante herramientas de síntesis, a un formato binario en el cual se encuentra
+ la información de ruteo e interconexiones necesarias para que el dispositivo
+ ejecute las funciones lógicas para el cual fue diseñado.
+ Esta propiedad de ser reconfigurable y poder ejecutar múltiples tareas
+ tan complejas o sencillas, de forma paralela, ofrece una significante ventaja
+ en muchas aplicaciones como por ejemplo en el diseño de circuitos integrados
+ donde a diferencia del prototipado con ASIC, en donde los diseñadores no
+ tienen la flexibilidad de hacer modificaciones al prototipo después de
+ que el chip ha sido manufacturado, en el FPGA es posible y muy común el
+ modificar algunas partes del circuito después de que el proyecto ha sido
+ concluido.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+La arquitectura de una FPGA se basa en bloques de matrices configurables
+ (CLBs), las cuales proporcionan la lógica programable y una jerarquía de
+ interconexiones reconfigurables para interconectar los CLBs entre sí.
+ Además de estos componentes básicos, las FPGA actuales contienen bloques
+ de memoria internos, controladores para interfaces externas de alta velocidad
+ como memorias DDR y bloques físicos de PCI Express, así como bloques optimizado
+s para operaciones de DSP, microprocesadores físicos y algunas funciones
+ especiales más, que dependen del enfoque o familia de la FPGA, todo esto
+ en el mismo silicio.
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing double
+La tendencia reciente en la tecnología FPGA es realizar arquitecturas de
+ hardware en alto nivel de abstracción, agregarle bloques DSP, procesadores
+ embebidos y transductores de alta velocidad para formar un Sistema Programable
+ en Chip completo (SOPC).
+\end_layout
+
+\begin_layout Standard
+Además, las FPGA toman ventaja del paralelismo natural del hardware, ya
+ que exceden el poder computacional de los Procesadores Digitales de Señales,
+ rompiendo el paradigma de la ejecución secuencial y lograr un mayor rendimiento.
+\end_layout
+
+\begin_layout Standard
+La tecnología FPGA ofrece la flexibilidad de probar y verificar un concepto
+ de diseño sin tener que recurrir al largo proceso de fabricación de un
+ dispositivo perzonalizado como un ASIC.
+ Gracias a esto, se pueden implementar diseños de manera incremental e incluso
+ hacer cambios iterativamente en cuestión de horas en lugar de semanas.
+ También, debido a la creciente oferta de herramientas de diseño en alto
+ nivel, se ha decrementado la curva de aprendizaje y con frecuencia, estas
+ herramientas incluyen valiosas Propiedades Intelectuales (IP) para control
+ y procesamiento de señales avanzadas.
+\end_layout
+
+\begin_layout Standard
+Existe una numerosa cantidad de fabricantes pero sólo dos tipos de FPGAs:
+ Reprogramables (basadas en SRAM o Flash) y Programables una sola vez (OTP).
+ Las FPGAs basadas en SRAM necesitan una memoria de configuración y no retienen
+ los datos cuando son desconectadas de la fuente de alimentación.
+ Las que son basadas en Flash, no necesitan una memoria externa para almacenar
+ la configuración y la pueden mantener aún cuando el dispositivo no está
+ energizado.
+ Anteriormente, las FPGAs basadas en Flash tenían la característica de ser
+ OTP, pero hoy en día existen dispositivos basados en esta tecnología que
+ pueden ser reprogramados tales como las MAX 10 de Altera.
+\end_layout
+
+\begin_layout Standard
+En la próxima sección se cubrirá a detalle, la arquitectura de la familia
+ Spartan6 de Xilinx, ya que es esta la que se encuentra en el kit de desarrollo
+ Atlys de digilent.
+\end_layout
+
+\begin_layout Subsection
+Estructura general de las FPGA.
+\end_layout
+
+\begin_layout Standard
+Como se mencionó anteriormente, las FPGA modernas ofrecen una serie de component
+es que son de gran utilidad al momento de diseñar sistemas digitales.
+ Estos básicamente son:
+\end_layout
+
+\begin_layout Itemize
+Bloques Lógicos Configurables (CLB) para poder implementar funciones lógicas
+ así como registros.
+\end_layout
+
+\begin_layout Itemize
+Memoria en Chip (On-chip memory) que provee almacenamiento de datos dentro
+ del FPGA, generalmente es reducido dado que el área de construcción de
+ memoria en el silicio, tiende a ocupar gran parte de este.
+\end_layout
+
+\begin_layout Itemize
+Propiedades Intelectuales físicas, tales como controladores Ethernet MAC,
+ Transductores, Multiplicadores optimizados, bloques DSP, Procesadores,
+ Controladores de memoria externa DDR, PCIe endpoint físico, etc.
+\end_layout
+
+\begin_layout Itemize
+Recursos de manejo de reloj que generen las frecuencias necesarias para
+ controlar dispositivos como los antes mencionados y que además, puedan
+ ser distribuidos dentro de la FPGA.
+ Esto es muy importante al momento de diseñar sistemas con un alto índice
+ de transferencia de datos.
+\end_layout
+
+\begin_layout Itemize
+Bloques de entrada y salida que comuniquen a la FPGA al mundo exterior.
+\end_layout
+
+\begin_layout Itemize
+Recursos de ruteo para proveer la interconectividad de los Bloques Lógicos
+ Configurables internos y las Propiedades Intelectuales.
+\end_layout
+
+\begin_layout Standard
+La 
+\series bold
+Figura 1
+\series default
+ muestra la arquitectura típica de una FPGA con los bloques de construcción
+ básicos.
+ Es importante mencionar que algunos elementos como las Block RAM, bloques
+ DSP, controladores de memoria, etcétera, que se muestran en la imagen,
+ son construidos sobre el mismo silicio, sin quitarle espacio a los elementos
+ lógicos.
+ También cabe mencionar que, las Tablas de Búsqueda, mejor conocidas como
+ Look Up Tables (LUT) que hay dentro de los bloques lógicos son usadas para
+ crear funciones de lógica combinacional, pero también pueden ser configuradas
+ como memorias RAM o registros de desplazamiento.
+ Esta es una forma muy eficiente de inferir dichos registros sin tener que
+ usar los elementos de almacenamiento.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/fpga_arch.jpeg
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Arquitectura general de las FPGA.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Arquitectura de la familia de FPGAs Xilinx Spartan 6.
+\end_layout
+
+\begin_layout Standard
+La familia Spartan 6 está fuertemente enfocada a proveer capacidades de
+ integración de sistemas con el menor costo posible para aplicaciones de
+ alto volumen, es decir, es una línea de dispositivos que tienen bloques
+ de comunicación de alta velocidad como PCI Express, controladores de memoria
+ externa DDR3 y Ethernet, entre otros.
+ Además de una vasta densidad de elementos lógicos y registros disponibles
+ que van desde 3,840 hasta 147,443 celdas lógicas, dependiendo del dispositivo
+ seleccionado por el diseñador.
+ Consume la mitad de la potencia comparado con la familia anterior de FPGAs
+ Spartan 3, gracias a que están construidas con una avanzada tecnología
+ de 45nm.
+ Esta línea de FPGAs son muy populares ya que son el balance óptimo entre
+ costo, potencia y rendimiento
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Xil_DS160"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+La innovación más notable en estas FPGA es la re estructuración de la arquitectu
+ra interna para implementar LUTs de 6 entradas y doble registro de salida
+ en cada LUT, esto significa que una sola LUT puede implementar funciones
+ lógicas de 
+\begin_inset Formula $2^{6}=64$
+\end_inset
+
+bits, como por ejemplo, una RAM de 64 bits o un registro de desplazamiento
+ de 32 bits.
+ Anteriormente, la arquitectura se basaba en LUTs de 4 entradas.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/6input.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+LUT de seis entradas.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Además, la familia Spartan 6 incluye bloques de memoria RAM (BRAM) de 18Kb,
+ una optimización de dispositivos DSP48A1 los cuales sirven para ejecutar
+ cálculos complejos de manera paralela, controladores físicos de memoria
+ SDRAM, bloques de manejo de reloj internos mejorados para poder generar
+ las frecuencias necesarias para controladores de alta velocidad, así como
+ opciones de configuración y seguridad de IP más avanzados.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/blockd.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama a bloques de una FPGA Spartan6.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Debido a la construcción en 45nm, se han podido incorporar una mayor cantidad
+ de CLBs en esta familia de FPGAs.
+ Los CLBs son los recursos lógicos principales necesarios para implementar
+ circuitos secuenciales y combinatorios.
+ Cada elemento CLB es conectado a una matriz de switches programables para
+ acceder a otra matriz de ruteo como se muestra en la Figura 4.
+ Cada elemento CLB contiene un par de SLICEs.
+ Estos dos SLICEs no tienen una conexión directa entre si.
+ Cada SLICE tiene un bloque de acarreo en cadena (carry chain).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/spartan_arch.png
+	display false
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Bloque Lógico Configurable.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cada SLICE contiene cuatro LUTs, cuatro elementos de almacenamiento (flip
+ flop), un amplio número de multiplexores y un bloque de acarreo lógico.
+ Esos elementos son usados por todos los SLICEs para proveer las funciones
+ lógicas, aritméticas y algunos tipos de memoria ROM.
+ Adicionalmente, algunos SLICEs pueden implementar dos funciones adicionales:
+ almacenar datos al adoptar la función de RAM distribuida y desplazar datos
+ adoptando la función de registro de desplazamiento de 32 bits.
+ Son llamados SLICEM (por Memoria), los comunes son llamados SLICEL (Por
+ Lógico).
+\end_layout
+
+\begin_layout Standard
+La Figura describe con detalle la arquitectura de cada SLICE en un CLB.
+ Los multiplexores antes mencionados sirven para proveer la conectividad
+ entre los recursos lógicos que rodean a los CLBs, mientras que la red de
+ elementos de acarreo en cadena dentro de los CLBs, hacen la función de
+ ruteo para generar sumadores lógicos más eficientes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/slice_struct.png
+	scale 90
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Estructura detallada de un SLICE.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Los dispositivos Spartan 6 cuentan con un gran número de memorias BRAM de
+ 18Kb, las cuales están construidas por dos memorias controladas independienteme
+nte de 9Kb cada una.
+ Estas memorias son colocadas en columnas, el número total de ellas depende
+ del tamaño del dispositivo Spartan 6.
+ Las memorias BRAM se pueden utilizar en cascada para habilitar implementaciones
+ de mayor tamaño de Kilo bits, con un pequeño impacto en el timing.
+ La Figura 6 muestra una BRAM en cascada con dos distintos puertos de lectura
+ y escritura.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/bram_block.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Block RAM de doble puerto.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Flujo de diseño DSP en FPGA.
+\end_layout
+
+\begin_layout Section
+Herramientas de Síntesis de Alto Nivel.
+\end_layout
+
+\end_body
+\end_document

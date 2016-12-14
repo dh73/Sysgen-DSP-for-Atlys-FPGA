@@ -1,0 +1,219 @@
+@techreport{Xil_DS160,
+	author = {{Technical Documentation}, Xilinx},
+	journal = {Spartan-6 Family Overview Product Specification},
+	month = oct,
+	number = {DS160 (v2.0)},
+	pages = {1, 2},
+	title = {{Spartan-6 Family Overview}},
+	year = {2011}
+}
+
+@manual{x6vs,
+	author = {{Peter Alfke}, Xilinx Inc.},
+	booktitle = {{Xilinx Virtex-6 and Spartan-6 FPGA Families}},
+	journal = {Hot Chips 21},
+	month = {Aug},
+	pages = {20},
+	title = {{Xilinx Virtex-6 and Spartan-6 FPGA Families}},
+	year = {2009}
+}
+
+@manual{clb_ov,
+	booktitle = {{Spartan-6 FPGA Configurable Logic Block User Guide}},
+	editor = {{Xilinx Inc.}},
+	journal = {UG384 (v1.1)},
+	month = feb,
+	series = {{Spartan-6 Family Overview}},
+	title = {{Spartan-6 FPGA Configurable Logic Block User Guide}},
+	year = {2010}
+}
+
+@techreport{Matlab_overview,
+	author = {{The Mathworks Company}},
+	booktitle = {{MATLAB Getting Started Guide}},
+	journal = {MATLAB Getting Started Guide},
+	month = oct,
+	title = {{MATLAB Getting Started Guide}},
+	volume = {I},
+	year = {2008}
+}
+
+@misc{analog_devices,
+	author = {{Analog Devices}},
+	journal = {A Beginner's Guide to Digital Signal Processing (DSP)},
+	month = may,
+	title = {{A Beginner's Guide to Digital Signal Processing (DSP)}},
+	year = {2015}
+}
+
+@dspguide{New1,
+	author = {Smith, Steven W.},
+	booktitle = {{The Scientist and Engineer's Guide to Digital Signal Processing Second Edition}},
+	chapter = {1},
+	edition = {2nd},
+	isbn = {The Scientist and Engineer's Guide to Digital Signal Processing},
+	month = may,
+	pages = {22, 23, 24},
+	title = {{The Scientist and Engineer's Guide to Digital Signal Processing}},
+	year = {2014}
+}
+
+@book{dsp_introduction,
+	author = {Orfanidis, Sophocles J.},
+	booktitle = {{Introducci\'{o}n al procesamiento de Se\~{n}ales}},
+	chapter = {1},
+	edition = {1},
+	isbn = {0-13-209172-0.},
+	month = mar,
+	organization = {Pearson Education},
+	pages = {6},
+	publisher = {Pearson Education},
+	school = {Rutgers University},
+	title = {{Introducci\'{o}n al procesamiento de Se\~{n}ales}},
+	year = {2009}
+}
+
+@book{kehtarnavaz_digital_2010,
+	abstract = {Field Programmable Gate Arrays (FPGAs) are increasingly becoming the platform of choice to implement DSP algorithms. This book is designed to allow DSP students or DSP engineers to achieve FPGA implementation of DSP algorithms in a one-semester DSP laboratory course or in a short design cycle time based on the LabVIEW FPGA Module. Features: - The first DSP laboratory book that uses the FPGA platform instead of the DSP platform for implementation of DSP algorithms - Incorporating introductions to LabVIEW and VHDL - Lab experiments covering FPGA implementation of basic DSP topics including convolution, digital filtering, fixed-point data representation, adaptive filtering, frequency domain processing - Hardware FPGA implementation applications including wavelet transform, software-defined radio, and MP3 player - Website providing downloadable LabVIEW FPGA codes},
+	author = {Kehtarnavaz, Nasser and Mahotra, Sidharth},
+	isbn = {978-1-59942-550-4},
+	keywords = {Computers / Computer Engineering, Technology \& Engineering / Electrical, Technology \& Engineering / Electronics / Circuits / Integrated, Technology \& Engineering / Signals \& Signal Processing},
+	language = {en},
+	publisher = {Universal-Publishers},
+	shorttitle = {Digital {Signal} {Processing} {Laboratory}},
+	title = {{Digital {Signal} {Processing} {Laboratory}: {LabVIEW}-{Based} {FPGA} {Implementation}}},
+	year = {2010}
+}
+
+@inbook{Tratamiendo_senales,
+	author = {Proakes, John G. and Manolakis, Dimitris G.},
+	booktitle = {{Tratamiento digital de se\~{n}ales}},
+	chapter = {1},
+	edition = {4},
+	organization = {Pearson Education},
+	pages = {966},
+	publisher = {Pearson Education},
+	title = {{Tratamiento digital de se\~{n}ales}},
+	year = {2007}
+}
+
+@proceedings{EECS_247,
+	author = {{B. Boser}},
+	edition = {1},
+	institution = {EECS Berkeley},
+	journal = {EECS Lecture 8: Sampling,},
+	month = may,
+	number = {8},
+	pages = {16},
+	school = {Berkeley},
+	series = {{AD/DSP Lecture 8}},
+	title = {{Sampling and Aliasing}},
+	year = {2002}
+}
+
+@book{chapter_3,
+	author = {Smith, Steven W.},
+	booktitle = {{The Scientist and Engineer's Guide to Digital Signal Processing Second Edition}},
+	chapter = {3},
+	edition = {2nd},
+	isbn = {The Scientist and Engineer's Guide to Digital Signal Processing},
+	month = may,
+	pages = {38, 39, 40, 41},
+	title = {{The Scientist and Engineer's Guide to Digital Signal Processing, chapter 3}},
+	year = {2014}
+}
+
+@techreport{ad_resistive_one,
+	author = {Smith, B. D.},
+	booktitle = {{Proceedings of the I. R. E.}},
+	journal = {Proceedings of the I. R. E.},
+	month = aug,
+	pages = {1053--1058},
+	title = {{Coding by Feedback Methods}},
+	volume = {41},
+	year = {1993}
+}
+
+@manual{binary_dacs_analogdev,
+	abstract = {While the string DAC and thermometer DAC architectures are by far the simplest, they are certainly not the most efficient when high resolutions are required. Binary-weighted DACs utilize one switch per bit and were first developed in the 1920s (see References 1, 2, and 3). Since then, the architecture has remained popular and forms the backbone for modern precision as well as high-speed DACs.},
+	author = {Kester, Walt},
+	booktitle = {{Basic DAC Architectures II: Binary DACs}},
+	chapter = {I},
+	edition = {REV A},
+	journal = {MT-015 TUTORIAL},
+	month = oct,
+	organization = {Analog Devices},
+	pages = {1--9},
+	publisher = {Analog Devices},
+	title = {{Basic DAC Architectures II: Binary DACs}},
+	year = {2008}
+}
+
+@article{spice_model,
+	abstract = {Data conversion devices are used to convert real world analog signals into a digital representation, a useful technique in a number of areas of signal processing. The basic circuit in the data conversion field is the digital to analog converter (DAC) which translates a digital representation of a signal into its analog equivalent. Many analog to digital converter (ADC) circuits use the DAC as a component in the overall system. DAC circuits are characterized by a number of parameters such as dynamic range (DR), resolution (RES), full scale range (FSR), signal to noise ratio (SNR), offset error, gain error and nonlinearity [1]. Many of these parameters are functions of the number of bits used to represent the analog signal (namely DR and SNR), others are based on the actual circuit construction (errors and linearity). Figure 1 shows an idealized example of the various static errors (offset, gain and linearity) that can be encountered with a DAC [1]. In the figure, the bold line represents the ideal DAC transfer characteristic. Gain error, as the name implies, causes an increase (or a decrease) in the full scale output value of the circuit. Offset error describes a shift in the transfer characteristic from its ideal case. Linearity describes the deviation from the ideal case.},
+	author = {Caverly, Robert H.},
+	booktitle = {{4 BIT CMOS CHARGE SCALING DIGITAL TO ANALOG CONVERTER}},
+	institution = {Department of Electrical and Computer Engineering},
+	journal = {4 BIT CMOS CHARGE SCALING DIGITAL TO ANALOG CONVERTER},
+	month = aug,
+	pages = {64--70},
+	school = {University of Massachusetts Dartmouth},
+	title = {{Analog Design Resource Kit Tutorial 6}},
+	year = {2014}
+}
+
+@manual{eece_matlab,
+	author = {Bashashati, Ali},
+	booktitle = {{MATLAB Exercise 2}},
+	chapter = {1},
+	edition = {1},
+	institution = {EECE},
+	month = oct,
+	pages = {1--2},
+	school = {Electrical, Electronic and Computer Engineering},
+	title = {{EECE 359}},
+	volume = {1},
+	year = {2009}
+}
+
+@book{dspguide_conv,
+	author = {Smith, Steven W.},
+	booktitle = {{The Scientist and Engineer's Guide to Digital Signal Processing Second Edition}},
+	chapter = {6},
+	edition = {2nd},
+	isbn = {The Scientist and Engineer's Guide to Digital Signal Processing},
+	month = may,
+	pages = {107--122},
+	title = {{The Scientist and Engineer's Guide to Digital Signal Processing}},
+	year = {2014}
+}
+
+@book{fir_complete,
+	author = {Oppenheim, Alan V. and Schafer, Ronald W. and Buck, John R.},
+	booktitle = {{Discrete-Time Signal Processing 2nd Edition}},
+	chapter = {7 - Filter Design Techniques},
+	edition = {2nd},
+	isbn = {0-13-754920-2},
+	month = oct,
+	organization = {Prentice-Hall},
+	pages = {439 a 465},
+	publisher = {Prentice-Hall},
+	series = {{Signal processing - Mathematics}},
+	title = {{Filter Design Techniques}},
+	year = {1999}
+}
+
+@book{iir_0,
+	author = {Schlichttharle, D.},
+	booktitle = {{Design of IIR Filters}},
+	chapter = {6},
+	edition = {2nd},
+	isbn = {978-3-642-14324-3},
+	month = aug,
+	organization = {Springer},
+	pages = {359,360,361},
+	publisher = {Springer},
+	title = {{Digital Filters, Basics and Design.}},
+	year = {2000}
+}
+
