@@ -2406,7 +2406,14 @@ status collapsed
 
 \begin_layout Plain Layout
 Kit de desarrollo Atlys Spartan-6 de Digilent, obtenida del sitio web del
- fabricante.
+ fabricante
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Digilent_atlys"
+
+\end_inset
+
+.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -2578,7 +2585,111 @@ Simulink.
 \end_layout
 
 \begin_layout Standard
+MATLAB tiene un toolbox adicional llamado Simulink que proporciona el modelado,
+ la simulación y el análisis de sistemas dinámicos, dentro de un entorno
+ gráfico.
+ Este sofwtare permite el diseño modular y jerárjico, ayudando al usuario
+ en el manejo y creación de sistemas complejos que son conceptualmente simplific
+ados.
+ 
+\end_layout
 
+\begin_layout Standard
+Debido a este amplio uso, la capacidad de diseñar y verificar las implementacion
+es de hardware desde el mismo ambiente de Simulink, se traduce en una mayor
+ ventaja para el prototipado rápido de nuevas teorías y diseños.
+ Añadiendo las múltiples capas de software y librerias que habilitan la
+ comunicación del ambiente gráfico de Simulink con el mundo exterior, proceso
+ conocido como simulación de 
+\emph on
+hardware-in-the-loop
+\emph default
+ (co simulación con módulos de adquisición de datos en hardware, que estimulan
+ entradas y/o envian resultados al modelo de Simulink), proporciona un enorme
+ beneficio adicional en el diseño y verificación del algoritmo sin arriesgar
+ pérdidas de hardware o errores de implementación
+\begin_inset CommandInset citation
+LatexCommand cite
+key "practical_dsp_algo"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/simulink_environment.eps
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Entorno de modelado gráfico Simulink de MATLAB.
+ En este ejemplo se puede observar, como se lleva a cabo la ejecución de
+ un algoritmo de detección de elementos en una imagen, utilizando solamente
+ 8 bloques del 
+\emph on
+Image Processing Toolbox
+\emph default
+ de Simulink.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sin embargo, el comportamiento de la simulación matemática de Simulink en
+ comparación con la implementación en el hardware, no es exacto.
+ Simulink permite que calculos de punto flotante complejos sean completados
+ en un solo paso 
+\begin_inset Quotes eld
+\end_inset
+
+virtual
+\begin_inset Quotes erd
+\end_inset
+
+, mediante el proceso de hacer más lenta la simulación para permitir cálculos
+ precisos,
+\end_layout
+
+\begin_layout Standard
+En comparación, la implementación en hardware con FPGA requiere un paso
+ de tiempo fijo pre-definido que funciona en tiempo real, mientras que las
+ tasas de muestreo de información se pueden ajustar en diferentes puntos
+ dentro del hardware para permitir la ejecución asíncrona.
+ Cada uno de estos procesos se ejecutan de manera coherente con un paso
+ de tiempo consistente y una longitud de palabra fija.
+ La conversión entre estas dos formas de ejecución, es decir, la simulación
+ del algoritmo en Simulink y la ejecución del mismo en elementos de hardware,
+ debe hacerse de una manera sistemática en donde se tenga en cuenta estas
+ diferencias de derivación.
 \end_layout
 
 \begin_layout Subsection

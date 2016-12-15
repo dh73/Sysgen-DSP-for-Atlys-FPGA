@@ -252,14 +252,14 @@
 
 @techreport{Digilent_atlys,
 	author = {Digilent and others},
-	booktitle = {{Atlys™ FPGA Board Reference Manual}},
+	booktitle = {{Atlys FPGA Board Reference Manual}},
 	chapter = {I},
 	month = apr,
-	number = {Atlys™ FPGA Board Reference Manual},
+	number = {Atlys FPGA Board Reference Manual},
 	organization = {Digilent},
 	pages = {1-10},
 	publisher = {Digilent},
-	title = {{Atlys™ FPGA Board Reference Manual}},
+	title = {{Atlys FPGA Board Reference Manual}},
 	volume = {502-178},
 	year = {2016}
 }

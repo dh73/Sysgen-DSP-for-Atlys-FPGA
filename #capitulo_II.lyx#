@@ -2439,6 +2439,10 @@ Plataformas de Software para el diseño de sistemas DSP.
 Introducción a MATLAB y Simulink.
 \end_layout
 
+\begin_layout Subsubsection
+MATLAB.
+\end_layout
+
 \begin_layout Standard
 \noindent
 El nombre de esta herramienta proviene de recortar y unir las palabras 
@@ -2565,7 +2569,16 @@ Los algoritmos diseñados en este paquete de software, pueden ser convertidos
 
 \begin_layout Itemize
 Matlab en conjunto con simulink, tienen soporte para la herramienta de diseño
- DSP de Xilinx, lo cual convierte a este ambiente en uno de los 
+ DSP de Xilinx, lo cual convierte a este ambiente en uno de los más atractivos
+ en este ámbito.
+\end_layout
+
+\begin_layout Subsubsection
+Simulink.
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \begin_layout Subsection

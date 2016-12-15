@@ -203,3 +203,17 @@
 	year = {1999}
 }
 
+@book{iir_0,
+	author = {Schlichttharle, D.},
+	booktitle = {{Design of IIR Filters}},
+	chapter = {6},
+	edition = {2nd},
+	isbn = {978-3-642-14324-3},
+	month = aug,
+	organization = {Springer},
+	pages = {359,360,361},
+	publisher = {Springer},
+	title = {{Digital Filters, Basics and Design.}},
+	year = {2000}
+}
+
