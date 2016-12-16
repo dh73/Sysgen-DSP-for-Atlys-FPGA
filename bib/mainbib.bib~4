@@ -217,3 +217,50 @@
 	year = {2000}
 }
 
+@inbook{ECE423_lectures_IIR,
+	author = {Barnes, James and others},
+	booktitle = {{IIR Filter Representations -- Difference Equations, h[n], H(z)}},
+	chapter = {1},
+	edition = {1},
+	institution = {Colorado State University Department of Electrical and Computer Engineering},
+	journal = {IIR Filter Representations -- Difference Equations, h[n], H(z)},
+	month = mar,
+	number = {Lecture 7 - IIR Filters},
+	organization = {Colorado State University Department of Electrical and Computer Engineering},
+	pages = {21},
+	series = {{ECE423}},
+	title = {{IIR Filter Representations -- Difference Equations, h[n], H(z)}},
+	year = {2014}
+}
+
+@techreport{Xilinx_IIR_impl,
+	abstract = {A large percentage of filters implemented in the digital domain are Finite Impulse Response (FIR) filters. These filters are used over a wide range of sample rates and are well supported in terms of tools, software, and IP cores. Another type of digital filter is the Infinite Impulse Response (IIR) filter, which tends not to be so well supported and is generally used in the lower sample rates, that is, less than 200 kHz. The IIR filter, known as a recursive filter, uses feedback to compute outputs. This white paper covers the different kinds of IIR filters and structures, and, with the use of The MathWorks{\textregistered} tools, shows how these structures can be mapped to the Xilinx{\textregistered} FPGA architecture. A final consideration is how to pipeline IIR filters to support higher sample rates.},
+	author = {Francis, Michael and others},
+	chapter = {I-III},
+	edition = {1.2},
+	journal = {WP330},
+	month = aug,
+	number = {330},
+	organization = {Xilinx},
+	pages = {1--19},
+	publisher = {Xilinx, Inc.},
+	series = {{Xilinx Technical Whitepaper}},
+	title = {{Infinite Impulse Response Filter Structures in Xilinx FPGAs}},
+	volume = {1.2},
+	year = {2009}
+}
+
+@techreport{Digilent_atlys,
+	author = {Digilent and others},
+	booktitle = {{Atlys™ FPGA Board Reference Manual}},
+	chapter = {I},
+	month = apr,
+	number = {Atlys™ FPGA Board Reference Manual},
+	organization = {Digilent},
+	pages = {1-10},
+	publisher = {Digilent},
+	title = {{Atlys™ FPGA Board Reference Manual}},
+	volume = {502-178},
+	year = {2016}
+}
+

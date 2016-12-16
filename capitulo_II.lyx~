@@ -2689,11 +2689,221 @@ En comparación, la implementación en hardware con FPGA requiere un paso
  La conversión entre estas dos formas de ejecución, es decir, la simulación
  del algoritmo en Simulink y la ejecución del mismo en elementos de hardware,
  debe hacerse de una manera sistemática en donde se tenga en cuenta estas
- diferencias de derivación.
+ diferencias de derivación
+\begin_inset CommandInset citation
+LatexCommand cite
+key "vehicle_sysgen_xilinx"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
 Xilinx System Generator for DSP.
+\end_layout
+
+\begin_layout Subsubsection
+Descripción general.
+\end_layout
+
+\begin_layout Standard
+El toolbox incluido en la suite de Xilinx ISE, llamado 
+\emph on
+System Generator for DSP 
+\emph default
+o en su contracción, 
+\emph on
+Sysgen
+\emph default
+, está pensado para resolver el problema de la interfáz entre el mundo de
+ la simulación matemática de Simulink, y el mundo tangible del hardware
+ en FPGA.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+System Generator
+\emph default
+ es una herramienta de modelado a nivel sistema que facilita el diseño de
+ hardware en FPGA
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Se recomienda leer la documentación de Xilinx: 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+System Generator for DSP, User Guide (UG640)
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+ para tener una mayor referencia a todos los conceptos técnicos que intervienen
+ en esta metodología de diseño y que no son tocados por este documento de
+ investigación.
+\end_layout
+
+\end_inset
+
+.
+ Esta herramienta extiende la funcionalidad de Simulnk de muchas maneras,
+ con el objetivo de proporcionar un entorno de modelado bastante adecuado
+ para el desarrollo de hardware.
+ Este toolbox proporciona abstracciones de alto nivel que se compilan automática
+mente en un FPGA, facilitando la implementación de algoritmos complejos
+ en donde intervengan, por ejemplo, hasta varios bloques de hardware complejos
+ en diferentes dominios de reloj.
+ También proporciona acceso a recursos o macros primitivas subyacentes del
+ FPGA a través de abstracciones de bajo nivel, lo que permite la construcción
+ de diseños altamente eficientes
+\begin_inset CommandInset citation
+LatexCommand cite
+key "sysgen_user_guide"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/sysgen_flow.eps
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Flujo de diseño con System Generator de Xilinx, imagen obtenida del documento
+ 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+Wireless communications: from systems to silicon
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+, del autor Raghu Rao.
+ Wireless Systems Group, Xilinx Inc, 2008.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Syst
+\emph default
+em Generator
+\emph on
+ 
+\emph default
+añade librerías o 
+\emph on
+blocksets
+\emph default
+ a la interfáz de Simulink, estos se pueden conectar a los demás toolboxes
+ que vienen ya incluidos en la suite de Matlab para generar modelos funcionales
+ de sistemas dinámicos.
+ Estos bloques proveen abstracciones de funciones matemáticas, lógicas,
+ utilización de memorias y funciones DSP que pueden ser facilmente utilizados
+ en el diseño de sistemas complejos y sofisticados.
+ 
+\end_layout
+
+\begin_layout Standard
+Una de las características más importantes de este toolbox es que, permite
+ implementar algoritmos haciendo uso de varios ingredientes.
+ Por ejemplo, se pueden integrar bloques de código en 
+\emph on
+Verilog 
+\emph default
+o 
+\emph on
+VHDL, 
+\emph default
+así como funciones pre diseñadas de matlab (scripts .m) dentro de las conexiones
+ de Simulink, sin afectar la ejecución de simulación y más importante, garantiza
+ndo la síntesis de todos estos elementos en el FPGA.
+ Además, este 
+\emph on
+blockset
+\emph default
+ trabaja con 
+\series bold
+\emph on
+precisión de bits
+\series default
+\emph default
+ (
+\emph on
+bit-accurate
+\emph default
+) y 
+\series bold
+\emph on
+precisión de ciclo
+\emph default
+ 
+\series default
+(
+\emph on
+cycle-accurate).
+ 
+\emph default
+La 
+\series bold
+\emph on
+precisión de bits
+\series default
+\emph default
+ produce valores en Simulink que coinciden con los valores producidos en
+ el hardware; la 
+\series bold
+\emph on
+presición de ciclo
+\series default
+\emph default
+ produce los valores correspondientes en el tiempo correspondiente.
+\end_layout
+
+\begin_layout Subsubsection
+Co-Diseño de Hardware/Software  
 \end_layout
 
 \begin_layout Subsection
