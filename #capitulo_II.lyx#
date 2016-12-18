@@ -2729,7 +2729,7 @@ System Generator
  es una herramienta de modelado a nivel sistema que facilita el diseño de
  hardware en FPGA
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Se recomienda leer la documentación de Xilinx: 
@@ -2738,14 +2738,15 @@ Se recomienda leer la documentación de Xilinx:
 \begin_inset Quotes eld
 \end_inset
 
-System Generator for DSP, User Guide (UG
+System Generator for DSP, User Guide (UG640)
 \begin_inset Quotes erd
 \end_inset
 
 
 \emph default
- para tener una mayor referencia a todos los conceptos que intervienen en
- esta metodología de diseño y que no son tocados por 
+ para tener una mayor referencia a todos los conceptos técnicos que intervienen
+ en esta metodología de diseño y que no son tocados por este documento de
+ investigación.
 \end_layout
 
 \end_inset
@@ -2846,6 +2847,43 @@ blocksets
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/sysgen_blocks.eps
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Una de las características más importantes de este toolbox es que, permite
  implementar algoritmos haciendo uso de varios ingredientes.
  Por ejemplo, se pueden integrar bloques de código en 
@@ -2899,6 +2937,44 @@ presición de ciclo
 \series default
 \emph default
  produce los valores correspondientes en el tiempo correspondiente.
+\end_layout
+
+\begin_layout Subsubsection
+Co-Diseño de Hardware/Software en el ambiente de Xilinx System Generator
+ for DSP.
+ 
+\end_layout
+
+\begin_layout Standard
+Es posible que el flujo de diseño con esta herramienta de alto nivel no
+ sea tan claro a primera instancia, más para aquellos que tienen experiencia
+ trabajando con los paquetes de software de Matlab y Xilinx por separado.
+ Existen varias formas en las que 
+\emph on
+Sysgen
+\emph default
+ puede se sintetizado en el kit Atlys, algunos flujos representan ciertas
+ ventajas sobre los demás, o simplemente son mejores formas de lograr el
+ objetivo deseado de una manera más rápida.
+ Los flujos de implementación soportados por este toolbox son:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Exploración de Algoritmos mediante simulación
+\emph on
+ Hardware-in-the-Loop: 
+\series default
+\emph default
+Este flujo está pensado para llevar a cabo una simulación en tiempo real
+ de un prototipado o un análisis realista del desempeño de un sistema bajo
+ estudio.
+ El bloque de Simulink es sintetizado con una capa extra de hardware que
+ le brinda la capacidad al FPGA de enviar y recibir estímulos directamente
+ del ambiente de simulación, mostrando así una respuesta tangible y cercana
+ a la realidad.
+ que el hardware podría brindar.
 \end_layout
 
 \begin_layout Subsection

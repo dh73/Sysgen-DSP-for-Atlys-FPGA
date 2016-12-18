@@ -7,8 +7,6 @@
 \textclass extarticle
 \begin_preamble
 \date{}
-%\usepackage{setspace}
-%\doublespacing
 \usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
 \usepackage{listings}
 \usepackage{color}
@@ -20,6 +18,8 @@
 \newcommand{\z}{\mathpzc{z}}
 \newcommand{\TikZ}{Ti\textit{k}Z\xspace}
 \usepackage{amsmath}
+
+\usepackage{microtype}
 \end_preamble
 \use_default_options true
 \begin_modules
@@ -329,7 +329,7 @@ filename "apendices.lyx"
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 bibfiles "bib/mainbib"
-options "ieeetr"
+options "bibtotoc,plainnat"
 
 \end_inset
 
