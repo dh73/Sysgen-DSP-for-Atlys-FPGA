@@ -2851,13 +2851,13 @@ blocksets
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename img/sysgen_blocks.eps
-	scale 40
+	scale 60
 
 \end_inset
 
@@ -2971,13 +2971,145 @@ Exploración de Algoritmos mediante simulación
 \series default
 \emph default
 Este flujo está pensado para llevar a cabo una simulación en tiempo real
- de un prototipado o un análisis realista del desempeño de un sistema bajo
- estudio.
+ de un prototipado o incluso de un análisis realista del desempeño de un
+ sistema bajo estudio.
  El bloque de Simulink es sintetizado con una capa extra de hardware que
  le brinda la capacidad al FPGA de enviar y recibir estímulos directamente
- del ambiente de simulación, mostrando así una respuesta tangible y cercana
- a la realidad.
- que el hardware podría brindar.
+ al ambiente de simulación, mostrando así una respuesta tangible y cercana
+ a la realidad que el hardware podría brindar.
+ En este modo, la información se puede enviar a través del puerto JTAG o
+ ethernet, dependiendo de la velocidad de tranmisión requerida.
+ 
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/hw_cosim.eps
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama a bloques del flujo de implementación mediante 
+\emph on
+Hardware-in-the-loop.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Diseño de una IP como parte de un prototipo más grande: 
+\series default
+Se puede empaquetar el sistema previamente modelado y simulado en Sysgen/Simulin
+k para después ser instanciado como parte de un diseño más grande.
+ 
+\emph on
+Sysgen 
+\emph default
+tiene bastante limitaciones a la hora de trabajar con interfaces que necesitan
+ estrictos requerimientos de 
+\emph on
+timing
+\emph default
+.
+ Por ejemplo, para trabajar con interfaces ADC/DAC que generan información
+ a grandes frecuencias de reloj, es mejor utilizar este flujo y combinar
+ el modelo de Sysgen con las demás partes necesarias del prototipo, en un
+ solo proyecto.
+ Sysgen puede crear un empaquetado en Verilog o VHDL para sintetizar y/o
+ simular un modelo de forma independiente.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Implementación de un diseño completo: 
+\series default
+La suite de Xilinx contiene herramientas para distintos enfoques, por ejemplo,
+ síntesis lógica con lenguajes de descripción de hardware, sistemas embebidos
+ basados en la familia de procesadores 
+\emph on
+MicroBlaze/PicoBlaze
+\emph default
+, catálogos de IPs para una gran variedad de sistemas ingenieriles y diseño
+ de sistemas en lenguajes de alto nivel.
+ Sysgen puede trabajar con todos y cada uno de esos enfoques, para lograr
+ un diseño mucho más estable en un menor tiempo.
+ 
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/edk_export.eps
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Ejemplo de implementación de un diseño completo utilizando el toolbox de
+ Sysgen en Simulink.
+ Imagen tomada de la guía de usuario 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+System Generator for DSP User Guide, UG640
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
