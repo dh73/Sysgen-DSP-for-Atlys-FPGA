@@ -65,7 +65,7 @@ shapepar
 \use_package stmaryrd 1
 \use_package undertilde 1
 \cite_engine natbib
-\cite_engine_type authoryear
+\cite_engine_type numerical
 \biblio_style plain
 \use_bibtopic false
 \use_indices false

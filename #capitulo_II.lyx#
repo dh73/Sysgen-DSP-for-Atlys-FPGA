@@ -2719,6 +2719,31 @@ Sysgen
 , está pensado para resolver el problema de la interfáz entre el mundo de
  la simulación matemática de Simulink, y el mundo tangible del hardware
  en FPGA.
+ 
+\end_layout
+
+\begin_layout Standard
+El desarrollo de algoritmos DSP implica transformar las muestras de entrada
+ provenientes de la etapa de conversión A/D, utilizando numerosas operaciones
+ matemáticas complejas sobre dichas señales como la convolución o la aplicación
+ de alguna transformación como la 
+\series bold
+\emph on
+Transformada Rápida de Fourier (FFT)
+\series default
+\emph default
+ y además, es necesario tener el equipo de laboratorio requerido para para
+ poder visualizar los espectros de las señales a través de todo el diseño
+\begin_inset CommandInset citation
+LatexCommand cite
+key "using_xilinx_fpgas_dsp"
+
+\end_inset
+
+.
+ Todo este proceso se vuelve una labor muy intensa cuando se utilizan técnicas
+ tradicionales de RTL en un FPGA.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -3052,15 +3077,165 @@ timing
 Implementación de un diseño completo: 
 \series default
 La suite de Xilinx contiene herramientas para distintos enfoques, por ejemplo,
- sistemas embebidos basados en la familia de procesadores 
+ síntesis lógica con lenguajes de descripción de hardware, sistemas embebidos
+ basados en la familia de procesadores 
 \emph on
-Micro
+MicroBlaze/PicoBlaze
 \emph default
+, catálogos de IPs para una gran variedad de sistemas ingenieriles y diseño
+ de sistemas en lenguajes de alto nivel.
+ Sysgen puede trabajar con todos y cada uno de esos enfoques, para lograr
+ un diseño mucho más estable en un menor tiempo.
  
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/edk_export.eps
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Ejemplo de implementación de un diseño completo utilizando el toolbox de
+ Sysgen en Simulink.
+ Imagen tomada de la guía de usuario 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+System Generator for DSP User Guide, UG640
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\emph default
+Se puede observar como el procesador Microblaze, puede transmitir y recibir
+ impulsos del modelo en Sysgen.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
 Introducción a Xilinx ISE y PlanAhead.
+\end_layout
+
+\begin_layout Subsection
+Reseña de Xilinx ISE.
+\end_layout
+
+\begin_layout Standard
+El sistema de Xilinx ISE es un entorno de diseño integrado que consiste
+ en un conjunto de programas para crear (o capturar), simular e implementar
+ diseños digitales en un dispositivo FPGA o CPLD de Xilinx únicamente.
+ Todas las herramientas contenidas en este entorno utilizan una interfáz
+ gráfica de usuario que permiten que todos los programas se ejecuten desde
+ la barra de herramientas
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ise_tut_0"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Este entorno gráfico mostrado en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Interfáz-principal-del"
+
+\end_inset
+
+ es conocido como 
+\emph on
+Project Navigator, 
+\emph default
+desde esta interfáz se controlan todos los aspectos del diseño, desde la
+ creación de un proyecto y la selección de la familia de FPGA que se va
+ a utilizar, hasta la edición de archivos de descripción de hardware, diseño
+ a base de captura de esquemático y verificación del diseño, sin salir de
+ la interfáz.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/project_navigator.eps
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Interfáz principal del 
+\emph on
+ISE Project Navigator
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Interfáz-principal-del"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Xilinx ISE guía al diseñador en el flujo de construcción en FPGA utilizando
+ el flujo cono
 \end_layout
 
 \begin_layout Standard

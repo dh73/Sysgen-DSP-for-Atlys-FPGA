@@ -2719,6 +2719,31 @@ Sysgen
 , está pensado para resolver el problema de la interfáz entre el mundo de
  la simulación matemática de Simulink, y el mundo tangible del hardware
  en FPGA.
+ 
+\end_layout
+
+\begin_layout Standard
+El desarrollo de algoritmos DSP implica transformar las muestras de entrada
+ provenientes de la etapa de conversión A/D, utilizando numerosas operaciones
+ matemáticas complejas sobre dichas señales como la convolución o la aplicación
+ de alguna transformación como la 
+\series bold
+\emph on
+Transformada Rápida de Fourier (FFT)
+\series default
+\emph default
+ y además, es necesario tener el equipo de laboratorio requerido para para
+ poder visualizar los espectros de las señales a través de todo el diseño
+\begin_inset CommandInset citation
+LatexCommand cite
+key "using_xilinx_fpgas_dsp"
+
+\end_inset
+
+.
+ Todo este proceso se vuelve una labor muy intensa cuando se utilizan técnicas
+ tradicionales de RTL en un FPGA.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -2984,7 +3009,7 @@ Este flujo está pensado para llevar a cabo una simulación en tiempo real
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -3066,7 +3091,7 @@ MicroBlaze/PicoBlaze
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -3096,6 +3121,10 @@ System Generator for DSP User Guide, UG640
 \end_inset
 
 .
+ 
+\emph default
+Se puede observar como el procesador Microblaze, puede transmitir y recibir
+ impulsos del modelo en Sysgen.
 \end_layout
 
 \end_inset
@@ -3114,6 +3143,243 @@ System Generator for DSP User Guide, UG640
 
 \begin_layout Subsection
 Introducción a Xilinx ISE y PlanAhead.
+\end_layout
+
+\begin_layout Subsection
+Reseña de Xilinx ISE.
+\end_layout
+
+\begin_layout Standard
+El sistema de Xilinx ISE es un entorno de diseño integrado que consiste
+ en un conjunto de programas para crear (o capturar), simular e implementar
+ diseños digitales en un dispositivo FPGA o CPLD de Xilinx únicamente.
+ Todas las herramientas contenidas en este entorno utilizan una interfáz
+ gráfica de usuario que permiten que todos los programas se ejecuten desde
+ la barra de herramientas
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ise_tut_0"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Este entorno gráfico mostrado en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Interfáz-principal-del"
+
+\end_inset
+
+ es conocido como 
+\emph on
+Project Navigator, 
+\emph default
+desde esta interfáz se controlan todos los aspectos del diseño, desde la
+ creación de un proyecto y la selección de la familia de FPGA que se va
+ a utilizar, hasta la edición de archivos de descripción de hardware, diseño
+ a base de captura de esquemático y verificación del diseño, sin salir de
+ la interfáz.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/project_navigator.eps
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Interfáz principal del 
+\emph on
+ISE Project Navigator
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Interfáz-principal-del"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Xilinx ISE guía al diseñador en el flujo de construcción en FPGA utilizando
+ el flujo conocido como 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+push button
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\emph default
+esto significa que todo el proceso está definido, automatizado y sólo basta
+ presionar un botón para que la herramienta haga el trabajo de llevar la
+ especificación del diseño de RTL al 
+\emph on
+bitstream
+\emph default
+, mediante la ejecución de algunos procesos en segundo plano, los cuales
+ se enlistan a continuación.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Síntesis: 
+\series default
+Este es el proceso de convertir un diseño descrito en Lenguaje de Descripción
+ de Hardware a un netlist con un formato propietario conocido como 
+\emph on
+Archivo Netlist con Información de restriciones físicas
+\series bold
+\emph default
+ 
+\series default
+(
+\series bold
+NGC
+\series default
+, por sus siglas en Inglés), ejecutando la herramienta llamada 
+\emph on
+Tecnología de Síntests de Xilinx
+\series bold
+\emph default
+ 
+\series default
+(
+\series bold
+XST
+\series default
+ por sus siglas en Inglés).
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Simulación: 
+\series default
+XIlinx ISE cuenta con un simulador integrado llamado 
+\series bold
+ISE Simulator 
+\series default
+o 
+\series bold
+ISim
+\series default
+, el cual soporta Verilog 2001 y VHDL 93, además del uso de ambos lenguajes
+ para diseño y simulación.
+ También ofrece capacidades de visualización y rastreo/análisis de formas
+ de onda tanto analógicas
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+La visualización de formas de onda analógicas requiere de una licencia adicional.
+\end_layout
+
+\end_inset
+
+ como digitales y depuración de fuentes HDL, entre muchas otras características
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Para obtener una lista más completa de las características de 
+\series bold
+ISim
+\series default
+, puede visitar el sitio web https://www.xilinx.com/products/design-tools/isim.html
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+MAP: 
+\series default
+En este paso se translada la salida del proceso de síntesis, conocida como
+ diseño lógico, a primitivos de la FPGA especificada en el proyecto.
+ Al finalizar, el ejecutable llamado igual que el proceso (
+\series bold
+MAP
+\series default
+) genera un netlist más, pero en un formato conocido como 
+\emph on
+Descripción Nativa del Circuito 
+\emph default
+(
+\series bold
+NCD 
+\series default
+por sus siglas en Inglés).
+ Es importante recalcar que en este proceso es donde se llevan a cabo las
+ optimizaciónes de 
+\emph on
+timing closure
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+
+\size normal
+\emph on
+Timing closure 
+\emph default
+es el proceso mediante el cual se modifica un diseño FPGA para cumplir con
+ los requisitos de tiempo.
+ Por ejemplo, la frecuencia máxima a la que el prototipo puede trabajar,
+ o la generación de frecuencias correctas para protocolos de baja velocidad
+ como RS232 o SPI.
+\end_layout
+
+\end_inset
+
+ y 
+\emph default
+área, las cuales están
+\series bold
+ 
+\series default
+relacionadas con el desempeño final del diseño.
 \end_layout
 
 \begin_layout Standard

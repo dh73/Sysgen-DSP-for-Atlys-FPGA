@@ -272,7 +272,7 @@
 	keywords = {FPGA, Digital Signal Processing},
 	month = apr,
 	organization = {Simon Fraser University},
-	pages = {2-5},
+	pages = {2--5},
 	school = {Simon Fraser University},
 	title = {{A practical approach to DSP algorithms using FPGA devices}},
 	year = {2011}
@@ -284,9 +284,49 @@
 	chapter = {I},
 	keywords = {Xilinx, Simulink, Matlab},
 	month = oct,
-	pages = {1-3},
+	pages = {1--3},
 	school = {University of South Florida},
 	title = {{Implementation of unmanned vehicle control on FPGA based platform using System Generator}},
 	year = {2007}
+}
+
+@manual{sysgen_user_guide,
+	author = {Xilinx},
+	booktitle = {{System Generator for DSP User Guide}},
+	chapter = {I - Hardware Design Using System Generator},
+	month = oct,
+	number = {I},
+	organization = {Xilinx, inc.},
+	pages = {1--9},
+	publisher = {Xilinx, Inc.},
+	title = {{Hardware Design Using System Generator}},
+	volume = {I},
+	year = {2012}
+}
+
+@inbook{using_xilinx_fpgas_dsp,
+	author = {Sundararajan, Arvind and Churiwala, Sanjay},
+	booktitle = {{Designing with Xilinx FPGAs Using Vivado}},
+	chapter = {VIII - SysGen for DSP},
+	edition = {I},
+	isbn = {978-3-319-42438-5},
+	month = oct,
+	organization = {Springer},
+	pages = {257},
+	title = {{SysGen for DSP}},
+	year = {2017}
+}
+
+@inproceedings{ise_tut_0,
+	author = {{Prof. Jan Van der Spiegel}},
+	edition = {I},
+	journal = {Digital Design Laboratory},
+	month = may,
+	number = {I},
+	pages = {1--5},
+	school = {University of Pennsylvania},
+	title = {{Introduction to Xilinx ISE 8.2i}},
+	volume = {I},
+	year = {2015}
 }
 

@@ -252,15 +252,41 @@
 
 @techreport{Digilent_atlys,
 	author = {Digilent and others},
-	booktitle = {{Atlys™ FPGA Board Reference Manual}},
+	booktitle = {{Atlys FPGA Board Reference Manual}},
 	chapter = {I},
 	month = apr,
-	number = {Atlys™ FPGA Board Reference Manual},
+	number = {Atlys FPGA Board Reference Manual},
 	organization = {Digilent},
-	pages = {1-10},
+	pages = {1--10},
 	publisher = {Digilent},
-	title = {{Atlys™ FPGA Board Reference Manual}},
+	title = {{Atlys FPGA Board Reference Manual}},
 	volume = {502-178},
 	year = {2016}
+}
+
+@phdthesis{practical_dsp_algo,
+	abstract = {Digital Signal Processing (DSP) is a basis for FPGA designs and is the core technology of many electronics devices. However, it requires study at a practical level in order to complete its deployment. This thesis examines the practical implementation of different DSP algorithms using FPGA devices. In our first contribution, we investigate the performance of a quadrature demodulator when implemented on FPGA. In the second contribution, we design a switch in the transmitter of wireless system operating under orthogonal frequency division multiplexing (OFDM). Here we devise a simple FPGA design to utilize feedback from the receiver aimed at reducing interference present in the system. In the third contribution, we present an efficient FPGA design for real-time convolution/correlation, as an essential component in the electronics in most wireless systems. Throughout the thesis, our emphasis is on the practical aspects of DSP.},
+	author = {Fozoonmayeh, Piraj},
+	chapter = {I},
+	edition = {I},
+	keywords = {FPGA, Digital Signal Processing},
+	month = apr,
+	organization = {Simon Fraser University},
+	pages = {2-5},
+	school = {Simon Fraser University},
+	title = {{A practical approach to DSP algorithms using FPGA devices}},
+	year = {2011}
+}
+
+@phdthesis{vehicle_sysgen_xilinx,
+	abstract = {The goal of this research was to explore a new and improved software development tool for the implementation of control algorithms on Xilinx Field Programmable Gate Arrays (FPGA). The Simulink plug in, System Generator, complements traditional Hardware Description Language (HDL) by providing a higher level graphical language for the development of FPGA designs. The design is then translated into the lower level required by the Xilinx{\rq}s ISE program. By utilizing this graphical based higher level of abstraction at the design entry level, the requirement of a detailed knowledge of HDL languages is no longer required. Because of this new environment the time required to implement the previously developed control design on the FPGA is reduced. The initial work began with a study of System Generator capabilities. One of the primary areas of interest is the difference on how the mathematical model representations are implemented between Simulink and the logic based hardware. From this initial work, a methodology for conversion between the developed and verified Simulink design and hardware implementation was obtained. As a case study, a control design was implemented for a Simulink model of an Unmanned Ground Vehicle (UGV) based on an RC-Truck. The control system consists of a simple mission planner to generate a vector of waypoints, a proportional-integral velocity vi controller and a proportional heading controller. The derived hardware design process is then utilized and validated by converting the control system into the available System Generator blocks. The final verification of the FPGA design was a hardware-in-the-loop simulation utilizing a Xilinx prototyping board. This design example demonstrated the validity of the presented approach as an efficient and reliable method for rapid system prototyping for designs developed within the Simulink environment.},
+	author = {Murthy, Shashikala Narasimha},
+	chapter = {I},
+	keywords = {Xilinx, Simulink, Matlab},
+	month = oct,
+	pages = {1-3},
+	school = {University of South Florida},
+	title = {{Implementation of unmanned vehicle control on FPGA based platform using System Generator}},
+	year = {2007}
 }
 

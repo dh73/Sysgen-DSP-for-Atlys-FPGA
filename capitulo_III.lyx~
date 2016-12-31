@@ -80,7 +80,11 @@ Marco metodológico.
 \end_layout
 
 \begin_layout Section
-Operaciones sobre señales de audio.
+Introducción práctica a Sysgen.
+\end_layout
+
+\begin_layout Section
+Operaciones sobre señales.
 \end_layout
 
 \begin_layout Subsection
@@ -89,7 +93,7 @@ Generación de señales senoidales y cosenoidales por síntesis digital directa
 \end_layout
 
 \begin_layout Subsection
-Filtrado
+Filtrado.
 \end_layout
 
 \begin_layout Subsection
