@@ -1,9 +1,7 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
 \begin_document
 \begin_header
-\save_transient_properties true
-\origin unavailable
 \textclass extarticle
 \begin_preamble
 %\date{}
@@ -21,16 +19,16 @@
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman "default" "default"
-\font_sans "default" "default"
-\font_typewriter "default" "default"
-\font_math "auto" "auto"
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100 100
-\font_tt_scale 100 100
+\font_sf_scale 100
+\font_tt_scale 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -3145,7 +3143,7 @@ Se puede observar como el procesador Microblaze, puede transmitir y recibir
 Introducción a Xilinx ISE y PlanAhead.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Reseña de Xilinx ISE.
 \end_layout
 
@@ -3254,7 +3252,89 @@ esto significa que todo el proceso está definido, automatizado y sólo basta
 bitstream
 \emph default
 , mediante la ejecución de algunos procesos en segundo plano, los cuales
- se enlistan a continuación.
+ se enlistan en la 
+\series bold
+Figura
+\series default
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Diagrama-a-flujo"
+
+\end_inset
+
+ y se describen a continuación.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset CommandInset include
+LatexCommand include
+filename "misc/fpgabuild_flow.tex"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama a flujo del proceso de compilación en FPGA, elaborado usando el
+ paquete 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textup{Ti
+\backslash
+textit{k}Z}
+\end_layout
+
+\end_inset
+
+ de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+LaTeX
+\end_layout
+
+\end_inset
+
+.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Diagrama-a-flujo"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -3283,7 +3363,7 @@ Tecnología de Síntests de Xilinx
 \series default
 (
 \series bold
-XST
+XST,
 \series default
  por sus siglas en Inglés).
 \end_layout
@@ -3336,8 +3416,8 @@ ISim
 \series bold
 MAP: 
 \series default
-En este paso se translada la salida del proceso de síntesis, conocida como
- diseño lógico, a primitivos de la FPGA especificada en el proyecto.
+En este paso se translada la salida generada en el proceso de síntesis,
+ a primitivos de la FPGA especificada en el proyecto.
  Al finalizar, el ejecutable llamado igual que el proceso (
 \series bold
 MAP
@@ -3356,7 +3436,7 @@ por sus siglas en Inglés).
 \emph on
 timing closure
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -3379,7 +3459,64 @@ es el proceso mediante el cual se modifica un diseño FPGA para cumplir con
 \series bold
  
 \series default
-relacionadas con el desempeño final del diseño.
+relacionadas con el desempeño final del diseño
+\begin_inset CommandInset citation
+LatexCommand cite
+key "power_tips"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Place and Route (PAR): 
+\series default
+Este es el proceso de interconectar los elementos primitivos, a partir de
+ la salida dada por el proceso de MAP, para así poder finalizar la implementació
+n.
+ Este es el paso más importante y el que consume un mayor tiempo de ejecución,
+ debido a que la herramienta de Xilinx encargada de hacer la 
+\emph on
+colocación 
+\emph default
+de los primitivos en los CLBs ejecutará diferentes algoritmos para obtener
+ el resultado más óptimo, de otra forma el 
+\emph on
+enrutamiento
+\emph default
+ será casi imposible de lograr.
+ En este paso, se obtiene el porcentaje exacto de recursos utilizados en
+ la FPGA y la información para generar el 
+\emph on
+bitstream.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Project Navigator
+\series bold
+ 
+\series default
+\emph default
+se encarga de ejecutar el flujo de implementación descrito, así como generar
+ reportes para el análisis de resultados y manejar la configuración del
+ kit Atlys, para descargar el 
+\emph on
+bitstream
+\emph default
+ generado.
+\end_layout
+
+\begin_layout Subsubsection
+PlanAhead.
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \begin_layout Standard

@@ -1,9 +1,7 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
 \begin_document
 \begin_header
-\save_transient_properties true
-\origin unavailable
 \textclass extarticle
 \begin_preamble
 %\date{}
@@ -21,16 +19,16 @@
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman "default" "default"
-\font_sans "default" "default"
-\font_typewriter "default" "default"
-\font_math "auto" "auto"
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100 100
-\font_tt_scale 100 100
+\font_sf_scale 100
+\font_tt_scale 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -3145,7 +3143,7 @@ Se puede observar como el procesador Microblaze, puede transmitir y recibir
 Introducción a Xilinx ISE y PlanAhead.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Reseña de Xilinx ISE.
 \end_layout
 
@@ -3235,7 +3233,430 @@ name "fig:Interfáz-principal-del"
 
 \begin_layout Standard
 Xilinx ISE guía al diseñador en el flujo de construcción en FPGA utilizando
- el flujo cono
+ el flujo conocido como 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+push button
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\emph default
+esto significa que todo el proceso está definido, automatizado y sólo basta
+ presionar un botón para que la herramienta haga el trabajo de llevar la
+ especificación del diseño de RTL al 
+\emph on
+bitstream
+\emph default
+, mediante la ejecución de algunos procesos en segundo plano, los cuales
+ se enlistan en la 
+\series bold
+Figura
+\series default
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Diagrama-a-flujo"
+
+\end_inset
+
+ y se describen a continuación.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset CommandInset include
+LatexCommand include
+filename "misc/fpgabuild_flow.tex"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama a flujo del proceso de compilación en FPGA, elaborado usando el
+ paquete 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textup{Ti
+\backslash
+textit{k}Z}
+\end_layout
+
+\end_inset
+
+ de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+LaTeX
+\end_layout
+
+\end_inset
+
+.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Diagrama-a-flujo"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Síntesis: 
+\series default
+Este es el proceso de convertir un diseño descrito en Lenguaje de Descripción
+ de Hardware a un netlist con un formato propietario conocido como 
+\emph on
+Archivo Netlist con Información de restriciones físicas
+\series bold
+\emph default
+ 
+\series default
+(
+\series bold
+NGC
+\series default
+, por sus siglas en Inglés), ejecutando la herramienta llamada 
+\emph on
+Tecnología de Síntests de Xilinx
+\series bold
+\emph default
+ 
+\series default
+(
+\series bold
+XST,
+\series default
+ por sus siglas en Inglés).
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Simulación: 
+\series default
+XIlinx ISE cuenta con un simulador integrado llamado 
+\series bold
+ISE Simulator 
+\series default
+o 
+\series bold
+ISim
+\series default
+, el cual soporta Verilog 2001 y VHDL 93, además del uso de ambos lenguajes
+ para diseño y simulación.
+ También ofrece capacidades de visualización y rastreo/análisis de formas
+ de onda tanto analógicas
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+La visualización de formas de onda analógicas requiere de una licencia adicional.
+\end_layout
+
+\end_inset
+
+ como digitales y depuración de fuentes HDL, entre muchas otras características
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Para obtener una lista más completa de las características de 
+\series bold
+ISim
+\series default
+, puede visitar el sitio web https://www.xilinx.com/products/design-tools/isim.html
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Map: 
+\series default
+En este paso se translada la salida generada en el proceso de síntesis,
+ a primitivos de la FPGA especificada en el proyecto.
+ Al finalizar, el ejecutable llamado igual que el proceso (
+\series bold
+Map
+\series default
+) genera un netlist más, pero en un formato conocido como 
+\emph on
+Descripción Nativa del Circuito 
+\emph default
+(
+\series bold
+NCD 
+\series default
+por sus siglas en Inglés).
+ Es importante recalcar que en este proceso es donde se llevan a cabo las
+ optimizaciónes de 
+\emph on
+timing closure
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+
+\size normal
+\emph on
+Timing closure 
+\emph default
+es el proceso mediante el cual se modifica un diseño FPGA para cumplir con
+ los requisitos de tiempo.
+ Por ejemplo, la frecuencia máxima a la que el prototipo puede trabajar,
+ o la generación de frecuencias correctas para protocolos de baja velocidad
+ como RS232 o SPI.
+\end_layout
+
+\end_inset
+
+ y 
+\emph default
+área, las cuales están
+\series bold
+ 
+\series default
+relacionadas con el desempeño final del diseño
+\begin_inset CommandInset citation
+LatexCommand cite
+key "power_tips"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Place and Route (PAR): 
+\series default
+Este es el proceso de interconectar los elementos primitivos, a partir de
+ la salida dada por el proceso de Map, para así poder finalizar la implementació
+n.
+ Este es el paso más importante y el que consume un mayor tiempo de ejecución,
+ debido a que la herramienta de Xilinx encargada de hacer la 
+\emph on
+colocación 
+\emph default
+de los primitivos en los CLBs ejecutará diferentes algoritmos para obtener
+ el resultado más óptimo, de otra forma el 
+\emph on
+enrutamiento
+\emph default
+ será casi imposible de lograr.
+ En este paso, se obtiene el porcentaje exacto de recursos utilizados en
+ la FPGA y la información para generar el 
+\emph on
+bitstream.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Project Navigator
+\series bold
+ 
+\series default
+\emph default
+se encarga de ejecutar el flujo de implementación descrito, así como generar
+ reportes para el análisis de resultados y manejar la configuración del
+ kit Atlys, para descargar el 
+\emph on
+bitstream
+\emph default
+ generado.
+\end_layout
+
+\begin_layout Subsubsection
+PlanAhead.
+\end_layout
+
+\begin_layout Standard
+Hablando en términos más profesionales, el flujo de implementación en FPGA
+ descrito en la subsección anterior se divide en dos procesos globales:
+ 
+\emph on
+Front-End, 
+\emph default
+que básicamente abarca la síntesis y simulación, y 
+\emph on
+Back-end
+\emph default
+ que abarca Map
+\emph on
+ y 
+\emph default
+PAR
+\emph on
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Generalmente, 
+\emph on
+PlanAhead
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Se recomienda leer la guía 
+\series bold
+UG673: 
+\begin_inset Quotes eld
+\end_inset
+
+Quick Front-to-Back Overview Tutorial
+\begin_inset Quotes erd
+\end_inset
+
+
+\series default
+ para mayor detalle en el uso de PlanAhead.
+\end_layout
+
+\end_inset
+
+
+\emph default
+ es utilizado por usuarios con más experiencia en el campo de diseño con
+ herramientas de Xilinx, puesto que este ambiente ofrece mejoras para la
+ optimización en el 
+\emph on
+Back-end 
+\emph default
+que en el 
+\emph on
+Project Navigator
+\emph default
+ no se exponen con la misma facilidad.
+ 
+\end_layout
+
+\begin_layout Standard
+Sin embargo, 
+\emph on
+PlanAhead
+\emph default
+ provee plugins bastante útiles para el 
+\emph on
+Front-End
+\emph default
+, por ejemplo, usa un potente motor para el análisis de los archivos HDL
+ en el diseño, también puede trabajar con netlist previamente sintetizados
+ y resultados de implementación, además de poder crear diferentes versiones
+ de implementación, con lo que se pueden explorar multiples óptimizaciones
+ para un mismo proyecto.
+\end_layout
+
+\begin_layout Standard
+En este documento se utilizará 
+\emph on
+PlanAhead 
+\emph default
+sobre 
+\emph on
+Project Navigator
+\emph default
+ por las ventajas ya mencionadas, además de que, Xilinx descontinuó la suite
+ ISE para evolucionar a Vivado desde el año 2013.
+ Vivado es una herramienta más poderosa pero no compatible con familias
+ inferiores a la serie 7.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+PlanAhead
+\emph default
+ es muy similar a la interfáz de Vivado, por lo que los diseños podrán migrarse
+ facilmente sin necesidad de tener que familiarizarse de nuevo con otra
+ herramienta.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/planAhead.eps
+	scale 40
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Interfáz gráfica de PlanAhead, imagen obtenida del paquete Xilinx ISE.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
