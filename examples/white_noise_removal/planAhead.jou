@@ -1,0 +1,11 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Sat Jan  7 19:14:52 2017
+# Process ID: 15660
+# Log file: /home/diego/Documents/Finalized/examples/white_noise_removal/planAhead.log
+# Journal file: /home/diego/Documents/Finalized/examples/white_noise_removal/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+create_project project_1 /home/diego/Documents/Finalized/examples/white_noise_removal/project_1 -part xc6slx45tfgg484-3
+set_property board sp605 [current_project]

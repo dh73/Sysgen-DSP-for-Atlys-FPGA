@@ -1,13 +1,15 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass extarticle
 \begin_preamble
 \date{}
 
-\usepackage{atbegshi}% http://ctan.org/pkg/atbegshi
-\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
+%\usepackage{atbegshi}% http://ctan.org/pkg/atbegshi %remove this if problems
+%\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
 
 \usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
 \usepackage{listings}
@@ -23,6 +25,9 @@
 
 \usepackage{microtype}
 \usepackage{smartdiagram}
+
+%\font\nullfont=cmr10
+\usepackage[latin1]{inputenc}
 \end_preamble
 \use_default_options true
 \begin_modules
@@ -36,16 +41,16 @@ shapepar
 \language_package default
 \inputencoding default
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -119,6 +124,10 @@ shapepar
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -183,6 +192,10 @@ begin{spacing}{1}
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -201,6 +214,10 @@ LatexCommand tableofcontents
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -215,6 +232,10 @@ LatexCommand tableofcontents
 
 \begin_layout Standard
 \begin_inset Newpage pagebreak
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
