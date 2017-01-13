@@ -104,7 +104,7 @@ A manera de introducción, se utilizará el ambiente de Matlab/Simulink con
 \end_layout
 
 \begin_layout Subsubsection
-Modelado del filtro FIR.
+Modelado del filtro FIR en Matlab.
 \end_layout
 
 \begin_layout Standard
@@ -412,7 +412,7 @@ status collapsed
 \align center
 \begin_inset Graphics
 	filename img/fir_example_analysis.eps
-	scale 70
+	scale 40
 
 \end_inset
 
@@ -464,16 +464,222 @@ al fltro que acabamos de desarrollar, la respuesta estricta debe ser una
 \begin_inset Formula $f_{c}=7KHz$
 \end_inset
 
-, como se muestra en la Figura
+, como se muestra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Resultado-de-la"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/filtdesi.eps
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Resultado de la implementación del filtro FIR, donde se puede observar la
+ señal resultante, de un color más oscuro, en oposición a la senal contaminada.
+ La señal resultante está totalmente reconstruida, lo que valida la implementaci
+ón.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Resultado-de-la"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Implementación del sistema en Sysgen.
+\end_layout
+
+\begin_layout Standard
+Las instrucciones para transformar el algoritmo que hemos diseñado ya, a
+ un modelo que se pueda ejecutar en la tarjeta de desarrollo Atlys, se muestran
+ a continuación:
+\end_layout
+
+\begin_layout Enumerate
+Abrir PlanAhead y seleccionar 
+\emph on
+'Create New Project'.
+\end_layout
+
+\begin_layout Enumerate
+Esto invocara al 
+\emph on
+'Project wizard', 
+\emph default
+en la primer ventana de bienvenida, dar clic en 
+\emph on
+'Next >'.
+\end_layout
+
+\begin_layout Enumerate
+En la ventana 
+\emph on
+'Project name'
+\emph default
+, seleccionar el nombre del proyecto y la ruta donde se guardará, estos
+ parámetros son a gusto del usuario.
+\end_layout
+
+\begin_layout Enumerate
+En 
+\emph on
+'Project Type'
+\emph default
+, seleccionar 
+\emph on
+'RTL Project'
+\emph default
+ y marcar la casilla 
+\emph on
+'Do not specify sources at this time'.
+\end_layout
+
+\begin_layout Enumerate
+Se abrirá una nueva ventana llamada 
+\emph on
+'Default Part'
+\emph default
+, donde se debe especificar la matrícula de la FPGA, en el caso del kit
+ Atlys es 
+\series bold
+XC6SLX45CSG324-3
+\series default
+.
+ Se puede poner esta matrícula en el apartado 
+\emph on
+'Search' 
+\emph default
+para que sea más sencillo y libre de errores dado que, si se selecciona
+ cualquier otra parte distinta, el proyecto no funcionara en el kit.
+\end_layout
+
+\begin_layout Enumerate
+Dar clic en 
+\emph on
+'Finish'
+\emph default
+, el proyecto está configurado en este punto.
+\end_layout
+
+\begin_layout Enumerate
+\noindent
+En la columna 
+\emph on
+'Project Manager'
+\emph default
+, seleccionar 
+\emph on
+'Add sources'
+\emph default
+ y después 
+\emph on
+'Add or Create DSP Sources' 
+\emph default
+como se muestra a continuación: 
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/planahead_project.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Selección del tipo de proyecto en PlanAhead.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Seleccionar la opción 
+\emph on
+'Create Sub-Design'
+\emph default
+ y defnir el nombre del módulo principal, por ejemplo 
+\series bold
+lab1_sysgen.
+\end_layout
+
+\begin_layout Enumerate
+La interfáz de Matlab se desplegará en la pantalla, con el toolbox de Sysgen
+ añadido a las librerias de Simulink.
+ En este paso hay que esperar un par de minutos hasta que aparezca el workspace
+ principal de Simulink, como se muestra en la Figura 
 \begin_inset Float figure
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/lab1_sysgen.png
+	scale 60
+
+\end_inset
+
 
 \end_layout
 

@@ -328,7 +328,7 @@ mediante el uso de las siguientes fórmulas
 
 \begin_inset Formula 
 \begin{equation}
-F_{Nyquist}=\frac{F_{s}}{2}=\frac{48*10^{6}}{2}=24*10^{6}
+F_{Nyquist}=\frac{F_{s}}{2}=\frac{48*10^{3}}{2}=24*10^{3}
 \end{equation}
 
 \end_inset
@@ -336,7 +336,7 @@ F_{Nyquist}=\frac{F_{s}}{2}=\frac{48*10^{6}}{2}=24*10^{6}
 
 \begin_inset Formula 
 \begin{equation}
-Wn=F_{corteNormalizada}=\frac{f_{s}}{F_{Nyquist}}=\frac{7*10^{6}}{24*10^{6}}=0.2917
+Wn=F_{corteNormalizada}=\frac{f_{s}}{F_{Nyquist}}=\frac{7*10^{3}}{24*10^{3}}=0.2917
 \end{equation}
 
 \end_inset
@@ -464,7 +464,14 @@ al fltro que acabamos de desarrollar, la respuesta estricta debe ser una
 \begin_inset Formula $f_{c}=7KHz$
 \end_inset
 
-, como se muestra en la Figura
+, como se muestra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Resultado-de-la"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -493,6 +500,14 @@ Resultado de la implementación del filtro FIR, donde se puede observar la
  señal resultante, de un color más oscuro, en oposición a la senal contaminada.
  La señal resultante está totalmente reconstruida, lo que valida la implementaci
 ón.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Resultado-de-la"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -520,69 +535,407 @@ Las instrucciones para transformar el algoritmo que hemos diseñado ya, a
 \end_layout
 
 \begin_layout Enumerate
-Abrir PlanAhead y seleccionar 
-\emph on
-'Create New Project'.
-\end_layout
-
-\begin_layout Enumerate
-Esto invocara al 
-\emph on
-'Project wizard', 
-\emph default
-en la primer ventana de bienvenida, dar clic en 
-\emph on
-'Next >'.
-\end_layout
-
-\begin_layout Enumerate
-En la ventana 
-\emph on
-'Project name'
-\emph default
-, seleccionar el nombre del proyecto y la ruta donde se guardará, estos
- parámetros son a gusto del usuario.
-\end_layout
-
-\begin_layout Enumerate
-En 
-\emph on
-'Project Type'
-\emph default
-, seleccionar 
-\emph on
-'RTL Project'
-\emph default
- y marcar la casilla 
-\emph on
-'Do not specify sources at this time'.
-\end_layout
-
-\begin_layout Enumerate
-Se abrirá una nueva ventana llamada 
-\emph on
-'Default Part'
-\emph default
-, donde se debe especificar la matrícula de la FPGA, en el caso del kit
- Atlys es 
+Para ejecutar Sysgen, no se abre Matlab directamente puesto que el toolbox
+ de Xilinx no aparecerá en las librerías de Simulink.
+ La forma de hacerlo es ir a la barra de 
 \series bold
-XC6SLX45CSG324-3
+Inicio > Todos los programas > Xilinx Design Tools > ISE > System Generator
 \series default
 .
- Se puede poner esta matrícula en el apartado 
-\emph on
-'Search' 
-\emph default
-para que sea más sencillo y libre de errores dado que, si se selecciona
- cualquier otra parte distinta, el proyecto no funcionara en el kit.
+ Esto invocará a Sysgen con el toolbox habilitado con la leyenda mostrada
+ en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Mensaje-de-instalación"
+
+\end_inset
+
+.
+ 
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/sysgen_installed.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Mensaje de instalación del toolbox de Sysgen en Matlab R2013a.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Mensaje-de-instalación"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Enumerate
-Dar clic en 
+Dar clic en el ícono 
+\begin_inset Graphics
+	filename img/simulink_icon.png
+	scale 40
+
+\end_inset
+
+ posicionado en la barra superior de la interfáz de Matlab, esto abrirá
+ una ventana con los toolboxes de Simulink disponibles en la instalación.
+ Los toolboxes de Xilinx se encuentran listados en la pestaña de 
+\series bold
+Bibliotecas
+\series default
+ con los nombres de 
+\series bold
+'Xilinx Blockset', 'Xilinx Reference Blockset' 
+\series default
+y 
+\series bold
+'Xilinx XtremeDSP Kit'
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Crear un nuevo modelo seleccionando el ícono 
 \emph on
-'Finish'
+'New model' 
 \emph default
-, el proyecto está configurado en este punto.
+o presionando CTRL+N.
+\end_layout
+
+\begin_layout Enumerate
+Dentro de esta nueva ventana, el primer paso que siempre se debe realizar
+ es agregar el 
+\emph on
+'Sysgen token' 
+\emph default
+desde 
+\series bold
+Xilinx Blockset > Basic Elements
+\series default
+, como se muestra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Instanciación-del-System"
+
+\end_inset
+
+.
+ 
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/sysgen_token_example.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Instanciación del System Generator token.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Instanciación-del-System"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Aquí es necesario resaltar algunas reglas importantes para hacer uso del
+ toolbox de Xilinx.
+ La primera es que, en todo diseño de Simulink donde se involucren bloques
+ de Xilinx, debe existir el 
+\emph on
+'Sysgen token'
+\emph default
+, este es un bloque especial que no tiene entrada o salida alguna, pero
+ es la interface que convierte los vectores de simulación de Matlab a datos
+ que la FPGA pueda comprender.
+ Además, este bloque contiene la información del proyecto que estamos modelando,
+ es decir, aquí se puede definir como el diseño va a ser transformado acorde
+ a los flujos discutidos en la 
+\series bold
+sección
+\series default
+ 
+\series bold
+5.5.2
+\series default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Al dar doble clic sobre el 
+\emph on
+'Sysgen token' 
+\emph default
+se abrirá una ventana donde podremos definir los parámetros de implementación,
+ los cuales definiremos como los que se muestran a continuación:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Compilation: 
+\series default
+Hardware Co-Simulation > Atlys > JTAG.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Synthesis tool: 
+\series default
+XST.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Hardware Description Language: 
+\series default
+Verilog.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Project type: 
+\series default
+PlanAhead.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Synthesis strategy: 
+\series default
+PlanAhead Defaults.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Implementation Strategy: 
+\series default
+ISE Defaults.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Ahora, se necesita agregar uno de los bloques más importantes los cuales
+ defininen el módulo que será sintetizado por la FPGA: Los bloques de entrada/sa
+lida, conocidos como 
+\emph on
+'Gateway in' 
+\emph default
+y 
+\emph on
+'Gateway Out'
+\emph default
+.
+ 
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/gateway_in_out.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Bloques de entrada/salida que acotan la implementación en el FPGA del algoritmo
+ a diseñar.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+En otras palabras, los únicos bloques que puede comunicarse directamente
+ con otros toolboxes de Simulink son los 
+\emph on
+Gateway In/Out
+\emph default
+.
+ Este par de bloques transforman los estímulos de Simulink en datos que
+ el FPGA puede procesar, así como capturar la información del tipo de dato
+ a utilizar (punto fijo o punto flotante), la frecuencia de muestreo e incluso
+ alguna locación física dentro de los puertos de entrada y salida generales
+ de la FPGA, para funcionar como disparadores externos.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Como se utilizó en el algoritmo de Matlab, será necesario generar la señal
+ que deseamos filtrar, a partir de utilizar dos generadores de señal senoidal
+ del toolbox de Simulink, ubicados en 
+\series bold
+Simulink > Sources > Sine Wave.
+ 
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/sinewave_gen.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Generadores de funci[on senoidal utilizados para generar la señal a filtrar.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\series default
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/lab1_sysgen_working.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Ejemplo funcionando.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard

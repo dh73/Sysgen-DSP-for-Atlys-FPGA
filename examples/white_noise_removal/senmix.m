@@ -1,7 +1,7 @@
 % Señal de prueba para ejercitar el filtro fir.
 % Parametros: fsenBase=1KHz, fsenRuido=1KHz:15KHz;
 % Abase=1, Aruido=0.5;
-% Fs=48KHz, nmuestras=256;
+% Fs=48KHz, nmuestras=300;
 close all; clear all; clc
 
 Fs        = 48000;
