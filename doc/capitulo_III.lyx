@@ -781,6 +781,16 @@ Implementation Strategy:
 ISE Defaults.
 \end_layout
 
+\begin_layout Itemize
+
+\series bold
+Clocking > Simulink system period: 
+\series default
+2.0833e-05 (1/48e3), este parámetro es el más importante puesto que si es
+ agregado con un valor incorrecto, el sistema no responderá como se espera.
+ Este periodo define la frecuencia de muestreo a la que el sistema trabaja.
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate
 Ahora, se necesita agregar uno de los bloques más importantes los cuales
@@ -836,17 +846,57 @@ Bloques de entrada/salida que acotan la implementación en el FPGA del algoritmo
 
 \begin_deeper
 \begin_layout Standard
-En otras palabras, los únicos bloques que puede comunicarse directamente
+En otras palabras, los únicos bloques que pueden comunicarse directamente
  con otros toolboxes de Simulink son los 
 \emph on
 Gateway In/Out
 \emph default
 .
  Este par de bloques transforman los estímulos de Simulink en datos que
- el FPGA puede procesar, así como capturar la información del tipo de dato
- a utilizar (punto fijo o punto flotante), la frecuencia de muestreo e incluso
- alguna locación física dentro de los puertos de entrada y salida generales
- de la FPGA, para funcionar como disparadores externos.
+ el FPGA puede procesar, también son capaces de capturar la información
+ del tipo de dato a utilizar (punto fijo o punto flotante), la frecuencia
+ de muestreo e incluso alguna locación física dentro de los puertos de entrada
+ y salida generales de la FPGA, para funcionar como disparadores externos.
+\end_layout
+
+\begin_layout Standard
+Este bloque se configura de la siguiente manera:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Output type:
+\series default
+ Fixed point.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Arithmetic type: 
+\series default
+Signed (2's comp).
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Fixed-point Precision > Number of bits:
+\series default
+ 16, 
+\series bold
+Binary point:
+\series default
+ 14.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Sample period: 
+\series default
+2.0833e-05.
 \end_layout
 
 \end_deeper
@@ -855,8 +905,18 @@ Como se utilizó en el algoritmo de Matlab, será necesario generar la señal
  que deseamos filtrar, a partir de utilizar dos generadores de señal senoidal
  del toolbox de Simulink, ubicados en 
 \series bold
-Simulink > Sources > Sine Wave.
+Simulink > Sources > Sine Wave, 
+\series default
+como se muestra en la Figura
+\series bold
  
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Generadores-de-función"
+
+\end_inset
+
+.
 \begin_inset Float figure
 placement H
 wide false
@@ -880,7 +940,15 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Generadores de funci[on senoidal utilizados para generar la señal a filtrar.
+Generadores de función senoidal utilizados para generar la señal a filtrar.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Generadores-de-función"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -899,12 +967,329 @@ Generadores de funci[on senoidal utilizados para generar la señal a filtrar.
  
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+Se deben utilizar dos generadores de señal senoidal, con los parámetros
+ mostrados a continuación: 
+\end_layout
+
+\begin_layout Enumerate
+Señal base:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Amplitude: 
+\series default
+1.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Frequency:
+\series default
+ 
+\begin_inset Formula $F_{base}*2pi=1e3*2*pi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Sample time: 
+\begin_inset Formula $1/Fs=1/48e3$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Standard
 \begin_inset Float figure
 placement H
 wide false
 sideways false
-status open
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/sinebase_sysgen.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Parámetros de configuración para la componente base de entrada al sistema
+ de filtrado.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Señal a filtrar:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Amplitude: 
+\series default
+0.5.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Frequency:
+\series default
+ 
+\begin_inset Formula $F_{base}*2pi=15e3*2*pi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Sample time: 
+\begin_inset Formula $1/Fs=1/48e3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/sinenoise_sysgen.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Parámetros de configuración para la componente de ruido de entrada al sistema
+ de filtrado.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+También se necesitará un sumador de señales para mezclar ambas funciones
+ senoidales, el cual se encuentra en 
+\series bold
+Simulink > Math Operations Sum: 
+\begin_inset Graphics
+	filename img/sum_simulink.png
+	scale 40
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+El bloque que se encargará de filtrar la señal se encuentra en 
+\series bold
+Xilinx Blockset > DSP > FIR Compiler 5.0
+\series default
+, se debe configurar con los siguientes parámetros:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Coefficient Vector = 
+\begin_inset Formula $fir1(orden,Wn)$
+\end_inset
+
+ = 
+\series default
+[0.0016,0.0013,-0.0005,-0.0037,-0.0055,-0.0018,0.0084,0.0175,0.0133,-0.0103,-0.0406,-0.0482,
+-0.0053,0.0900,0.2034,0.2804,0.2804,0.2034,0.0900,-0.0053,-0.0482,-0.0406,-0.0103,0.0133,0.01
+75,0.0084,-0.0018,-0.0055,-0.0037,-0.0005,0.0013,0.0016].
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Hardware Oversampling Specification > Sample Format: 
+\series default
+Sample_period
+\series bold
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Sample Period
+\series default
+: 1.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Implementation > Filter Architecture
+\series default
+: Distributed_Arithmetic.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Coefficient Options > Coefficient Structure:
+\series default
+ Inferred.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Coefficient Type: 
+\series default
+Signed.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Quantization: 
+\series default
+Quantize_Only.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Coefficient Width:
+\series default
+ 16.
+\end_layout
+
+\begin_layout Itemize
+Checar la opción 
+\series bold
+Best Precision Fraction Length.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/fircompiler_opts.png
+	scale 40
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Configuración del bloque FIR Compiler.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Una vez teniendo estos elementos en el nuevo modelo de Simulink, se deben
+ conectar como se muestra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Interconexión-de-los"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -921,7 +1306,16 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Ejemplo funcionando.
+Interconexión de los bloques de Simulink/Sysgen para la elaboración del
+ filtro FIR.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Interconexión-de-los"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
