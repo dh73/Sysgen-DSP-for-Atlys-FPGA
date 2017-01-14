@@ -183,7 +183,7 @@ status collapsed
 \align center
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "/home/diego/Documents/Finalized/examples/white_noise_removal/senmix.m"
+filename "/home/diego/Documents/Finalized/examples/noise_removal/senmix.m"
 lstparams "style={Matlab-editor},basicstyle={\\mlttfamily\\scriptsize}"
 
 \end_inset
@@ -365,13 +365,13 @@ reference "fig:Respuesta-en-magnitud"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "/home/diego/Documents/Finalized/examples/white_noise_removal/firm_imp.m"
+filename "/home/diego/Documents/Finalized/examples/noise_removal/firm_imp.m"
 lstparams "style={Matlab-editor},basicstyle={\\mlttfamily\\scriptsize}"
 
 \end_inset

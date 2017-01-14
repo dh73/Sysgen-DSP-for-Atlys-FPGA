@@ -1274,7 +1274,14 @@ Configuración del bloque FIR Compiler.
 \end_deeper
 \begin_layout Enumerate
 Una vez teniendo estos elementos en el nuevo modelo de Simulink, se deben
- conectar como se muestra en la Figura
+ conectar como se muestra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Interconexión-de-los"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -1282,7 +1289,7 @@ Una vez teniendo estos elementos en el nuevo modelo de Simulink, se deben
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1301,6 +1308,14 @@ status open
 \begin_layout Plain Layout
 Interconexión de los bloques de Simulink/Sysgen para la elaboración del
  filtro FIR.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Interconexión-de-los"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
