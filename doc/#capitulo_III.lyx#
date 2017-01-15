@@ -1,0 +1,1475 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extarticle
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1.54in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Part
+Marco metodológico.
+\end_layout
+
+\begin_layout Section
+Introducción práctica a Sysgen.
+\end_layout
+
+\begin_layout Subsection
+Diseño de un filtro FIR pasabajas para la eliminación de ruido en una señal
+ senoidal.
+\end_layout
+
+\begin_layout Standard
+Una de las aplicaciones más comunes en el mundo del procesamiento digital
+ de señales, es la eliminación de componentes no deseadas que, por algún
+ fenómeno físico, distorsionan la información de la señal en la cual estamos
+ interesados.
+ 
+\end_layout
+
+\begin_layout Standard
+A manera de introducción, se utilizará el ambiente de Matlab/Simulink con
+ el toolbox de Sysgen para diseñar un sistema que elimine una componente
+ senoidal de alta frecuencia mezclada a una componente senoidal base, mediante
+ el uso de un filtro FIR pasabajas ejecutándose en el kit Atlys.
+\end_layout
+
+\begin_layout Subsubsection
+Modelado del filtro FIR en Matlab.
+\end_layout
+
+\begin_layout Standard
+Existe una señal de entrada a nuestro sistema 
+\begin_inset Formula $F_{DSP}$
+\end_inset
+
+ cuya entrada está representada por la suma de dos señales senoidales de
+ 
+\begin_inset Formula $f_{senBase}=1KHz$
+\end_inset
+
+ y 
+\begin_inset Formula $5KHz\leq f_{senRuido}\leq15KHz$
+\end_inset
+
+ con una amplitud de 1 y 0.5 respectivamente, esta suma de señales representará
+ el fenómeno no deseado.
+ 
+\end_layout
+
+\begin_layout Standard
+El sistema 
+\begin_inset Formula $F_{DSP}$
+\end_inset
+
+ debe ser capáz de eliminar señales por encima de 
+\begin_inset Formula $f_{corte}=7KHz$
+\end_inset
+
+, por lo que el tipo de filtro a implementar debe ser 
+\emph on
+paso bajo.
+ 
+\emph default
+Además, la frecuencia de muestreo del sistema debe ser de 
+\begin_inset Formula $F_{s}=48KHz$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+En primer lugar, es necesario desarollar la función de las señales 
+\begin_inset Formula $f_{senBase}$
+\end_inset
+
+ y 
+\begin_inset Formula $f_{senRuido}$
+\end_inset
+
+ para utilizarlas para ejercitar el filtro FIR, utilizando el script de
+ Matlab que se muestra en el Algoritmo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:Generación-de-la"
+
+\end_inset
+
+, y el resultado de la función se muestra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Gráfica-derivada-de"
+
+\end_inset
+
+.
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "/home/diego/Documents/Finalized/examples/noise_removal/senmix.m"
+lstparams "style={Matlab-editor},basicstyle={\\mlttfamily\\scriptsize}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Generación de la señal de excitación al sistema 
+\begin_inset Formula $F_{DSP}.$
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:Generación-de-la"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/fft_example1.eps
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Gráfica derivada de la función diseñada en Matlab para este ejercicio.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Gráfica-derivada-de"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Para el diseño del filtro FIR, se usará el método por ventana de Hamming
+ por la facilidad de implementación discutida en la 
+\series bold
+sección 3.2.2
+\series default
+ de este documento.
+ La ecuación del filtro por ventana de Hamming queda como sigue:
+\begin_inset Formula 
+\begin{equation}
+W=0.54-0.46*cos(2\pi t/T)
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+y=x(t)*W(t)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Para efecto de simplificar la implementación y demostrar la versatilidad
+ de los lenguajes de alto nivel, se utilizará la funcion 
+\series bold
+fir1(n, Wn)
+\series default
+ incluida en el 
+\emph on
+Signal Processing Toolbox
+\emph default
+ de Matlab, donde 
+\series bold
+n 
+\series default
+es el órden del filtro y 
+\series bold
+Wn 
+\series default
+es un elemento entre 0 y 1 correspoindiente a la frequencia de Nyquist.
+ Para calcular el valor de 
+\series bold
+Wn
+\series default
+, necesitamos normalizar la frecuencia de corte para cumplir con el teorema
+ de muestreo discutido en la sección 
+\series bold
+3.1.1 
+\series default
+mediante el uso de las siguientes fórmulas
+\series bold
+:
+\series default
+
+\begin_inset Formula 
+\begin{equation}
+F_{Nyquist}=\frac{F_{s}}{2}=\frac{48*10^{3}}{2}=24*10^{3}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+Wn=F_{corteNormalizada}=\frac{f_{s}}{F_{Nyquist}}=\frac{7*10^{3}}{24*10^{3}}=0.2917
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Por lo tanto, el diseño final del filtro queda como se muestra en el Algoritmo
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:Implementación-del-filtro"
+
+\end_inset
+
+ y la gráfica de la respuesta en magnitud se muestra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Respuesta-en-magnitud"
+
+\end_inset
+
+ 
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "/home/diego/Documents/Finalized/examples/noise_removal/firm_imp.m"
+lstparams "style={Matlab-editor},basicstyle={\\mlttfamily\\scriptsize}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Implementación del filtro FIR.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:Implementación-del-filtro"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/fir_example_analysis.eps
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Respuesta en magnitud del filtro FIR diseñado, donde se puede observar la
+ atenuación de frecuencias mayores a 
+\begin_inset Formula $f_{c}$
+\end_inset
+
+= 7KHz.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Respuesta-en-magnitud"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Por último, para confirmar que el diseño se ha implementado de una manera
+ correcta, aplicamos la señal generada en el 
+\series bold
+paso 1 
+\series default
+al fltro que acabamos de desarrollar, la respuesta estricta debe ser una
+ señal senoidal sin alguna componente por encima de la 
+\begin_inset Formula $f_{c}=7KHz$
+\end_inset
+
+, como se muestra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Resultado-de-la"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/filtdesi.eps
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Resultado de la implementación del filtro FIR, donde se puede observar la
+ señal resultante, de un color más oscuro, en oposición a la senal contaminada.
+ La señal resultante está totalmente reconstruida, lo que valida la implementaci
+ón.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Resultado-de-la"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Simulación del sistema en Sysgen.
+\end_layout
+
+\begin_layout Standard
+Las instrucciones para transformar el algoritmo que hemos diseñado ya, a
+ un modelo que se pueda ejecutar en la tarjeta de desarrollo Atlys, se muestran
+ a continuación:
+\end_layout
+
+\begin_layout Enumerate
+Para ejecutar Sysgen, no se abre Matlab directamente puesto que el toolbox
+ de Xilinx no aparecerá en las librerías de Simulink.
+ La forma de hacerlo es ir a la barra de 
+\series bold
+Inicio > Todos los programas > Xilinx Design Tools > ISE > System Generator
+\series default
+.
+ Esto invocará a Sysgen con el toolbox habilitado con la leyenda mostrada
+ en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Mensaje-de-instalación"
+
+\end_inset
+
+.
+ 
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/sysgen_installed.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Mensaje de instalación del toolbox de Sysgen en Matlab R2013a.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Mensaje-de-instalación"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+Dar clic en el ícono 
+\begin_inset Graphics
+	filename img/simulink_icon.png
+	scale 40
+
+\end_inset
+
+ posicionado en la barra superior de la interfáz de Matlab, esto abrirá
+ una ventana con los toolboxes de Simulink disponibles en la instalación.
+ Los toolboxes de Xilinx se encuentran listados en la pestaña de 
+\series bold
+Bibliotecas
+\series default
+ con los nombres de 
+\series bold
+'Xilinx Blockset', 'Xilinx Reference Blockset' 
+\series default
+y 
+\series bold
+'Xilinx XtremeDSP Kit'
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Crear un nuevo modelo seleccionando el ícono 
+\emph on
+'New model' 
+\emph default
+o presionando CTRL+N.
+\end_layout
+
+\begin_layout Enumerate
+Dentro de esta nueva ventana, el primer paso que siempre se debe realizar
+ es agregar el 
+\emph on
+'Sysgen token' 
+\emph default
+desde 
+\series bold
+Xilinx Blockset > Basic Elements
+\series default
+, como se muestra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Instanciación-del-System"
+
+\end_inset
+
+.
+ 
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/sysgen_token_example.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Instanciación del System Generator token.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Instanciación-del-System"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Aquí es necesario resaltar algunas reglas importantes para hacer uso del
+ toolbox de Xilinx.
+ La primera es que, en todo diseño de Simulink donde se involucren bloques
+ de Xilinx, debe existir el 
+\emph on
+'Sysgen token'
+\emph default
+, este es un bloque especial que no tiene entrada o salida alguna, pero
+ es la interface que convierte los vectores de simulación de Matlab a datos
+ que la FPGA pueda comprender.
+ Además, este bloque contiene la información del proyecto que estamos modelando,
+ es decir, aquí se puede definir como el diseño va a ser transformado acorde
+ a los flujos discutidos en la 
+\series bold
+sección
+\series default
+ 
+\series bold
+5.5.2
+\series default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Al dar doble clic sobre el 
+\emph on
+'Sysgen token' 
+\emph default
+se abrirá una ventana donde podremos definir los parámetros de implementación,
+ los cuales definiremos como los que se muestran a continuación:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Compilation: 
+\series default
+Hardware Co-Simulation > Atlys > JTAG.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Synthesis tool: 
+\series default
+XST.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Hardware Description Language: 
+\series default
+Verilog.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Project type: 
+\series default
+PlanAhead.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Synthesis strategy: 
+\series default
+PlanAhead Defaults.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Implementation Strategy: 
+\series default
+ISE Defaults.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Clocking > Simulink system period: 
+\series default
+2.0833e-05 (1/48e3), este parámetro es el más importante puesto que si es
+ agregado con un valor incorrecto, el sistema no responderá como se espera.
+ Este periodo define la frecuencia de muestreo a la que el sistema trabaja.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Ahora, se necesita agregar uno de los bloques más importantes los cuales
+ defininen el módulo que será sintetizado por la FPGA: Los bloques de entrada/sa
+lida, conocidos como 
+\emph on
+'Gateway in' 
+\emph default
+y 
+\emph on
+'Gateway Out'
+\emph default
+.
+ 
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/gateway_in_out.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Bloques de entrada/salida que acotan la implementación en el FPGA del algoritmo
+ a diseñar.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+En otras palabras, los únicos bloques que pueden comunicarse directamente
+ con otros toolboxes de Simulink son los 
+\emph on
+Gateway In/Out
+\emph default
+.
+ Este par de bloques transforman los estímulos de Simulink en datos que
+ el FPGA puede procesar, también son capaces de capturar la información
+ del tipo de dato a utilizar (punto fijo o punto flotante), la frecuencia
+ de muestreo e incluso alguna locación física dentro de los puertos de entrada
+ y salida generales de la FPGA, para funcionar como disparadores externos.
+\end_layout
+
+\begin_layout Standard
+Este bloque se configura de la siguiente manera:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Output type:
+\series default
+ Fixed point.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Arithmetic type: 
+\series default
+Signed (2's comp).
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Fixed-point Precision > Number of bits:
+\series default
+ 16, 
+\series bold
+Binary point:
+\series default
+ 14.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Sample period: 
+\series default
+2.0833e-05.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Como se utilizó en el algoritmo de Matlab, será necesario generar la señal
+ que deseamos filtrar, a partir de utilizar dos generadores de señal senoidal
+ del toolbox de Simulink, ubicados en 
+\series bold
+Simulink > Sources > Sine Wave, 
+\series default
+como se muestra en la Figura
+\series bold
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Generadores-de-función"
+
+\end_inset
+
+.
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/sinewave_gen.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Generadores de función senoidal utilizados para generar la señal a filtrar.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Generadores-de-función"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\series default
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Se deben utilizar dos generadores de señal senoidal, con los parámetros
+ mostrados a continuación: 
+\end_layout
+
+\begin_layout Enumerate
+Señal base:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Amplitude: 
+\series default
+1.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Frequency:
+\series default
+ 
+\begin_inset Formula $f_{senBase}*2pi=1e3*2*pi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Sample time: 
+\begin_inset Formula $1/Fs=1/48e3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/sinebase_sysgen.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Parámetros de configuración para la componente base de entrada al sistema
+ de filtrado.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Señal a filtrar:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Amplitude: 
+\series default
+0.5.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Frequency:
+\series default
+ 
+\begin_inset Formula $f_{senRuido}*2pi=15e3*2*pi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Sample time: 
+\begin_inset Formula $1/Fs=1/48e3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/sinenoise_sysgen.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Parámetros de configuración para la componente de ruido de entrada al sistema
+ de filtrado.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+También se necesitará un sumador de señales para mezclar ambas funciones
+ senoidales, el cual se encuentra en 
+\series bold
+Simulink > Math Operations Sum: 
+\begin_inset Graphics
+	filename img/sum_simulink.png
+	scale 40
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+El bloque que se encargará de filtrar la señal se encuentra en 
+\series bold
+Xilinx Blockset > DSP > FIR Compiler 5.0
+\series default
+, se debe configurar con los siguientes parámetros:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Coefficient Vector = 
+\begin_inset Formula $fir1(orden,Wn)$
+\end_inset
+
+ = 
+\series default
+[0.0016,0.0013,-0.0005,-0.0037,-0.0055,-0.0018,0.0084,0.0175,0.0133,-0.0103,-0.0406,-0.0482,
+-0.0053,0.0900,0.2034,0.2804,0.2804,0.2034,0.0900,-0.0053,-0.0482,-0.0406,-0.0103,0.0133,0.01
+75,0.0084,-0.0018,-0.0055,-0.0037,-0.0005,0.0013,0.0016].
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Hardware Oversampling Specification > Sample Format: 
+\series default
+Sample_period
+\series bold
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Sample Period
+\series default
+: 1.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Implementation > Filter Architecture
+\series default
+: Distributed_Arithmetic.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Coefficient Options > Coefficient Structure:
+\series default
+ Inferred.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Coefficient Type: 
+\series default
+Signed.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Quantization: 
+\series default
+Quantize_Only.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Coefficient Width:
+\series default
+ 16.
+\end_layout
+
+\begin_layout Itemize
+Checar la opción 
+\series bold
+Best Precision Fraction Length.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/fircompiler_opts.png
+	scale 40
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Configuración del bloque FIR Compiler.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Una vez teniendo estos elementos en el nuevo modelo de Simulink, se deben
+ conectar como se muestra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Interconexión-de-los"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/lab1_sysgen_working.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Interconexión de los bloques de Simulink/Sysgen para la elaboración del
+ filtro FIR.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Interconexión-de-los"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Debido a que la señal de interés en este sistema, es la 
+\begin_inset Formula $f_{senBase}$
+\end_inset
+
+ con 1KHz, para poder observar 10 muestras en el osciloscopio de simulink,
+ pondremos como valor en el 
+\emph on
+Simulink stop time
+\emph default
+ = 0.010, que equivale a multiplicar el periodo de la señal de 1KHz por 10.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/parametros_de_simulacion.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Parámetro de tiempo de simulación para este ejercicio.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Ejecutar el sistema.
+ El scope deberá mostrar dos señales, en la parte superior la señal con
+ ruido inducido y en la posterior, la señal filtrada libre de cualquier
+ deformación, como se muestra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Resultado-de-la"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/myfigurescope.jpg
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Resultado de la simulación del sistema utilizando los bloques de Sysgen.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Resultado-de-la-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+Implementación del sistema en el kit Atlys.
+\end_layout
+
+\begin_layout Standard
+El siguiente proceso describe como utilizar el kit Atlys como co-procesador,
+ mediante la generación d
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

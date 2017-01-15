@@ -1,0 +1,126 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Sun Jan 15 00:45:01 2017
+# Process ID: 6038
+# Log file: /home/diego/Documents/Finalized/examples/noise_removal/netlist/hwcosim/planAhead.log
+# Journal file: /home/diego/Documents/Finalized/examples/noise_removal/netlist/hwcosim/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from /home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [/home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [/home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+open_project noise_removal_cw.ppr
+Scanning sources...
+Finished scanning sources
+update_compile_order -fileset sim_1
+open_run synth_1 -name netlist_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc6slx45tfgg484-3
+Parsing EDIF File [./noise_removal_cw.data/cache/hwcosim_top_ngc_ff415333.edif]
+Finished Parsing EDIF File [./noise_removal_cw.data/cache/hwcosim_top_ngc_ff415333.edif]
+Reading core file '/home/diego/Documents/Finalized/examples/noise_removal/netlist/hwcosim/noise_removal_cw.srcs/sources_1/imports/sysgen/fr_cmplr_v5_0_975105ecba5a1562.ngc' for (cell view 'fr_cmplr_v5_0_975105ecba5a1562', library 'hwcosim_top_lib', file 'hwcosim_top.ngc')
+Parsing EDIF File [./noise_removal_cw.data/cache/fr_cmplr_v5_0_975105ecba5a1562_ngc_c7475c5b.edif]
+Finished Parsing EDIF File [./noise_removal_cw.data/cache/fr_cmplr_v5_0_975105ecba5a1562_ngc_c7475c5b.edif]
+Reading core file '/home/diego/Documents/Finalized/examples/noise_removal/netlist/hwcosim/noise_removal_cw.srcs/sources_1/imports/sysgen/xlpersistentdff.ngc' for (cell view 'xlpersistentdff', library 'hwcosim_top_lib', file 'hwcosim_top.ngc')
+Parsing EDIF File [./noise_removal_cw.data/cache/xlpersistentdff_ngc_c7475c5b.edif]
+Finished Parsing EDIF File [./noise_removal_cw.data/cache/xlpersistentdff_ngc_c7475c5b.edif]
+Reading core file '/home/diego/Documents/Finalized/examples/noise_removal/netlist/hwcosim/noise_removal_cw.srcs/sources_1/imports/sysgen/jtagcosim_iface_spartan6.ngc' for (cell view 'jtagcosim_iface_spartan6', library 'hwcosim_top_lib', file 'hwcosim_top.ngc')
+Parsing EDIF File [./noise_removal_cw.data/cache/jtagcosim_iface_spartan6_ngc_c7475c5b.edif]
+Finished Parsing EDIF File [./noise_removal_cw.data/cache/jtagcosim_iface_spartan6_ngc_c7475c5b.edif]
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-43] Netlist 'hwcosim_top' is not ideal for floorplanning, since the cellview 'fr_cmplr_v5_0_975105ecba5a1562_fir_compiler_v5_0_xst_1_c_da_fir_v9_0_xst' defined in file 'fr_cmplr_v5_0_975105ecba5a1562.ngc' contains large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+Loading clock regions from /home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan6/spartan6lxt/xc6slx45t/ClockRegion.xml
+Loading clock buffers from /home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan6/spartan6lxt/xc6slx45t/ClockBuffers.xml
+Loading package pin functions from /home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan6/PinFunctions.xml...
+Loading package from /home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan6/spartan6lxt/xc6slx45t/fgg484/Package.xml
+Loading io standards from /home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan6/IOStandards.xml
+Loading device configuration modes from /home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan6/ConfigModes.xml
+Loading list of drcs for the architecture : /home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan6/drc.xml
+Parsing UCF File [/home/diego/Documents/Finalized/examples/noise_removal/netlist/hwcosim/noise_removal_cw.srcs/constrs_1/imports/sysgen/hwcosim_top.ucf]
+Finished Parsing UCF File [/home/diego/Documents/Finalized/examples/noise_removal/netlist/hwcosim/noise_removal_cw.srcs/constrs_1/imports/sysgen/hwcosim_top.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 5 instances were transformed.
+  AUTOBUF => BUFG: 1 instances
+  INV => LUT1: 4 instances
+
+Phase 0 | Netlist Checksum: 5145b539
+open_run: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 2932.652 ; gain = 180.387
+open_rtl_design -name rtl_1
+Design is defaulting to project part: xc6slx45tfgg484-3
+Using Verific elaboration
+Parsing VHDL file "/home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Analyzing Verilog file "/home/diego/Documents/Finalized/examples/noise_removal/netlist/hwcosim/noise_removal_cw.srcs/sources_1/imports/sysgen/noise_removal.v" into library work
+Analyzing Verilog file "/home/diego/Documents/Finalized/examples/noise_removal/netlist/hwcosim/noise_removal_cw.srcs/sources_1/imports/sysgen/noise_removal_cw.v" into library work
+Analyzing Verilog file "/home/diego/Documents/Finalized/examples/noise_removal/netlist/hwcosim/noise_removal_cw.srcs/sources_1/imports/sysgen/hwcosim_interface.v" into library work
+Analyzing Verilog file "/home/diego/Documents/Finalized/examples/noise_removal/netlist/hwcosim/noise_removal_cw.srcs/sources_1/imports/sysgen/hwcosim_top.v" into library work
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design fr_cmplr_v5_0_975105ecba5a1562.ngc ...
+WARNING:NetListWriters:298 - No output is written to
+   fr_cmplr_v5_0_975105ecba5a1562.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file fr_cmplr_v5_0_975105ecba5a1562.edif ...
+ngc2edif: Total memory usage is 131296 kilobytes
+
+Reading core file '/home/diego/Documents/Finalized/examples/noise_removal/netlist/hwcosim/noise_removal_cw.srcs/sources_1/imports/sysgen/fr_cmplr_v5_0_975105ecba5a1562.ngc' for (cell view 'fr_cmplr_v5_0_975105ecba5a1562', library 'work', file 'noise_removal.v')
+Parsing EDIF File [./.Xil/PlanAhead-6038-alienwarex/ngc2edif/fr_cmplr_v5_0_975105ecba5a1562.edif]
+Finished Parsing EDIF File [./.Xil/PlanAhead-6038-alienwarex/ngc2edif/fr_cmplr_v5_0_975105ecba5a1562.edif]
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design xlpersistentdff.ngc ...
+WARNING:NetListWriters:298 - No output is written to xlpersistentdff.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file xlpersistentdff.edif ...
+ngc2edif: Total memory usage is 113640 kilobytes
+
+Reading core file '/home/diego/Documents/Finalized/examples/noise_removal/netlist/hwcosim/noise_removal_cw.srcs/sources_1/imports/sysgen/xlpersistentdff.ngc' for (cell view 'xlpersistentdff', library 'work', file 'noise_removal_cw.v')
+Parsing EDIF File [./.Xil/PlanAhead-6038-alienwarex/ngc2edif/xlpersistentdff.edif]
+Finished Parsing EDIF File [./.Xil/PlanAhead-6038-alienwarex/ngc2edif/xlpersistentdff.edif]
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design jtagcosim_iface_spartan6.ngc ...
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file jtagcosim_iface_spartan6.edif ...
+ngc2edif: Total memory usage is 116636 kilobytes
+
+Reading core file '/home/diego/Documents/Finalized/examples/noise_removal/netlist/hwcosim/noise_removal_cw.srcs/sources_1/imports/sysgen/jtagcosim_iface_spartan6.ngc' for (cell view 'jtagcosim_iface_spartan6', library 'work', file 'hwcosim_top.v')
+Parsing EDIF File [./.Xil/PlanAhead-6038-alienwarex/ngc2edif/jtagcosim_iface_spartan6.edif]
+Finished Parsing EDIF File [./.Xil/PlanAhead-6038-alienwarex/ngc2edif/jtagcosim_iface_spartan6.edif]
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Parsing UCF File [/home/diego/Documents/Finalized/examples/noise_removal/netlist/hwcosim/.Xil/PlanAhead-6038-alienwarex/ngc2edif/jtagcosim_iface_spartan6.xncf]
+Finished Parsing UCF File [/home/diego/Documents/Finalized/examples/noise_removal/netlist/hwcosim/.Xil/PlanAhead-6038-alienwarex/ngc2edif/jtagcosim_iface_spartan6.xncf]
+Parsing UCF File [/home/diego/Documents/Finalized/examples/noise_removal/netlist/hwcosim/noise_removal_cw.srcs/constrs_1/imports/sysgen/hwcosim_top.ucf]
+Finished Parsing UCF File [/home/diego/Documents/Finalized/examples/noise_removal/netlist/hwcosim/noise_removal_cw.srcs/constrs_1/imports/sysgen/hwcosim_top.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  AUTOBUF => BUFG: 1 instances
+
+Phase 0 | Netlist Checksum: 3c280463
+open_rtl_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 2933.168 ; gain = 0.250
+exit
+INFO: [Common 17-206] Exiting PlanAhead at Sun Jan 15 00:50:54 2017...
+INFO: [Common 17-83] Releasing license: PlanAhead

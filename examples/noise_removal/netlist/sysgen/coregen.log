@@ -1,0 +1,36 @@
+INFO:encore:314 - Created non-GUI application for batch mode execution.
+INFO:sim:172 - Generating IP...
+Resolving generic values...
+WARNING:sim:597 - The parameter 'Sample_Frequency' is disabled and can't be set
+   to any other value than '0.001'. Its value will be reset from '0.00100000000'
+   to its last valid value '0.001'.
+WARNING:sim:597 - The parameter 'Clock_Frequency' is disabled and can't be set
+   to any other value than '250.0'. Its value will be reset from '250' to its
+   last valid value '250.0'.
+WARNING:sim:192 - Xco Parameter changed from (Sample_Frequency,0.00100000000) to
+   (Sample_Frequency,0.001) during Recustomization.
+WARNING:sim:192 - Xco Parameter changed from (Clock_Frequency,250) to
+   (Clock_Frequency,250.0) during Recustomization.
+Finished resolving generic values.
+Generating IP...
+WARNING:sim:472 - The chosen IP does not support a Verilog behavioral model,
+   generating a Verilog structural model instead.
+XST: HDL Parsing
+XST: HDL Elaboration
+XST: HDL Synthesis
+XST: Advanced HDL Synthesis
+XST: Low Level Synthesis
+Generating Implementation files.
+Generating NGC file.
+Generating Verilog structural model.
+Finished Generation.
+Generating IP instantiation template...
+INFO:sim:949 - Finished generation of ASY schematic symbol.
+Generating metadata file...
+Generating README file...
+Generating FLIST file...
+INFO:sim:948 - Finished FLIST file generation.
+Moving files to output directory...
+Finished moving files to output directory
+Saved CGP file for project 'coregen'.
+Saved CGP file for project 'coregen'.

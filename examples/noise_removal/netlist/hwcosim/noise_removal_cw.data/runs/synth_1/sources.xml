@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DARoots Version="1" Minor="26">
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/sysgen/fr_cmplr_v5_0_975105ecba5a1562.ngc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sysgen/fr_cmplr_v5_0_975105ecba5a1562.ngc"/>
+        <Attr Name="ImportTime" Val="1484461736"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInImplementation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sysgen/xlpersistentdff.ngc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sysgen/xlpersistentdff.ngc"/>
+        <Attr Name="ImportTime" Val="1484461679"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInImplementation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sysgen/noise_removal.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sysgen/noise_removal.v"/>
+        <Attr Name="ImportTime" Val="1484461739"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInImplementation" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sysgen/noise_removal_cw.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sysgen/noise_removal_cw.v"/>
+        <Attr Name="ImportTime" Val="1484461740"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInImplementation" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sysgen/jtagcosim_iface_spartan6.ngc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sysgen/jtagcosim_iface_spartan6.ngc"/>
+        <Attr Name="ImportTime" Val="1484461748"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInImplementation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sysgen/hwcosim_interface.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sysgen/hwcosim_interface.v"/>
+        <Attr Name="ImportTime" Val="1484461748"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInImplementation" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sysgen/hwcosim_top.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sysgen/hwcosim_top.v"/>
+        <Attr Name="ImportTime" Val="1484461748"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInImplementation" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="hwcosim_top"/>
+    </Config>
+  </FileSet>
+</DARoots>

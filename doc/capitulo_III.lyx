@@ -365,7 +365,7 @@ reference "fig:Respuesta-en-magnitud"
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -525,7 +525,7 @@ name "fig:Resultado-de-la"
 \end_layout
 
 \begin_layout Subsubsection
-Implementación del sistema en Sysgen.
+Simulación del sistema en Sysgen.
 \end_layout
 
 \begin_layout Standard
@@ -992,7 +992,7 @@ Amplitude:
 Frequency:
 \series default
  
-\begin_inset Formula $F_{base}*2pi=1e3*2*pi$
+\begin_inset Formula $f_{senBase}*2pi=1e3*2*pi$
 \end_inset
 
 .
@@ -1068,7 +1068,7 @@ Amplitude:
 Frequency:
 \series default
  
-\begin_inset Formula $F_{base}*2pi=15e3*2*pi$
+\begin_inset Formula $f_{senRuido}*2pi=15e3*2*pi$
 \end_inset
 
 .
@@ -1284,6 +1284,7 @@ reference "fig:Interconexión-de-los"
 .
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
 \begin_inset Float figure
 placement H
@@ -1332,6 +1333,373 @@ name "fig:Interconexión-de-los"
 
 \end_layout
 
+\end_deeper
+\begin_layout Enumerate
+Debido a que la señal de interés en este sistema, es la 
+\begin_inset Formula $f_{senBase}$
+\end_inset
+
+ con 1KHz, para poder observar 10 muestras en el osciloscopio de simulink,
+ pondremos como valor en el 
+\emph on
+Simulink stop time
+\emph default
+ = 0.010, que equivale a multiplicar el periodo de la señal de 1KHz por 10.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/parametros_de_simulacion.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Parámetro de tiempo de simulación para este ejercicio.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Ejecutar el sistema.
+ El scope deberá mostrar dos señales, en la parte superior la señal con
+ ruido inducido y en la posterior, la señal filtrada libre de cualquier
+ deformación, como se muestra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Resultado-de-la"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/myfigurescope.jpg
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Resultado de la simulación del sistema utilizando los bloques de Sysgen.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Resultado-de-la-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+Implementación del sistema en el kit Atlys.
+\end_layout
+
+\begin_layout Standard
+El siguiente proceso describe como utilizar el kit Atlys como co-procesador,
+ mediante la compilación y generación de una biblioteca que contiene el
+ modelo que se describió con anterioridad.
+ Mediante el uso de la herramienta Sysgen, se generarán los archivos de
+ HDL necesarios así como la síntesis e implementación en segundo plano.
+ Al finalizar, La tarjeta de desarrollo será capáz de comunicarse con Simulink
+ para enviar y recibir los datos correspondientes a este modelo.
+\end_layout
+
+\begin_layout Enumerate
+Al dar doble clic sobre 
+\emph on
+'Sysgen token'
+\emph default
+, existe un parámetro de usuario donde se define el tipo de compilación.
+ Para este caso, se utilizarán las siguiente configuración:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Compilation: 
+\series default
+Hardware Co-Simulation > Atlys > JTAG.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Dar clic en 
+\emph on
+'Generate'.
+ 
+\emph default
+Esto ejecutará a PlanAhead en segundo plano, con la intención de generar
+ el 
+\emph on
+bitfile
+\series bold
+ 
+\series default
+\emph default
+o ejecutable que se descargará en la FPGA.
+ Al finalizar, aparecerá en una nueva ventana la biblioteca generada por
+ Sysgen, que no es más que la representación del algoritmo en términos de
+ hardware.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/firlib_generated.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Generación de la representación del kit Atlys en Simulink, el cual contiene
+ los recursos de hardware necesario para ejecutar el algoritmo del filtro
+ FIR.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Con el nuevo bloque generado, se deben actualizar las conexiones de la siguiente
+ forma.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/lab1_sysgen_fpgaincluded.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Conexión del bloque de Co-simulación.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Al integrar el bloque generado por Sysgen, es necesario conectar el kit
+ Atlys a la PC antes de volver a ejecutar la simulación, puesto que ahora,
+ el bitfile se descargará en el kit y podremos observar los resultados en
+ el segundo osciloscopio,
+\end_layout
+
+\begin_layout Enumerate
+La traducción de este filtro FIR a hardware se hizo mediante la utilización
+ de BRAMs para almacenar los coeficientes, un contador y un par de elementos
+ multiplicadores y acumuladores.
+ Todo esto se puede analizar abriendo el proyecto generado que se encuentra
+ en 
+\emph on
+netlist > hwcosim > nombre_del_proyecto.ppr
+\emph default
+ con PlanAhead.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/planahead_fir_schem.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama esquemático de la implementación del modelo del filtro FIR en FPGA.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+La utilización del sistema y frecuencia máxima a la que se puede ejecutar
+ este modelo se muestra en la Figura
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/planahead_fir_utilization.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Utilización de recursos de la FPGA.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset

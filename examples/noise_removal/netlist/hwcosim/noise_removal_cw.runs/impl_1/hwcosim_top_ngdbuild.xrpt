@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<document OS="lin64" product="ISE" version="14.7">
+
+  <!--The data in this file is primarily intended for consumption by Xilinx tools.
+    The structure and the elements are likely to change over the next few releases.
+    This means code written to parse this file will need to be revisited each subsequent release.-->
+
+  <application stringID="NgdBuild" timeStamp="Sun Jan 15 00:29:57 2017">
+    <section stringID="User_Env">
+      <table stringID="User_EnvVar">
+        <column stringID="variable"/>
+        <column stringID="value"/>
+        <row stringID="row" value="0">
+          <item stringID="variable" value="XILINX_DSP"/>
+          <item stringID="value" value="/home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/ISE"/>
+        </row>
+        <row stringID="row" value="1">
+          <item stringID="variable" value="XILINX_COMMON_TOOLS"/>
+          <item stringID="value" value="/home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/common"/>
+        </row>
+        <row stringID="row" value="2">
+          <item stringID="variable" value="XIL_DRC_BUFR_NO_CCIO_CHECK"/>
+          <item stringID="value" value="1"/>
+        </row>
+        <row stringID="row" value="3">
+          <item stringID="variable" value="XIL_IMPACT_ENV_LPT1_BASE_ADDRESS"/>
+          <item stringID="value" value="0"/>
+        </row>
+        <row stringID="row" value="4">
+          <item stringID="variable" value="LD_LIBRARY_PATH"/>
+          <item stringID="value" value="/home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/ISE//lib/lin64:/home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/EDK/lib/lin64:/home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/ISE/lib/lin64:/home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/common/lib/lin64:/home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/ISE/sysgen/bin/lin64:/home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/ISE/sysgen/lib/lin64:/home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/PlanAhead/lib:/home/diego/EDA/Matlab/R2013a/sys/os/glnxa64:/home/diego/EDA/Matlab/R2013a/bin/glnxa64:/home/diego/EDA/Matlab/R2013a/extern/lib/glnxa64:/home/diego/EDA/Matlab/R2013a/runtime/glnxa64:/home/diego/EDA/Matlab/R2013a/sys/java/jre/glnxa64/jre/lib/amd64/native_threads:/home/diego/EDA/Matlab/R2013a/sys/java/jre/glnxa64/jre/lib/amd64/server:/home/diego/EDA/Matlab/R2013a/sys/java/jre/glnxa64/jre/lib/amd64:/home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/ISE/smartmodel/lin64/installed_lin64/lib:/home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/ISE/sysgen/lib"/>
+        </row>
+        <row stringID="row" value="5">
+          <item stringID="variable" value="XILINX_EDK"/>
+          <item stringID="value" value="/home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/EDK"/>
+        </row>
+        <row stringID="row" value="6">
+          <item stringID="variable" value="XIL_IMPACT_ENV_LPT2_ECP_ADDRESS"/>
+          <item stringID="value" value="410"/>
+        </row>
+        <row stringID="row" value="7">
+          <item stringID="variable" value="PATH"/>
+          <item stringID="value" value="/home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/ISE//bin/lin64:/home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/EDK/bin/lin64:/home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/ISE/bin/lin64:/home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/common/bin/lin64:/home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/PlanAhead/bin:/home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/ISE/sysgen/bin/lin64:/home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/ISE/sysgen/util:/home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/ISE/sysgen/bin:/home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/ISE/../../../DocNav:/home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin:/home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/EDK/gnu/powerpc-eabi/lin/bin:/home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/EDK/gnu/arm/lin/bin:/home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/EDK/gnu/microblaze/linux_toolchain/lin64_be/bin:/home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/EDK/gnu/microblaze/linux_toolchain/lin64_le/bin:/usr/lib64/qt-3.3/bin:/usr/lib64/ccache:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/home/diego/EDA/Altera/16.1/quartus/bin:/home/diego/EDA/Matlab/R2013a/bin"/>
+        </row>
+        <row stringID="row" value="8">
+          <item stringID="variable" value="XIL_IMPACT_USE_WINDRIVER"/>
+          <item stringID="value" value="1"/>
+        </row>
+        <row stringID="row" value="9">
+          <item stringID="variable" value="XIL_IMPACT_USE_LIBUSB"/>
+          <item stringID="value" value="0"/>
+        </row>
+        <row stringID="row" value="10">
+          <item stringID="variable" value="XIL_IMPACT_ENV_LPT4_BASE_ADDRESS"/>
+          <item stringID="value" value="30"/>
+        </row>
+        <row stringID="row" value="11">
+          <item stringID="variable" value="XIL_IMPACT_ENV_LPT3_BASE_ADDRESS"/>
+          <item stringID="value" value="20"/>
+        </row>
+        <row stringID="row" value="12">
+          <item stringID="variable" value="XIL_IMPACT_ENV_LPT1_ECP_ADDRESS"/>
+          <item stringID="value" value="400"/>
+        </row>
+        <row stringID="row" value="13">
+          <item stringID="variable" value="XIL_IMPACT_ENV_LPT3_ECP_ADDRESS"/>
+          <item stringID="value" value="420"/>
+        </row>
+        <row stringID="row" value="14">
+          <item stringID="variable" value="LMC_HOME"/>
+          <item stringID="value" value="/home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/ISE/smartmodel/lin64/installed_lin64"/>
+        </row>
+        <row stringID="row" value="15">
+          <item stringID="variable" value="XIL_IMPACT_ENV_LPT2_BASE_ADDRESS"/>
+          <item stringID="value" value="10"/>
+        </row>
+        <row stringID="row" value="16">
+          <item stringID="variable" value="XILINX_PLANAHEAD"/>
+          <item stringID="value" value="/home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/PlanAhead"/>
+        </row>
+        <row stringID="row" value="17">
+          <item stringID="variable" value="XIL_IMPACT_ENV_LPT4_ECP_ADDRESS"/>
+          <item stringID="value" value="430"/>
+        </row>
+        <row stringID="row" value="18">
+          <item stringID="variable" value="XILINX"/>
+          <item stringID="value" value="/home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/ISE/"/>
+        </row>
+      </table>
+      <item stringID="User_EnvOs" value="OS Information">
+        <item stringID="User_EnvOsname" value="Fedora"/>
+        <item stringID="User_EnvOsrelease" value="Fedora release 25 (Twenty Five)"/>
+      </item>
+      <item stringID="User_EnvHost" value="alienwarex"/>
+      <table stringID="User_EnvCpu">
+        <column stringID="arch"/>
+        <column stringID="speed"/>
+        <row stringID="row" value="0">
+          <item stringID="arch" value="Intel(R) Core(TM) i7-4790 CPU @ 3.60GHz"/>
+          <item stringID="speed" value="3896.630 MHz"/>
+        </row>
+      </table>
+    </section>
+    <task stringID="NGDBUILD_OPTION_SUMMARY">
+      <section stringID="NGDBUILD_OPTION_SUMMARY">
+        <item DEFAULT="None" label="-intstyle" stringID="NGDBUILD_intstyle" value="ise"/>
+        <item DEFAULT="None" label="-dd" stringID="NGDBUILD_output_dir" value="_ngo"/>
+        <item DEFAULT="None" label="-p" stringID="NGDBUILD_partname" value="xc6slx45tfgg484-3"/>
+        <item DEFAULT="None" label="-uc" stringID="NGDBUILD_ucf_file" value="hwcosim_top.ucf"/>
+      </section>
+    </task>
+    <task stringID="NGDBUILD_REPORT">
+      <section stringID="NGDBUILD_DESIGN_SUMMARY">
+        <item dataType="int" stringID="NGDBUILD_NUM_ERRORS" value="0"/>
+        <item dataType="int" stringID="NGDBUILD_FILTERED_WARNINGS" value="0"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_WARNINGS" value="26"/>
+        <item dataType="int" stringID="NGDBUILD_FILTERED_INFOS" value="0"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_INFOS" value="2"/>
+      </section>
+      <section stringID="NGDBUILD_PRE_UNISIM_SUMMARY"/>
+      <section stringID="NGDBUILD_POST_UNISIM_SUMMARY">
+        <item dataType="int" stringID="NGDBUILD_NUM_BSCAN_SPARTAN6" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_BUFG" value="2"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_BUFGMUX" value="3"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_DCM_SP" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FD" value="9"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDC" value="21"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDCE" value="322"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDE" value="4027"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDP" value="8"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDPE" value="37"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDRE" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_GND" value="8"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_IBUFGDS" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT1" value="29"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT1_L" value="58"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT2" value="46"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT2_L" value="110"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT3" value="133"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT3_L" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT4" value="3099"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT4_L" value="4"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT5" value="24"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT5_L" value="28"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT6" value="38"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT6_L" value="13"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_MUXCY" value="1813"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_MUXCY_L" value="97"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_MUXF7" value="2"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_RAMB16BWER" value="2"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_SRL16E" value="17"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_TS_TIMESPEC" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_VCC" value="8"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_XORCY" value="1958"/>
+      </section>
+      <section stringID="NGDBUILD_CORE_SUMMARY">
+        <item COUNT="1" stringID="NGDBUILD_CORE" value="fir_compiler_v5_0, Xilinx CORE Generator 14.7"/>
+        <section stringID="NGDBUILD_CORE_GENERATION_SUMMARY">
+          <section stringID="NGDBUILD_CORE_INSTANCES">
+            <scope stringID="NGDBUILD_CORE_INSTANCE" value="fr_cmplr_v5_0_975105ecba5a1562">
+              <item stringID="NGDBUILD_CORE_INFO" type="fir_compiler_v5_0" value="fr_cmplr_v5_0_975105ecba5a1562"/>
+              <item accum_width="37" allow_approx="0" c_has_ce="0" c_has_data_valid="0" c_has_nd="1" c_has_sclr="0" c_latency="11" c_mem_init_file="fname.mif" c_optimization="1" chan_in_adv="0" chan_sel_width="1" clock_freq="1" coef_memtype="0" coef_reload="0" coef_type="0" coef_width="16" col_config="1" col_mode="0" col_pipe_len="4" data_memtype="0" data_type="0" data_width="16" datapath_memtype="0" decim_rate="1" filter_arch="3" filter_sel_width="1" filter_type="0" interp_rate="1" ipbuff_memtype="0" neg_symmetry="0" num_channels="1" num_filts="1" num_paths="1" num_taps="32" odd_symmetry="0" opbuff_memtype="0" output_reg="1" output_width="37" rate_change_type="0" round_mode="0" sample_freq="1" sclr_deterministic="0" stringID="NGDBUILD_CORE_PARAMETERS" symmetry="1" value="fr_cmplr_v5_0_975105ecba5a1562" zero_packing_factor="1"/>
+            </scope>
+            <scope stringID="NGDBUILD_CORE_INSTANCE" value="noise_removal">
+              <item stringID="NGDBUILD_CORE_INFO" type="sysgen_core" value="noise_removal"/>
+              <item clock_period="15.00000000" clocking="Clock_Enables" compilation="SP605_(JTAG)" sample_periods="1.00000000000" stringID="NGDBUILD_CORE_PARAMETERS" testbench="0" total_blocks="20" value="noise_removal" xilinx_constant_block_block="1" xilinx_fir_compiler_5_0_block="1" xilinx_gateway_in_block="1" xilinx_gateway_out_block="2" xilinx_system_generator_block="1"/>
+            </scope>
+          </section>
+        </section>
+      </section>
+    </task>
+  </application>
+
+</document>

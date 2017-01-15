@@ -1,0 +1,4 @@
+verilog work "/home/diego/Documents/Finalized/examples/noise_removal/netlist/hwcosim/noise_removal_cw.srcs/sources_1/imports/sysgen/noise_removal.v"
+verilog work "/home/diego/Documents/Finalized/examples/noise_removal/netlist/hwcosim/noise_removal_cw.srcs/sources_1/imports/sysgen/noise_removal_cw.v"
+verilog work "/home/diego/Documents/Finalized/examples/noise_removal/netlist/hwcosim/noise_removal_cw.srcs/sources_1/imports/sysgen/hwcosim_interface.v"
+verilog work "/home/diego/Documents/Finalized/examples/noise_removal/netlist/hwcosim/noise_removal_cw.srcs/sources_1/imports/sysgen/hwcosim_top.v"
