@@ -1598,9 +1598,65 @@ Conexión del bloque de Co-simulación.
 Al integrar el bloque generado por Sysgen, es necesario conectar el kit
  Atlys a la PC antes de volver a ejecutar la simulación, puesto que ahora,
  el bitfile se descargará en el kit y podremos observar los resultados en
- el segundo osciloscopio,
+ el segundo osciloscopio, como se muestra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Comparación-entre-el"
+
+\end_inset
+
+.
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/output_from_fir_I.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Comparación entre el resultado de la simulación en contraste con la ejecución
+ en FPGA como co-procesador.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Comparación-entre-el"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 La traducción de este filtro FIR a hardware se hizo mediante la utilización
  de BRAMs para almacenar los coeficientes, un contador y un par de elementos
@@ -1619,7 +1675,7 @@ netlist > hwcosim > nombre_del_proyecto.ppr
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1665,7 +1721,7 @@ La utilización del sistema y frecuencia máxima a la que se puede ejecutar
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center

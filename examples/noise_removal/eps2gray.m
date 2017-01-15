@@ -1,4 +1,4 @@
-bw=imread('/home/diego/Documents/Finalized/examples/noise_removal/myfigurescope.jpg');
+bw=imread('/home/diego/Pictures/output_from_fir.png');
 bw2=imcomplement(bw);
 figure();
 imshow(bw2)
