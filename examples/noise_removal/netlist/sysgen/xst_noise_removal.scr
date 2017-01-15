@@ -1,1 +1,0 @@
-run -ifn xst_noise_removal.prj -ifmt mixed -ofn noise_removal_cw.ngc -ofmt NGC -p xc6slx45t-3fgg484 -ent noise_removal_cw -keep_hierarchy NO -iobuf YES -bus_delimiter [] -top noise_removal_cw -hierarchy_separator / -report_timing_constraint_problems warning -register_balancing no -iob Auto -uc noise_removal_cw.xcf -write_timing_constraints yes

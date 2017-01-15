@@ -1619,7 +1619,7 @@ status collapsed
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename img/output_from_fir_I.png
-	scale 40
+	scale 30
 
 \end_inset
 
@@ -1756,6 +1756,122 @@ Utilización de recursos de la FPGA.
 \end_layout
 
 \end_deeper
+\begin_layout Subsection
+Implementación del algoritmo de eco aplicado a señales de audio utilizando
+ el códec AC97.
+\end_layout
+
+\begin_layout Standard
+El efecto de eco es uno de los más utilizados en el procesamiento de señales
+ de audio.
+ De este se pueden derivar otros efectos como la reverberación, vibrato,
+ coro y demás efectos basados en retrasos.
+\end_layout
+
+\begin_layout Standard
+Este efecto está basado en el filtro FIR conocido como 
+\series bold
+peine 
+\series default
+o en inglés como 
+\emph on
+fir comb filter
+\emph default
+.
+ La entrada del filtro es retrasada por un tiempo definido y el efecto sólo
+ será audible cuando la señal procesada sea combinada con la original (de
+ ahí el nombre de 
+\emph on
+comb filter
+\emph default
+).
+\end_layout
+
+\begin_layout Standard
+La ecuación diferencial del filtro peine está dada por:
+\begin_inset Formula 
+\begin{equation}
+y_{n}=x_{n}+g*x_{n-M}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si trasladamos la ecuación 
+\series bold
+6.5
+\series default
+ a diagrama de bloques, nos queda como se muestra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Comb_filter"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/comb_filter.jpeg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama a bloques del filtro peine o 
+\emph on
+comb filter.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Comb_filter"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A partir de esto podemos observar que, la estructura se conforma de elementos
+ básicos como bloques de retraso (
+\begin_inset Formula $Z^{-M}$
+\end_inset
+
+), multiplicadores que sirven como ganancia y sumadores.
+\end_layout
+
 \begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
