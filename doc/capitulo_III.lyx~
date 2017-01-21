@@ -1869,7 +1869,8 @@ A partir de esto podemos observar que, la estructura se conforma de elementos
 \begin_inset Formula $Z^{-M}$
 \end_inset
 
-), multiplicadores que sirven como ganancia y sumadores.
+), multiplicadores que sirven como ganancia y sumadores, los cuales fácilmente
+ pueden ser implementados en un FPGA.
 \end_layout
 
 \begin_layout Standard

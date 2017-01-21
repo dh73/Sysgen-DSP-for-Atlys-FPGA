@@ -1764,12 +1764,13 @@ Implementación del algoritmo de eco aplicado a señales de audio utilizando
 \begin_layout Standard
 El efecto de eco es uno de los más utilizados en el procesamiento de señales
  de audio.
- De este se pueden derivar otros efectos como la reverberación, vibrato,
- coro y demás efectos basados en retrasos.
+ De este se pueden derivar otros más como la reverberación, vibrato, coro
+ y otras transformaciones basadas en retrasos.
 \end_layout
 
 \begin_layout Standard
-Este efecto está basado en el filtro FIR conocido como 
+Esta implementación está basada en la utilización del filtro FIR conocido
+ como 
 \series bold
 peine 
 \series default
