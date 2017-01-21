@@ -1761,6 +1761,12 @@ Implementación del algoritmo de eco aplicado a señales de audio utilizando
  el códec AC97.
 \end_layout
 
+\begin_layout Subsubsection
+Filtros FIR peine o 
+\emph on
+comb filter.
+\end_layout
+
 \begin_layout Standard
 El efecto de eco es uno de los más utilizados en el procesamiento de señales
  de audio.
@@ -1805,7 +1811,7 @@ Si trasladamos la ecuación
 \series bold
 6.5
 \series default
- a diagrama de bloques, nos queda como se muestra en la Figura 
+ a un diagrama de bloques, nos queda como se muestra en la Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Comb_filter"
@@ -1820,7 +1826,7 @@ reference "fig:Comb_filter"
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1872,6 +1878,53 @@ A partir de esto podemos observar que, la estructura se conforma de elementos
 
 ), multiplicadores que sirven como ganancia y sumadores, los cuales fácilmente
  pueden ser implementados en un FPGA.
+\end_layout
+
+\begin_layout Subsubsection
+Desarrollo del algoritmo de eco en Sysgen.
+\end_layout
+
+\begin_layout Subsubsection
+Implementación en FPGA del códec de audio AC97.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/codec_impl_ac97final.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Test
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
