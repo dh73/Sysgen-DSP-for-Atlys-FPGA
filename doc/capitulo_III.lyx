@@ -1881,11 +1881,87 @@ A partir de esto podemos observar que, la estructura se conforma de elementos
 \end_layout
 
 \begin_layout Subsubsection
-Desarrollo del algoritmo de eco en Sysgen.
+Implementación en FPGA del códec de audio AC97.
 \end_layout
 
-\begin_layout Subsubsection
-Implementación en FPGA del códec de audio AC97.
+\begin_layout Standard
+El códec de audio disponible en la tarjeta Atlys es el AC97 LM4550
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Para obetener mayor información técnica a cerca del códec, visitar: 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://www.xilinx.com/products/boards/ml510/datasheets/lm4550.pdf
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ de National Semiconductor; AC97 es un standard desarrollado por Intel en
+ 1997, el cual es utilizado en tarjetas madre de ordenadores, módems y tarjetas
+ de sonido.
+\end_layout
+
+\begin_layout Standard
+El formato de datos del LM4550 es serial, de 18 bits con una frecuencia
+ de muestreo a 48KHz.
+ Es importante mantener este dato en consideración a la hora de realizar
+ cualquier algoritmo de procesamiento, puesto que, si la magnitud de la
+ trama enviada al códec es mayor o menor a la requerida, será necesario
+ alinear los datos para que la señal de audio no sea deformada, haciéndola
+ parecer como una señal de ruido.
+\end_layout
+
+\begin_layout Standard
+Puesto que el objetivo de este documento no es detallar el desarrollo del
+ controlador del códec, se provee un netlist pre-sintetizado (Verilog) el
+ cual tiene toda las siguientes características (véase Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:AC97_schem"
+
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Itemize
+Frecuencia de trabajo a 100MHz, provenientes del oscilador externo al FPGA.
+\end_layout
+
+\begin_layout Itemize
+Reset activado por flanco de bajada (activo en bajo).
+\end_layout
+
+\begin_layout Itemize
+Reloj de 12.288MHz desde el puerto 
+\emph on
+bit clock
+\emph default
+ del códec.
+\end_layout
+
+\begin_layout Itemize
+Selector de 3 bits para escoger la fuente de entrada (Mic, LineIn, headphone)
+ y de 5 bits para volúmen.
+ Estos se pueden mapear a los switches de la tarjeta Atlys para controlar
+ dichos parámetros.
+ 
+\end_layout
+
+\begin_layout Itemize
+Parámetros seleccionados para la mayor calidad de audio posible: 48KHz de
+ frecuencia de sampleo, con una palabra de 16 bits en lugar de 18 (por compatibi
+lidad con la mayoria de los formatos de audio disponibles).
 \end_layout
 
 \begin_layout Standard
@@ -1894,6 +1970,58 @@ placement H
 wide false
 sideways false
 status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/ac97_sch.svg
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama a bloques de la implementación del controlador para el códec AC97
+ en Verilog.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:AC97_schem"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Desarrollo del algoritmo en Sysgen.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1915,10 +2043,6 @@ Test
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 

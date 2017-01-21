@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="26cm" height="7cm" viewBox="271 -33 512 135" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #ffffff" x="400.825" y="2.27674" width="214.62" height="98.1192"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="400.825" y="2.27674" width="214.62" height="98.1192"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="508.135" y="55.2364">
+      <tspan x="508.135" y="55.2364"></tspan>
+    </text>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="324.53" y1="19.1976" x2="389.53" y2="20.0529"/>
+    <polygon style="fill: #000000" points="389.465,25.0525 399.53,20.1845 389.596,15.0533 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="389.465,25.0525 399.53,20.1845 389.596,15.0533 "/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="322.379" y1="50.0155" x2="389.827" y2="51.1512"/>
+    <polygon style="fill: #000000" points="389.742,56.1505 399.825,51.3195 389.911,46.1519 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="389.742,56.1505 399.825,51.3195 389.911,46.1519 "/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="321.43" y1="81.1208" x2="388.877" y2="81.5935"/>
+    <polygon style="fill: #000000" points="388.842,86.5934 398.877,81.6636 388.912,76.5936 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="388.842,86.5934 398.877,81.6636 388.912,76.5936 "/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="693.215" y1="17.3355" x2="626.348" y2="17.3109"/>
+    <polygon style="fill: #000000" points="626.35,12.3109 616.348,17.3072 626.346,22.3109 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="626.35,12.3109 616.348,17.3072 626.346,22.3109 "/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="617.106" y1="36.3627" x2="681.62" y2="36.3627"/>
+    <polygon style="fill: #000000" points="681.62,41.3627 691.62,36.3627 681.62,31.3627 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="681.62,41.3627 691.62,36.3627 681.62,31.3627 "/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="614.955" y1="55.6458" x2="679.469" y2="55.6458"/>
+    <polygon style="fill: #000000" points="679.469,60.6458 689.469,55.6458 679.469,50.6458 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="679.469,60.6458 689.469,55.6458 679.469,50.6458 "/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="693.463" y1="72.3192" x2="626.596" y2="72.2946"/>
+    <polygon style="fill: #000000" points="626.598,67.2946 616.596,72.2909 626.594,77.2946 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="626.598,67.2946 616.596,72.2909 626.594,77.2946 "/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="617.333" y1="89.538" x2="681.847" y2="89.538"/>
+    <polygon style="fill: #000000" points="681.847,94.538 691.847,89.538 681.847,84.538 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="681.847,94.538 691.847,89.538 681.847,84.538 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="441.152,-20.7105 441.152,-19.8713 561.79,-19.8713 561.79,-8.72326 "/>
+    <polygon style="fill: #000000" points="556.79,-8.72326 561.79,1.27674 566.79,-8.72326 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="556.79,-8.72326 561.79,1.27674 566.79,-8.72326 "/>
+  </g>
+  <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 4; stroke: #000000" x="280.851" y="38.8401" width="125.864" height="54.4468"/>
+  <text font-size="7.90222" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:700" x="300.65" y="52.5502">
+    <tspan x="300.65" y="52.5502">Fuente</tspan>
+  </text>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="196.706" y="52.2751">
+    <tspan x="196.706" y="52.2751"></tspan>
+  </text>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="299.236" y="48.0324">
+    <tspan x="299.236" y="48.0324"></tspan>
+  </text>
+  <text font-size="7.90222" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:700" x="300.546" y="83.8786">
+    <tspan x="300.546" y="83.8786">Volumen</tspan>
+  </text>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="268.123" y="-76.4175">
+    <tspan x="268.123" y="-76.4175"></tspan>
+  </text>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="257.517" y="-77.1246">
+    <tspan x="257.517" y="-77.1246"></tspan>
+  </text>
+  <text font-size="7.90222" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:700" x="295.596" y="22.3608">
+    <tspan x="295.596" y="22.3608">CLK 100MHz</tspan>
+  </text>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="290.751" y="17.6271">
+    <tspan x="290.751" y="17.6271"></tspan>
+  </text>
+  <text font-size="7.90222" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:700" x="498.842" y="-25.13">
+    <tspan x="498.842" y="-25.13">FPGA reset</tspan>
+  </text>
+  <text font-size="7.90222" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:700" x="718.751" y="20.2395">
+    <tspan x="718.751" y="20.2395">SDATA_IN</tspan>
+  </text>
+  <text font-size="7.90222" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:700" x="720.365" y="38.6241">
+    <tspan x="720.365" y="38.6241">SDATA_OUT</tspan>
+  </text>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="499.346" y="-31.8701">
+    <tspan x="499.346" y="-31.8701"></tspan>
+  </text>
+  <text font-size="7.90222" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:700" x="710.973" y="57.0088">
+    <tspan x="710.973" y="57.0088">Sync</tspan>
+  </text>
+  <text font-size="7.90222" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:700" x="740.671" y="74.6863">
+    <tspan x="740.671" y="74.6863">BIT_CLK 12.288MHz</tspan>
+  </text>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="253.062" y="-67.8409">
+    <tspan x="253.062" y="-67.8409"></tspan>
+  </text>
+  <text font-size="7.90222" style="fill: #000000;text-anchor:middle;font-family:monospace;font-style:normal;font-weight:700" x="725.115" y="92.2489">
+    <tspan x="725.115" y="92.2489">Codec reset</tspan>
+  </text>
+  <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 4; stroke: #000000" x="604.704" y="9.14184" width="177.483" height="88.3877"/>
+  <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="538.236" y="15.5058" width="58.6895" height="70.0031"/>
+  <text font-size="9.03111" style="fill: #000000;text-anchor:middle;font-family:serif;font-style:normal;font-weight:normal" x="567.935" y="50.0968">
+    <tspan x="567.935" y="50.0968">Controlador</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="427.221" y="11.9702" width="60.1037" height="31.8196"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="427.221" y="11.9702" width="60.1037" height="31.8196"/>
+  </g>
+  <text font-size="9.03111" style="fill: #000000;text-anchor:middle;font-family:serif;font-style:normal;font-weight:normal" x="457.273" y="25.3606">
+    <tspan x="457.273" y="25.3606">AC97FSM</tspan>
+    <tspan x="457.273" y="36.6495">Comandos</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="427.302" y="54.9014" width="60.1037" height="31.8196"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="427.302" y="54.9014" width="60.1037" height="31.8196"/>
+  </g>
+  <text font-size="9.03111" style="fill: #000000;text-anchor:middle;font-family:serif;font-style:normal;font-weight:normal" x="457.354" y="73.9362">
+    <tspan x="457.354" y="73.9362">Algoritmo</tspan>
+  </text>
+</svg>
