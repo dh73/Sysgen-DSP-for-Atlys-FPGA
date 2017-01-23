@@ -1969,7 +1969,7 @@ lidad con la mayoria de los formatos de audio disponibles).
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -2016,6 +2016,779 @@ name "fig:AC97_schem"
 Desarrollo del algoritmo en Sysgen.
 \end_layout
 
+\begin_layout Standard
+Los pasos para llevar a cabo la implementación del algoritmo de eco se muestran
+ a continuación:
+\end_layout
+
+\begin_layout Enumerate
+A partir de tener el nuevo espacio de trabajo en Simulink (se pueden seguir
+ los pasos 1 a 4 de la sección 
+\series bold
+6.1.2 Simulación del sistema en Sysgen
+\series default
+), el bloque 
+\emph on
+Sysgen Token
+\emph default
+ deberá tener las siguientes configuraciones:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Compilation: 
+\series default
+HDL Netlist.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Part: 
+\series default
+Sparnta6 xc6lx45-3csg324
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Synthesis tool: 
+\series default
+XST, 
+\series bold
+Language:
+\series default
+ Verilog.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Project Type: 
+\series default
+PlanAhead.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Synthesis Strategy: 
+\series default
+TimingWithIOBPacking
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Implementation Strategy: 
+\series default
+ParHighEffort.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Clocking Tab > FPGA clock period (ns):
+\series default
+ 10.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Multirate implementation: 
+\series default
+Clock Enables.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Simulink system period: 
+\series default
+
+\begin_inset Formula $\nicefrac{1}{48KHz}=2.0833e-05$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Añadir el bloque 
+\series bold
+DSP System Toolbox > From Multimedia File 
+\series default
+y configurarlo como sigue:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+File name: 
+\series default
+En este documento se proporciona el archivo partita_e_major.wav obtenida
+ libremente de 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.music.helsinki.fi/tmt/opetus/uusmedia/esim/index-e.html
+\end_layout
+
+\end_inset
+
+.
+ Este archivo de audio tiene la frecuencia de muestreo a 48KHz, stereo a
+ 16 bits.
+\end_layout
+
+\begin_layout Itemize
+Seleccionar el recuadro 
+\series bold
+Inherit sample time from file.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Number of times to play the file: 
+\series default
+1.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Outputs > Samples per audio channel: 
+\series default
+1.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Outputs > Audio output sampling mode:
+\series default
+ Sample based.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/input_from_multimedia_file_AC97.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Configuración del bloque 
+\emph on
+From multimedia File
+\emph default
+ para servir como fuente de sonido.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+El archivo de audio representa una matiz de 1x1 (datos, frecuencia de muestreo).
+ Es necesario convertir esta matriz a un vector de un solo elemento mediante
+ el uso de los bloques 
+\emph on
+'Reshape' 
+\emph default
+y 
+\emph on
+'Unbuffer'
+\emph default
+, ubicados en 
+\series bold
+Simulink > Math Operations 
+\series default
+y 
+\series bold
+DSP System Toolbox > Signal Management > Buffers
+\series default
+ respectivamente.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Para manejar los canales de audio dentro de la FPGA, se utilizarán dos 
+\emph on
+'Gateway In' 
+\emph default
+con los parámetros siguientes:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Output type: 
+\series default
+Fixed point.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Arithmetic type: 
+\series default
+Signed (2's comp).
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Fixed-point Precision: 
+\series default
+Number of bits = 16, Binary point = 14.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Overflow: 
+\series default
+Saturate.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Sample period: 
+\series default
+2.0833e-05.
+\end_layout
+
+\begin_layout Itemize
+Es necesario nombrar ambos puertos como 
+\series bold
+AudioLeftIn
+\series default
+ y 
+\series bold
+AudioRightIn
+\series default
+ respectivamente, cuidando de siempre mantener los mismos nombres o de lo
+ contrario, el archivo NCG del controlador del códec marcará un error al
+ intentar utilizar el netlist de Sysgen.
+ Se deben configurar como se muestra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Configuración-del-tipo"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/audiosin_sysgen_ac97.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Configuración del tipo de dato usado por los puertos de entrada al filtro
+ peine.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Configuración-del-tipo"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Como se mostró al principio de la 
+\series bold
+subsección 6.1
+\series default
+, ahora será necesario construir el filtro comb, siguiendo el bloque de
+ la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Comb_filter"
+
+\end_inset
+
+ con algunas alteraciones necesarias para adaptarlo al kit Atlys, mismas
+ que se explicarán posteriormente.
+ El bloque debe quedar como se muestra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Filtro-comb-(FIR)"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/eco_reverb_algo.png
+	lyxscale 30
+	scale 36
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Filtro comb (FIR) con retroalimentación realizado en Sysgen.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Filtro-comb-(FIR)"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El filtro se compone de un bloque 
+\emph on
+delay
+\emph default
+ de 4500 unidades de retraso (cada una de estas unidades representa un flipflop
+ en términos de recursos de FPGA) y un subsistema de ganancia nombrado 
+\series bold
+\emph on
+gain2
+\series default
+\emph default
+, el cual se muestra a más detalle en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Parámetros-de-la"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/ganancia_2.png
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Parámetros de la ganancia del filtro comb.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Parámetros-de-la"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Los bloques que le preceden al sumador 
+\series bold
+\emph on
+AddSub1 
+\series default
+\emph default
+son necesarios debido a que, durante el flujo de información a través de
+ los multiplicadores que actúan como ganancia, los datos se ven afectados
+ sufriendo incrementos debido a la magnitud que ahora deben representar
+ (aumenta el número de bits).
+ Como el controlador del AC97 trabaja sólo con palabras de 16 bits, es necesario
+ alinear y transformar la salida de dicho sumador, a que cumpla con los
+ 16 bits requeridos por el códec.
+\end_layout
+
+\begin_layout Standard
+La ganancia de retroalimentación es utilizada para estabilizar la salida
+ del filtro, con el fin de remover lo más posible, ruido inferido por las
+ modificaciones aplicadas a la señal de audio.
+ Dicha ganancia esta elaborada por el subsistema 
+\series bold
+\emph on
+gain1
+\series default
+\emph default
+, el cual se muestra a mayor detalle en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Ganancia-de-retroalimentación"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/gain1_subsystem.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Ganancia de retroalimentación para estabilizar el sistema.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Ganancia-de-retroalimentación"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por último, el bloque 
+\series bold
+\emph on
+Delay5
+\series default
+\emph default
+ es utilizado para sincronizar los sumadores 
+\series bold
+\emph on
+AddSub 
+\series default
+\emph default
+y 
+\series bold
+AddSub1
+\series default
+\emph on
+ 
+\emph default
+y así evitar problemas de timing
+\emph on
+ 
+\emph default
+debido al 
+\emph on
+cruce de reloj cruzado (CDC por sus siglas en Inglés).
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Los elementos mostrados en el paso 
+\series bold
+5
+\series default
+, deben ser convertidos a subsistema (seleccionar los bloques y ejecutar
+ CTRL+G, los subsistemas pueden ser nombrados a gusto del usuario) y replicados
+ para así, tener los dos canales del formato estéreo, como se muestra en
+ la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Conversión-del-filtro"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/finalized_algo.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Conversión del filtro comb en subsistemas y replicación para formato estéreo.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Conversión-del-filtro"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Como paso final, se deberan arrastrar dos 
+\emph on
+'Gateway Out' 
+\emph default
+al espacio de trabajo de simulink, y nombrarlos 
+\series bold
+AudioLeftOut 
+\series default
+y 
+\series bold
+AudioRightIn 
+\series default
+respectivamente, así como un bloque 
+\emph on
+Mux 
+\emph default
+(
+\series bold
+Simulink > Commonly Used Blocks
+\series default
+) y un bloque 
+\emph on
+To Multimedia File 
+\emph default
+(
+\series bold
+DSP System Toolbox > Sinks
+\series default
+), y conectarlos como se muestra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Interconección-del-sistema"
+
+\end_inset
+
+.
+ El recuadro girs nombrado 
+\series bold
+Audio_algoritmo 
+\series default
+representa ambos filtros desarrollados.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/ac97_full_system.png
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Interconección del sistema de eco finalizado.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Interconección-del-sistema"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se pueden modificar los valores de retraso y ganancias con el fin de obtener
+ efectos mucho más notables.
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Float figure
 placement H
