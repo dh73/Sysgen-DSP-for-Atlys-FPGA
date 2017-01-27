@@ -1,0 +1,3 @@
+verilog work algodev.v
+verilog work algodev_cw.v
+verilog work $XILINX/verilog/src/glbl.v

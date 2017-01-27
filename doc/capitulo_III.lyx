@@ -2013,7 +2013,7 @@ name "fig:AC97_schem"
 \end_layout
 
 \begin_layout Subsubsection
-Desarrollo del algoritmo en Sysgen.
+Desarrollo del modelo en Sysgen.
 \end_layout
 
 \begin_layout Standard
@@ -2620,6 +2620,9 @@ debido al
 \emph on
 cruce de reloj cruzado (CDC por sus siglas en Inglés).
  
+\emph default
+Se pueden modificar los valores de retraso y ganancias con el fin de obtener
+ efectos mucho más notables.
 \end_layout
 
 \end_deeper
@@ -2628,10 +2631,10 @@ Los elementos mostrados en el paso
 \series bold
 5
 \series default
-, deben ser convertidos a subsistema (seleccionar los bloques y ejecutar
- CTRL+G, los subsistemas pueden ser nombrados a gusto del usuario) y replicados
- para así, tener los dos canales del formato estéreo, como se muestra en
- la Figura 
+, pueden ser convertidos a subsistema para mantener la sencilléz del sistema
+ (seleccionar los bloques y ejecutar CTRL+G, los subsistemas pueden ser
+ nombrados a gusto del usuario) y replicados para así, tener los dos canales
+ del formato estéreo, como se muestra en la Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Conversión-del-filtro"
@@ -2741,7 +2744,7 @@ representa ambos filtros desarrollados.
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -2783,12 +2786,117 @@ name "fig:Interconección-del-sistema"
 
 \end_layout
 
+\end_deeper
+\begin_layout Enumerate
+Para hacer la simulación de este modelo, utilizaremos un valor menor a la
+ duración en segundos del archivo de audio como 
+\emph on
+'stop time'
+\emph default
+ en Simulink.
+ El efecto es perfectamente audible utilizando el valor de 
+\series bold
+10.0(s)
+\series default
+.
+ El efecto de eco puede ser analizado reproduciendo el archivo generado
+ por el bloque '
+\emph on
+To Wave File'
+\emph default
+ en la ruta especificada dentro del mismo, o utilizando el 
+\emph on
+'Time Scope'
+\emph default
+ para observar los datos con un ligero desfase, como se muestra en la Figura
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Gráfica-resultante-del"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
-Se pueden modificar los valores de retraso y ganancias con el fin de obtener
- efectos mucho más notables.
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/audio_procesado_final.png
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Gráfica resultante del eco aplicado al archivo de audio.
+ La señal de la parte superior representa el audio sin procesar, mientras
+ que la señal inferior muestra el audio procesado, el cual se compone de
+ un desfase y una amplitud diferente a la original.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Gráfica-resultante-del"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
+\begin_layout Subsubsection
+Implementación en el kit Atlys.
+\end_layout
+
+\begin_layout Enumerate
+Una vez que obtenemos el resultado esperado, es necesario generar un 
+\emph on
+'Netlist' 
+\emph default
+(archivos HDL en Verilog o VHDL) para poder utilizar este modelo dentro
+ de la interface del codec de audio\SpecialChar endofsentence
+ Esto se logra dando doble clic sobre
+ el '
+\emph on
+Sysgen Token'
+\emph default
+ > 
+\emph on
+'Generate'.
+\end_layout
+
+\begin_layout Enumerate
+Al terminar, 
+\end_layout
+
 \begin_layout Standard
 \begin_inset Float figure
 placement H

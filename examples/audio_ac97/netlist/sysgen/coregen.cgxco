@@ -1,0 +1,162 @@
+
+SETPROJECT ./
+SET ASYSymbol = false
+SET BusFormat = BusFormatParenNotRipped
+SET XilinxFamily = spartan6
+SET simulationfiles = Structural
+SET devicefamily = spartan6
+SET device = xc6slx45
+SET package = csg324
+SET speedgrade = -3
+SET VerilogSim = true
+SET VHDLSim = false
+SELECT Adder_Subtracter spartan6 Xilinx,_Inc. 11.0
+# 14.7_P.79
+# DEVICE spartan6
+# VERILOG
+CSET AINIT_Value = 0
+CSET A_Type = Signed
+CSET A_Width = 34
+CSET Add_Mode = Add
+CSET B_Constant = false
+CSET B_Type = Signed
+CSET B_Value = 0
+CSET B_Width = 34
+CSET Borrow_Sense = Active_Low
+CSET Bypass = false
+CSET Bypass_CE_Priority = Bypass_Overrides_CE
+CSET Bypass_Sense = Active_Low
+CSET CE = false
+CSET C_In = false
+CSET C_Out = false
+CSET Implementation = Fabric
+CSET Latency = 0
+CSET Out_Width = 34
+CSET SCLR = false
+CSET SINIT = false
+CSET SINIT_Value = 0
+CSET SSET = false
+CSET Sync_CE_Priority = Sync_Overrides_CE
+CSET Sync_Ctrl_Priority = Reset_Overrides_Set
+SET simulationfiles = Structural
+CSET component_name = addsb_11_0_115949a8e6f0bfc4
+GENERATE
+
+SETPROJECT ./
+SET ASYSymbol = false
+SET BusFormat = BusFormatParenNotRipped
+SET XilinxFamily = spartan6
+SET simulationfiles = Structural
+SET devicefamily = spartan6
+SET device = xc6slx45
+SET package = csg324
+SET speedgrade = -3
+SET VerilogSim = true
+SET VHDLSim = false
+SELECT Adder_Subtracter spartan6 Xilinx,_Inc. 11.0
+# 14.7_P.79
+# DEVICE spartan6
+# VERILOG
+CSET AINIT_Value = 0
+CSET A_Type = Signed
+CSET A_Width = 17
+CSET Add_Mode = Add
+CSET B_Constant = false
+CSET B_Type = Signed
+CSET B_Value = 0
+CSET B_Width = 17
+CSET Borrow_Sense = Active_Low
+CSET Bypass = false
+CSET Bypass_CE_Priority = Bypass_Overrides_CE
+CSET Bypass_Sense = Active_Low
+CSET CE = false
+CSET C_In = false
+CSET C_Out = false
+CSET Implementation = Fabric
+CSET Latency = 0
+CSET Out_Width = 17
+CSET SCLR = false
+CSET SINIT = false
+CSET SINIT_Value = 0
+CSET SSET = false
+CSET Sync_CE_Priority = Sync_Overrides_CE
+CSET Sync_Ctrl_Priority = Reset_Overrides_Set
+SET simulationfiles = Structural
+CSET component_name = addsb_11_0_232ff08b73742c1b
+GENERATE
+
+SETPROJECT ./
+SET ASYSymbol = false
+SET BusFormat = BusFormatParenNotRipped
+SET XilinxFamily = spartan6
+SET simulationfiles = Behavioral
+SET devicefamily = spartan6
+SET device = xc6slx45
+SET package = csg324
+SET speedgrade = -3
+SET VerilogSim = true
+SET VHDLSim = false
+SELECT Multiplier spartan6 Xilinx,_Inc. 11.2
+# 14.7_P.79
+# DEVICE spartan6
+# VERILOG
+CSET ccmimp = Distributed_Memory
+CSET clockenable = false
+CSET constvalue = 129
+CSET internaluser = 0
+CSET multiplier_construction = Use_Mults
+CSET multtype = Parallel_Multiplier
+CSET optgoal = Speed
+CSET outputwidthhigh = 32
+CSET outputwidthlow = 0
+CSET pipestages = 0
+CSET portatype = Signed
+CSET portawidth = 17
+CSET portbtype = Signed
+CSET portbwidth = 16
+CSET roundpoint = 0
+CSET sclrcepriority = CE_Overrides_SCLR
+CSET syncclear = false
+CSET use_custom_output_width = true
+CSET userounding = false
+CSET zerodetect = false
+CSET component_name = mult_11_2_27d1945b067283da
+GENERATE
+
+SETPROJECT ./
+SET ASYSymbol = false
+SET BusFormat = BusFormatParenNotRipped
+SET XilinxFamily = spartan6
+SET simulationfiles = Behavioral
+SET devicefamily = spartan6
+SET device = xc6slx45
+SET package = csg324
+SET speedgrade = -3
+SET VerilogSim = true
+SET VHDLSim = false
+SELECT Multiplier spartan6 Xilinx,_Inc. 11.2
+# 14.7_P.79
+# DEVICE spartan6
+# VERILOG
+CSET ccmimp = Distributed_Memory
+CSET clockenable = false
+CSET constvalue = 129
+CSET internaluser = 0
+CSET multiplier_construction = Use_Mults
+CSET multtype = Parallel_Multiplier
+CSET optgoal = Speed
+CSET outputwidthhigh = 32
+CSET outputwidthlow = 0
+CSET pipestages = 0
+CSET portatype = Signed
+CSET portawidth = 16
+CSET portbtype = Signed
+CSET portbwidth = 17
+CSET roundpoint = 0
+CSET sclrcepriority = CE_Overrides_SCLR
+CSET syncclear = false
+CSET use_custom_output_width = true
+CSET userounding = false
+CSET zerodetect = false
+CSET component_name = mult_11_2_9c87a4aa35fb2a9b
+GENERATE

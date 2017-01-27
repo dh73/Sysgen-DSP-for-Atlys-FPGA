@@ -1,0 +1,80 @@
+[
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  [
+    [
+      'xlpersistentdff.ngc',
+      undef,
+    ],
+    '/home/diego/Documents/Finalized/examples/audio_ac97/netlist/sysgen/perl_results.v',
+  ],
+  [
+    [
+      'addsb_11_0_232ff08b73742c1b.v',
+      {
+        'producer' => 'coregen',
+      },
+    ],
+    [
+      'mult_11_2_27d1945b067283da.ngc',
+      {
+        'producer' => 'coregen',
+      },
+    ],
+    [
+      'mult_11_2_9c87a4aa35fb2a9b.v',
+      {
+        'producer' => 'coregen',
+      },
+    ],
+    [
+      'addsb_11_0_115949a8e6f0bfc4.v',
+      {
+        'producer' => 'coregen',
+      },
+    ],
+    [
+      'addsb_11_0_232ff08b73742c1b.ngc',
+      {
+        'producer' => 'coregen',
+      },
+    ],
+    [
+      'mult_11_2_9c87a4aa35fb2a9b.ngc',
+      {
+        'producer' => 'coregen',
+      },
+    ],
+    [
+      'mult_11_2_27d1945b067283da.v',
+      {
+        'producer' => 'coregen',
+      },
+    ],
+    [
+      'addsb_11_0_115949a8e6f0bfc4.ngc',
+      {
+        'producer' => 'coregen',
+      },
+    ],
+  ],
+]

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DARoots Version="1" Minor="26">
+  <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/sysgen/algodev.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sysgen/algodev.v"/>
+        <Attr Name="ImportTime" Val="1485527209"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInImplementation" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sysgen/algodev_cw.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sysgen/algodev_cw.v"/>
+        <Attr Name="ImportTime" Val="1485527210"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInImplementation" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sysgen/mult_11_2_27d1945b067283da.ngc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sysgen/mult_11_2_27d1945b067283da.ngc"/>
+        <Attr Name="ImportTime" Val="1485527206"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInImplementation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sysgen/xlpersistentdff.ngc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sysgen/xlpersistentdff.ngc"/>
+        <Attr Name="ImportTime" Val="1485527066"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInImplementation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sysgen/addsb_11_0_232ff08b73742c1b.ngc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sysgen/addsb_11_0_232ff08b73742c1b.ngc"/>
+        <Attr Name="ImportTime" Val="1485527206"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInImplementation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sysgen/mult_11_2_9c87a4aa35fb2a9b.ngc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sysgen/mult_11_2_9c87a4aa35fb2a9b.ngc"/>
+        <Attr Name="ImportTime" Val="1485527206"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInImplementation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sysgen/addsb_11_0_115949a8e6f0bfc4.ngc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sysgen/addsb_11_0_115949a8e6f0bfc4.ngc"/>
+        <Attr Name="ImportTime" Val="1485527206"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInImplementation" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="algodev_cw"/>
+    </Config>
+  </FileSet>
+</DARoots>
