@@ -1,0 +1,2 @@
+NET "clk" PERIOD = 10 ns HIGH 50 %;
+NET "bitclk" PERIOD = 12.288 MHz HIGH 50 %;

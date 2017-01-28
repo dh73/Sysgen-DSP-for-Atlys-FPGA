@@ -1,0 +1,655 @@
+(edif rt_audio_controller
+  (edifVersion 2 0 0)
+  (edifLevel 0)
+  (keywordMap (keywordLevel 0))
+  (status
+    (written
+      (timestamp 2017 1 27 21 9 51)
+      (program "Xilinx ngc2edif" (version "P.20131013"))
+      (author "Xilinx. Inc ")
+      (comment "This EDIF netlist is to be used within supported synthesis tools")
+      (comment "for determining resource/timing estimates of the design component")
+      (comment "represented by this netlist.")
+      (comment "Command line: -mdp2sp -w -secure rt_audio_controller.ngc rt_audio_controller.edif ")))
+  (external UNISIMS
+    (edifLevel 0)
+    (technology (numberDefinition))
+    (cell IBUFG
+      (cellType GENERIC)
+        (view view_1
+          (viewType NETLIST)
+          (interface
+            (port I
+              (direction INPUT)
+            )
+            (port O
+              (direction OUTPUT)
+            )
+          )
+      )
+    )
+  )
+
+  (library rt_audio_controller_lib
+    (edifLevel 0)
+    (technology (numberDefinition))
+    (cell ac97cmd
+      (cellType GENERIC)
+        (view view_1
+          (viewType NETLIST)
+          (interface
+            (port clk
+              (direction INPUT)
+            )
+            (port ac97_ready_sig
+              (direction INPUT)
+            )
+            (port latching_cmd
+              (direction OUTPUT)
+            )
+            (port (array (rename volume "volume<4:0>") 5)
+              (direction INPUT))
+            (port (array (rename source "source<2:0>") 3)
+              (direction INPUT))
+            (port (array (rename cmd_addr "cmd_addr<7:0>") 8)
+              (direction OUTPUT))
+            (port (array (rename cmd_data "cmd_data<15:0>") 16)
+              (direction OUTPUT))
+          )
+      )
+    )
+    (cell ac97
+      (cellType GENERIC)
+        (view view_1
+          (viewType NETLIST)
+          (interface
+            (port n_reset
+              (direction INPUT)
+            )
+            (port clk
+              (direction INPUT)
+            )
+            (port ac97_sdata_in
+              (direction INPUT)
+            )
+            (port ac97_bitclk
+              (direction INPUT)
+            )
+            (port latching_cmd
+              (direction INPUT)
+            )
+            (port ac97_sdata_out
+              (direction OUTPUT)
+            )
+            (port ac97_sync
+              (direction OUTPUT)
+            )
+            (port ac97_n_reset
+              (direction OUTPUT)
+            )
+            (port ac97_ready_sig
+              (direction OUTPUT)
+            )
+            (port (array (rename L_out "L_out<17:0>") 18)
+              (direction INPUT))
+            (port (array (rename R_out "R_out<17:0>") 18)
+              (direction INPUT))
+            (port (array (rename cmd_addr "cmd_addr<7:0>") 8)
+              (direction INPUT))
+            (port (array (rename cmd_data "cmd_data<15:0>") 16)
+              (direction INPUT))
+            (port (array (rename L_in "L_in<17:0>") 18)
+              (direction OUTPUT))
+            (port (array (rename R_in "R_in<17:0>") 18)
+              (direction OUTPUT))
+          )
+      )
+    )
+    (cell rt_audio_controller
+      (cellType GENERIC)
+        (view view_1
+          (viewType NETLIST)
+          (interface
+            (port clk
+              (direction INPUT)
+            )
+            (port n_reset
+              (direction INPUT)
+            )
+            (port sdata_in
+              (direction INPUT)
+            )
+            (port bitclk
+              (direction INPUT)
+            )
+            (port sync
+              (direction OUTPUT)
+            )
+            (port codec_n_reset
+              (direction OUTPUT)
+            )
+            (port sdata_out
+              (direction OUTPUT)
+            )
+            (port (array (rename volume "volume<4:0>") 5)
+              (direction INPUT))
+            (port (array (rename source "source<2:0>") 3)
+              (direction INPUT))
+            (designator "xc6slx45tcsg324-3N")
+            (property TYPE (string "rt_audio_controller") (owner "Xilinx"))
+            (property BUS_INFO (string "5:INPUT:volume<4:0>") (owner "Xilinx"))
+            (property BUS_INFO (string "3:INPUT:source<2:0>") (owner "Xilinx"))
+            (property SHREG_MIN_SIZE (string "-1") (owner "Xilinx"))
+            (property SHREG_EXTRACT_NGC (string "Yes") (owner "Xilinx"))
+            (property NLW_UNIQUE_ID (integer 0) (owner "Xilinx"))
+            (property NLW_MACRO_TAG (integer 0) (owner "Xilinx"))
+            (property NLW_MACRO_ALIAS (string "rt_audio_controller_rt_audio_controller") (owner "Xilinx"))
+          )
+          (contents
+            (instance FIX1
+              (viewRef view_1 (cellRef IBUFG (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+              (property OPTIMIZE_PRIMITIVES_NGC (string "no") (owner "Xilinx"))
+              (property CAPACITANCE (string "DONT_CARE") (owner "Xilinx"))
+              (property IBUF_DELAY_VALUE (string "0") (owner "Xilinx"))
+              (property IBUF_LOW_PWR (string "TRUE") (owner "Xilinx"))
+              (property IOSTANDARD (string "DEFAULT") (owner "Xilinx"))
+            )
+            (instance controller
+              (viewRef view_1 (cellRef ac97cmd (libraryRef rt_audio_controller_lib)))
+              (property BUS_INFO (string "5:INPUT:volume<4:0>") (owner "Xilinx"))
+              (property BUS_INFO (string "3:INPUT:source<2:0>") (owner "Xilinx"))
+              (property BUS_INFO (string "8:OUTPUT:cmd_addr<7:0>") (owner "Xilinx"))
+              (property BUS_INFO (string "16:OUTPUT:cmd_data<15:0>") (owner "Xilinx"))
+            )
+            (instance datapath
+              (viewRef view_1 (cellRef ac97 (libraryRef rt_audio_controller_lib)))
+              (property BUS_INFO (string "18:INPUT:L_out<17:0>") (owner "Xilinx"))
+              (property BUS_INFO (string "18:INPUT:R_out<17:0>") (owner "Xilinx"))
+              (property BUS_INFO (string "8:INPUT:cmd_addr<7:0>") (owner "Xilinx"))
+              (property BUS_INFO (string "16:INPUT:cmd_data<15:0>") (owner "Xilinx"))
+              (property BUS_INFO (string "18:OUTPUT:L_in<17:0>") (owner "Xilinx"))
+              (property BUS_INFO (string "18:OUTPUT:R_in<17:0>") (owner "Xilinx"))
+            )
+            (net (rename volume_4_ "volume<4>")
+              (joined
+                (portRef (member volume 0))
+                (portRef (member volume 0) (instanceRef controller))
+              )
+            )
+            (net (rename volume_3_ "volume<3>")
+              (joined
+                (portRef (member volume 1))
+                (portRef (member volume 1) (instanceRef controller))
+              )
+            )
+            (net (rename volume_2_ "volume<2>")
+              (joined
+                (portRef (member volume 2))
+                (portRef (member volume 2) (instanceRef controller))
+              )
+            )
+            (net (rename volume_1_ "volume<1>")
+              (joined
+                (portRef (member volume 3))
+                (portRef (member volume 3) (instanceRef controller))
+              )
+            )
+            (net (rename volume_0_ "volume<0>")
+              (joined
+                (portRef (member volume 4))
+                (portRef (member volume 4) (instanceRef controller))
+              )
+            )
+            (net (rename source_2_ "source<2>")
+              (joined
+                (portRef (member source 0))
+                (portRef (member source 0) (instanceRef controller))
+              )
+            )
+            (net (rename source_1_ "source<1>")
+              (joined
+                (portRef (member source 1))
+                (portRef (member source 1) (instanceRef controller))
+              )
+            )
+            (net (rename source_0_ "source<0>")
+              (joined
+                (portRef (member source 2))
+                (portRef (member source 2) (instanceRef controller))
+              )
+            )
+            (net clk
+              (joined
+                (portRef clk)
+                (portRef I (instanceRef FIX1))
+              )
+            )
+            (net n_reset
+              (joined
+                (portRef n_reset)
+                (portRef n_reset (instanceRef datapath))
+              )
+            )
+            (net sdata_in
+              (joined
+                (portRef sdata_in)
+                (portRef ac97_sdata_in (instanceRef datapath))
+              )
+            )
+            (net bitclk
+              (joined
+                (portRef bitclk)
+                (portRef ac97_bitclk (instanceRef datapath))
+              )
+            )
+            (net (rename cmd_addr_w_7_ "cmd_addr_w<7>")
+              (joined
+                (portRef (member cmd_addr 0) (instanceRef controller))
+                (portRef (member cmd_addr 0) (instanceRef datapath))
+              )
+            )
+            (net (rename cmd_addr_w_6_ "cmd_addr_w<6>")
+              (joined
+                (portRef (member cmd_addr 1) (instanceRef controller))
+                (portRef (member cmd_addr 1) (instanceRef datapath))
+              )
+            )
+            (net (rename cmd_addr_w_5_ "cmd_addr_w<5>")
+              (joined
+                (portRef (member cmd_addr 2) (instanceRef controller))
+                (portRef (member cmd_addr 2) (instanceRef datapath))
+              )
+            )
+            (net (rename cmd_addr_w_4_ "cmd_addr_w<4>")
+              (joined
+                (portRef (member cmd_addr 3) (instanceRef controller))
+                (portRef (member cmd_addr 3) (instanceRef datapath))
+              )
+            )
+            (net (rename cmd_addr_w_3_ "cmd_addr_w<3>")
+              (joined
+                (portRef (member cmd_addr 4) (instanceRef controller))
+                (portRef (member cmd_addr 4) (instanceRef datapath))
+              )
+            )
+            (net (rename cmd_addr_w_2_ "cmd_addr_w<2>")
+              (joined
+                (portRef (member cmd_addr 5) (instanceRef controller))
+                (portRef (member cmd_addr 5) (instanceRef datapath))
+              )
+            )
+            (net (rename cmd_addr_w_1_ "cmd_addr_w<1>")
+              (joined
+                (portRef (member cmd_addr 6) (instanceRef controller))
+                (portRef (member cmd_addr 6) (instanceRef datapath))
+              )
+            )
+            (net (rename cmd_addr_w_0_ "cmd_addr_w<0>")
+              (joined
+                (portRef (member cmd_addr 7) (instanceRef controller))
+                (portRef (member cmd_addr 7) (instanceRef datapath))
+              )
+            )
+            (net (rename cmd_data_w_15_ "cmd_data_w<15>")
+              (joined
+                (portRef (member cmd_data 0) (instanceRef controller))
+                (portRef (member cmd_data 0) (instanceRef datapath))
+              )
+            )
+            (net (rename cmd_data_w_14_ "cmd_data_w<14>")
+              (joined
+                (portRef (member cmd_data 1) (instanceRef controller))
+                (portRef (member cmd_data 1) (instanceRef datapath))
+              )
+            )
+            (net (rename cmd_data_w_13_ "cmd_data_w<13>")
+              (joined
+                (portRef (member cmd_data 2) (instanceRef controller))
+                (portRef (member cmd_data 2) (instanceRef datapath))
+              )
+            )
+            (net (rename cmd_data_w_12_ "cmd_data_w<12>")
+              (joined
+                (portRef (member cmd_data 3) (instanceRef controller))
+                (portRef (member cmd_data 3) (instanceRef datapath))
+              )
+            )
+            (net (rename cmd_data_w_11_ "cmd_data_w<11>")
+              (joined
+                (portRef (member cmd_data 4) (instanceRef controller))
+                (portRef (member cmd_data 4) (instanceRef datapath))
+              )
+            )
+            (net (rename cmd_data_w_10_ "cmd_data_w<10>")
+              (joined
+                (portRef (member cmd_data 5) (instanceRef controller))
+                (portRef (member cmd_data 5) (instanceRef datapath))
+              )
+            )
+            (net (rename cmd_data_w_9_ "cmd_data_w<9>")
+              (joined
+                (portRef (member cmd_data 6) (instanceRef controller))
+                (portRef (member cmd_data 6) (instanceRef datapath))
+              )
+            )
+            (net (rename cmd_data_w_8_ "cmd_data_w<8>")
+              (joined
+                (portRef (member cmd_data 7) (instanceRef controller))
+                (portRef (member cmd_data 7) (instanceRef datapath))
+              )
+            )
+            (net (rename cmd_data_w_7_ "cmd_data_w<7>")
+              (joined
+                (portRef (member cmd_data 8) (instanceRef controller))
+                (portRef (member cmd_data 8) (instanceRef datapath))
+              )
+            )
+            (net (rename cmd_data_w_6_ "cmd_data_w<6>")
+              (joined
+                (portRef (member cmd_data 9) (instanceRef controller))
+                (portRef (member cmd_data 9) (instanceRef datapath))
+              )
+            )
+            (net (rename cmd_data_w_5_ "cmd_data_w<5>")
+              (joined
+                (portRef (member cmd_data 10) (instanceRef controller))
+                (portRef (member cmd_data 10) (instanceRef datapath))
+              )
+            )
+            (net (rename cmd_data_w_4_ "cmd_data_w<4>")
+              (joined
+                (portRef (member cmd_data 11) (instanceRef controller))
+                (portRef (member cmd_data 11) (instanceRef datapath))
+              )
+            )
+            (net (rename cmd_data_w_3_ "cmd_data_w<3>")
+              (joined
+                (portRef (member cmd_data 12) (instanceRef controller))
+                (portRef (member cmd_data 12) (instanceRef datapath))
+              )
+            )
+            (net (rename cmd_data_w_2_ "cmd_data_w<2>")
+              (joined
+                (portRef (member cmd_data 13) (instanceRef controller))
+                (portRef (member cmd_data 13) (instanceRef datapath))
+              )
+            )
+            (net (rename cmd_data_w_1_ "cmd_data_w<1>")
+              (joined
+                (portRef (member cmd_data 14) (instanceRef controller))
+                (portRef (member cmd_data 14) (instanceRef datapath))
+              )
+            )
+            (net (rename cmd_data_w_0_ "cmd_data_w<0>")
+              (joined
+                (portRef (member cmd_data 15) (instanceRef controller))
+                (portRef (member cmd_data 15) (instanceRef datapath))
+              )
+            )
+            (net latching_cmd_w
+              (joined
+                (portRef latching_cmd (instanceRef controller))
+                (portRef latching_cmd (instanceRef datapath))
+              )
+            )
+            (net gclk
+              (joined
+                (portRef O (instanceRef FIX1))
+                (portRef clk (instanceRef controller))
+                (portRef clk (instanceRef datapath))
+              )
+            )
+            (net (rename left_loopback_17_ "left_loopback<17>")
+              (joined
+                (portRef (member L_out 0) (instanceRef datapath))
+                (portRef (member L_in 0) (instanceRef datapath))
+              )
+            )
+            (net (rename left_loopback_16_ "left_loopback<16>")
+              (joined
+                (portRef (member L_out 1) (instanceRef datapath))
+                (portRef (member L_in 1) (instanceRef datapath))
+              )
+            )
+            (net (rename left_loopback_15_ "left_loopback<15>")
+              (joined
+                (portRef (member L_out 2) (instanceRef datapath))
+                (portRef (member L_in 2) (instanceRef datapath))
+              )
+            )
+            (net (rename left_loopback_14_ "left_loopback<14>")
+              (joined
+                (portRef (member L_out 3) (instanceRef datapath))
+                (portRef (member L_in 3) (instanceRef datapath))
+              )
+            )
+            (net (rename left_loopback_13_ "left_loopback<13>")
+              (joined
+                (portRef (member L_out 4) (instanceRef datapath))
+                (portRef (member L_in 4) (instanceRef datapath))
+              )
+            )
+            (net (rename left_loopback_12_ "left_loopback<12>")
+              (joined
+                (portRef (member L_out 5) (instanceRef datapath))
+                (portRef (member L_in 5) (instanceRef datapath))
+              )
+            )
+            (net (rename left_loopback_11_ "left_loopback<11>")
+              (joined
+                (portRef (member L_out 6) (instanceRef datapath))
+                (portRef (member L_in 6) (instanceRef datapath))
+              )
+            )
+            (net (rename left_loopback_10_ "left_loopback<10>")
+              (joined
+                (portRef (member L_out 7) (instanceRef datapath))
+                (portRef (member L_in 7) (instanceRef datapath))
+              )
+            )
+            (net (rename left_loopback_9_ "left_loopback<9>")
+              (joined
+                (portRef (member L_out 8) (instanceRef datapath))
+                (portRef (member L_in 8) (instanceRef datapath))
+              )
+            )
+            (net (rename left_loopback_8_ "left_loopback<8>")
+              (joined
+                (portRef (member L_out 9) (instanceRef datapath))
+                (portRef (member L_in 9) (instanceRef datapath))
+              )
+            )
+            (net (rename left_loopback_7_ "left_loopback<7>")
+              (joined
+                (portRef (member L_out 10) (instanceRef datapath))
+                (portRef (member L_in 10) (instanceRef datapath))
+              )
+            )
+            (net (rename left_loopback_6_ "left_loopback<6>")
+              (joined
+                (portRef (member L_out 11) (instanceRef datapath))
+                (portRef (member L_in 11) (instanceRef datapath))
+              )
+            )
+            (net (rename left_loopback_5_ "left_loopback<5>")
+              (joined
+                (portRef (member L_out 12) (instanceRef datapath))
+                (portRef (member L_in 12) (instanceRef datapath))
+              )
+            )
+            (net (rename left_loopback_4_ "left_loopback<4>")
+              (joined
+                (portRef (member L_out 13) (instanceRef datapath))
+                (portRef (member L_in 13) (instanceRef datapath))
+              )
+            )
+            (net (rename left_loopback_3_ "left_loopback<3>")
+              (joined
+                (portRef (member L_out 14) (instanceRef datapath))
+                (portRef (member L_in 14) (instanceRef datapath))
+              )
+            )
+            (net (rename left_loopback_2_ "left_loopback<2>")
+              (joined
+                (portRef (member L_out 15) (instanceRef datapath))
+                (portRef (member L_in 15) (instanceRef datapath))
+              )
+            )
+            (net (rename left_loopback_1_ "left_loopback<1>")
+              (joined
+                (portRef (member L_out 16) (instanceRef datapath))
+                (portRef (member L_in 16) (instanceRef datapath))
+              )
+            )
+            (net (rename left_loopback_0_ "left_loopback<0>")
+              (joined
+                (portRef (member L_out 17) (instanceRef datapath))
+                (portRef (member L_in 17) (instanceRef datapath))
+              )
+            )
+            (net (rename right_loopback_17_ "right_loopback<17>")
+              (joined
+                (portRef (member R_out 0) (instanceRef datapath))
+                (portRef (member R_in 0) (instanceRef datapath))
+              )
+            )
+            (net (rename right_loopback_16_ "right_loopback<16>")
+              (joined
+                (portRef (member R_out 1) (instanceRef datapath))
+                (portRef (member R_in 1) (instanceRef datapath))
+              )
+            )
+            (net (rename right_loopback_15_ "right_loopback<15>")
+              (joined
+                (portRef (member R_out 2) (instanceRef datapath))
+                (portRef (member R_in 2) (instanceRef datapath))
+              )
+            )
+            (net (rename right_loopback_14_ "right_loopback<14>")
+              (joined
+                (portRef (member R_out 3) (instanceRef datapath))
+                (portRef (member R_in 3) (instanceRef datapath))
+              )
+            )
+            (net (rename right_loopback_13_ "right_loopback<13>")
+              (joined
+                (portRef (member R_out 4) (instanceRef datapath))
+                (portRef (member R_in 4) (instanceRef datapath))
+              )
+            )
+            (net (rename right_loopback_12_ "right_loopback<12>")
+              (joined
+                (portRef (member R_out 5) (instanceRef datapath))
+                (portRef (member R_in 5) (instanceRef datapath))
+              )
+            )
+            (net (rename right_loopback_11_ "right_loopback<11>")
+              (joined
+                (portRef (member R_out 6) (instanceRef datapath))
+                (portRef (member R_in 6) (instanceRef datapath))
+              )
+            )
+            (net (rename right_loopback_10_ "right_loopback<10>")
+              (joined
+                (portRef (member R_out 7) (instanceRef datapath))
+                (portRef (member R_in 7) (instanceRef datapath))
+              )
+            )
+            (net (rename right_loopback_9_ "right_loopback<9>")
+              (joined
+                (portRef (member R_out 8) (instanceRef datapath))
+                (portRef (member R_in 8) (instanceRef datapath))
+              )
+            )
+            (net (rename right_loopback_8_ "right_loopback<8>")
+              (joined
+                (portRef (member R_out 9) (instanceRef datapath))
+                (portRef (member R_in 9) (instanceRef datapath))
+              )
+            )
+            (net (rename right_loopback_7_ "right_loopback<7>")
+              (joined
+                (portRef (member R_out 10) (instanceRef datapath))
+                (portRef (member R_in 10) (instanceRef datapath))
+              )
+            )
+            (net (rename right_loopback_6_ "right_loopback<6>")
+              (joined
+                (portRef (member R_out 11) (instanceRef datapath))
+                (portRef (member R_in 11) (instanceRef datapath))
+              )
+            )
+            (net (rename right_loopback_5_ "right_loopback<5>")
+              (joined
+                (portRef (member R_out 12) (instanceRef datapath))
+                (portRef (member R_in 12) (instanceRef datapath))
+              )
+            )
+            (net (rename right_loopback_4_ "right_loopback<4>")
+              (joined
+                (portRef (member R_out 13) (instanceRef datapath))
+                (portRef (member R_in 13) (instanceRef datapath))
+              )
+            )
+            (net (rename right_loopback_3_ "right_loopback<3>")
+              (joined
+                (portRef (member R_out 14) (instanceRef datapath))
+                (portRef (member R_in 14) (instanceRef datapath))
+              )
+            )
+            (net (rename right_loopback_2_ "right_loopback<2>")
+              (joined
+                (portRef (member R_out 15) (instanceRef datapath))
+                (portRef (member R_in 15) (instanceRef datapath))
+              )
+            )
+            (net (rename right_loopback_1_ "right_loopback<1>")
+              (joined
+                (portRef (member R_out 16) (instanceRef datapath))
+                (portRef (member R_in 16) (instanceRef datapath))
+              )
+            )
+            (net (rename right_loopback_0_ "right_loopback<0>")
+              (joined
+                (portRef (member R_out 17) (instanceRef datapath))
+                (portRef (member R_in 17) (instanceRef datapath))
+              )
+            )
+            (net sdata_out
+              (joined
+                (portRef sdata_out)
+                (portRef ac97_sdata_out (instanceRef datapath))
+              )
+            )
+            (net sync
+              (joined
+                (portRef sync)
+                (portRef ac97_sync (instanceRef datapath))
+              )
+            )
+            (net codec_n_reset
+              (joined
+                (portRef codec_n_reset)
+                (portRef ac97_n_reset (instanceRef datapath))
+              )
+            )
+            (net slot_status_signal
+              (joined
+                (portRef ac97_ready_sig (instanceRef controller))
+                (portRef ac97_ready_sig (instanceRef datapath))
+              )
+            )
+          )
+      )
+    )
+  )
+
+  (design rt_audio_controller
+    (cellRef rt_audio_controller
+      (libraryRef rt_audio_controller_lib)
+    )
+    (property PART (string "xc6slx45tcsg324-3N") (owner "Xilinx"))
+  )
+)
+

@@ -1,0 +1,105 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle
+ise -o rt_audio_controller.twr -v 30 -l 30 rt_audio_controller_routed.ncd
+rt_audio_controller.pcf
+
+Design file:              rt_audio_controller_routed.ncd
+Physical constraint file: rt_audio_controller.pcf
+Device,package,speed:     xc6slx45t,csg324,C,-3N (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report, limited to 30 items per constraint
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock bitclk
+------------+------------+------------+------------+------------+-------------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                         | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s)        | Phase  |
+------------+------------+------------+------------+------------+-------------------------+--------+
+sdata_in    |    0.571(F)|      SLOW  |    0.546(F)|      SLOW  |datapath/ac97_bitclk_IBUF|   0.000|
+source[0]   |    0.780(R)|      SLOW  |    0.151(R)|      SLOW  |datapath/ac97_bitclk_IBUF|   0.000|
+source[1]   |    0.509(R)|      SLOW  |    0.571(R)|      SLOW  |datapath/ac97_bitclk_IBUF|   0.000|
+source[2]   |    0.818(R)|      SLOW  |    0.303(R)|      SLOW  |datapath/ac97_bitclk_IBUF|   0.000|
+volume[0]   |    0.581(R)|      SLOW  |    0.405(R)|      SLOW  |datapath/ac97_bitclk_IBUF|   0.000|
+volume[1]   |    0.495(R)|      SLOW  |    0.537(R)|      SLOW  |datapath/ac97_bitclk_IBUF|   0.000|
+volume[2]   |    0.760(R)|      SLOW  |    0.365(R)|      SLOW  |datapath/ac97_bitclk_IBUF|   0.000|
+volume[3]   |   -0.093(R)|      SLOW  |    0.823(R)|      SLOW  |datapath/ac97_bitclk_IBUF|   0.000|
+volume[4]   |    0.754(R)|      SLOW  |   -0.062(R)|      SLOW  |datapath/ac97_bitclk_IBUF|   0.000|
+------------+------------+------------+------------+------------+-------------------------+--------+
+
+Setup/Hold to clock clk
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+n_reset     |    1.235(R)|      SLOW  |    0.903(R)|      SLOW  |gclk              |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock bitclk to Pad
+------------+-----------------+------------+-----------------+------------+-------------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                         | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)        | Phase  |
+------------+-----------------+------------+-----------------+------------+-------------------------+--------+
+sdata_out   |         8.783(R)|      SLOW  |         4.425(R)|      FAST  |datapath/ac97_bitclk_IBUF|   0.000|
+sync        |         8.707(R)|      SLOW  |         4.629(R)|      FAST  |datapath/ac97_bitclk_IBUF|   0.000|
+------------+-----------------+------------+-----------------+------------+-------------------------+--------+
+
+Clock clk to Pad
+-------------+-----------------+------------+-----------------+------------+------------------+--------+
+             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination  |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+-------------+-----------------+------------+-----------------+------------+------------------+--------+
+codec_n_reset|        10.368(R)|      SLOW  |         5.439(R)|      FAST  |gclk              |   0.000|
+-------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock bitclk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+bitclk         |    5.037|    2.207|    3.728|    2.085|
+clk            |    2.523|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+bitclk         |    4.078|         |         |         |
+clk            |    3.895|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Fri Jan 27 21:11:08 2017 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 451 MB
+
+
+

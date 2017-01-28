@@ -1,0 +1,3 @@
+verilog work "/home/diego/Documents/Finalized/examples/audio_ac97/AC97_IP/ac97cmd.v"
+verilog work "/home/diego/Documents/Finalized/examples/audio_ac97/AC97_IP/ac97.v"
+verilog work "/home/diego/Documents/Finalized/examples/audio_ac97/AC97_IP/rt_audio_controller.v"
