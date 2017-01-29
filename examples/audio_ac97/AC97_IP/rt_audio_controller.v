@@ -1,4 +1,4 @@
-//`define NO_LOOPBACK
+`define NO_LOOPBACK
 module rt_audio_controller( input       clk,
                             input       n_reset,
                             input       sdata_in,
@@ -64,7 +64,7 @@ module rt_audio_controller( input       clk,
 `endif           );
                           
 `ifdef NO_LOOPBACK
-   algodev_cw algorithm_from_sysgen( .clk(clk),
+   algodev_cw algorithm_from_sysgen( .clk(gclk),
 				     .audioleftin(left_audioout),
 				     .audiorightin(right_audioout),
 				     .audioleftout(left_audioin),

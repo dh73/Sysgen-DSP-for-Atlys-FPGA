@@ -1,2 +1,16 @@
 NET "clk" PERIOD = 10 ns HIGH 50 %;
 NET "bitclk" PERIOD = 12.288 MHz HIGH 50 %;
+
+NET "u3/persistentdff_inst_q" KEEP = "TRUE";
+NET "clk" LOC = L15;
+NET "sdata_out" LOC = N16;
+NET "bitclk" LOC = L13;
+NET "sdata_in" LOC = T18;
+NET "sync" LOC = U17;
+NET "codec_n_reset" LOC = T17;
+NET "n_reset" LOC = T15;
+NET "volume[4]" LOC = E4;
+NET "volume[3]" LOC = T5;
+NET "volume[2]" LOC = R5;
+NET "volume[1]" LOC = P12;
+NET "volume[0]" LOC = P15;
