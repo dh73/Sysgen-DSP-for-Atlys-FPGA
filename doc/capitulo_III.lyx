@@ -6,6 +6,9 @@
 \origin unavailable
 \textclass extarticle
 \use_default_options true
+\begin_modules
+tcolorbox
+\end_modules
 \maintain_unincluded_children false
 \language spanish-mexico
 \language_package default
@@ -2929,14 +2932,69 @@ rt_audio_controller.v
 \emph default
 este último es el top module o módulo principal., que se conforma de las
  siguientes estructuras:
+\begin_inset Flex Color Box
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+arc=0mm,colback=white, colframe=black, title=Memperra
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "/home/diego/Documents/Finalized/examples/audio_ac97/AC97_IP/rt_audio_controller.v"
+lstparams "style={Verilog},language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={\\color{gray}},keepspaces=true,numberstyle={\\tiny\\color{black}},keywordstyle={\\mlttfamily\\color{blue}},tabsize=2,breaklines=true,columns=flexible,linerange={1-10}"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
 \end_layout
 
 \begin_deeper
 \begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "/home/diego/Documents/Finalized/examples/audio_ac97/AC97_IP/rt_audio_controller.v"
-lstparams "style={Verilog},language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={\\color{gray}},keepspaces=true,numberstyle={\\tiny\\color{black}},rulecolor={\\color{gray}},keywordstyle={\\mlttfamily\\color{blue}},tabsize=2,frame=leftline"
+lstparams "style={Verilog},language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={\\color{gray}},keepspaces=true,numberstyle={\\tiny\\color{black}},keywordstyle={\\mlttfamily\\color{blue}},tabsize=2,breaklines=true,columns=flexible,linerange={1-10}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
 
 \end_inset
 

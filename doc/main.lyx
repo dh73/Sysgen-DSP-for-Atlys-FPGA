@@ -7,10 +7,6 @@
 \textclass extarticle
 \begin_preamble
 \date{}
-
-%\usepackage{atbegshi}% http://ctan.org/pkg/atbegshi %remove this if problems
-%\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
-
 \usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
 \usepackage{listings}
 \usepackage{color}
@@ -22,12 +18,13 @@
 \newcommand{\z}{\mathpzc{z}}
 \newcommand{\TikZ}{Ti\textit{k}Z\xspace}
 \usepackage{amsmath}
-
 \usepackage{microtype}
 \usepackage{smartdiagram}
-
 %\font\nullfont=cmr10
 \usepackage[utf8]{inputenc}
+\usepackage{listings}
+%\usepackage[most]{tcolorbox}
+%\usepackage{inconsolata}
 \end_preamble
 \use_default_options true
 \begin_modules
@@ -35,6 +32,7 @@ eqs-within-sections
 figs-within-sections
 tabs-within-sections
 shapepar
+tcolorbox
 \end_modules
 \maintain_unincluded_children true
 \language spanish-mexico
