@@ -1715,7 +1715,14 @@ Diagrama esquemático de la implementación del modelo del filtro FIR en FPGA.
 \end_deeper
 \begin_layout Enumerate
 La utilización del sistema y frecuencia máxima a la que se puede ejecutar
- este modelo se muestra en la Figura
+ este modelo se muestra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Utilización-de-recursos"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_deeper
@@ -1724,7 +1731,7 @@ La utilización del sistema y frecuencia máxima a la que se puede ejecutar
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1741,7 +1748,15 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Utilización de recursos de la FPGA.
+Utilización de recursos de la FPGA para la implementación del filtro FIR.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Utilización-de-recursos"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -3353,7 +3368,7 @@ reference "fig:Utilización-y-frecuencia"
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -3375,6 +3390,69 @@ Utilización y frecuencia máxima de trabajo de la implementación final.
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Utilización-y-frecuencia"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Para ejecutar este diseño en la tarjeta Atlys, se debe conectar una fuente
+ de audio (micrófono, reproductor MP3, étc) en el plug de color azul (Line
+ In) y unos audífonos o bocina en el plug verde (Line Out), como se muestra
+ en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Conexiones-a-la"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename misc/ac97_util.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Conexiones a la tarjeta Atlys para ejecutar el algoritmo desarrollado.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Conexiones-a-la"
 
 \end_inset
 
