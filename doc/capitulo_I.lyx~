@@ -80,9 +80,44 @@
 
 \begin_body
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{
+\backslash
+fill}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Part
-\paragraph_spacing double
 Introducción.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{
+\backslash
+fill}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -162,10 +197,6 @@ Muchas veces la información que el fabricante proporciona sobre sus plataformas
  en el interés del alumno, provocando que los conocimientos y conceptos
  no queden del todo entendidos.
  
-\end_layout
-
-\begin_layout Section
-Revisión de la literatura.
 \end_layout
 
 \begin_layout Section

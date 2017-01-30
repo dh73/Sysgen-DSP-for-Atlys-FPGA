@@ -174,26 +174,6 @@ thispagestyle{empty}
 \end_inset
 
 
-\begin_inset Separator latexpar
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-frontmatter
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -322,7 +302,7 @@ status open
 
 
 \backslash
-thispagestyle{empty} 
+pagestyle{empty} 
 \end_layout
 
 \end_inset
@@ -348,7 +328,7 @@ status open
 
 
 \backslash
-thispagestyle{empty} 
+pagestyle{empty} 
 \end_layout
 
 \end_inset
@@ -534,6 +514,10 @@ filename "conclusiones.lyx"
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
 
 \end_layout
 
