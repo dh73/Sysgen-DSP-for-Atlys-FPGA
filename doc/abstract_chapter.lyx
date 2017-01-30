@@ -76,6 +76,22 @@ Placeholder, TBD;
 \end_layout
 
 \begin_layout Abstract
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
 \begin_inset Newpage newpage
 \end_inset
 
