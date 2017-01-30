@@ -106,7 +106,7 @@ A manera de introducción, se utilizará el ambiente de Matlab/Simulink con
  el uso de un filtro FIR pasabajas ejecutándose en el kit Atlys.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Modelado del filtro FIR en Matlab.
 \end_layout
 
@@ -527,7 +527,7 @@ name "fig:Resultado-de-la"
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Simulación del sistema en Sysgen.
 \end_layout
 
@@ -1454,7 +1454,7 @@ name "fig:Resultado-de-la-1"
 \end_layout
 
 \end_deeper
-\begin_layout Subsubsection
+\begin_layout Subsection
 Implementación del sistema en el kit Atlys.
 \end_layout
 
@@ -1731,7 +1731,7 @@ reference "fig:Utilización-de-recursos"
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1774,12 +1774,12 @@ name "fig:Utilización-de-recursos"
 \end_layout
 
 \end_deeper
-\begin_layout Subsection
+\begin_layout Section
 Implementación del algoritmo de eco aplicado a señales de audio utilizando
  el códec AC97.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Filtros FIR peine o 
 \emph on
 comb filter.
@@ -1827,7 +1827,7 @@ y_{n}=x_{n}+g*x_{n-M}
 \begin_layout Standard
 Si trasladamos la ecuación 
 \series bold
-6.5
+7.1
 \series default
  a un diagrama de bloques, nos queda como se muestra en la Figura 
 \begin_inset CommandInset ref
@@ -1898,7 +1898,7 @@ A partir de esto podemos observar que, la estructura se conforma de elementos
  pueden ser implementados en un FPGA.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Implementación en FPGA del códec de audio AC97.
 \end_layout
 
@@ -2030,7 +2030,7 @@ name "fig:AC97_schem"
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Desarrollo del modelo en Sysgen.
 \end_layout
 
@@ -2041,9 +2041,9 @@ Los pasos para llevar a cabo la implementación del algoritmo de eco se muestran
 
 \begin_layout Enumerate
 A partir de tener el nuevo espacio de trabajo en Simulink (se pueden seguir
- los pasos 1 a 4 de la sección 
+ los pasos 1 a 4 de la subsección 
 \series bold
-6.1.2 Simulación del sistema en Sysgen
+6.3 Simulación del sistema en Sysgen
 \series default
 ), el bloque 
 \emph on
@@ -2385,7 +2385,7 @@ name "fig:Configuración-del-tipo"
 \begin_layout Enumerate
 Como se mostró al principio de la 
 \series bold
-subsección 6.1
+subsección 7.1
 \series default
 , ahora será necesario construir el filtro comb, siguiendo el bloque de
  la Figura 
@@ -2890,7 +2890,7 @@ name "fig:Gráfica-resultante-del"
 \end_layout
 
 \end_deeper
-\begin_layout Subsubsection
+\begin_layout Subsection
 Implementación en el kit Atlys.
 \end_layout
 
@@ -3474,6 +3474,10 @@ name "fig:Conexiones-a-la"
 \end_layout
 
 \end_deeper
+\begin_layout Section
+Nombre
+\end_layout
+
 \begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
