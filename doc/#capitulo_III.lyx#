@@ -162,7 +162,7 @@ thispagestyle{empty}
 \end_layout
 
 \begin_layout Section
-Introducción práctica a Sysgen.
+Filtrado básico de señales - Introducción práctica a Sysgen.
 \end_layout
 
 \begin_layout Subsection
@@ -1854,8 +1854,7 @@ name "fig:Utilización-de-recursos"
 
 \end_deeper
 \begin_layout Section
-Implementación del algoritmo de eco aplicado a señales de audio utilizando
- el códec AC97.
+Procesamiento de Audio - Algoritmo de eco.
 \end_layout
 
 \begin_layout Subsection
@@ -3554,7 +3553,84 @@ name "fig:Conexiones-a-la"
 
 \end_deeper
 \begin_layout Section
-Detección de bordes
+Procesamiento de imágenes - Detección de bordes.
+\end_layout
+
+\begin_layout Subsection
+Algoritmo del filtro Sobel.
+\end_layout
+
+\begin_layout Standard
+La detección de bordes mediante la implementación del filtro Sobel es una
+ práctica fundamental en el área del procesamiento de imágenes y video.
+ Este algoritmo es utilizado para la extracción de características de imágenes
+ en 2D a escala de grises
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Se utilizan imagenes a escala de grises y de dimensiones pequeñas para diseñar
+ operaciones sobre ellas, puesto que simplifican la potencia computacional
+ necesaria para obtener un resultado satisfactorio.
+\end_layout
+
+\end_inset
+
+, mediante el énfasis de las regiones de alta frecuencia espacial, que correspon
+den a los bordes.
+\end_layout
+
+\begin_layout Standard
+El principio de implementación se basa en utilizar dos operadores de convolción
+ matriciales o 
+\series bold
+kernels
+\series default
+, mostrados en la Ecuación 8.1.
+ Estos operadores son matrices de diferente tamaño a la imagen (generalmente
+ más pequeñas) pero de igual dimensión que dan como resultado, la estimación
+ de la primera derivada vertical y horizontalmente con respecto a la cuadrícula
+ de pixeles.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\begin{align}
+G_{x} & =\begin{bmatrix}-1 & 0 & 1\\
+-2 & 0 & 2\\
+-1 & 0 & 1
+\end{bmatrix}\qquad G_{y}=\begin{bmatrix}1 & 2 & 1\\
+0 & 0 & 0\\
+-1 & -2 & -1
+\end{bmatrix}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Después de aplicar la convolución usando dichos kernels, es necesario obtener
+ la magnitud absoluta de las componentes obtenidas en ambos cálculos, utilizando
+ la fórmula mostrada en la Ecuación 8.2:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left|G\right|=\sqrt{G_{x}^{2}+G_{y}^{2}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Así mismo, se puede obtener el ángulo de orientación del borde (para usos
+ más complejos)
 \end_layout
 
 \begin_layout Standard
