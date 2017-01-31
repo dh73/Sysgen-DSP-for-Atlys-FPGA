@@ -162,7 +162,7 @@ thispagestyle{empty}
 \end_layout
 
 \begin_layout Section
-Introducción práctica a Sysgen.
+Procesamiento de señales y filtrado - Introducción práctica a Sysgen.
 \end_layout
 
 \begin_layout Subsection
@@ -255,50 +255,6 @@ reference "fig:Gráfica-derivada-de"
 \end_inset
 
 .
-\begin_inset Flex Color Box
-status open
-
-\begin_layout Plain Layout
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-arc=0mm,colback=white, colframe=black, fonttitle=
-\backslash
-sffamily
-\backslash
-bfseries
-\backslash
-large, title=Generación de la señal de excitación al sistema
-\begin_inset Formula $F_{DSP}.$
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "alg:Generación-de-la"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset include
-LatexCommand lstinputlisting
-filename "/home/diego/Documents/Finalized/examples/noise_removal/senmix.m"
-lstparams "style={Matlab-editor},basicstyle={\\mlttfamily\\scriptsize},frame=none"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
- 
 \begin_inset Float algorithm
 placement H
 wide false
@@ -323,6 +279,13 @@ lstparams "style={Matlab-editor},basicstyle={\\mlttfamily\\scriptsize}"
 \begin_layout Plain Layout
 Generación de la señal de excitación al sistema 
 \begin_inset Formula $F_{DSP}.$
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:Generación-de-la"
+
 \end_inset
 
 
@@ -1891,8 +1854,7 @@ name "fig:Utilización-de-recursos"
 
 \end_deeper
 \begin_layout Section
-Implementación del algoritmo de eco aplicado a señales de audio utilizando
- el códec AC97.
+Procesamiento de Audio - Algoritmo de eco.
 \end_layout
 
 \begin_layout Subsection
@@ -3591,7 +3553,7 @@ name "fig:Conexiones-a-la"
 
 \end_deeper
 \begin_layout Section
-Nombre
+Procesamiento de imágenes - Detección de bordes.
 \end_layout
 
 \begin_layout Standard

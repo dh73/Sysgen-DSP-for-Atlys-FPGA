@@ -5,7 +5,14 @@
 \save_transient_properties true
 \origin unavailable
 \textclass extarticle
+\begin_preamble
+\usepackage[numbered,framed]{matlab-prettifier}
+\lstset{style=Matlab-editor}
+\end_preamble
 \use_default_options true
+\begin_modules
+tcolorbox
+\end_modules
 \maintain_unincluded_children false
 \language spanish-mexico
 \language_package default
@@ -75,8 +82,83 @@
 
 \begin_body
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+topskip0pt
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{
+\backslash
+fill}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Part
 Marco metodológico.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{
+\backslash
+fill}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -103,7 +185,7 @@ A manera de introducción, se utilizará el ambiente de Matlab/Simulink con
  el uso de un filtro FIR pasabajas ejecutándose en el kit Atlys.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Modelado del filtro FIR en Matlab.
 \end_layout
 
@@ -524,7 +606,7 @@ name "fig:Resultado-de-la"
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Simulación del sistema en Sysgen.
 \end_layout
 
@@ -1451,7 +1533,7 @@ name "fig:Resultado-de-la-1"
 \end_layout
 
 \end_deeper
-\begin_layout Subsubsection
+\begin_layout Subsection
 Implementación del sistema en el kit Atlys.
 \end_layout
 
@@ -1712,7 +1794,14 @@ Diagrama esquemático de la implementación del modelo del filtro FIR en FPGA.
 \end_deeper
 \begin_layout Enumerate
 La utilización del sistema y frecuencia máxima a la que se puede ejecutar
- este modelo se muestra en la Figura
+ este modelo se muestra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Utilización-de-recursos"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_deeper
@@ -1738,7 +1827,15 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Utilización de recursos de la FPGA.
+Utilización de recursos de la FPGA para la implementación del filtro FIR.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Utilización-de-recursos"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1756,12 +1853,12 @@ Utilización de recursos de la FPGA.
 \end_layout
 
 \end_deeper
-\begin_layout Subsection
+\begin_layout Section
 Implementación del algoritmo de eco aplicado a señales de audio utilizando
  el códec AC97.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Filtros FIR peine o 
 \emph on
 comb filter.
@@ -1809,7 +1906,7 @@ y_{n}=x_{n}+g*x_{n-M}
 \begin_layout Standard
 Si trasladamos la ecuación 
 \series bold
-6.5
+7.1
 \series default
  a un diagrama de bloques, nos queda como se muestra en la Figura 
 \begin_inset CommandInset ref
@@ -1880,7 +1977,7 @@ A partir de esto podemos observar que, la estructura se conforma de elementos
  pueden ser implementados en un FPGA.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Implementación en FPGA del códec de audio AC97.
 \end_layout
 
@@ -2012,12 +2109,1279 @@ name "fig:AC97_schem"
 
 \end_layout
 
-\begin_layout Subsubsection
-Desarrollo del algoritmo en Sysgen.
+\begin_layout Subsection
+Desarrollo del modelo en Sysgen.
 \end_layout
 
 \begin_layout Standard
-Los pasos para llevar a cabo la s
+Los pasos para llevar a cabo la implementación del algoritmo de eco se muestran
+ a continuación:
+\end_layout
+
+\begin_layout Enumerate
+A partir de tener el nuevo espacio de trabajo en Simulink (se pueden seguir
+ los pasos 1 a 4 de la subsección 
+\series bold
+6.3 Simulación del sistema en Sysgen
+\series default
+), el bloque 
+\emph on
+Sysgen Token
+\emph default
+ deberá tener las siguientes configuraciones:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Compilation: 
+\series default
+HDL Netlist.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Part: 
+\series default
+Sparnta6 xc6lx45-3csg324
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Synthesis tool: 
+\series default
+XST, 
+\series bold
+Language:
+\series default
+ Verilog.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Project Type: 
+\series default
+PlanAhead.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Synthesis Strategy: 
+\series default
+TimingWithIOBPacking
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Implementation Strategy: 
+\series default
+ParHighEffort.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Clocking Tab > FPGA clock period (ns):
+\series default
+ 10.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Multirate implementation: 
+\series default
+Clock Enables.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Simulink system period: 
+\series default
+
+\begin_inset Formula $\nicefrac{1}{48KHz}=2.0833e-05$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Añadir el bloque 
+\series bold
+DSP System Toolbox > From Multimedia File 
+\series default
+y configurarlo como sigue:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+File name: 
+\series default
+En este documento se proporciona el archivo partita_e_major.wav obtenida
+ libremente de 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.music.helsinki.fi/tmt/opetus/uusmedia/esim/index-e.html
+\end_layout
+
+\end_inset
+
+.
+ Este archivo de audio tiene la frecuencia de muestreo a 48KHz, stereo a
+ 16 bits.
+\end_layout
+
+\begin_layout Itemize
+Seleccionar el recuadro 
+\series bold
+Inherit sample time from file.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Number of times to play the file: 
+\series default
+1.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Outputs > Samples per audio channel: 
+\series default
+1.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Outputs > Audio output sampling mode:
+\series default
+ Sample based.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/input_from_multimedia_file_AC97.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Configuración del bloque 
+\emph on
+From multimedia File
+\emph default
+ para servir como fuente de sonido.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+El archivo de audio representa una matiz de 1x1 (datos, frecuencia de muestreo).
+ Es necesario convertir esta matriz a un vector de un solo elemento mediante
+ el uso de los bloques 
+\emph on
+'Reshape' 
+\emph default
+y 
+\emph on
+'Unbuffer'
+\emph default
+, ubicados en 
+\series bold
+Simulink > Math Operations 
+\series default
+y 
+\series bold
+DSP System Toolbox > Signal Management > Buffers
+\series default
+ respectivamente.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Para manejar los canales de audio dentro de la FPGA, se utilizarán dos 
+\emph on
+'Gateway In' 
+\emph default
+con los parámetros siguientes:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Output type: 
+\series default
+Fixed point.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Arithmetic type: 
+\series default
+Signed (2's comp).
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Fixed-point Precision: 
+\series default
+Number of bits = 16, Binary point = 14.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Overflow: 
+\series default
+Saturate.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Sample period: 
+\series default
+2.0833e-05.
+\end_layout
+
+\begin_layout Itemize
+Es necesario nombrar ambos puertos como 
+\series bold
+AudioLeftIn
+\series default
+ y 
+\series bold
+AudioRightIn
+\series default
+ respectivamente, cuidando de siempre mantener los mismos nombres o de lo
+ contrario, el archivo NCG del controlador del códec marcará un error al
+ intentar utilizar el netlist de Sysgen.
+ Se deben configurar como se muestra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Configuración-del-tipo"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/audiosin_sysgen_ac97.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Configuración del tipo de dato usado por los puertos de entrada al filtro
+ peine.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Configuración-del-tipo"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Como se mostró al principio de la 
+\series bold
+subsección 7.1
+\series default
+, ahora será necesario construir el filtro comb, siguiendo el bloque de
+ la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Comb_filter"
+
+\end_inset
+
+ con algunas alteraciones necesarias para adaptarlo al kit Atlys, mismas
+ que se explicarán posteriormente.
+ El bloque debe quedar como se muestra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Filtro-comb-(FIR)"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/eco_reverb_algo.png
+	lyxscale 30
+	scale 36
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Filtro comb (FIR) con retroalimentación realizado en Sysgen.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Filtro-comb-(FIR)"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El filtro se compone de un bloque 
+\emph on
+delay
+\emph default
+ de 4500 unidades de retraso (cada una de estas unidades representa un flipflop
+ en términos de recursos de FPGA) y un subsistema de ganancia nombrado 
+\series bold
+\emph on
+gain2
+\series default
+\emph default
+, el cual se muestra a más detalle en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Parámetros-de-la"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/ganancia_2.png
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Parámetros de la ganancia del filtro comb.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Parámetros-de-la"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Los bloques que le preceden al sumador 
+\series bold
+\emph on
+AddSub1 
+\series default
+\emph default
+son necesarios debido a que, durante el flujo de información a través de
+ los multiplicadores que actúan como ganancia, los datos se ven afectados
+ sufriendo incrementos debido a la magnitud que ahora deben representar
+ (aumenta el número de bits).
+ Como el controlador del AC97 trabaja sólo con palabras de 16 bits, es necesario
+ alinear y transformar la salida de dicho sumador, a que cumpla con los
+ 16 bits requeridos por el códec.
+\end_layout
+
+\begin_layout Standard
+La ganancia de retroalimentación es utilizada para estabilizar la salida
+ del filtro, con el fin de remover lo más posible, ruido inferido por las
+ modificaciones aplicadas a la señal de audio.
+ Dicha ganancia esta elaborada por el subsistema 
+\series bold
+\emph on
+gain1
+\series default
+\emph default
+, el cual se muestra a mayor detalle en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Ganancia-de-retroalimentación"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/gain1_subsystem.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Ganancia de retroalimentación para estabilizar el sistema.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Ganancia-de-retroalimentación"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por último, el bloque 
+\series bold
+\emph on
+Delay5
+\series default
+\emph default
+ es utilizado para sincronizar los sumadores 
+\series bold
+\emph on
+AddSub 
+\series default
+\emph default
+y 
+\series bold
+AddSub1
+\series default
+\emph on
+ 
+\emph default
+y así evitar problemas de timing
+\emph on
+ 
+\emph default
+debido al 
+\emph on
+cruce de reloj cruzado (CDC por sus siglas en Inglés).
+ 
+\emph default
+Se pueden modificar los valores de retraso y ganancias con el fin de obtener
+ efectos mucho más notables.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Los elementos mostrados en el paso 
+\series bold
+5
+\series default
+, pueden ser convertidos a subsistema para mantener la sencilléz del sistema
+ (seleccionar los bloques y ejecutar CTRL+G, los subsistemas pueden ser
+ nombrados a gusto del usuario) y replicados para así, tener los dos canales
+ del formato estéreo, como se muestra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Conversión-del-filtro"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/finalized_algo.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Conversión del filtro comb en subsistemas y replicación para formato estéreo.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Conversión-del-filtro"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Como paso final, se deberan arrastrar dos 
+\emph on
+'Gateway Out' 
+\emph default
+al espacio de trabajo de simulink, y nombrarlos 
+\series bold
+AudioLeftOut 
+\series default
+y 
+\series bold
+AudioRightIn 
+\series default
+respectivamente, así como un bloque 
+\emph on
+Mux 
+\emph default
+(
+\series bold
+Simulink > Commonly Used Blocks
+\series default
+) y un bloque 
+\emph on
+To Multimedia File 
+\emph default
+(
+\series bold
+DSP System Toolbox > Sinks
+\series default
+), y conectarlos como se muestra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Interconección-del-sistema"
+
+\end_inset
+
+.
+ El recuadro girs nombrado 
+\series bold
+Audio_algoritmo 
+\series default
+representa ambos filtros desarrollados.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/ac97_full_system.png
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Interconección del sistema de eco finalizado.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Interconección-del-sistema"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Para hacer la simulación de este modelo, utilizaremos un valor menor a la
+ duración en segundos del archivo de audio como 
+\emph on
+'stop time'
+\emph default
+ en Simulink.
+ El efecto es perfectamente audible utilizando el valor de 
+\series bold
+10.0(s)
+\series default
+.
+ El efecto de eco puede ser analizado reproduciendo el archivo generado
+ por el bloque '
+\emph on
+To Wave File'
+\emph default
+ en la ruta especificada dentro del mismo, o utilizando el 
+\emph on
+'Time Scope'
+\emph default
+ para observar los datos con un ligero desfase, como se muestra en la Figura
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Gráfica-resultante-del"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/audio_procesado_final.png
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Gráfica resultante del eco aplicado al archivo de audio.
+ La señal de la parte superior representa el audio sin procesar, mientras
+ que la señal inferior muestra el audio procesado, el cual se compone de
+ un desfase y una amplitud diferente a la original.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Gráfica-resultante-del"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Implementación en el kit Atlys.
+\end_layout
+
+\begin_layout Enumerate
+Una vez que obtenemos el resultado esperado, es necesario generar un 
+\emph on
+'Netlist' 
+\emph default
+(archivos HDL en Verilog o VHDL) para poder utilizar este modelo dentro
+ de la interface del codec de audio\SpecialChar endofsentence
+ Esto se logra dando doble clic sobre
+ el '
+\emph on
+Sysgen Token'
+\emph default
+ > 
+\emph on
+'Generate'.
+\end_layout
+
+\begin_layout Enumerate
+Al terminar el proceso anterior, lanzar PlanAhead y crear un nuevo proyecto
+ RTL
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Se añade un proyecto previamente configurado y funcionando con este documento,
+ para referencia.
+\end_layout
+
+\end_inset
+
+ (véase 
+\series bold
+Apéndice D:
+\series default
+ 
+\series bold
+Creación de projectos usando PlanAhead
+\series default
+ para más detalles).
+ Se deben agregar primeramente los archivos 
+\series bold
+ac97cmd.v
+\series default
+, 
+\series bold
+ac97cmd.ngc
+\series default
+, 
+\series bold
+ac97.v
+\series default
+, 
+\series bold
+ac97.ngc, ac97_constraints.ucf 
+\series default
+y 
+\series bold
+\emph on
+rt_audio_controller.v
+\series default
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Estos archivos se encuentran adjuntos en el proyecto de referencia.
+ 
+\end_layout
+
+\end_inset
+
+, 
+\emph default
+este último es el top module o módulo principal., que se conforma de las
+ siguientes estructuras:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+En primer lugar se definen los puertos de la interfáz principal entre el
+ códec de audio y la FPGA.
+ La directiva de compilación de la línea 1, 
+\emph on
+'NO_LOOPBACK', 
+\emph default
+al estar comentada, hace que las salidas del códec se conecten a sus entradas
+ (
+\emph on
+loopback
+\emph default
+).
+ Al momento de instanciar el modelo generado en Sysgen, esta directiva debe
+ ser descomentada.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Flex Color Box
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+arc=0mm,colback=white, colframe=black, fonttitle=
+\backslash
+sffamily
+\backslash
+bfseries
+\backslash
+large, title=Puertos del módulo principal
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "/home/diego/Documents/Finalized/examples/audio_ac97/AC97_IP/rt_audio_controller.v"
+lstparams "language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={\\color{gray}},keepspaces=true,numberstyle={\\tiny\\color{black}},keywordstyle={\\mlttfamily\\color{blue}},tabsize=2,breaklines=true,columns=flexible,linerange={1-10},frame=none"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+La instanciación de la IP de audio se hace como se muestra a continuación.
+ Se necesitan los archivos 
+\series bold
+ac97cmd.v
+\series default
+, 
+\series bold
+ac97cmd.ngc
+\series default
+, 
+\series bold
+ac97.v y ac97.ngc 
+\series default
+para ser utilizada.
+ Además, sólo funciona para la familia de FPGAs utilizada en el kit Atlys.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Flex Color Box
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+arc=0mm,colback=white, colframe=black, fonttitle=
+\backslash
+sffamily
+\backslash
+bfseries
+\backslash
+large, title=Instanciación de la IP de audio AC97
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "/home/diego/Documents/Finalized/examples/audio_ac97/AC97_IP/rt_audio_controller.v"
+lstparams "language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={\\color{gray}},keepspaces=true,numberstyle={\\tiny\\color{black}},keywordstyle={\\mlttfamily\\color{blue}},tabsize=2,breaklines=true,columns=flexible,linerange={35-64},frame=none"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Por último, el módulo generado por Sysgen está instanciado como se muestra
+ en el siguiente cuadro.
+ Si se utilizara otro módulo con un nombre diferente, sólo basta con especificar
+ el nombre de este y hacer las conexiones necesarias.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Flex Color Box
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+arc=0mm,colback=white, colframe=black, fonttitle=
+\backslash
+sffamily
+\backslash
+bfseries
+\backslash
+large, title=Instanciación del algoritmo de eco generado por Sysgen
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "/home/diego/Documents/Finalized/examples/audio_ac97/AC97_IP/rt_audio_controller.v"
+lstparams "language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={\\color{gray}},keepspaces=true,numberstyle={\\tiny\\color{black}},keywordstyle={\\mlttfamily\\color{blue}},tabsize=2,breaklines=true,columns=flexible,linerange={66-73},frame=none"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Al terminar de configurar el nuevo proyecto, se deberá ver como se muestra
+ en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Vista-jerárjica-de"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/planahead_activity_ac97.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Vista jerárjica de las fuentes utilizadas para el proyecto.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Vista-jerárjica-de"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como se puede observar, el netlist del algoritmo de eco aparece como faltante.
+ Para agregar estas dependencias, basta con dar clic sobre 
+\series bold
+Add sources > Add or Create Design Sources
+\series default
+, en la columna 
+\series bold
+Project Manager
+\series default
+, y seleccionar 
+\series bold
+Add Files
+\series default
+.
+ En la ventana que aparece, seleccionar el directorio 
+\series bold
+netlist/sysgen
+\series default
+ para añadir los archivos Verilog 
+\series bold
+algodev.v 
+\series default
+y 
+\series bold
+algodev_cw.v
+\series default
+, como se muestra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Archivos-de-Verilog"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/verilog_files_ac97.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Archivos de Verilog que contienen el hardware realizado en Sysgen para implement
+ar el algoritmo de procesamiento de audio.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Archivos-de-Verilog"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Ahora, se puede ir a través de todo el flujo de implementación en FPGA dando
+ clic sobre 
+\series bold
+Program and Debug > Generate Bitstream
+\series default
+.
+ Esto ejecutará el proceso de Síntesis, Place and Route y generará el 
+\emph on
+bitfile
+\series bold
+ 
+\series default
+\emph default
+o archivo de configuración que se deberá descargar al kit Atlys.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+El esqemático de módulo princpial se muestra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Esquemático-completo-de"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -2042,8 +3406,12 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Test
-\end_layout
+Esquemático completo de la implementación del modelo de procesamiento de
+ audio.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Esquemático-completo-de"
 
 \end_inset
 
@@ -2053,6 +3421,140 @@ Test
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+La utilización total de recursos y frecuencia máxima de trabajo se muestra
+ en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Utilización-y-frecuencia"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/utilizacion_ac97.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Utilización y frecuencia máxima de trabajo de la implementación final.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Utilización-y-frecuencia"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Para ejecutar este diseño en la tarjeta Atlys, se debe conectar una fuente
+ de audio (micrófono, reproductor MP3, étc) en el plug de color azul (Line
+ In) y unos audífonos o bocina en el plug verde (Line Out), como se muestra
+ en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Conexiones-a-la"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename misc/ac97_util.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Conexiones a la tarjeta Atlys para ejecutar el algoritmo desarrollado.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Conexiones-a-la"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Detección de bordes
 \end_layout
 
 \begin_layout Standard

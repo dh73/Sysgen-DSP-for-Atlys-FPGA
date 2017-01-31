@@ -162,7 +162,7 @@ thispagestyle{empty}
 \end_layout
 
 \begin_layout Section
-Introducción práctica a Sysgen.
+Filtrado básico de señales - Introducción práctica a Sysgen.
 \end_layout
 
 \begin_layout Subsection
@@ -259,7 +259,7 @@ reference "fig:Gráfica-derivada-de"
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1854,8 +1854,7 @@ name "fig:Utilización-de-recursos"
 
 \end_deeper
 \begin_layout Section
-Implementación del algoritmo de eco aplicado a señales de audio utilizando
- el códec AC97.
+Procesamiento de Audio - Algoritmo de eco.
 \end_layout
 
 \begin_layout Subsection
@@ -3554,7 +3553,7 @@ name "fig:Conexiones-a-la"
 
 \end_deeper
 \begin_layout Section
-Nombre
+Procesamiento de imágenes - Detección de bordes.
 \end_layout
 
 \begin_layout Standard
