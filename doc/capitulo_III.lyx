@@ -5,6 +5,10 @@
 \save_transient_properties true
 \origin unavailable
 \textclass extarticle
+\begin_preamble
+\usepackage[numbered,framed]{matlab-prettifier}
+\lstset{style=Matlab-editor}
+\end_preamble
 \use_default_options true
 \begin_modules
 tcolorbox
@@ -255,7 +259,7 @@ reference "fig:Gráfica-derivada-de"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center

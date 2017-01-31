@@ -5,6 +5,10 @@
 \save_transient_properties true
 \origin unavailable
 \textclass extarticle
+\begin_preamble
+\usepackage[numbered,framed]{matlab-prettifier}
+\lstset{style=Matlab-editor}
+\end_preamble
 \use_default_options true
 \begin_modules
 tcolorbox
@@ -150,6 +154,13 @@ thispagestyle{empty}
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Introducción práctica a Sysgen.
 \end_layout
@@ -244,6 +255,50 @@ reference "fig:Gráfica-derivada-de"
 \end_inset
 
 .
+\begin_inset Flex Color Box
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+arc=0mm,colback=white, colframe=black, fonttitle=
+\backslash
+sffamily
+\backslash
+bfseries
+\backslash
+large, title=Generación de la señal de excitación al sistema
+\begin_inset Formula $F_{DSP}.$
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:Generación-de-la"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "/home/diego/Documents/Finalized/examples/noise_removal/senmix.m"
+lstparams "style={Matlab-editor},basicstyle={\\mlttfamily\\scriptsize},frame=none"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
 \begin_inset Float algorithm
 placement H
 wide false
@@ -268,13 +323,6 @@ lstparams "style={Matlab-editor},basicstyle={\\mlttfamily\\scriptsize}"
 \begin_layout Plain Layout
 Generación de la señal de excitación al sistema 
 \begin_inset Formula $F_{DSP}.$
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "alg:Generación-de-la"
-
 \end_inset
 
 

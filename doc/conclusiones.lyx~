@@ -151,5 +151,41 @@ thispagestyle{empty}
 
 \end_layout
 
+\begin_layout Standard
+
+\lang spanish-mexico
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish-mexico
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-4ex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish-mexico
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document

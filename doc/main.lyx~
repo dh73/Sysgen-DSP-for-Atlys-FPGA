@@ -36,6 +36,9 @@
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.0pt}
 \usepackage{pslatex}
+
+%\setlength{\topskip}{0mm}
+%\setlength{\parindent}{0mm}
 \end_preamble
 \use_default_options true
 \begin_modules
@@ -517,7 +520,8 @@ filename "conclusiones.lyx"
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout LyX-Code
+\start_of_appendix
 
 \end_layout
 

@@ -86,13 +86,6 @@
 \begin_body
 
 \begin_layout Standard
-\begin_inset Newpage pagebreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -165,6 +158,13 @@ fill}
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -172,7 +172,7 @@ status open
 
 
 \backslash
-vspace*{0pt}
+vspace{-3ex}
 \end_layout
 
 \end_inset

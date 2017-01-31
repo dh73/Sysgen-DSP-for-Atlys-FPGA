@@ -23,8 +23,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage{listings}
 %%% New stuff
-\let\stdsection\section
-\renewcommand*{\section}{\clearpage\stdsection}
+%\let\stdsection\section
+%\renewcommand*{\section}{\clearpage\stdsection}
 %%%
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -36,6 +36,9 @@
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.0pt}
 \usepackage{pslatex}
+
+%\setlength{\topskip}{0mm}
+%\setlength{\parindent}{0mm}
 \end_preamble
 \use_default_options true
 \begin_modules
