@@ -3630,7 +3630,43 @@ Después de aplicar la convolución usando dichos kernels, es necesario obtener
 
 \begin_layout Standard
 Así mismo, se puede obtener el ángulo de orientación del borde (para usos
- más complejos)
+ más complejos) aplicando la Ecuación 8.3:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\theta=\arctan\frac{G_{x}}{G_{y}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Este algoritmo, a diferencia de otros como el 
+\emph on
+Canny
+\emph default
+ o 
+\emph on
+Roberts Cross
+\emph default
+, es menos sensible al ruido lo que significa que es más estable, aunque
+ es más lento en cuanto a términos de computación de resultados.
+\end_layout
+
+\begin_layout Subsection
+Modelo de conversión RGB a escala de grises.
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Subsection
+Operador Sobel usando filtros FIR.
 \end_layout
 
 \begin_layout Standard

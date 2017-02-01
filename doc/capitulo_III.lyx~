@@ -3658,11 +3658,306 @@ Roberts Cross
 \end_layout
 
 \begin_layout Subsection
+Descomposición del espacio de colores RGB.
+\end_layout
+
+\begin_layout Standard
+El proceso mostrado a continuación muestra como separar las componentes
+ R | G | B de la imagen a procesar:
+\end_layout
+
+\begin_layout Enumerate
+En un nuevo modelo de Simulink, instanciar un objeto 
+\emph on
+'Image From File' 
+\emph default
+que se encuentra en 
+\series bold
+Computer Vision System > Sources
+\series default
+, con las configuraciones mostradas en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Parámetros-de-configuración"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/image_viewer.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Parámetros de configuración del bloque 
+\emph on
+'Image From File'.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Parámetros-de-configuración"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El tipo de dato se deja en 
+\series bold
+double
+\series default
+, en la pestaña 
+\emph on
+'Data types'
+\emph default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se necesitan también los bloques de 
+\emph on
+'Transpose'
+\emph default
+, 
+\emph on
+'Reshape'
+\emph default
+, '
+\emph on
+Frame Conversion'
+\emph default
+ y finalmente 
+\emph on
+'Unbuffer'
+\emph default
+, con los parámetros mostrados en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:bloques_sobel_imagen"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/blocks_config_rgb.png
+	scale 25
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Configuración de los bloques 
+\emph on
+'Transpose'
+\emph default
+, 
+\emph on
+'Reshape'
+\emph default
+, '
+\emph on
+Frame Conversion'
+\emph default
+ y 
+\emph on
+'Unbuffer', 
+\emph default
+respectivamente
+\emph on
+.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:bloques_sobel_imagen"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se deben conectar dichos bloques como se muestra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Conexión-de-los"
+
+\end_inset
+
+, y repitiendo la estructura para cada uno de los espacios de colores RGB.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/conexion_buffering.png
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Conexión de los bloques necesarios para convertir la matríz 2D en un vector
+ de 1D necesario para cada una de las componentes del espacio de color.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Conexión-de-los"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Las entradas a esta estructura vienen del bloque 
+\emph on
+'Image From File'
+\emph default
+, y a las salidas se puede conectar ya, el modelo de conversión RGB a escala
+ de grises.
+ La Figura muestra los mismos bloques del Paso 3, convertidos en un subsistema.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/subsystem_buffer.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Conexión entre la fuente de imágen hacia el bloque de conversión de la matríz
+ 2D a vectores por espacio de color.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
 Modelo de conversión RGB a escala de grises.
 \end_layout
 
 \begin_layout Subsection
-Operados Sobel usando filtros FIR.
+Operador Sobel usando filtros FIR.
 \end_layout
 
 \begin_layout Standard
