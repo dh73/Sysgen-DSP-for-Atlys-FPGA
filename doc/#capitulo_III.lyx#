@@ -186,7 +186,7 @@ A manera de introducción, se utilizará el ambiente de Matlab/Simulink con
 \end_layout
 
 \begin_layout Subsection
-Modelado del filtro FIR en Matlab.
+Especificaciones del modelo del filtro FIR en Matlab.
 \end_layout
 
 \begin_layout Standard
@@ -3557,6 +3557,38 @@ Procesamiento de imágenes - Detección de bordes.
 \end_layout
 
 \begin_layout Subsection
+Características técnicas y arquitectura del modelo a implementar.
+\end_layout
+
+\begin_layout Standard
+El flujo fundamental del diseño de algoritmos para el procesamiento digital
+ de señales, se basa en la simulación y refinamiento del prototipo a implementar.
+ Una vez que se tiene el resultado esperado del filtro en la imágen, se
+ puede implementar en un modelo más complejo.
+\end_layout
+
+\begin_layout Standard
+Para esta sección, se ilustrará paso a paso el desarrollo del operador Sobel
+ para detección de bordes sobre imágenes en escala de grises, el cual debe
+ cumplir las siguientes características:
+\end_layout
+
+\begin_layout Itemize
+La transformación de RGB a escala de grises se debe hacer directo en la
+ FPGA, de esta manera se puede reutilizar en sistemas mucho más complejos
+ o en algoritmos diferentes.
+\end_layout
+
+\begin_layout Itemize
+La frecuencia (periodo) del modelo de Simulink debe ser de 5.0863ns.
+\end_layout
+
+\begin_layout Itemize
+Para términos de simplicidad, el modelo será ejecutado en el kit Atlys como
+ co-simulación.
+\end_layout
+
+\begin_layout Subsection
 Algoritmo del filtro Sobel.
 \end_layout
 
@@ -3658,13 +3690,456 @@ Roberts Cross
 \end_layout
 
 \begin_layout Subsection
+Descomposición del espacio de colores RGB.
+\end_layout
+
+\begin_layout Standard
+El proceso mostrado a continuación muestra como separar las componentes
+ R | G | B de la imagen a procesar:
+\end_layout
+
+\begin_layout Enumerate
+En un nuevo modelo de Simulink, instanciar un objeto 
+\emph on
+'Image From File' 
+\emph default
+que se encuentra en 
+\series bold
+Computer Vision System > Sources
+\series default
+, con las configuraciones mostradas en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Parámetros-de-configuración"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/image_viewer.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Parámetros de configuración del bloque 
+\emph on
+'Image From File'.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Parámetros-de-configuración"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El tipo de dato se deja en 
+\series bold
+double
+\series default
+, en la pestaña 
+\emph on
+'Data types'
+\emph default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se necesitan también los bloques de 
+\emph on
+'Transpose'
+\emph default
+, 
+\emph on
+'Reshape'
+\emph default
+, '
+\emph on
+Frame Conversion'
+\emph default
+ y finalmente 
+\emph on
+'Unbuffer'
+\emph default
+, con los parámetros mostrados en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:bloques_sobel_imagen"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/blocks_config_rgb.png
+	scale 25
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Configuración de los bloques 
+\emph on
+'Transpose'
+\emph default
+, 
+\emph on
+'Reshape'
+\emph default
+, '
+\emph on
+Frame Conversion'
+\emph default
+ y 
+\emph on
+'Unbuffer', 
+\emph default
+respectivamente
+\emph on
+.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:bloques_sobel_imagen"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se deben conectar dichos bloques como se muestra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Conexión-de-los"
+
+\end_inset
+
+, y repitiendo la estructura para cada uno de los espacios de colores RGB.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/conexion_buffering.png
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Conexión de los bloques necesarios para convertir la matríz 2D en un vector
+ de 1D necesario para cada una de las componentes del espacio de color.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Conexión-de-los"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Las entradas a esta estructura vienen del bloque 
+\emph on
+'Image From File'
+\emph default
+, y a las salidas se puede conectar ya, el modelo de conversión RGB a escala
+ de grises.
+ La Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Conexión-entre-la"
+
+\end_inset
+
+ muestra los mismos bloques del Paso 3, convertidos en un subsistema.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/subsystem_buffer.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Conexión entre la fuente de imágen hacia el bloque de conversión de la matríz
+ 2D a vectores por espacio de color.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Conexión-entre-la"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
 Modelo de conversión RGB a escala de grises.
 \end_layout
 
 \begin_layout Standard
+Para llevar a cabo esta conversión, se utilizará el método de luminosidad,
+ el cual consiste en ponderar específicamente a cada uno de los espacios
+ de color.
+ Dicho de otra forma, se debe aplicar la expresión mostrada en la Ecuación
+ 8.4:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Y_{i,\,j}=0.2989Y_{i,\,j,\,1}+0.58709Y_{i,\,j,\,2}+0.1140Y_{i,\,j,\,3}
+\end{equation}
+
+\end_inset
+
 
 \end_layout
 
+\begin_layout Standard
+Siguiendo los lineamientos dados en las especificaciones técnicas, la construcci
+ón de este algoritmo se logra siguiendo los pasos a continuación.
+\end_layout
+
+\begin_layout Enumerate
+Agregar el 
+\emph on
+'Sysgen Token' 
+\emph default
+con los siguientes parámetros:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Compilation: 
+\series default
+Hardware Co-Simulation > Atlys > JTAG.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Synthesis tool: 
+\series default
+XST.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Hardware Description Language: 
+\series default
+Verilog.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Project type: 
+\series default
+PlanAhead.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Synthesis strategy: 
+\series default
+PlanAhead Defaults.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Implementation Strategy: 
+\series default
+ISE Defaults.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Clocking > Simulink system period: 
+\series default
+5.0863e-06.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Añadir un 
+\emph on
+'Gateway In'
+\emph default
+ por cada espacio de color, con la configuracion mostrada en la Figura
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/RGB_gateways.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Subsection
 Operador Sobel usando filtros FIR.
 \end_layout
