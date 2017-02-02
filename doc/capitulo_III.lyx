@@ -4597,7 +4597,7 @@ reference "fig:Resultado-esperado-de"
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -4640,7 +4640,7 @@ name "fig:Resultado-esperado-de"
 \end_layout
 
 \begin_layout Standard
-Si se compara la salida de este modelo, con la función clásica de Matlab,
+Si se compara la salida de este modelo, con la popular función de Matlab,
  
 \emph on
 'rgb2gray'
@@ -4652,6 +4652,541 @@ Si se compara la salida de este modelo, con la función clásica de Matlab,
 \end_deeper
 \begin_layout Subsection
 Operador Sobel usando filtros FIR.
+\end_layout
+
+\begin_layout Standard
+Como se mencionó en la subsección 
+\series bold
+8.2 Algoritmo del filtro Sobel
+\series default
+, serán necesarios dos kernels que realizen el filtrado de la imagen construida
+ en la subsección 
+\series bold
+8.4 Modelo de conversión RGB a escala de grises
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+Para ello, se utilizarán dos bloques 
+\emph on
+'Fir Compiler 5.0' 
+\emph default
+que realizarán el filtrado en el eje X y Y de la imagen, utilizando los
+ valores mostrados en la Ecuación 8.1 como coeficientes del filtro.
+ Los pasos a seguir se ilustran a continuación:
+\end_layout
+
+\begin_layout Enumerate
+Se deben arrastrar dos bloques 
+\emph on
+'Fir Compiler 5.0' 
+\emph default
+al espacio de trabajo donde se generó el modelo de conversión RGB a escala
+ de grises.
+ Dichos bloques se encuentran en 
+\series bold
+Xilinx Blockset > DSP
+\series default
+.
+\end_layout
+
+\begin_layout Enumerate
+El vector de coeficientes para el filtro del eje X tiene los valores de
+ 
+\begin_inset Formula $[-1,0,+1,-2,0,+2,-1,0,+1]$
+\end_inset
+
+, como se muestra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Coeficientes-del-filtro"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/x_sobel_filter.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Coeficientes del filtro FIR para el eje X de la imagen.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Coeficientes-del-filtro"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Adicionalmente, se deben especificar los siguientes parámetros del tipo
+ de datos usados para los coeficientes del filtro.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/x_sobel_details_coeff.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Configuración del tipo de dato de los coeficientes para el filtro FIR.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se debe hacer lo mismo para el filtro del eje Y, en este caso el vector
+ de coeficientes debe ser 
+\begin_inset Formula $[+1,+2,+1,0,0,0,-1,-2,-1].$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/y_sobel_filter.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Coeficientes del filtro FIR para el eje Y de la imagen.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se debe conectar una constante con un valor de 1 booleano, así como 
+\emph on
+'Terminators'
+\emph default
+ en las salidas no utilizadas de los filtros, como se muestra en la Figura
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Conexión-de-los-1"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/terminators.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Conexión de los filtros FIR y sus terminales.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Conexión-de-los-1"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Continuando con las especificaciones técnicas, ahora es necesario implementar
+ la Ecuación 8.2.
+ Utilizar raíces cuadradas es muy costoso en términos de hardware, por esa
+ razón se modelará dicha ecuación de una forma menos compleja pero matemáticamen
+te equivalente.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+En primer lugar, se deben sumar ambas salidas 
+\series bold
+dout 
+\series default
+de los filtros FIR, lo que supone utilizar el bloque 
+\emph on
+'AddSub',
+\emph default
+ sin modificación alguna.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/sobel_dout_add.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Adición de los valores calculados por ambos filtros FIR.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Adición-de-los"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Para obtener al valor absoluto requerido por el algoritmo, basta con analizar
+ el signo de los datos a la salida del bloque 
+\emph on
+'AddSub' 
+\emph default
+mostrado en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Adición-de-los"
+
+\end_inset
+
+, e invertir el signo de todo aquel valor negativo, mediante el uso de un
+ selector, en donde el puerto de 
+\series bold
+sel
+\series default
+ sea el bit más significativo del dato (el cual es el signo), el puerto
+ 
+\series bold
+d0 
+\series default
+se active cuando el dato sea positivo (sin ningún cambio), pero el puerto
+ 
+\series bold
+d1 
+\series default
+por el contrario, cuando el dato sea negativo.
+ A la entrada del puerto 
+\series bold
+d1 
+\series default
+se agregará un bloque 
+\emph on
+'Negate'
+\emph default
+ el cual se puede encontrar en 
+\series bold
+Xilinx Blockset > Math
+\series default
+.
+ Todo esto se ilustra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Modelo-para-obtener"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/abs_value.png
+	scale 23
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Modelo para obtener el valor absoluto de los datos arrojados por los filtros
+ FIR.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Modelo-para-obtener"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+El modelo completo del filtro Sobel se muestra a continuación.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/full_sobel.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Modelo completo del filtro Sobel.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Este modelo se convirtió en subsistema, para conectarse como se muestra
+ en la Figura .
+ La conversión a subsistema es opcional, sólo le da más legibilidad a modelos
+ complejos con gran cantidad de bloques.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/Afull_sobel_model.png
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Implementación y resultados.
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \begin_layout Standard
