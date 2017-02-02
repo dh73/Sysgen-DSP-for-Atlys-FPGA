@@ -23,8 +23,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage{listings}
 %%% New stuff
-\let\stdsection\section
-\renewcommand*{\section}{\clearpage\stdsection}
+%\let\stdsection\section
+%\renewcommand*{\section}{\clearpage\stdsection}
 %%%
 \usepackage{fancyhdr}
 \pagestyle{fancy}

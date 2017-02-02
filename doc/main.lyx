@@ -520,11 +520,6 @@ filename "conclusiones.lyx"
 
 \end_layout
 
-\begin_layout LyX-Code
-\start_of_appendix
-
-\end_layout
-
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input

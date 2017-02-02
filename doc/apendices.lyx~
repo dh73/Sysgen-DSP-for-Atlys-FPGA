@@ -85,6 +85,40 @@ Apéndice A: Conversión Analógico-Digital.
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+topskip0pt
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{
+\backslash
+fill}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
 
@@ -621,6 +655,14 @@ Apéndice C: Script en Matlab de la Convolución de dos vectores de forma
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "src/convolve_example.m"
@@ -629,6 +671,283 @@ lstparams "style={Matlab-editor},basicstyle={\\mlttfamily\\scriptsize}"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Ilustración interactiva de la convolución, usada en la subsección 
+\series bold
+3.2.1 Convolución
+\series default
+.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part*
+Apéndice D: Creación de proyectos usando PlanAhead.
+\end_layout
+
+\begin_layout Enumerate
+Abrir PlanAhead y seleccionar 
+\emph on
+'Create New Project'.
+\end_layout
+
+\begin_layout Enumerate
+Esto invocara al 
+\emph on
+'Project wizard', 
+\emph default
+en la primer ventana de bienvenida, dar clic en 
+\emph on
+'Next >'.
+\end_layout
+
+\begin_layout Enumerate
+En la ventana 
+\emph on
+'Project name'
+\emph default
+, seleccionar el nombre del proyecto y la ruta donde se guardará, estos
+ parámetros son a gusto del usuario.
+\end_layout
+
+\begin_layout Enumerate
+En 
+\emph on
+'Project Type'
+\emph default
+, seleccionar 
+\emph on
+'RTL Project'
+\emph default
+ y marcar la casilla 
+\emph on
+'Do not specify sources at this time'.
+\end_layout
+
+\begin_layout Enumerate
+Se abrirá una nueva ventana llamada 
+\emph on
+'Default Part'
+\emph default
+, donde se debe especificar la matrícula de la FPGA, en el caso del kit
+ Atlys es 
+\series bold
+XC6SLX45CSG324-3
+\series default
+.
+ Se puede poner esta matrícula en el apartado 
+\emph on
+'Search' 
+\emph default
+para que sea más sencillo y libre de errores dado que, si se selecciona
+ cualquier otra parte distinta, el proyecto no funcionara en el kit.
+\end_layout
+
+\begin_layout Enumerate
+Dar clic en 
+\emph on
+'Finish'
+\emph default
+, el proyecto está configurado en este punto.
+\end_layout
+
+\begin_layout Enumerate
+\noindent
+En la columna 
+\emph on
+'Project Manager'
+\emph default
+, seleccionar 
+\emph on
+'Add sources'
+\emph default
+ y después 
+\emph on
+'Add or Create DSP Sources' 
+\emph default
+como se muestra a continuación: 
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/planahead_project.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Selección del tipo de proyecto en PlanAhead.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Seleccionar la opción 
+\emph on
+'Create Sub-Design'
+\emph default
+ y defnir el nombre del módulo principal, por ejemplo 
+\series bold
+lab1_sysgen.
+\end_layout
+
+\begin_layout Enumerate
+La interfáz de Matlab se desplegará en la pantalla, con el toolbox de Sysgen
+ añadido a las librerias de Simulink.
+ En este paso hay que esperar un par de minutos hasta que aparezca el workspace
+ principal de Simulink, como se muestra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Modelo-de-ejemplo-1"
+
+\end_inset
+
+.
+ 
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/lab1_sysgen.png
+	lyxscale 40
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Modelo de ejemplo en Sysgen.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Modelo-de-ejemplo-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part*
+Apéndice E: Instalación del plugin de Sysgen para el kit Atlys.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part*
+Apéndice F: Código Verilog completo del módulo de procesamiento de audio
+ con el códec AC97.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Color Box
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status collapsed
+
+\begin_layout Plain Layout
+arc=0mm,colback=white, colframe=black, fonttitle=
+\backslash
+sffamily
+\backslash
+bfseries
+\backslash
+large, title=Instanciación de la IP de audio AC97
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "/home/diego/Documents/Finalized/examples/audio_ac97/AC97_IP/rt_audio_controller.v"
+lstparams "language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={\\color{gray}},keepspaces=true,numberstyle={\\tiny\\color{black}},keywordstyle={\\mlttfamily\\color{blue}},tabsize=2,breaklines=true,columns=flexible,frame=none"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
 \end_layout
 
 \end_body
