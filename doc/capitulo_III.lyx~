@@ -3588,6 +3588,64 @@ Para términos de simplicidad, el modelo será ejecutado en el kit Atlys como
  co-simulación.
 \end_layout
 
+\begin_layout Itemize
+La imagen a procesar es la que se muestra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Imagen-utilizada-para"
+
+\end_inset
+
+, con una dimensión de 512*384.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/peppers_ex.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Imagen utilizada para la implementación del filtro Sobel.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Imagen-utilizada-para"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Algoritmo del filtro Sobel.
 \end_layout
@@ -4098,7 +4156,14 @@ Añadir un
 \emph on
 'Gateway In'
 \emph default
- por cada espacio de color, con la configuracion mostrada en la Figura
+ por cada espacio de color, con la configuracion mostrada en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Configuración-para-las"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_deeper
@@ -4107,7 +4172,7 @@ Añadir un
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -4124,7 +4189,15 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Configuracion para las entradas RGB
+Configuración para las entradas RGB al sistema en FPGA.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Configuración-para-las"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -4139,6 +4212,441 @@ Configuracion para las entradas RGB
 \end_inset
 
 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Para efectos de rendimiento, se sugiere añadir un bloque 
+\emph on
+'Register' 
+\emph default
+a cada una de las entradas, como se muestra a continuación.
+ Esto agrega un flujo de 
+\series bold
+cañería, 
+\series default
+mejor conocido como 
+\series bold
+pipeline
+\series default
+, que transforma un sólo proceso en varias fases para evitar problemas de
+ 
+\series bold
+timing
+\series default
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/registers_xilinx.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Entradas registradas usando bloques de Sysgen, con sus configuraciones originale
+s.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+La Ecuación 8.4 utiliza operadores como la suma y la multiplicación por cada
+ uno de los valores constantes.
+ Esto se traduce en hardware de la misma manera, utilizando un bloque 
+\emph on
+'CMult'
+\emph default
+ (
+\series bold
+Xilinx Blockset > Floating-Point
+\series default
+)
+\series bold
+ 
+\series default
+para cada uno de los canales de color, como se muestra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Configuración-de-los"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/cmult_settings.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Configuración de los multiplicadores por el valor constante requerido para
+ R, G y B respectivamente.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Configuración-de-los"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Así mismo, dos bloques 
+\emph on
+'AddSub' 
+\emph default
+(
+\series bold
+Xilinx Blockset > Floating-Point
+\series default
+) son necesarios para obtener la suma de los valores calculados en el Paso
+ 4.
+ Los parámetros de estos dos bloques no se modifican.
+\end_layout
+
+\begin_layout Enumerate
+La conexión a realizar utilizando los bloques antes mencionados se muestra
+ en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Modelo-completo-que"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/rgb2gray_fpga.png
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Modelo completo que realiza la conversión RGB a escala de grises de la imagen
+ obtenida por el bloque 
+\emph on
+'Image From File'
+\emph default
+.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Modelo-completo-que"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+El subsustema 
+\emph on
+'VideoView Gray'
+\emph default
+ se compone de un 
+\emph on
+'buffer
+\emph default
+' con capacidad de 196608 unidades (512*384), un bloque 
+\emph on
+'Frame conversion' 
+\emph default
+con su configuraciones sin modificar, un bloque 
+\emph on
+'Convert 1-D to 2-D' 
+\emph default
+con los parámetros mostrados en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Parámetros-necesarios-para"
+
+\end_inset
+
+, y un bloque 
+\emph on
+'Transpose' 
+\emph default
+sin modificar.
+ Todos conectados como se muestra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Reconstrucción-de-la"
+
+\end_inset
+
+.
+ El princpial objetivo de este bloque es, reconstruir los datos multiplicados
+ por el operador de luminosidad mostrada en la Ecuación 8.4 y al mismo tiempo,
+ ensamblar esos datos en una matriz 2D que representa la imagen obtenida.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/convert_1d_to_2d.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Parámetros necesarios para el bloque 
+\emph on
+'Convert 1-D to 2-D'.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Parámetros-necesarios-para"
+
+\end_inset
+
+
+\emph default
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/image_view_subsystem.png
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Reconstrucción de la imagen procesada por los bloques FPGA.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Reconstrucción-de-la"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Como tiempo de simulación, se recomienda generalmente utilizar el número
+ de filas por el número de columnas, en este caso 512*384.
+ Al ejecutar la simulación, el resultado debe ser como se muestra en la
+ Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Resultado-esperado-de"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/result_grayscale.png
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Resultado esperado de la conversión RGB a escala de grises.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Resultado-esperado-de"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si se compara la salida de este modelo, con la función clásica de Matlab,
+ 
+\emph on
+'rgb2gray'
+\emph default
+, las matrices tendran los mismos valores puesto que dicha función está
+ basada en el mismo principio que el modelo desarrollado en esta sección.
 \end_layout
 
 \end_deeper

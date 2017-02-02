@@ -4098,7 +4098,221 @@ Añadir un
 \emph on
 'Gateway In'
 \emph default
- por cada espacio de color, con la configuracion mostrada en la Figura
+ por cada espacio de color, con la configuracion mostrada en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Configuración-para-las"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/RGB_gateways.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Configuración para las entradas RGB al sistema en FPGA.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Configuración-para-las"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Para efectos de rendimiento, se sugiere añadir un bloque 
+\emph on
+'Register' 
+\emph default
+a cada una de las entradas, como se muestra a continuación.
+ Esto agrega un flujo de 
+\series bold
+cañería, 
+\series default
+mejor conocido como 
+\series bold
+pipeline
+\series default
+, que transforma un sólo proceso en varias fases para evitar problemas de
+ 
+\series bold
+timing
+\series default
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/registers_xilinx.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Entradas registradas usando bloques de Sysgen, con sus configuraciones originale
+s.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+La Ecuación 8.4 utiliza operadores como la suma y la multiplicación por cada
+ uno de los valores constantes.
+ Esto se traduce en hardware de la misma manera, utilizando un bloque 
+\emph on
+'CMult'
+\emph default
+ (
+\series bold
+Xilinx Blockset > Floating-Point
+\series default
+)
+\series bold
+ 
+\series default
+para cada uno de los canales de color, como se muestra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Configuración-de-los"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/cmult_settings.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Configuración de los multiplicadores por el valor constante requerido para
+ R, G y B respectivamente.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Configuración-de-los"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Así mismo, dos bloques 
+\emph on
+'AddSub' 
+\emph default
+((
+\series bold
+Xilinx Blockset > Floating-Point
+\series default
+) son necesarios para obtener la suma de los valores calculados en el Paso
+ 4.
+ Los parámetros de estos dos bloques no se modifican.
+\end_layout
+
+\begin_layout Enumerate
+La conexión a realizar utilizando los bloques antes mencionados se muestra
+ en la Figura
 \end_layout
 
 \begin_deeper
@@ -4109,12 +4323,10 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename img/RGB_gateways.png
-	scale 40
 
-\end_inset
+\end_layout
 
+\begin_layout Plain Layout
 
 \end_layout
 
