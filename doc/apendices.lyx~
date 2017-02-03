@@ -10,6 +10,9 @@
 \lstset{style=Matlab-editor}
 \end_preamble
 \use_default_options true
+\begin_modules
+tcolorbox
+\end_modules
 \maintain_unincluded_children false
 \language spanish-mexico
 \language_package default
@@ -79,43 +82,58 @@
 
 \begin_body
 
-\begin_layout Part*
+\begin_layout Part
 \start_of_appendix
-Apéndice A: Conversión Analógico-Digital.
+Apéndices.
+\end_layout
+
+\begin_layout Section
+Conversión Analógico-Digital.
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-topskip0pt
-\end_layout
-
-\end_inset
-
-
+Los conversores de señal analógica a digital (
+\series bold
+ADC
+\series default
+ por sus siglas en Inglés), son dispositivos de señal mixta que se encargan
+ de producir una salida que representa un valor digital en referencia al
+ voltaje o corriente de entrada al mismo, generalmente en código binario
+ convencional, aunque también se puden encontrar algunos que generan código
+ gray,
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-vspace*{
-\backslash
-fill}
+Un ADC tiene una tensión o corriente analógica de referencia utilizada para
+ comparar la magnitud de la señal a convertir digitalmente.
+ La salida digital del ADC representa el valor de la fracción del voltaje
+ de referencia.
+ Esto hace que los dispositivos ADC sean conocidos también como divisores.
 \end_layout
 
-\end_inset
+\begin_layout Standard
+La conversión A/D utiliza la cuantización, muestreo y codificación binaria
+ como parte del proceso de transformación.
+ dichos procesos se resumen a continuación.
+\end_layout
 
+\begin_layout Subsection
+Cuantización.
+\end_layout
 
+\begin_layout Standard
+La cuantización hace que el rango de la señal analógica sea discreto con
+ un conjunto de valores finitos, sin embargo este proceso es generalmente
+ irreversible y resulta en pérdida de información lo cual produce una distorsión
+ que no puede eliminarse.
+\end_layout
+
+\begin_layout Standard
+Este proceso viene después de la discretización en función del tiempo (muestreo)
+, y no es más que la misma discretización pero esta vez en función de la
+ amplitud.
+ asignándole un valor o estado, que depende del número de bits del ADC.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -125,17 +143,17 @@ fill}
 
 \end_layout
 
-\begin_layout Part*
-Apéndice B: Conversión Digital-Analógico.
+\begin_layout Section
+Conversión Digital-Analógico.
 \end_layout
 
 \begin_layout Standard
 Para convertir una señal digital a una analógica después de que se ha procesado
  por el sistema DSP, se utiliza un conversor D/A (o DAC, por sus siglas
  en inglés).
- La manera en que este proceso se lleva a cabo es interpolando los datos
- de las señales entre las muestras tomadas, es decir, aplicando una aproximación
- sucesiva al valor de dichas muestras.
+ Este proceso se lleva a cabo es interpolando los datos de las señales entre
+ las muestras tomadas, es decir, aplicando una aproximación sucesiva al
+ valor de dichas muestras.
 \end_layout
 
 \begin_layout Standard
@@ -299,10 +317,10 @@ reference "fig:Representación-gráfica-de-1"
 
 
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
-Información sacada de 
+Información obtenida de 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "chapter_3"
@@ -649,9 +667,8 @@ Modelo en NGSpice de un DAC ideal de 4 bits.
 
 \end_layout
 
-\begin_layout Part*
-Apéndice C: Script en Matlab de la Convolución de dos vectores de forma
- interactiva.
+\begin_layout Section
+Script en Matlab de la Convolución de dos vectores de forma interactiva.
 \end_layout
 
 \begin_layout Standard
@@ -706,8 +723,8 @@ Ilustración interactiva de la convolución, usada en la subsección
 
 \end_layout
 
-\begin_layout Part*
-Apéndice D: Creación de proyectos usando PlanAhead.
+\begin_layout Section
+Creación de proyectos usando PlanAhead.
 \end_layout
 
 \begin_layout Enumerate
@@ -898,8 +915,8 @@ name "fig:Modelo-de-ejemplo-1"
 
 \end_layout
 
-\begin_layout Part*
-Apéndice E: Instalación del plugin de Sysgen para el kit Atlys.
+\begin_layout Section
+Instalación del plugin de Sysgen para el kit Atlys.
 \end_layout
 
 \begin_layout Standard
@@ -909,9 +926,9 @@ Apéndice E: Instalación del plugin de Sysgen para el kit Atlys.
 
 \end_layout
 
-\begin_layout Part*
-Apéndice F: Código Verilog completo del módulo de procesamiento de audio
- con el códec AC97.
+\begin_layout Section
+Código Verilog completo del módulo de procesamiento de audio con el códec
+ AC97.
 \end_layout
 
 \begin_layout Standard
@@ -920,7 +937,7 @@ status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Argument 1
-status collapsed
+status open
 
 \begin_layout Plain Layout
 arc=0mm,colback=white, colframe=black, fonttitle=
@@ -938,7 +955,43 @@ large, title=Instanciación de la IP de audio AC97
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "/home/diego/Documents/Finalized/examples/audio_ac97/AC97_IP/rt_audio_controller.v"
-lstparams "language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={\\color{gray}},keepspaces=true,numberstyle={\\tiny\\color{black}},keywordstyle={\\mlttfamily\\color{blue}},tabsize=2,breaklines=true,columns=flexible,frame=none"
+lstparams "language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={\\color{gray}},keepspaces=true,numberstyle={\\tiny\\color{black}},keywordstyle={\\mlttfamily\\color{blue}},tabsize=2,breaklines=true,columns=flexible,frame=none,linerange={1-33}"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Color Box
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+arc=0mm,colback=white, colframe=black, fonttitle=
+\backslash
+sffamily
+\backslash
+bfseries
+\backslash
+large, title=Instanciación de la IP de audio AC97
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "/home/diego/Documents/Finalized/examples/audio_ac97/AC97_IP/rt_audio_controller.v"
+lstparams "language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={\\color{gray}},keepspaces=true,numberstyle={\\tiny\\color{black}},keywordstyle={\\mlttfamily\\color{blue}},tabsize=2,breaklines=true,columns=flexible,frame=none,linerange={34-76},firstnumber=34"
 
 \end_inset
 

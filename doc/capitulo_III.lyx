@@ -5433,7 +5433,7 @@ reference "fig:Gráfica-de-utilización"
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -5481,10 +5481,8 @@ Como se puede observar, la mayoría de los recursos utilizados son DSP48A1,
  los cuales ejecutan las funciones matemáticas de los dos filtros FIR utilizados
  en este prototipo.
  Esto asegura que las operaciones con mayor flujo de datos se hacen utilizando
- primitivas especiales para esto, aumentando el paralelismo de una manera
- significativa, puesto que el modelo puede ejecutarse a frecuencias de hasta
- 98 MHz a diferencia de la mayoria de los DSP comerciales, que funcionan
- a frecuencias máximas de 
+ primitivas especiales para cálculos complejos, aumentando el paralelismo
+ de una manera significativa.
 \end_layout
 
 \end_deeper

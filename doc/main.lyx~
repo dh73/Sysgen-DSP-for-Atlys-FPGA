@@ -275,6 +275,16 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset index_print
+LatexCommand printindex
+type "idx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -517,11 +527,6 @@ filename "conclusiones.lyx"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout LyX-Code
-\start_of_appendix
 
 \end_layout
 

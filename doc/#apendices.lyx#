@@ -109,7 +109,10 @@ Un ADC tiene una tensión o corriente analógica de referencia utilizada para
  La salida digital del ADC representa el valor de la fracción del voltaje
  de referencia.
  Esto hace que los dispositivos ADC sean conocidos también como divisores.
- La conversión A/D utiliza la cuantización, muestreo y codificación binaria
+\end_layout
+
+\begin_layout Standard
+La conversión A/D utiliza la cuantización, muestreo y codificación binaria
  como parte del proceso de transformación.
  dichos procesos se resumen a continuación.
 \end_layout
@@ -128,9 +131,7 @@ La cuantización hace que el rango de la señal analógica sea discreto con
 \begin_layout Standard
 Este proceso viene después de la discretización en función del tiempo (muestreo)
 , y no es más que la misma discretización pero esta vez en función de la
- amplitud.
- asignándole un valor o estado, que depende del número de bits del ADC.
- 
+ amplitud tomando parámetros 
 \end_layout
 
 \begin_layout Standard
