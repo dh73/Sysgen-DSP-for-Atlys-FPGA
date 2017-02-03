@@ -16,3 +16,6 @@ open_project sobel_t_cw.ppr
 Scanning sources...
 Finished scanning sources
 update_compile_order -fileset sim_1
+exit
+INFO: [Common 17-206] Exiting PlanAhead at Thu Feb  2 23:57:07 2017...
+INFO: [Common 17-83] Releasing license: PlanAhead
