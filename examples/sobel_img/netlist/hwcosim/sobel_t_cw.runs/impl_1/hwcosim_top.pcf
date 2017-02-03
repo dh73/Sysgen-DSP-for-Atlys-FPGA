@@ -1,0 +1,1715 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Thu Feb 02 18:37:57 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "hwcosim_sys_clk_n" LOCATE = SITE "K22" LEVEL 1;
+COMP "hwcosim_sys_clk_p" LOCATE = SITE "K21" LEVEL 1;
+PIN
+        cosim_core_inst/serial_iface/din_fifo/genblk1.RAM.blockram/genblk0.MEM[0].generate_v4ramb16.BRAM_pins<29>
+        = BEL
+        "cosim_core_inst/serial_iface/din_fifo/genblk1.RAM.blockram/genblk0.MEM[0].generate_v4ramb16.BRAM"
+        PINNAME CLKB;
+PIN
+        cosim_core_inst/serial_iface/dout_fifo/genblk1.RAM.blockram/genblk0.MEM[0].generate_v4ramb16.BRAM_pins<28>
+        = BEL
+        "cosim_core_inst/serial_iface/dout_fifo/genblk1.RAM.blockram/genblk0.MEM[0].generate_v4ramb16.BRAM"
+        PINNAME CLKA;
+PIN
+        hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000006_pins<92>
+        = BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000006"
+        PINNAME CLK;
+PIN
+        hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000005c_pins<92>
+        = BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000005c"
+        PINNAME CLK;
+PIN
+        hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000005d_pins<92>
+        = BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000005d"
+        PINNAME CLK;
+PIN
+        hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000005e_pins<92>
+        = BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000005e"
+        PINNAME CLK;
+PIN
+        hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000005f_pins<92>
+        = BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000005f"
+        PINNAME CLK;
+PIN
+        hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000060_pins<92>
+        = BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000060"
+        PINNAME CLK;
+PIN
+        hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000061_pins<92>
+        = BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000061"
+        PINNAME CLK;
+PIN
+        hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000062_pins<92>
+        = BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000062"
+        PINNAME CLK;
+PIN
+        hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000063_pins<92>
+        = BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000063"
+        PINNAME CLK;
+PIN
+        hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000064_pins<92>
+        = BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000064"
+        PINNAME CLK;
+PIN
+        hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000065_pins<92>
+        = BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000065"
+        PINNAME CLK;
+PIN
+        hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000066_pins<92>
+        = BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000066"
+        PINNAME CLK;
+PIN
+        hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000067_pins<92>
+        = BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000067"
+        PINNAME CLK;
+PIN
+        hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000068_pins<92>
+        = BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000068"
+        PINNAME CLK;
+PIN
+        hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000069_pins<92>
+        = BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000069"
+        PINNAME CLK;
+PIN
+        hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000006a_pins<92>
+        = BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000006a"
+        PINNAME CLK;
+PIN
+        hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000006b_pins<92>
+        = BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000006b"
+        PINNAME CLK;
+PIN
+        hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000006c_pins<92>
+        = BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000006c"
+        PINNAME CLK;
+PIN
+        hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000006d_pins<92>
+        = BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000006d"
+        PINNAME CLK;
+PIN
+        hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000006_pins<92>
+        = BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000006"
+        PINNAME CLK;
+PIN
+        hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000005c_pins<92>
+        = BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000005c"
+        PINNAME CLK;
+PIN
+        hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000005d_pins<92>
+        = BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000005d"
+        PINNAME CLK;
+PIN
+        hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000005e_pins<92>
+        = BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000005e"
+        PINNAME CLK;
+PIN
+        hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000005f_pins<92>
+        = BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000005f"
+        PINNAME CLK;
+PIN
+        hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000060_pins<92>
+        = BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000060"
+        PINNAME CLK;
+PIN
+        hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000061_pins<92>
+        = BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000061"
+        PINNAME CLK;
+PIN
+        hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000062_pins<92>
+        = BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000062"
+        PINNAME CLK;
+PIN
+        hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000063_pins<92>
+        = BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000063"
+        PINNAME CLK;
+PIN
+        hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000064_pins<92>
+        = BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000064"
+        PINNAME CLK;
+PIN
+        hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000065_pins<92>
+        = BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000065"
+        PINNAME CLK;
+PIN
+        hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000066_pins<92>
+        = BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000066"
+        PINNAME CLK;
+PIN
+        hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000067_pins<92>
+        = BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000067"
+        PINNAME CLK;
+PIN
+        hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000068_pins<92>
+        = BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000068"
+        PINNAME CLK;
+PIN
+        hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000069_pins<92>
+        = BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000069"
+        PINNAME CLK;
+PIN
+        hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000006a_pins<92>
+        = BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000006a"
+        PINNAME CLK;
+PIN
+        hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000006b_pins<92>
+        = BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000006b"
+        PINNAME CLK;
+PIN
+        hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000006c_pins<92>
+        = BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000006c"
+        PINNAME CLK;
+PIN
+        hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000006d_pins<92>
+        = BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000006d"
+        PINNAME CLK;
+TIMEGRP hwcosim_clkgen_dcm_clkfx = BEL "bufgmux_comp1" BEL "bufgmux_comp2" BEL
+        "bufgce_hwcosim_clkgen_dcm_clkfx" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_clk_pulses_10" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_clk_pulses_11" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_clk_pulses_12" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_clk_pulses_13" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_clk_pulses_14" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_clk_pulses_15" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_clk_pulses_20" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_clk_pulses_16" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_clk_pulses_21" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_clk_pulses_22" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_clk_pulses_17" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_clk_pulses_23" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_clk_pulses_18" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_clk_pulses_19" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/seq_addr" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/cosim_clk_sel" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/bank_sel_0" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/bank_sel_1" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/bank_sel_2" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/bank_sel_3" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/bank_sel_4" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/bank_sel_5" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/bank_sel_6" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/bank_sel_7" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_words_10" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_words_11" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_words_12" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_words_13" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_words_14" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_words_15" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_words_20" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_words_16" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_words_21" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_words_17" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_words_22" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_words_18" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_words_23" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_words_19" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/dout_fifo_we" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/pulse_count_10" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/pulse_count_11" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/pulse_count_12" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/pulse_count_13" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/pulse_count_14" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/pulse_count_15" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/pulse_count_20" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/pulse_count_21" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/pulse_count_16" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_words_0" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/pulse_count_22" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/pulse_count_17" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_words_1" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/pulse_count_23" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/pulse_count_18" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_words_2" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/pulse_count_19" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_words_3" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_words_4" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_words_5" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_words_6" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_words_7" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_words_8" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_words_9" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/addr_i_10" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/addr_i_11" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/addr_i_12" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/addr_i_13" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/addr_i_14" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/addr_i_15" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/addr_i_20" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/addr_i_16" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/addr_i_21" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/addr_i_17" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/addr_i_22" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/addr_i_18" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/addr_i_23" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/addr_i_19" BEL
+        "cosim_core_inst/serial_iface/din_fifo/read_addrgray[0]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/read_addrgray[1]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/read_addrgray[2]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/read_addrgray[3]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/read_addrgray[4]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/read_addrgray[5]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/read_addrgray[6]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/read_addrgray[7]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/read_addrgray[8]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/read_addr[0]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/read_addr[1]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/read_addr[2]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/read_addr[3]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/read_addr[4]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/read_addr[5]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/read_addr[6]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/read_addr[7]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/read_addr[8]" PIN
+        "cosim_core_inst/serial_iface/din_fifo/genblk1.RAM.blockram/genblk0.MEM[0].generate_v4ramb16.BRAM_pins<29>"
+        BEL "cosim_core_inst/serial_iface/din_fifo/empty1" BEL
+        "cosim_core_inst/serial_iface/din_fifo/rd_reset_resync" BEL
+        "cosim_core_inst/serial_iface/din_fifo/rd_reset" BEL
+        "cosim_core_inst/serial_iface/din_fifo/read_addrgray_ext" BEL
+        "cosim_core_inst/serial_iface/din_fifo/read_next[0]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/read_next[1]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/read_next[2]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/read_next[3]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/read_next[4]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/read_next[5]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/read_next[6]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/read_next[7]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/read_nextgray[0]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/read_next[8]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/read_nextgray[1]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/read_nextgray[2]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/read_nextgray[3]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/read_nextgray[4]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/read_nextgray[5]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/read_nextgray[6]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/read_nextgray[7]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/bram_enb_pipe" BEL
+        "cosim_core_inst/serial_iface/din_fifo/read_nextgray[8]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/read_nextgray_ext" PIN
+        "cosim_core_inst/serial_iface/dout_fifo/genblk1.RAM.blockram/genblk0.MEM[0].generate_v4ramb16.BRAM_pins<28>"
+        BEL "cosim_core_inst/serial_iface/dout_fifo/almost_full" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/write_nextgray[0]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/write_nextgray[1]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/write_nextgray[2]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/write_nextgray[3]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/full" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/write_next[0]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/write_nextgray[4]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/write_next[1]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/write_nextgray[5]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/write_next[2]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/write_nextgray[6]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/write_next[3]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/write_nxtnxtgray[1]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/write_nextgray[7]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/write_next[4]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/write_nxtnxtgray[2]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/write_nextgray[8]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/write_next[5]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/write_nxtnxtgray[3]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/write_next[6]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/write_nxtnxtgray[4]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/write_next[7]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/write_nxtnxtgray[5]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/write_next[8]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/write_nxtnxtgray[6]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/write_nxtnxtgray[7]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/write_nxtnxtgray[8]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/write_addrgray[0]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/write_addrgray[1]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/write_addrgray[2]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/write_addrgray[3]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/write_addrgray[4]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/write_addrgray[5]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/write_addrgray[6]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/write_addrgray[7]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/write_addrgray[8]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/wr_reset" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/write_addr[0]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/write_addr[1]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/write_addr[2]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/write_addr[3]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/write_addr[4]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/write_addr[5]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/write_addr[6]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/write_addr[7]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/wr_reset_resync" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/mode" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_clk_pulses_0" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_clk_pulses_1" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_clk_pulses_2" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_clk_pulses_3" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_clk_pulses_4" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_clk_pulses_5" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_clk_pulses_6" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_clk_pulses_7" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_clk_pulses_8" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/n_clk_pulses_9" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/data_valid" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/pulse_count_0" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/pulse_count_1" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/pulse_count_2" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/pulse_count_3" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/pulse_count_4" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/pulse_count_5" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/pulse_count_6" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/pulse_count_7" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/pulse_count_8" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/pulse_count_9" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/addr_i_0" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/addr_i_1" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/addr_i_2" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/addr_i_3" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/addr_i_4" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/addr_i_5" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/addr_i_6" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/addr_i_7" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/addr_i_8" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/addr_i_9" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/sstep_clk_i" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/current_state_FSM_FFd1" BEL
+        "cosim_core_inst/serial_iface/cmd_proc/current_state_FSM_FFd2" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_b_15" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_b_14" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_b_13" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_b_12" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_b_11" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_b_10" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_b_9" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_b_8" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_b_7" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_b_6" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_b_5" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_b_4" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_b_3" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_b_2" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_b_1" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_b_0" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_r_15" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_r_14" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_r_13" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_r_12" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_r_11" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_r_10" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_r_9" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_r_8" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_r_7" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_r_6" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_r_5" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_r_4" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_r_3" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_r_2" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_r_1" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_r_0" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_g_15" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_g_14" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_g_13" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_g_12" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_g_11" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_g_10" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_g_9" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_g_8" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_g_7" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_g_6" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_g_5" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_g_4" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_g_3" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_g_2" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_g_1" BEL
+        "hwcif/hwcosim_memory_map_inst/int_o_g_0" BEL
+        "hwcif/hwcosim_memory_map_inst/hwcosim_mm_data_out_bank0_31" BEL
+        "hwcif/hwcosim_memory_map_inst/hwcosim_mm_data_out_bank0_30" BEL
+        "hwcif/hwcosim_memory_map_inst/hwcosim_mm_data_out_bank0_29" BEL
+        "hwcif/hwcosim_memory_map_inst/hwcosim_mm_data_out_bank0_28" BEL
+        "hwcif/hwcosim_memory_map_inst/hwcosim_mm_data_out_bank0_27" BEL
+        "hwcif/hwcosim_memory_map_inst/hwcosim_mm_data_out_bank0_26" BEL
+        "hwcif/hwcosim_memory_map_inst/hwcosim_mm_data_out_bank0_25" BEL
+        "hwcif/hwcosim_memory_map_inst/hwcosim_mm_data_out_bank0_24" BEL
+        "hwcif/hwcosim_memory_map_inst/hwcosim_mm_data_out_bank0_23" BEL
+        "hwcif/hwcosim_memory_map_inst/hwcosim_mm_data_out_bank0_22" BEL
+        "hwcif/hwcosim_memory_map_inst/hwcosim_mm_data_out_bank0_21" BEL
+        "hwcif/hwcosim_memory_map_inst/hwcosim_mm_data_out_bank0_20" BEL
+        "hwcif/hwcosim_memory_map_inst/hwcosim_mm_data_out_bank0_19" BEL
+        "hwcif/hwcosim_memory_map_inst/hwcosim_mm_data_out_bank0_18" BEL
+        "hwcif/hwcosim_memory_map_inst/hwcosim_mm_data_out_bank0_17" BEL
+        "hwcif/hwcosim_memory_map_inst/hwcosim_mm_data_out_bank0_16" BEL
+        "hwcif/hwcosim_memory_map_inst/hwcosim_mm_data_out_bank0_15" BEL
+        "hwcif/hwcosim_memory_map_inst/hwcosim_mm_data_out_bank0_14" BEL
+        "hwcif/hwcosim_memory_map_inst/hwcosim_mm_data_out_bank0_13" BEL
+        "hwcif/hwcosim_memory_map_inst/hwcosim_mm_data_out_bank0_12" BEL
+        "hwcif/hwcosim_memory_map_inst/hwcosim_mm_data_out_bank0_11" BEL
+        "hwcif/hwcosim_memory_map_inst/hwcosim_mm_data_out_bank0_10" BEL
+        "hwcif/hwcosim_memory_map_inst/hwcosim_mm_data_out_bank0_9" BEL
+        "hwcif/hwcosim_memory_map_inst/hwcosim_mm_data_out_bank0_8" BEL
+        "hwcif/hwcosim_memory_map_inst/hwcosim_mm_data_out_bank0_7" BEL
+        "hwcif/hwcosim_memory_map_inst/hwcosim_mm_data_out_bank0_6" BEL
+        "hwcif/hwcosim_memory_map_inst/hwcosim_mm_data_out_bank0_5" BEL
+        "hwcif/hwcosim_memory_map_inst/hwcosim_mm_data_out_bank0_4" BEL
+        "hwcif/hwcosim_memory_map_inst/hwcosim_mm_data_out_bank0_3" BEL
+        "hwcif/hwcosim_memory_map_inst/hwcosim_mm_data_out_bank0_2" BEL
+        "hwcif/hwcosim_memory_map_inst/hwcosim_mm_data_out_bank0_1" BEL
+        "hwcif/hwcosim_memory_map_inst/hwcosim_mm_data_out_bank0_0" BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[15].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[14].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[13].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[12].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[11].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[10].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[9].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[8].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[7].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[6].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[5].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[4].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[3].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[2].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[1].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register2/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[15].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register2/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[14].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register2/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[13].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register2/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[12].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register2/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[11].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register2/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[10].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register2/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[9].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register2/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[8].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register2/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[7].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register2/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[6].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register2/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[5].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register2/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[4].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register2/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[3].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register2/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[2].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register2/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[1].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register2/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register_x0/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[15].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register_x0/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[14].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register_x0/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[13].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register_x0/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[12].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register_x0/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[11].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register_x0/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[10].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register_x0/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[9].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register_x0/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[8].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register_x0/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[7].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register_x0/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[6].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register_x0/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[5].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register_x0/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[4].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register_x0/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[3].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register_x0/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[2].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register_x0/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[1].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/register_x0/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp"
+        PIN
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000006_pins<92>"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000009"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000000a"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000000c"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000000f"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000010"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000011"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000012"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000013"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000014"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000015"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000016"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000017"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000018"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000019"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000001a"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000001b"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000001c"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000001d"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000001e"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000001f"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000020"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000021"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000022"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000023"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000024"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000025"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000026"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000027"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000028"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000029"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000002a"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000002b"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000002c"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000002d"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000002e"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000002f"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000030"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000003a"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000003b"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000003c"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000003d"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000003e"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000003f"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000040"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000041"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000042"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000043"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000044"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000045"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000046"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000047"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000048"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000049"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000004a"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000004b"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000004c"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000004d"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000004e"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000004f"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000050"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000051"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000052"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000053"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000054"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000055"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000056"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000057"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000058"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000059"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000005a"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000005b"
+        PIN
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000005c_pins<92>"
+        PIN
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000005d_pins<92>"
+        PIN
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000005e_pins<92>"
+        PIN
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000005f_pins<92>"
+        PIN
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000060_pins<92>"
+        PIN
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000061_pins<92>"
+        PIN
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000062_pins<92>"
+        PIN
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000063_pins<92>"
+        PIN
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000064_pins<92>"
+        PIN
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000065_pins<92>"
+        PIN
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000066_pins<92>"
+        PIN
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000067_pins<92>"
+        PIN
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000068_pins<92>"
+        PIN
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000069_pins<92>"
+        PIN
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000006a_pins<92>"
+        PIN
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000006b_pins<92>"
+        PIN
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000006c_pins<92>"
+        PIN
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000006d_pins<92>"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000006e"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000006f"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000070"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000071"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000072"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000073"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000074"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000075"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000076"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000077"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000078"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000079"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000007a"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000007b"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000007c"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000007d"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000007e"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000007f"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000080"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000081"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000082"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000083"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000084"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000085"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000086"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000087"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000088"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000089"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000008a"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000008b"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000008c"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000008d"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000008e"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk0000008f"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000090"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000091"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000092"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000093"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk00000094"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk000000cb"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk000000cf"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk000000ce"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk000000d1"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk000000d0"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk000000d3"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk000000d2"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk000000d5"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk000000d4"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk000000d7"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk000000d6"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk000000d9"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk000000d8"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk000000db"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk000000da"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk000000dd"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk000000dc"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk000000df"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk000000de"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk000000e1"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk000000e0"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk000000e3"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk000000e2"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk000000e5"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk000000e4"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk000000e7"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk000000e6"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk000000e9"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk000000e8"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk000000eb"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk000000ea"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk000000ed"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk000000ec"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk000000ef"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk000000ee"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk000000f1"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk000000f0"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk000000f3"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_x/fr_cmplr_v5_0_3273d736a853206c_instance/blk00000003/blk000000f2"
+        PIN
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000006_pins<92>"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000009"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000000a"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000000c"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000000f"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000010"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000011"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000012"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000013"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000014"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000015"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000016"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000017"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000018"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000019"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000001a"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000001b"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000001c"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000001d"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000001e"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000001f"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000020"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000021"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000022"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000023"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000024"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000025"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000026"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000027"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000028"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000029"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000002a"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000002b"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000002c"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000002d"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000002e"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000002f"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000030"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000003a"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000003b"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000003c"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000003d"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000003e"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000003f"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000040"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000041"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000042"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000043"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000044"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000045"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000046"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000047"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000048"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000049"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000004a"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000004b"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000004c"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000004d"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000004e"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000004f"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000050"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000051"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000052"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000053"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000054"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000055"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000056"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000057"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000058"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000059"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000005a"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000005b"
+        PIN
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000005c_pins<92>"
+        PIN
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000005d_pins<92>"
+        PIN
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000005e_pins<92>"
+        PIN
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000005f_pins<92>"
+        PIN
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000060_pins<92>"
+        PIN
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000061_pins<92>"
+        PIN
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000062_pins<92>"
+        PIN
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000063_pins<92>"
+        PIN
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000064_pins<92>"
+        PIN
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000065_pins<92>"
+        PIN
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000066_pins<92>"
+        PIN
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000067_pins<92>"
+        PIN
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000068_pins<92>"
+        PIN
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000069_pins<92>"
+        PIN
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000006a_pins<92>"
+        PIN
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000006b_pins<92>"
+        PIN
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000006c_pins<92>"
+        PIN
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000006d_pins<92>"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000006e"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000006f"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000070"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000071"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000072"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000073"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000074"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000075"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000076"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000077"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000078"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000079"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000007a"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000007b"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000007c"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000007d"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000007e"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000007f"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000080"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000081"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000082"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000083"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000084"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000085"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000086"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000087"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000088"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000089"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000008a"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000008b"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000008c"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000008d"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000008e"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk0000008f"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000090"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000091"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000092"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000093"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk00000094"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk000000cb"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk000000cf"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk000000ce"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk000000d1"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk000000d0"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk000000d3"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk000000d2"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk000000d5"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk000000d4"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk000000d7"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk000000d6"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk000000d9"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk000000d8"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk000000db"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk000000da"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk000000dd"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk000000dc"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk000000df"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk000000de"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk000000e1"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk000000e0"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk000000e3"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk000000e2"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk000000e5"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk000000e4"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk000000e7"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk000000e6"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk000000e9"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk000000e8"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk000000eb"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk000000ea"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk000000ed"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk000000ec"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk000000ef"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk000000ee"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk000000f1"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk000000f0"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk000000f3"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/sobel_y/fr_cmplr_v5_0_b6abdcad38a718af_instance/blk00000003/blk000000f2"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/mux/pipe_16_22_0_39"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/mux/pipe_16_22_0_38"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/mux/pipe_16_22_0_37"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/mux/pipe_16_22_0_36"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/mux/pipe_16_22_0_35"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/mux/pipe_16_22_0_34"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/mux/pipe_16_22_0_33"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/mux/pipe_16_22_0_32"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/mux/pipe_16_22_0_31"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/mux/pipe_16_22_0_30"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/mux/pipe_16_22_0_29"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/mux/pipe_16_22_0_28"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/mux/pipe_16_22_0_27"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/mux/pipe_16_22_0_26"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/mux/pipe_16_22_0_25"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/mux/pipe_16_22_0_24"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/mux/pipe_16_22_0_23"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/mux/pipe_16_22_0_22"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/mux/pipe_16_22_0_21"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/mux/pipe_16_22_0_20"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/mux/pipe_16_22_0_19"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/mux/pipe_16_22_0_18"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/mux/pipe_16_22_0_17"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/mux/pipe_16_22_0_16"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/mux/pipe_16_22_0_15"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/mux/pipe_16_22_0_14"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/mux/pipe_16_22_0_13"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/mux/pipe_16_22_0_12"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/mux/pipe_16_22_0_11"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/mux/pipe_16_22_0_10"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/mux/pipe_16_22_0_9"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/mux/pipe_16_22_0_8"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/mux/pipe_16_22_0_7"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/mux/pipe_16_22_0_6"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/mux/pipe_16_22_0_5"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/mux/pipe_16_22_0_4"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/mux/pipe_16_22_0_3"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/mux/pipe_16_22_0_2"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/mux/pipe_16_22_0_1"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/mux/pipe_16_22_0_0"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/negate/op_mem_48_20_0_39"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/negate/op_mem_48_20_0_38"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/negate/op_mem_48_20_0_37"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/negate/op_mem_48_20_0_36"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/negate/op_mem_48_20_0_35"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/negate/op_mem_48_20_0_34"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/negate/op_mem_48_20_0_33"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/negate/op_mem_48_20_0_32"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/negate/op_mem_48_20_0_31"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/negate/op_mem_48_20_0_30"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/negate/op_mem_48_20_0_29"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/negate/op_mem_48_20_0_28"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/negate/op_mem_48_20_0_27"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/negate/op_mem_48_20_0_26"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/negate/op_mem_48_20_0_25"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/negate/op_mem_48_20_0_24"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/negate/op_mem_48_20_0_23"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/negate/op_mem_48_20_0_22"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/negate/op_mem_48_20_0_21"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/negate/op_mem_48_20_0_20"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/negate/op_mem_48_20_0_19"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/negate/op_mem_48_20_0_18"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/negate/op_mem_48_20_0_17"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/negate/op_mem_48_20_0_16"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/negate/op_mem_48_20_0_15"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/negate/op_mem_48_20_0_14"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/negate/op_mem_48_20_0_13"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/negate/op_mem_48_20_0_12"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/negate/op_mem_48_20_0_11"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/negate/op_mem_48_20_0_10"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/negate/op_mem_48_20_0_9"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/negate/op_mem_48_20_0_8"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/negate/op_mem_48_20_0_7"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/negate/op_mem_48_20_0_6"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/negate/op_mem_48_20_0_5"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/negate/op_mem_48_20_0_4"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/negate/op_mem_48_20_0_3"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/negate/op_mem_48_20_0_2"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/negate/op_mem_48_20_0_1"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/negate/op_mem_48_20_0_0"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[39].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[38].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[37].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[36].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[35].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[34].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[33].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[32].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[31].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[30].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[29].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[28].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[27].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[26].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[25].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[24].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[23].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[22].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[21].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[20].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[19].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[18].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[17].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[16].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[15].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[14].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[13].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[12].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[11].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[10].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[9].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[8].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[7].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[6].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[5].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[4].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[3].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[2].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[1].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/register1/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp"
+        BEL
+        "hwcif/hwcosim_dut_inst/sobel_t_x0/sobelfilter_imp_1d64c29308/abs1_50faf5e9b2/register2/synth_reg_inst/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp";
+PIN
+        cosim_core_inst/serial_iface/din_fifo/genblk1.RAM.blockram/genblk0.MEM[0].generate_v4ramb16.BRAM_pins<28>
+        = BEL
+        "cosim_core_inst/serial_iface/din_fifo/genblk1.RAM.blockram/genblk0.MEM[0].generate_v4ramb16.BRAM"
+        PINNAME CLKA;
+PIN
+        cosim_core_inst/serial_iface/dout_fifo/genblk1.RAM.blockram/genblk0.MEM[0].generate_v4ramb16.BRAM_pins<29>
+        = BEL
+        "cosim_core_inst/serial_iface/dout_fifo/genblk1.RAM.blockram/genblk0.MEM[0].generate_v4ramb16.BRAM"
+        PINNAME CLKB;
+TIMEGRP J_CLK = BEL "cosim_core_inst/serial_iface/din_fifo_we" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_addr[8]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_addr[9]" PIN
+        "cosim_core_inst/serial_iface/din_fifo/genblk1.RAM.blockram/genblk0.MEM[0].generate_v4ramb16.BRAM_pins<28>"
+        BEL "cosim_core_inst/serial_iface/din_fifo/downcount_w[0]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/downcount_w[1]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/downcount_w[2]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/downcount_w[3]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/downcount_w[4]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_nextgray[10]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_nextgray[11]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_nextgray[12]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_nextgray[13]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_next[10]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_nxtnxtgray[10]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_next[11]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_nxtnxtgray[11]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_next[12]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_nxtnxtgray[12]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_next[13]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_nxtnxtgray[13]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_addr[10]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_addr[11]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_addr[12]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_nextgray[0]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_nextgray[1]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_nextgray[2]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_nextgray[3]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/full" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_next[0]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_nextgray[4]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_next[1]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_nextgray[5]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_next[2]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_nextgray[6]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_next[3]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_nxtnxtgray[1]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_nextgray[7]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_next[4]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_nxtnxtgray[2]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_nextgray[8]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_next[5]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_nxtnxtgray[3]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_nextgray[9]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_next[6]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_nxtnxtgray[4]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_next[7]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_nxtnxtgray[5]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_next[8]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_nxtnxtgray[6]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_next[9]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_nxtnxtgray[7]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_nxtnxtgray[8]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_nxtnxtgray[9]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_addrgray[5]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_addrgray[6]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_addrgray[7]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_addrgray[8]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_addrgray[9]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/wr_reset" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_addrgray[10]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_addrgray[11]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_addrgray[12]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_addrgray[13]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_addr[0]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_addr[1]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_addr[2]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_addr[3]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_addr[4]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_addr[5]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_addr[6]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/write_addr[7]" BEL
+        "cosim_core_inst/serial_iface/din_fifo/wr_reset_resync" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/read_addrgray[5]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/read_addrgray[6]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/read_addrgray[7]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/read_addrgray[8]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/read_addrgray[9]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/read_addr[5]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/read_addr[6]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/read_addr[7]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/read_addr[8]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/read_addr[9]" PIN
+        "cosim_core_inst/serial_iface/dout_fifo/genblk1.RAM.blockram/genblk0.MEM[0].generate_v4ramb16.BRAM_pins<29>"
+        BEL "cosim_core_inst/serial_iface/dout_fifo/read_next[10]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/read_next[11]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/read_next[12]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/read_next[13]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/read_addr[10]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/read_addr[11]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/read_addr[12]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/read_addr[13]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/empty1" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/rd_reset_resync" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/read_nextgray[10]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/read_nextgray[11]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/read_nextgray[12]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/read_nextgray[13]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/rd_reset" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/downcount_r[0]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/downcount_r[1]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/downcount_r[2]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/downcount_r[3]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/downcount_r[4]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/next_downcount_r[0]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/next_downcount_r[1]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/next_downcount_r[2]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/next_downcount_r[3]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/next_downcount_r[4]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/read_next[0]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/read_next[1]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/read_next[2]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/read_next[3]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/read_next[4]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/read_next[5]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/read_next[6]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/read_next[7]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/read_next[8]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/read_next[9]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/read_addrgray[10]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/read_nextgray[5]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/read_addrgray[11]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/read_nextgray[6]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/read_addrgray[12]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/read_nextgray[7]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/bram_enb_pipe" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/read_addrgray[13]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/read_nextgray[8]" BEL
+        "cosim_core_inst/serial_iface/dout_fifo/read_nextgray[9]" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_0" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_1" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_2" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_3" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_4" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_5" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_6" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_7" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_8" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_9" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_10" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_11" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_12" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_13" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_14" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_20" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_15" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_21" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_16" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_22" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_17" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_23" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_18" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_24" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_19" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_30" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_25" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_26" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_27" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_28" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_29";
+TIMEGRP U_CLK = BEL "cosim_core_inst/serial_iface/din_fifo_we" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_0" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_1" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_2" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_3" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_4" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_5" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_6" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_7" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_8" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_9" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_10" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_11" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_12" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_13" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_14" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_20" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_15" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_21" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_16" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_22" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_17" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_23" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_18" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_24" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_19" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_30" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_25" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_26" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_27" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_28" BEL
+        "cosim_core_inst/serial_iface/sync_word_sr_29";
+PIN SP6_BUFIO_INSERT_ML_BUFIO2_0_pins<0> = BEL "SP6_BUFIO_INSERT_ML_BUFIO2_0"
+        PINNAME DIVCLK;
+PIN hwcosim_clkgen_dcm_pins<3> = BEL "hwcosim_clkgen_dcm" PINNAME CLKIN;
+TIMEGRP T_hwcosim_sys_clk = PIN "SP6_BUFIO_INSERT_ML_BUFIO2_0_pins<0>" PIN
+        "hwcosim_clkgen_dcm_pins<3>";
+NET "cosim_core_inst/drck" PERIOD = 30 ns HIGH 50%;
+TS_J_TO_U = MAXDELAY FROM TIMEGRP "J_CLK" TO TIMEGRP "U_CLK" 15 ns;
+TS_hwcosim_sys_clk = PERIOD TIMEGRP "T_hwcosim_sys_clk" 5 ns HIGH 50%;
+TS_hwcosim_clkgen_dcm_clkfx = PERIOD TIMEGRP "hwcosim_clkgen_dcm_clkfx"
+        TS_hwcosim_sys_clk / 0.333333333 HIGH 50%;
+SCHEMATIC END;
+

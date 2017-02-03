@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Thu Feb  2 19:07:25 2017
+# Process ID: 8198
+# Log file: /home/diego/Documents/Finalized/examples/sobel_img/netlist/hwcosim/planAhead.log
+# Journal file: /home/diego/Documents/Finalized/examples/sobel_img/netlist/hwcosim/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from /home/diego/eda/closedsource/ISE/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [/home/diego/eda/closedsource/ISE/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [/home/diego/eda/closedsource/ISE/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+open_project sobel_t_cw.ppr
+Scanning sources...
+Finished scanning sources
+update_compile_order -fileset sim_1

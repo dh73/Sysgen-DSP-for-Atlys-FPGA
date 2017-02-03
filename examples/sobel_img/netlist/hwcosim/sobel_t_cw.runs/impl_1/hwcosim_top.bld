@@ -1,0 +1,135 @@
+Release 14.7 ngdbuild P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line:
+/home/diego/eda/closedsource/ISE/14.7/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild
+-intstyle ise -p xc6slx45tfgg484-3 -dd _ngo -uc hwcosim_top.ucf -bm
+sobel_t_cw.bmm -nt timestamp -bm sobel_t_cw.bmm hwcosim_top.edf
+
+Executing edif2ngd -quiet "hwcosim_top.edf" "_ngo/hwcosim_top.ngo"
+Release 14.7 - edif2ngd P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading NGO file
+"/home/diego/Documents/Finalized/examples/sobel_img/netlist/hwcosim/sobel_t_cw.r
+uns/impl_1/_ngo/hwcosim_top.ngo" ...
+Executing edif2ngd -noa "c_addsub_v11_0_xst.edn" "_ngo/c_addsub_v11_0_xst.ngo"
+Release 14.7 - edif2ngd P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+INFO:NgdBuild - Release 14.7 edif2ngd P.20131013 (lin64)
+INFO:NgdBuild - Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Writing module to "_ngo/c_addsub_v11_0_xst.ngo"...
+Loading design module
+"/home/diego/Documents/Finalized/examples/sobel_img/netlist/hwcosim/sobel_t_cw.r
+uns/impl_1/_ngo/c_addsub_v11_0_xst.ngo"...
+Executing edif2ngd -noa "mult_gen_v11_2_xst.edn" "_ngo/mult_gen_v11_2_xst.ngo"
+Release 14.7 - edif2ngd P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+INFO:NgdBuild - Release 14.7 edif2ngd P.20131013 (lin64)
+INFO:NgdBuild - Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Writing module to "_ngo/mult_gen_v11_2_xst.ngo"...
+Loading design module
+"/home/diego/Documents/Finalized/examples/sobel_img/netlist/hwcosim/sobel_t_cw.r
+uns/impl_1/_ngo/mult_gen_v11_2_xst.ngo"...
+Executing edif2ngd -noa "mult_gen_v11_2_xst_HDI_0.edn"
+"_ngo/mult_gen_v11_2_xst_HDI_0.ngo"
+Release 14.7 - edif2ngd P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+INFO:NgdBuild - Release 14.7 edif2ngd P.20131013 (lin64)
+INFO:NgdBuild - Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Writing module to "_ngo/mult_gen_v11_2_xst_HDI_0.ngo"...
+Loading design module
+"/home/diego/Documents/Finalized/examples/sobel_img/netlist/hwcosim/sobel_t_cw.r
+uns/impl_1/_ngo/mult_gen_v11_2_xst_HDI_0.ngo"...
+Executing edif2ngd -noa "mult_gen_v11_2_xst_HDI_1.edn"
+"_ngo/mult_gen_v11_2_xst_HDI_1.ngo"
+Release 14.7 - edif2ngd P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+INFO:NgdBuild - Release 14.7 edif2ngd P.20131013 (lin64)
+INFO:NgdBuild - Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Writing module to "_ngo/mult_gen_v11_2_xst_HDI_1.ngo"...
+Loading design module
+"/home/diego/Documents/Finalized/examples/sobel_img/netlist/hwcosim/sobel_t_cw.r
+uns/impl_1/_ngo/mult_gen_v11_2_xst_HDI_1.ngo"...
+Executing edif2ngd -noa "c_addsub_v11_0_xst_HDI_2.edn"
+"_ngo/c_addsub_v11_0_xst_HDI_2.ngo"
+Release 14.7 - edif2ngd P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+INFO:NgdBuild - Release 14.7 edif2ngd P.20131013 (lin64)
+INFO:NgdBuild - Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Writing module to "_ngo/c_addsub_v11_0_xst_HDI_2.ngo"...
+Loading design module
+"/home/diego/Documents/Finalized/examples/sobel_img/netlist/hwcosim/sobel_t_cw.r
+uns/impl_1/_ngo/c_addsub_v11_0_xst_HDI_2.ngo"...
+Executing edif2ngd -noa "c_addsub_v11_0_xst_HDI_3.edn"
+"_ngo/c_addsub_v11_0_xst_HDI_3.ngo"
+Release 14.7 - edif2ngd P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+INFO:NgdBuild - Release 14.7 edif2ngd P.20131013 (lin64)
+INFO:NgdBuild - Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Writing module to "_ngo/c_addsub_v11_0_xst_HDI_3.ngo"...
+Loading design module
+"/home/diego/Documents/Finalized/examples/sobel_img/netlist/hwcosim/sobel_t_cw.r
+uns/impl_1/_ngo/c_addsub_v11_0_xst_HDI_3.ngo"...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "hwcosim_top.ucf" ...
+WARNING:NgdBuild - The value of SIM_DEVICE on instance
+   'cosim_core_inst/serial_iface/din_fifo/genblk1.RAM.blockram/genblk0.MEM[0].ge
+   nerate_v4ramb16.BRAM' of type RAMB16BWER has been changed from 'SPARTAN3ADSP'
+   to 'SPARTAN6' to correct post-ngdbuild and timing simulation for this
+   primitive.  In order for functional simulation to be correct, the value of
+   SIM_DEVICE should be changed in this same manner in the source netlist or
+   constraint file.
+WARNING:NgdBuild - The value of SIM_DEVICE on instance
+   'cosim_core_inst/serial_iface/dout_fifo/genblk1.RAM.blockram/genblk0.MEM[0].g
+   enerate_v4ramb16.BRAM' of type RAMB16BWER has been changed from
+   'SPARTAN3ADSP' to 'SPARTAN6' to correct post-ngdbuild and timing simulation
+   for this primitive.  In order for functional simulation to be correct, the
+   value of SIM_DEVICE should be changed in this same manner in the source
+   netlist or constraint file.
+Resolving constraint associations...
+Checking Constraint Associations...
+INFO:ConstraintSystem:178 - TNM 'T_hwcosim_sys_clk', used in period
+   specification 'TS_hwcosim_sys_clk', was traced into DCM_SP instance
+   hwcosim_clkgen_dcm. The following new TNM groups and period specifications
+   were generated at the DCM_SP output(s): 
+   CLKFX: <TIMESPEC TS_hwcosim_clkgen_dcm_clkfx = PERIOD
+   "hwcosim_clkgen_dcm_clkfx" TS_hwcosim_sys_clk / 0.333333333 HIGH 50%>
+
+INFO:ConstraintSystem - The Period constraint <NET "cosim_core_inst/drck" PERIOD
+   = 30000 ps HIGH 50 %;> [hwcosim_top.ucf(11)], is specified using the Net
+   Period method which is not recommended. Please use the Timespec PERIOD
+   method.
+
+Done...
+
+Processing BMM file "sobel_t_cw.bmm" ...
+
+WARNING::53 - File 'sobel_t_cw.bmm' is empty or has no BMM content.
+
+
+Checking expanded design ...
+WARNING:NgdBuild:443 - SFF primitive
+   'hwcif/hwcosim_dut_inst/default_clock_driver_sobel_t_x0/xlclockdriver_1/clr_r
+   eg/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp'
+   has unconnected output pin
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   3
+
+Total memory usage is 671128 kilobytes
+
+Writing NGD file "hwcosim_top.ngd" ...
+Total REAL time to NGDBUILD completion:  34 sec
+Total CPU time to NGDBUILD completion:   3 sec
+
+Writing NGDBUILD log file "hwcosim_top.bld"...

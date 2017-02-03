@@ -1,0 +1,5 @@
+{
+  'addsub' => 'SELECT Adder_Subtracter spartan6 Xilinx,_Inc. 11.0',
+  'cmult' => 'SELECT Multiplier spartan6 Xilinx,_Inc. 11.2',
+  'fir_compiler_v5_0' => 'SELECT FIR_Compiler spartan6 Xilinx,_Inc. 5.0'
+}

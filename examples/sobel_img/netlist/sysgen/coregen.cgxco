@@ -1,0 +1,375 @@
+
+SETPROJECT ./
+SET ASYSymbol = false
+SET BusFormat = BusFormatParenNotRipped
+SET XilinxFamily = spartan6
+SET simulationfiles = Structural
+SET devicefamily = spartan6
+SET device = xc6slx45t
+SET package = fgg484
+SET speedgrade = -3
+SET VerilogSim = true
+SET VHDLSim = false
+SELECT Adder_Subtracter spartan6 Xilinx,_Inc. 11.0
+# 14.7_P.79
+# DEVICE spartan6
+# VERILOG
+CSET AINIT_Value = 0
+CSET A_Type = Signed
+CSET A_Width = 40
+CSET Add_Mode = Add
+CSET B_Constant = false
+CSET B_Type = Signed
+CSET B_Value = 0
+CSET B_Width = 40
+CSET Borrow_Sense = Active_Low
+CSET Bypass = false
+CSET Bypass_CE_Priority = Bypass_Overrides_CE
+CSET Bypass_Sense = Active_Low
+CSET CE = false
+CSET C_In = false
+CSET C_Out = false
+CSET Implementation = Fabric
+CSET Latency = 0
+CSET Out_Width = 40
+CSET SCLR = false
+CSET SINIT = false
+CSET SINIT_Value = 0
+CSET SSET = false
+CSET Sync_CE_Priority = Sync_Overrides_CE
+CSET Sync_Ctrl_Priority = Reset_Overrides_Set
+SET simulationfiles = Structural
+CSET component_name = addsb_11_0_29dfa978383111a1
+GENERATE
+
+SETPROJECT ./
+SET ASYSymbol = false
+SET BusFormat = BusFormatParenNotRipped
+SET XilinxFamily = spartan6
+SET simulationfiles = Structural
+SET devicefamily = spartan6
+SET device = xc6slx45t
+SET package = fgg484
+SET speedgrade = -3
+SET VerilogSim = true
+SET VHDLSim = false
+SELECT Adder_Subtracter spartan6 Xilinx,_Inc. 11.0
+# 14.7_P.79
+# DEVICE spartan6
+# VERILOG
+CSET AINIT_Value = 0
+CSET A_Type = Unsigned
+CSET A_Width = 33
+CSET Add_Mode = Add
+CSET B_Constant = false
+CSET B_Type = Unsigned
+CSET B_Value = 0
+CSET B_Width = 33
+CSET Borrow_Sense = Active_Low
+CSET Bypass = false
+CSET Bypass_CE_Priority = Bypass_Overrides_CE
+CSET Bypass_Sense = Active_Low
+CSET CE = false
+CSET C_In = false
+CSET C_Out = false
+CSET Implementation = Fabric
+CSET Latency = 0
+CSET Out_Width = 33
+CSET SCLR = false
+CSET SINIT = false
+CSET SINIT_Value = 0
+CSET SSET = false
+CSET Sync_CE_Priority = Sync_Overrides_CE
+CSET Sync_Ctrl_Priority = Reset_Overrides_Set
+SET simulationfiles = Structural
+CSET component_name = addsb_11_0_856b46edf5fd2c9b
+GENERATE
+
+SETPROJECT ./
+SET ASYSymbol = false
+SET BusFormat = BusFormatParenNotRipped
+SET XilinxFamily = spartan6
+SET simulationfiles = Structural
+SET devicefamily = spartan6
+SET device = xc6slx45t
+SET package = fgg484
+SET speedgrade = -3
+SET VerilogSim = true
+SET VHDLSim = false
+SELECT Adder_Subtracter spartan6 Xilinx,_Inc. 11.0
+# 14.7_P.79
+# DEVICE spartan6
+# VERILOG
+CSET AINIT_Value = 0
+CSET A_Type = Unsigned
+CSET A_Width = 34
+CSET Add_Mode = Add
+CSET B_Constant = false
+CSET B_Type = Unsigned
+CSET B_Value = 0
+CSET B_Width = 34
+CSET Borrow_Sense = Active_Low
+CSET Bypass = false
+CSET Bypass_CE_Priority = Bypass_Overrides_CE
+CSET Bypass_Sense = Active_Low
+CSET CE = false
+CSET C_In = false
+CSET C_Out = false
+CSET Implementation = Fabric
+CSET Latency = 0
+CSET Out_Width = 34
+CSET SCLR = false
+CSET SINIT = false
+CSET SINIT_Value = 0
+CSET SSET = false
+CSET Sync_CE_Priority = Sync_Overrides_CE
+CSET Sync_Ctrl_Priority = Reset_Overrides_Set
+SET simulationfiles = Structural
+CSET component_name = addsb_11_0_ba165a98660a6463
+GENERATE
+
+SETPROJECT ./
+SET ASYSymbol = false
+SET BusFormat = BusFormatParenNotRipped
+SET XilinxFamily = spartan6
+SET simulationfiles = Behavioral
+SET devicefamily = spartan6
+SET device = xc6slx45t
+SET package = fgg484
+SET speedgrade = -3
+SET VerilogSim = true
+SET VHDLSim = false
+SELECT Multiplier spartan6 Xilinx,_Inc. 11.2
+# 14.7_P.79
+# DEVICE spartan6
+# VERILOG
+CSET ccmimp = Distributed_Memory
+CSET clockenable = false
+CSET constvalue = 4897
+CSET internaluser = 0
+CSET multtype = Constant_Coefficient_Multiplier
+CSET outputwidthhigh = 31
+CSET outputwidthlow = 0
+CSET pipestages = 0
+CSET portatype = Unsigned
+CSET portawidth = 16
+CSET portbtype = Unsigned
+CSET portbwidth = 16
+CSET syncclear = false
+CSET use_custom_output_width = true
+CSET component_name = cmlt_11_2_a680687b7f91c37b
+GENERATE
+
+SETPROJECT ./
+SET ASYSymbol = false
+SET BusFormat = BusFormatParenNotRipped
+SET XilinxFamily = spartan6
+SET simulationfiles = Behavioral
+SET devicefamily = spartan6
+SET device = xc6slx45t
+SET package = fgg484
+SET speedgrade = -3
+SET VerilogSim = true
+SET VHDLSim = false
+SELECT Multiplier spartan6 Xilinx,_Inc. 11.2
+# 14.7_P.79
+# DEVICE spartan6
+# VERILOG
+CSET ccmimp = Distributed_Memory
+CSET clockenable = false
+CSET constvalue = 9617
+CSET internaluser = 0
+CSET multtype = Constant_Coefficient_Multiplier
+CSET outputwidthhigh = 31
+CSET outputwidthlow = 0
+CSET pipestages = 0
+CSET portatype = Unsigned
+CSET portawidth = 16
+CSET portbtype = Unsigned
+CSET portbwidth = 16
+CSET syncclear = false
+CSET use_custom_output_width = true
+CSET component_name = cmlt_11_2_a8cda2c4d6ade386
+GENERATE
+
+SETPROJECT ./
+SET ASYSymbol = false
+SET BusFormat = BusFormatParenNotRipped
+SET XilinxFamily = spartan6
+SET simulationfiles = Behavioral
+SET devicefamily = spartan6
+SET device = xc6slx45t
+SET package = fgg484
+SET speedgrade = -3
+SET VerilogSim = true
+SET VHDLSim = false
+SELECT Multiplier spartan6 Xilinx,_Inc. 11.2
+# 14.7_P.79
+# DEVICE spartan6
+# VERILOG
+CSET ccmimp = Distributed_Memory
+CSET clockenable = false
+CSET constvalue = 1868
+CSET internaluser = 0
+CSET multtype = Constant_Coefficient_Multiplier
+CSET outputwidthhigh = 31
+CSET outputwidthlow = 0
+CSET pipestages = 0
+CSET portatype = Unsigned
+CSET portawidth = 16
+CSET portbtype = Unsigned
+CSET portbwidth = 16
+CSET syncclear = false
+CSET use_custom_output_width = true
+CSET component_name = cmlt_11_2_ef11385c78568766
+GENERATE
+
+SETPROJECT ./
+SET ASYSymbol = false
+SET BusFormat = BusFormatParenNotRipped
+SET XilinxFamily = spartan6
+SET simulationfiles = Behavioral
+SET devicefamily = spartan6
+SET device = xc6slx45t
+SET package = fgg484
+SET speedgrade = -3
+SET VerilogSim = true
+SET VHDLSim = false
+SELECT FIR_Compiler spartan6 Xilinx,_Inc. 5.0
+# 14.7_P.79
+# DEVICE spartan6
+# VERILOG
+CSET allow_rounding_approximation = false
+CSET bestprecision = false
+CSET chan_in_adv = 0
+CSET clock_frequency = 250
+CSET coefficient_buffer_type = Not_Applicable
+CSET coefficient_file = no_coe_file_loaded
+CSET coefficient_fractional_bits = 0
+CSET coefficient_reload = false
+CSET coefficient_sets = 1
+CSET coefficient_sign = Signed
+CSET coefficient_structure = Inferred
+CSET coefficient_width = 16
+CSET coefficientsource = Vector
+CSET coefficientvector = -1,0,1,-2,0,2,-1,0,1
+CSET columnconfig = 9
+CSET data_buffer_type = Not_Applicable
+CSET data_fractional_bits = 28
+CSET data_sign = Unsigned
+CSET data_width = 34
+CSET decimation_rate = 1
+CSET displayreloadorder = false
+CSET filter_architecture = Transpose_Multiply_Accumulate
+CSET filter_selection = 1
+CSET filter_type = Single_Rate
+CSET gui_behaviour = Coregen
+CSET hardwareoversamplingrate = 1
+CSET has_ce = true
+CSET has_data_valid = false
+CSET has_nd = true
+CSET has_sclr = false
+CSET input_buffer_type = Not_Applicable
+CSET inter_column_pipe_length = 4
+CSET interpolation_rate = 1
+CSET multi_column_support = Disabled
+CSET number_channels = 1
+CSET number_paths = 1
+CSET optimization_goal = Area
+CSET output_buffer_type = Not_Applicable
+CSET output_rounding_mode = Full_Precision
+CSET output_width = 39
+CSET passband_max = 0.50000000000
+CSET passband_min = 0
+CSET preference_for_other_storage = Not_Applicable
+CSET quantization = Integer_Coefficients
+CSET rate_change_type = Integer
+CSET ratespecification = Sample_Period
+CSET registered_output = true
+CSET sample_frequency = 0.00100000000
+CSET sampleperiod = 1
+CSET sclr_deterministic = false
+CSET stopband_max = 1
+CSET stopband_min = 0.50000000000
+CSET usechan_in_adv = false
+CSET zero_pack_factor = 1
+SET device = xc6slx45t
+SET package = fgg484
+SET speedgrade = -3
+CSET component_name = fr_cmplr_v5_0_3273d736a853206c
+GENERATE
+
+SETPROJECT ./
+SET ASYSymbol = false
+SET BusFormat = BusFormatParenNotRipped
+SET XilinxFamily = spartan6
+SET simulationfiles = Behavioral
+SET devicefamily = spartan6
+SET device = xc6slx45t
+SET package = fgg484
+SET speedgrade = -3
+SET VerilogSim = true
+SET VHDLSim = false
+SELECT FIR_Compiler spartan6 Xilinx,_Inc. 5.0
+# 14.7_P.79
+# DEVICE spartan6
+# VERILOG
+CSET allow_rounding_approximation = false
+CSET bestprecision = false
+CSET chan_in_adv = 0
+CSET clock_frequency = 250
+CSET coefficient_buffer_type = Not_Applicable
+CSET coefficient_file = no_coe_file_loaded
+CSET coefficient_fractional_bits = 0
+CSET coefficient_reload = false
+CSET coefficient_sets = 1
+CSET coefficient_sign = Signed
+CSET coefficient_structure = Inferred
+CSET coefficient_width = 16
+CSET coefficientsource = Vector
+CSET coefficientvector = 1,2,1,0,0,0,-1,-2,-1
+CSET columnconfig = 9
+CSET data_buffer_type = Not_Applicable
+CSET data_fractional_bits = 28
+CSET data_sign = Unsigned
+CSET data_width = 34
+CSET decimation_rate = 1
+CSET displayreloadorder = false
+CSET filter_architecture = Transpose_Multiply_Accumulate
+CSET filter_selection = 1
+CSET filter_type = Single_Rate
+CSET gui_behaviour = Coregen
+CSET hardwareoversamplingrate = 1
+CSET has_ce = true
+CSET has_data_valid = false
+CSET has_nd = true
+CSET has_sclr = false
+CSET input_buffer_type = Not_Applicable
+CSET inter_column_pipe_length = 4
+CSET interpolation_rate = 1
+CSET multi_column_support = Disabled
+CSET number_channels = 1
+CSET number_paths = 1
+CSET optimization_goal = Area
+CSET output_buffer_type = Not_Applicable
+CSET output_rounding_mode = Full_Precision
+CSET output_width = 39
+CSET passband_max = 0.50000000000
+CSET passband_min = 0
+CSET preference_for_other_storage = Not_Applicable
+CSET quantization = Integer_Coefficients
+CSET rate_change_type = Integer
+CSET ratespecification = Sample_Period
+CSET registered_output = true
+CSET sample_frequency = 0.00100000000
+CSET sampleperiod = 1
+CSET sclr_deterministic = false
+CSET stopband_max = 1
+CSET stopband_min = 0.50000000000
+CSET usechan_in_adv = false
+CSET zero_pack_factor = 1
+SET device = xc6slx45t
+SET package = fgg484
+SET speedgrade = -3
+CSET component_name = fr_cmplr_v5_0_b6abdcad38a718af
+GENERATE

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DARoots Version="1" Minor="26">
+  <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sim_1/imports/sysgen/fr_cmplr_v5_0_b6abdcad38a718affilt_decode_rom.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sysgen/fr_cmplr_v5_0_b6abdcad38a718affilt_decode_rom.mif"/>
+        <Attr Name="ImportTime" Val="1486082161"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/sysgen/fr_cmplr_v5_0_b6abdcad38a718afCOEFF_auto0_8.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sysgen/fr_cmplr_v5_0_b6abdcad38a718afCOEFF_auto0_8.mif"/>
+        <Attr Name="ImportTime" Val="1486082161"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/sysgen/fr_cmplr_v5_0_b6abdcad38a718afCOEFF_auto0_7.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sysgen/fr_cmplr_v5_0_b6abdcad38a718afCOEFF_auto0_7.mif"/>
+        <Attr Name="ImportTime" Val="1486082161"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/sysgen/fr_cmplr_v5_0_b6abdcad38a718afCOEFF_auto0_6.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sysgen/fr_cmplr_v5_0_b6abdcad38a718afCOEFF_auto0_6.mif"/>
+        <Attr Name="ImportTime" Val="1486082161"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/sysgen/fr_cmplr_v5_0_b6abdcad38a718afCOEFF_auto0_5.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sysgen/fr_cmplr_v5_0_b6abdcad38a718afCOEFF_auto0_5.mif"/>
+        <Attr Name="ImportTime" Val="1486082161"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/sysgen/fr_cmplr_v5_0_b6abdcad38a718afCOEFF_auto0_4.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sysgen/fr_cmplr_v5_0_b6abdcad38a718afCOEFF_auto0_4.mif"/>
+        <Attr Name="ImportTime" Val="1486082161"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/sysgen/fr_cmplr_v5_0_b6abdcad38a718afCOEFF_auto0_3.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sysgen/fr_cmplr_v5_0_b6abdcad38a718afCOEFF_auto0_3.mif"/>
+        <Attr Name="ImportTime" Val="1486082161"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/sysgen/fr_cmplr_v5_0_b6abdcad38a718afCOEFF_auto0_2.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sysgen/fr_cmplr_v5_0_b6abdcad38a718afCOEFF_auto0_2.mif"/>
+        <Attr Name="ImportTime" Val="1486082161"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/sysgen/fr_cmplr_v5_0_b6abdcad38a718afCOEFF_auto0_1.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sysgen/fr_cmplr_v5_0_b6abdcad38a718afCOEFF_auto0_1.mif"/>
+        <Attr Name="ImportTime" Val="1486082161"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/sysgen/fr_cmplr_v5_0_b6abdcad38a718afCOEFF_auto0_0.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sysgen/fr_cmplr_v5_0_b6abdcad38a718afCOEFF_auto0_0.mif"/>
+        <Attr Name="ImportTime" Val="1486082161"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/sysgen/fr_cmplr_v5_0_b6abdcad38a718af.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sysgen/fr_cmplr_v5_0_b6abdcad38a718af.mif"/>
+        <Attr Name="ImportTime" Val="1486082161"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/sysgen/fr_cmplr_v5_0_3273d736a853206cfilt_decode_rom.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sysgen/fr_cmplr_v5_0_3273d736a853206cfilt_decode_rom.mif"/>
+        <Attr Name="ImportTime" Val="1486082161"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/sysgen/fr_cmplr_v5_0_3273d736a853206cCOEFF_auto0_8.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sysgen/fr_cmplr_v5_0_3273d736a853206cCOEFF_auto0_8.mif"/>
+        <Attr Name="ImportTime" Val="1486082161"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/sysgen/fr_cmplr_v5_0_3273d736a853206cCOEFF_auto0_7.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sysgen/fr_cmplr_v5_0_3273d736a853206cCOEFF_auto0_7.mif"/>
+        <Attr Name="ImportTime" Val="1486082161"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/sysgen/fr_cmplr_v5_0_3273d736a853206cCOEFF_auto0_6.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sysgen/fr_cmplr_v5_0_3273d736a853206cCOEFF_auto0_6.mif"/>
+        <Attr Name="ImportTime" Val="1486082161"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/sysgen/fr_cmplr_v5_0_3273d736a853206cCOEFF_auto0_5.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sysgen/fr_cmplr_v5_0_3273d736a853206cCOEFF_auto0_5.mif"/>
+        <Attr Name="ImportTime" Val="1486082161"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/sysgen/fr_cmplr_v5_0_3273d736a853206cCOEFF_auto0_4.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sysgen/fr_cmplr_v5_0_3273d736a853206cCOEFF_auto0_4.mif"/>
+        <Attr Name="ImportTime" Val="1486082161"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/sysgen/fr_cmplr_v5_0_3273d736a853206cCOEFF_auto0_3.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sysgen/fr_cmplr_v5_0_3273d736a853206cCOEFF_auto0_3.mif"/>
+        <Attr Name="ImportTime" Val="1486082161"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/sysgen/fr_cmplr_v5_0_3273d736a853206cCOEFF_auto0_2.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sysgen/fr_cmplr_v5_0_3273d736a853206cCOEFF_auto0_2.mif"/>
+        <Attr Name="ImportTime" Val="1486082161"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/sysgen/fr_cmplr_v5_0_3273d736a853206cCOEFF_auto0_1.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sysgen/fr_cmplr_v5_0_3273d736a853206cCOEFF_auto0_1.mif"/>
+        <Attr Name="ImportTime" Val="1486082161"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/sysgen/fr_cmplr_v5_0_3273d736a853206cCOEFF_auto0_0.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sysgen/fr_cmplr_v5_0_3273d736a853206cCOEFF_auto0_0.mif"/>
+        <Attr Name="ImportTime" Val="1486082161"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sim_1/imports/sysgen/fr_cmplr_v5_0_3273d736a853206c.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sysgen/fr_cmplr_v5_0_3273d736a853206c.mif"/>
+        <Attr Name="ImportTime" Val="1486082161"/>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="hwcosim_top"/>
+      <Option Name="TopLib" Val="work"/>
+      <Option Name="TopRTLFile" Val="$PSRCDIR/sources_1/imports/sysgen/hwcosim_top.v"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="SrcSet" Val="sources_1"/>
+    </Config>
+  </FileSet>
+</DARoots>

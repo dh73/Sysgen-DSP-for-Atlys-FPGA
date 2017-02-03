@@ -1,0 +1,1 @@
+run -ifn xst_sobel_t.prj -ifmt mixed -ofn sobel_t_cw.ngc -ofmt NGC -p xc6slx45t-3fgg484 -ent sobel_t_cw -keep_hierarchy NO -iobuf YES -bus_delimiter [] -top sobel_t_cw -hierarchy_separator / -report_timing_constraint_problems warning -register_balancing no -iob Auto -uc sobel_t_cw.xcf -write_timing_constraints yes

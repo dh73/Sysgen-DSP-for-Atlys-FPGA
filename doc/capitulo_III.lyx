@@ -4603,7 +4603,7 @@ status collapsed
 \align center
 \begin_inset Graphics
 	filename img/result_grayscale.png
-	scale 25
+	scale 30
 
 \end_inset
 
@@ -5185,6 +5185,309 @@ status collapsed
 Implementación y resultados.
 \end_layout
 
+\begin_layout Enumerate
+Al simular el modelo de Sysgen, el resultado se debe observar como en la
+ Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Resultado-de-la"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/sobel_results_sim.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Resultados de la simulación del modelo del filtro Sobel.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Resultados-de-la"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Para generar el modelo de Co-simulación, basta con abrir el '
+\emph on
+Sysgen Token' 
+\emph default
+y dar clic en 
+\emph on
+'Generate'.
+ 
+\emph default
+Una nueva biblioteca se abrirá, la cual contiene el modelo compilado para
+ poder ejecutarse en FPGA (véase Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Bloque-de-Co-Simulación"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/sobel_hwcosim.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Bloque de Co-Simulación del filtro Sobel, que se ejecuta en FPGA.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Bloque-de-Co-Simulación"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+El bloque generado en el Paso 2, se conecta de la siguiente manera:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/sobel_full_system_fpga.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Conexión del modelo completo para FPGA, el cual ejecuta el resultado simulado
+ y el obtenido por el hardware reconfigurable.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Conexión-del-modelo"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+El resultado obtenido al ejecutar el modelo de la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Conexión-del-modelo"
+
+\end_inset
+
+ se ilustra a continuación.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+TBD
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Resultado de la ejecución en FPGA del modelo del filtro Sobel.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Las estadísticas de recursos utilizados y frecuencia máxima de trabajo de
+ este prototipo, se muestran en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Gráfica-de-utilización"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/sobel_utilization.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Gráfica de utilización de recursos en la FPGA al implementar el modelo del
+ operador Sobel.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Gráfica-de-utilización"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como se puede observar, la mayoría de los recursos utilizados son DSP48A1,
+ los cuales ejecutan las funciones matemáticas de los dos filtros FIR utilizados
+ en este prototipo.
+ Esto asegura que las operaciones con mayor flujo de datos se hacen utilizando
+ primitivas especiales para esto, aumentando el paralelismo de una manera
+ significativa, puesto que el modelo puede ejecutarse a frecuencias de hasta
+ 98 MHz a diferencia de la mayoria de los DSP comerciales, que funcionan
+ a frecuencias máximas de 
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset

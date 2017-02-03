@@ -1,0 +1,10 @@
+set -loop_iteration_limit 1000
+run
+-ifn hwcosim_top.prj
+-top hwcosim_top
+-p xc6slx45tfgg484-3
+-ofn hwcosim_top.ngc
+-sd {../../sobel_t_cw.srcs/sources_1/imports/sysgen}
+-opt_mode speed
+-opt_level 1
+-netlist_hierarchy rebuilt

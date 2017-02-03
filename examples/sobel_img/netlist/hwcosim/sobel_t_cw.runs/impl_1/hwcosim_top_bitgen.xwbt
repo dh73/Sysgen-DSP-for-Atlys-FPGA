@@ -1,0 +1,8 @@
+INTSTYLE=pa
+INFILE=/home/diego/Documents/Finalized/examples/sobel_img/netlist/hwcosim/sobel_t_cw.runs/impl_1/hwcosim_top_routed.ncd
+OUTFILE=/home/diego/Documents/Finalized/examples/sobel_img/netlist/hwcosim/sobel_t_cw.runs/impl_1/hwcosim_top.bit
+FAMILY=Spartan6
+PART=xc6slx45t-3fgg484
+WORKINGDIR=/home/diego/Documents/Finalized/examples/sobel_img/netlist/hwcosim/sobel_t_cw.runs/impl_1
+LICENSE=WebPack
+USER_INFO=__0_0_0

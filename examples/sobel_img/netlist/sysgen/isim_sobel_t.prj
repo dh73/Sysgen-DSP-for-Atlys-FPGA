@@ -1,0 +1,3 @@
+verilog work sobel_t.v
+verilog work sobel_t_cw.v
+verilog work $XILINX/verilog/src/glbl.v

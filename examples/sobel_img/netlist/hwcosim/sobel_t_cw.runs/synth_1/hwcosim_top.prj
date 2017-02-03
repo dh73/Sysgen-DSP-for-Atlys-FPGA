@@ -1,0 +1,4 @@
+verilog work "/home/diego/Documents/Finalized/examples/sobel_img/netlist/hwcosim/sobel_t_cw.srcs/sources_1/imports/sysgen/sobel_t.v"
+verilog work "/home/diego/Documents/Finalized/examples/sobel_img/netlist/hwcosim/sobel_t_cw.srcs/sources_1/imports/sysgen/sobel_t_cw.v"
+verilog work "/home/diego/Documents/Finalized/examples/sobel_img/netlist/hwcosim/sobel_t_cw.srcs/sources_1/imports/sysgen/hwcosim_interface.v"
+verilog work "/home/diego/Documents/Finalized/examples/sobel_img/netlist/hwcosim/sobel_t_cw.srcs/sources_1/imports/sysgen/hwcosim_top.v"

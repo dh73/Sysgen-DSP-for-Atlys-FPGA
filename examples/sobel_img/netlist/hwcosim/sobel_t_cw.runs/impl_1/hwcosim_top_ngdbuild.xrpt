@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<document OS="lin64" product="ISE" version="14.7">
+
+  <!--The data in this file is primarily intended for consumption by Xilinx tools.
+    The structure and the elements are likely to change over the next few releases.
+    This means code written to parse this file will need to be revisited each subsequent release.-->
+
+  <application stringID="NgdBuild" timeStamp="Thu Feb  2 18:37:31 2017">
+    <section stringID="User_Env">
+      <table stringID="User_EnvVar">
+        <column stringID="variable"/>
+        <column stringID="value"/>
+        <row stringID="row" value="0">
+          <item stringID="variable" value="XILINX_DSP"/>
+          <item stringID="value" value="/home/diego/eda/closedsource/ISE/14.7/ISE_DS/ISE"/>
+        </row>
+        <row stringID="row" value="1">
+          <item stringID="variable" value="XILINX_COMMON_TOOLS"/>
+          <item stringID="value" value="/home/diego/eda/closedsource/ISE/14.7/ISE_DS/common"/>
+        </row>
+        <row stringID="row" value="2">
+          <item stringID="variable" value="XIL_DRC_BUFR_NO_CCIO_CHECK"/>
+          <item stringID="value" value="1"/>
+        </row>
+        <row stringID="row" value="3">
+          <item stringID="variable" value="LD_LIBRARY_PATH"/>
+          <item stringID="value" value="/home/diego/eda/closedsource/ISE/14.7/ISE_DS/ISE//lib/lin64:/home/diego/eda/closedsource/ISE/14.7/ISE_DS/EDK/lib/lin64:/home/diego/eda/closedsource/ISE/14.7/ISE_DS/ISE/lib/lin64:/home/diego/eda/closedsource/ISE/14.7/ISE_DS/common/lib/lin64:/home/diego/eda/closedsource/ISE/14.7/ISE_DS/ISE/sysgen/bin/lin64:/home/diego/eda/closedsource/ISE/14.7/ISE_DS/ISE/sysgen/lib/lin64:/home/diego/eda/closedsource/ISE/14.7/ISE_DS/PlanAhead/lib:/home/diego/eda/closedsource/matlab/R2013a/sys/os/glnxa64:/home/diego/eda/closedsource/matlab/R2013a/bin/glnxa64:/home/diego/eda/closedsource/matlab/R2013a/extern/lib/glnxa64:/home/diego/eda/closedsource/matlab/R2013a/runtime/glnxa64:/home/diego/eda/closedsource/matlab/R2013a/sys/java/jre/glnxa64/jre/lib/amd64/native_threads:/home/diego/eda/closedsource/matlab/R2013a/sys/java/jre/glnxa64/jre/lib/amd64/server:/home/diego/eda/closedsource/matlab/R2013a/sys/java/jre/glnxa64/jre/lib/amd64:/home/diego/eda/closedsource/ISE/14.7/ISE_DS/ISE/smartmodel/lin64/installed_lin64/lib:/home/diego/eda/closedsource/ISE/14.7/ISE_DS/ISE/sysgen/lib"/>
+        </row>
+        <row stringID="row" value="4">
+          <item stringID="variable" value="XILINX_EDK"/>
+          <item stringID="value" value="/home/diego/eda/closedsource/ISE/14.7/ISE_DS/EDK"/>
+        </row>
+        <row stringID="row" value="5">
+          <item stringID="variable" value="PATH"/>
+          <item stringID="value" value="/home/diego/eda/closedsource/ISE/14.7/ISE_DS/ISE//bin/lin64:/home/diego/eda/closedsource/ISE/14.7/ISE_DS/EDK/bin/lin64:/home/diego/eda/closedsource/ISE/14.7/ISE_DS/ISE/bin/lin64:/home/diego/eda/closedsource/ISE/14.7/ISE_DS/common/bin/lin64:/home/diego/eda/closedsource/ISE/14.7/ISE_DS/PlanAhead/bin:/home/diego/eda/closedsource/ISE/14.7/ISE_DS/ISE/sysgen/bin/lin64:/home/diego/eda/closedsource/ISE/14.7/ISE_DS/ISE/sysgen/util:/home/diego/eda/closedsource/ISE/14.7/ISE_DS/ISE/sysgen/bin:/home/diego/eda/closedsource/ISE/14.7/ISE_DS/ISE/../../../DocNav:/home/diego/eda/closedsource/ISE/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin:/home/diego/eda/closedsource/ISE/14.7/ISE_DS/EDK/gnu/powerpc-eabi/lin/bin:/home/diego/eda/closedsource/ISE/14.7/ISE_DS/EDK/gnu/arm/lin/bin:/home/diego/eda/closedsource/ISE/14.7/ISE_DS/EDK/gnu/microblaze/linux_toolchain/lin64_be/bin:/home/diego/eda/closedsource/ISE/14.7/ISE_DS/EDK/gnu/microblaze/linux_toolchain/lin64_le/bin:/usr/lib64/qt-3.3/bin:/usr/lib64/ccache:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/home/diego/bin:/home/diego/eda/closedsource/matlab/R2013a//bin:/home/diego/eda/closedsource/intelfpga/16.1/nios2eds/bin:/home/diego/eda/OpenSource/yosys/bin:/home/diego/eda/OpenSource/riscv-bin/bin"/>
+        </row>
+        <row stringID="row" value="6">
+          <item stringID="variable" value="LMC_HOME"/>
+          <item stringID="value" value="/home/diego/eda/closedsource/ISE/14.7/ISE_DS/ISE/smartmodel/lin64/installed_lin64"/>
+        </row>
+        <row stringID="row" value="7">
+          <item stringID="variable" value="XILINX_PLANAHEAD"/>
+          <item stringID="value" value="/home/diego/eda/closedsource/ISE/14.7/ISE_DS/PlanAhead"/>
+        </row>
+        <row stringID="row" value="8">
+          <item stringID="variable" value="XILINX"/>
+          <item stringID="value" value="/home/diego/eda/closedsource/ISE/14.7/ISE_DS/ISE/"/>
+        </row>
+      </table>
+      <item stringID="User_EnvOs" value="OS Information">
+        <item stringID="User_EnvOsname" value="Fedora"/>
+        <item stringID="User_EnvOsrelease" value="Fedora release 25 (Twenty Five)"/>
+      </item>
+      <item stringID="User_EnvHost" value="diegoh.localdomain"/>
+      <table stringID="User_EnvCpu">
+        <column stringID="arch"/>
+        <column stringID="speed"/>
+        <row stringID="row" value="0">
+          <item stringID="arch" value="Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz"/>
+          <item stringID="speed" value="3099.957 MHz"/>
+        </row>
+      </table>
+    </section>
+    <task stringID="NGDBUILD_OPTION_SUMMARY">
+      <section stringID="NGDBUILD_OPTION_SUMMARY">
+        <item DEFAULT="None" label="-bm" stringID="NGDBUILD_bmm_file" value="sobel_t_cw.bmm"/>
+        <item DEFAULT="None" label="-intstyle" stringID="NGDBUILD_intstyle" value="ise"/>
+        <item DEFAULT="None" label="-dd" stringID="NGDBUILD_output_dir" value="_ngo"/>
+        <item DEFAULT="None" label="-p" stringID="NGDBUILD_partname" value="xc6slx45tfgg484-3"/>
+        <item DEFAULT="None" label="-uc" stringID="NGDBUILD_ucf_file" value="hwcosim_top.ucf"/>
+      </section>
+    </task>
+    <task stringID="NGDBUILD_REPORT">
+      <section stringID="NGDBUILD_DESIGN_SUMMARY">
+        <item dataType="int" stringID="NGDBUILD_NUM_ERRORS" value="0"/>
+        <item dataType="int" stringID="NGDBUILD_FILTERED_WARNINGS" value="0"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_WARNINGS" value="3"/>
+        <item dataType="int" stringID="NGDBUILD_FILTERED_INFOS" value="0"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_INFOS" value="2"/>
+      </section>
+      <section stringID="NGDBUILD_PRE_UNISIM_SUMMARY"/>
+      <section stringID="NGDBUILD_POST_UNISIM_SUMMARY">
+        <item dataType="int" stringID="NGDBUILD_NUM_BSCAN_SPARTAN6" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_BUFG" value="2"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_BUFGMUX" value="3"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_DCM_SP" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_DSP48A1" value="38"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FD" value="11"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDC" value="21"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDCE" value="322"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDE" value="406"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDP" value="8"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDPE" value="37"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDRE" value="314"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDSE" value="2"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_GND" value="25"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_IBUFGDS" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT1" value="96"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT1_L" value="58"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT2" value="255"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT2_L" value="110"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT3" value="246"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT3_L" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT4" value="78"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT4_L" value="4"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT5" value="52"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT5_L" value="28"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT6" value="108"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT6_L" value="13"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_MUXCY" value="327"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_MUXCY_D" value="4"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_MUXCY_L" value="103"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_MUXF7" value="2"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_RAMB16BWER" value="2"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_SRL16E" value="38"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_TS_TIMESPEC" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_VCC" value="17"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_XORCY" value="420"/>
+      </section>
+      <section stringID="NGDBUILD_CORE_SUMMARY">
+        <item COUNT="1" stringID="NGDBUILD_CORE" value="c_addsub_v11_0, Xilinx CORE Generator 14.7"/>
+        <section stringID="NGDBUILD_CORE_GENERATION_SUMMARY">
+          <section stringID="NGDBUILD_CORE_INSTANCES">
+            <scope stringID="NGDBUILD_CORE_INSTANCE" value="addsb_11_0_29dfa978383111a1">
+              <item stringID="NGDBUILD_CORE_INFO" type="c_addsub_v11_0" value="addsb_11_0_29dfa978383111a1"/>
+              <item c_a_type="0" c_a_width="40" c_add_mode="0" c_ainit_val="0" c_b_constant="0" c_b_type="0" c_b_value="0000000000000000000000000000000000000000" c_b_width="40" c_borrow_low="1" c_bypass_low="0" c_ce_overrides_bypass="1" c_ce_overrides_sclr="0" c_has_bypass="0" c_has_c_in="0" c_has_c_out="0" c_has_ce="0" c_has_sclr="0" c_has_sinit="0" c_has_sset="0" c_implementation="0" c_latency="0" c_out_width="40" c_sclr_overrides_sset="1" c_sinit_val="0" c_verbosity="0" c_xdevicefamily="spartan6" stringID="NGDBUILD_CORE_PARAMETERS" value="addsb_11_0_29dfa978383111a1"/>
+            </scope>
+            <scope stringID="NGDBUILD_CORE_INSTANCE" value="addsb_11_0_856b46edf5fd2c9b">
+              <item stringID="NGDBUILD_CORE_INFO" type="c_addsub_v11_0" value="addsb_11_0_856b46edf5fd2c9b"/>
+              <item c_a_type="1" c_a_width="33" c_add_mode="0" c_ainit_val="0" c_b_constant="0" c_b_type="1" c_b_value="000000000000000000000000000000000" c_b_width="33" c_borrow_low="1" c_bypass_low="0" c_ce_overrides_bypass="1" c_ce_overrides_sclr="0" c_has_bypass="0" c_has_c_in="0" c_has_c_out="0" c_has_ce="0" c_has_sclr="0" c_has_sinit="0" c_has_sset="0" c_implementation="0" c_latency="0" c_out_width="33" c_sclr_overrides_sset="1" c_sinit_val="0" c_verbosity="0" c_xdevicefamily="spartan6" stringID="NGDBUILD_CORE_PARAMETERS" value="addsb_11_0_856b46edf5fd2c9b"/>
+            </scope>
+            <scope stringID="NGDBUILD_CORE_INSTANCE" value="addsb_11_0_ba165a98660a6463">
+              <item stringID="NGDBUILD_CORE_INFO" type="c_addsub_v11_0" value="addsb_11_0_ba165a98660a6463"/>
+              <item c_a_type="1" c_a_width="34" c_add_mode="0" c_ainit_val="0" c_b_constant="0" c_b_type="1" c_b_value="0000000000000000000000000000000000" c_b_width="34" c_borrow_low="1" c_bypass_low="0" c_ce_overrides_bypass="1" c_ce_overrides_sclr="0" c_has_bypass="0" c_has_c_in="0" c_has_c_out="0" c_has_ce="0" c_has_sclr="0" c_has_sinit="0" c_has_sset="0" c_implementation="0" c_latency="0" c_out_width="34" c_sclr_overrides_sset="1" c_sinit_val="0" c_verbosity="0" c_xdevicefamily="spartan6" stringID="NGDBUILD_CORE_PARAMETERS" value="addsb_11_0_ba165a98660a6463"/>
+            </scope>
+            <scope stringID="NGDBUILD_CORE_INSTANCE" value="cmlt_11_2_a680687b7f91c37b">
+              <item stringID="NGDBUILD_CORE_INFO" type="mult_gen_v11_2" value="cmlt_11_2_a680687b7f91c37b"/>
+              <item c_a_type="1" c_a_width="16" c_b_type="1" c_b_value="1001100100001" c_b_width="13" c_ccm_imp="0" c_ce_overrides_sclr="0" c_has_ce="0" c_has_sclr="0" c_has_zero_detect="0" c_latency="0" c_model_type="0" c_mult_type="2" c_optimize_goal="1" c_out_high="31" c_out_low="0" c_round_output="0" c_round_pt="0" c_verbosity="0" c_xdevicefamily="spartan6" stringID="NGDBUILD_CORE_PARAMETERS" value="cmlt_11_2_a680687b7f91c37b"/>
+            </scope>
+            <scope stringID="NGDBUILD_CORE_INSTANCE" value="cmlt_11_2_a8cda2c4d6ade386">
+              <item stringID="NGDBUILD_CORE_INFO" type="mult_gen_v11_2" value="cmlt_11_2_a8cda2c4d6ade386"/>
+              <item c_a_type="1" c_a_width="16" c_b_type="1" c_b_value="10010110010001" c_b_width="14" c_ccm_imp="0" c_ce_overrides_sclr="0" c_has_ce="0" c_has_sclr="0" c_has_zero_detect="0" c_latency="0" c_model_type="0" c_mult_type="2" c_optimize_goal="1" c_out_high="31" c_out_low="0" c_round_output="0" c_round_pt="0" c_verbosity="0" c_xdevicefamily="spartan6" stringID="NGDBUILD_CORE_PARAMETERS" value="cmlt_11_2_a8cda2c4d6ade386"/>
+            </scope>
+            <scope stringID="NGDBUILD_CORE_INSTANCE" value="cmlt_11_2_ef11385c78568766">
+              <item stringID="NGDBUILD_CORE_INFO" type="mult_gen_v11_2" value="cmlt_11_2_ef11385c78568766"/>
+              <item c_a_type="1" c_a_width="16" c_b_type="1" c_b_value="11101001100" c_b_width="11" c_ccm_imp="0" c_ce_overrides_sclr="0" c_has_ce="0" c_has_sclr="0" c_has_zero_detect="0" c_latency="0" c_model_type="0" c_mult_type="2" c_optimize_goal="1" c_out_high="31" c_out_low="0" c_round_output="0" c_round_pt="0" c_verbosity="0" c_xdevicefamily="spartan6" stringID="NGDBUILD_CORE_PARAMETERS" value="cmlt_11_2_ef11385c78568766"/>
+            </scope>
+            <scope stringID="NGDBUILD_CORE_INSTANCE" value="fr_cmplr_v5_0_3273d736a853206c">
+              <item stringID="NGDBUILD_CORE_INFO" type="fir_compiler_v5_0" value="fr_cmplr_v5_0_3273d736a853206c"/>
+              <item accum_width="39" allow_approx="0" c_has_ce="1" c_has_data_valid="0" c_has_nd="1" c_has_sclr="0" c_latency="8" c_mem_init_file="fname.mif" c_optimization="1" chan_in_adv="0" chan_sel_width="1" clock_freq="1" coef_memtype="0" coef_reload="0" coef_type="0" coef_width="16" col_config="9" col_mode="0" col_pipe_len="4" data_memtype="0" data_type="1" data_width="34" datapath_memtype="0" decim_rate="1" filter_arch="4" filter_sel_width="1" filter_type="12" interp_rate="1" ipbuff_memtype="0" neg_symmetry="0" num_channels="1" num_filts="1" num_paths="1" num_taps="9" odd_symmetry="1" opbuff_memtype="0" output_reg="1" output_width="39" rate_change_type="0" round_mode="0" sample_freq="1" sclr_deterministic="0" stringID="NGDBUILD_CORE_PARAMETERS" symmetry="0" value="fr_cmplr_v5_0_3273d736a853206c" zero_packing_factor="1"/>
+            </scope>
+            <scope stringID="NGDBUILD_CORE_INSTANCE" value="fr_cmplr_v5_0_b6abdcad38a718af">
+              <item stringID="NGDBUILD_CORE_INFO" type="fir_compiler_v5_0" value="fr_cmplr_v5_0_b6abdcad38a718af"/>
+              <item accum_width="39" allow_approx="0" c_has_ce="1" c_has_data_valid="0" c_has_nd="1" c_has_sclr="0" c_latency="8" c_mem_init_file="fname.mif" c_optimization="1" chan_in_adv="0" chan_sel_width="1" clock_freq="1" coef_memtype="0" coef_reload="0" coef_type="0" coef_width="16" col_config="9" col_mode="0" col_pipe_len="4" data_memtype="0" data_type="1" data_width="34" datapath_memtype="0" decim_rate="1" filter_arch="4" filter_sel_width="1" filter_type="12" interp_rate="1" ipbuff_memtype="0" neg_symmetry="0" num_channels="1" num_filts="1" num_paths="1" num_taps="9" odd_symmetry="1" opbuff_memtype="0" output_reg="1" output_width="39" rate_change_type="0" round_mode="0" sample_freq="1" sclr_deterministic="0" stringID="NGDBUILD_CORE_PARAMETERS" symmetry="0" value="fr_cmplr_v5_0_b6abdcad38a718af" zero_packing_factor="1"/>
+            </scope>
+            <scope stringID="NGDBUILD_CORE_INSTANCE" value="sobel_t">
+              <item stringID="NGDBUILD_CORE_INFO" type="sysgen_core" value="sobel_t"/>
+              <item clock_period="15.00000000" clocking="Clock_Enables" compilation="SP605_(JTAG)" sample_periods="1.00000000000" stringID="NGDBUILD_CORE_PARAMETERS" testbench="0" total_blocks="101" value="sobel_t" xilinx_adder_subtracter_block="3" xilinx_bit_slice_extractor_block="1" xilinx_bus_multiplexer_block="1" xilinx_constant_block_block="1" xilinx_constant_multiplier_block="3" xilinx_fir_compiler_5_0_block="2" xilinx_gateway_in_block="3" xilinx_gateway_out_block="2" xilinx_negate_block_block="1" xilinx_register_block="5" xilinx_resource_estimator_block="1" xilinx_system_generator_block="1"/>
+            </scope>
+          </section>
+        </section>
+      </section>
+    </task>
+  </application>
+
+</document>

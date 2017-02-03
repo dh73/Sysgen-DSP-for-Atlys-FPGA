@@ -1,0 +1,9 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Thu Feb  2 18:36:12 2017
+# Process ID: 6010
+# Log file: /home/diego/Documents/Finalized/examples/sobel_img/netlist/planAhead.log
+# Journal file: /home/diego/Documents/Finalized/examples/sobel_img/netlist/planAhead.jou
+#-----------------------------------------------------------
+source ProjectGeneration.tcl
