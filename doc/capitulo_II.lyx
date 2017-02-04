@@ -258,7 +258,7 @@ muestrea
 \emph default
  y cada muestra es a su vez, 
 \emph on
-cuantizada
+cuantificada
 \emph default
  a un número finito de bits.
  Este proceso es llamado 
@@ -562,7 +562,7 @@ Muestra.
 
 \end_inset
 
- en donde cada muestra es representada por un número finito de digitos
+ en donde cada muestra es representada por un número finito de dígitos
 \begin_inset Foot
 status collapsed
 
@@ -578,7 +578,7 @@ precisión finita
 
 .La cuantización es el proceso de convertir una señal discreta en el tiempo
  de amplitud continua, a una señal digital, representando cada valor muestreado
- como un número finito de digitos.
+ como un número finito de dígitos.
  La Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -852,7 +852,7 @@ sistemas LTI
 \emph default
  pueden ser implementados a base de sumadores, multiplicadores y unidades
  de retraso.
- Estos sistemas son facilmente realizables dado que se basan a partir de
+ Estos sistemas son fácilmente realizables dado que se basan a partir de
  un número finito de elementos, como los antes mencionados.
 \end_layout
 
@@ -882,7 +882,7 @@ respuesta al impulso.
 
 \begin_layout Standard
 Un punto fundamental a comprender de los sistemas DSP, es que estos trabajan
- descompiniendo la señal de entrada en simples componentes aditivos, cada
+ descomponiendo la señal de entrada en simples componentes aditivos, cada
  uno de estos componentes se pasa a través de un sistema linear, y los component
 es de salida resultantes son sintetizados, o en otras palabras, sumados.
  Esta descomposición se puede hacer de dos formas distintas: 
@@ -986,7 +986,7 @@ respuesta al impulso
  a la entrada.
  Si dos sistemas son diferentes en cualquier manera, ambos tendrán diferentes
  respuestas al impulso.
- Comunmente, las respuestas a la entrada y salida son llamadas 
+ Comúnmente, las respuestas a la entrada y salida son llamadas 
 \begin_inset Formula $\mathbf{x[n]}$
 \end_inset
 
@@ -1037,7 +1037,85 @@ Función
 \noun off
 \color none
 \lang english
-de respuesta al impulso graficada.
+de 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang spanish-mexico
+respuesta
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang spanish-mexico
+al
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang spanish-mexico
+impulso
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+ graficada.
 \end_layout
 
 \end_inset
@@ -1251,7 +1329,7 @@ Respuesta Finita al Impulso
 sistema LTI
 \emph default
  si es definido por un conjunto de coeficientes constantes.
- La salida de un filtro FIR de órden (o longitud) 
+ La salida de un filtro FIR de orden (o longitud) 
 \series bold
 L
 \series default
@@ -1413,7 +1491,7 @@ Estabilidad:
 \series default
 \emph default
  Para una entrada finita, la salida siempre es finita, además son no recursivos,
- es decir, no hay una conexión de retroalimentación envuelta en la estructura
+ es decir, no hay una conexión de retro alimentación envuelta en la estructura
  del filtro.
 \end_layout
 
@@ -1568,7 +1646,7 @@ IIR
  más las muestras pasadas de la misma función de salida, es decir, este
  filtro cuenta con lazos de 
 \emph on
-retroalimentación 
+retro alimentación 
 \emph default
 y 
 \emph on
@@ -1671,7 +1749,7 @@ El formato de implementación del filtro IIR utilizando el
 método de Chevysheb
 \series default
 \emph default
- minimiza la diferencia absoulta entre la respuesta en frecuencia ideal
+ minimiza la diferencia absoluta entre la respuesta en frecuencia ideal
  y la actual sobre toda la banda de paso mediante la incorporación de rizo
  uniforme en la banda de paso.
  La transición desde la banda de paso hacia la banda de corte es más rápida
@@ -1709,7 +1787,7 @@ Bessel
 no se puede implementar digitalmente utilizando muchas las herramientas
  comerciales de modelado matemático, por esta razón, no es muy común en
  el campo del diseño DSP.
- Además, estos filtros requieren un órden más alto, por lo que la utilización
+ Además, estos filtros requieren un orden más alto, por lo que la utilización
  de elementos discretos para su implementación se dispara, volviendo al
  filtro de 
 \emph on
@@ -2375,14 +2453,15 @@ key "clb_ov"
 \end_layout
 
 \begin_layout Subsection
-Kit de desarollo Atlys de Digilent.
+Kit de desarrollo Atlys de Digilent.
 \end_layout
 
 \begin_layout Standard
 El sistema de desarrollo Atlys fabricado por Digilent bajo el programa Xilinx
  University Program es la plataforma seleccionada para cumplir con los objetivos
  de esta investigación.
- El kit Atlys es una plataforma avanzada para el desarollo de sistemas digitales.
+ El kit Atlys es una plataforma avanzada para el desarrollo de sistemas
+ digitales.
  Está basada en un dispositivo FPGA Xilinx Spartan-6 LX45, la familia LX
  está optimizada para implementaciones lógicas de alto rendimiento
 \begin_inset CommandInset citation
@@ -2417,7 +2496,7 @@ FPGA Spartan-6 LX45-3 con 6,822 slices, cada una contiene 4 LUTS de 6 entradas
 status collapsed
 
 \begin_layout Plain Layout
-Para una mayor comprensión de estas catacterísitcas técnicas, referirse
+Para una mayor comprensión de estas características técnicas, referirse
  a la sección 
 \series bold
 \emph on
@@ -2451,7 +2530,7 @@ Oscilador CMOS a 100 MHz como reloj base para PLL/DCM.
 \end_layout
 
 \begin_layout Itemize
-Códec de audio AC97 con líneas de entrada/salida de audio y ariculares.
+Códec de audio AC97 con líneas de entrada/salida de audio y auriculares.
 \end_layout
 
 \begin_layout Itemize
@@ -2666,7 +2745,7 @@ Los algoritmos diseñados en este paquete de software, pueden ser convertidos
 \end_layout
 
 \begin_layout Itemize
-Matlab en conjunto con simulink, tienen soporte para la herramienta de diseño
+Matlab en conjunto con Simulink, tienen soporte para la herramienta de diseño
  DSP de Xilinx, lo cual convierte a este ambiente en uno de los más atractivos
  en este ámbito.
 \end_layout
@@ -2679,7 +2758,7 @@ Simulink.
 MATLAB tiene un toolbox adicional llamado Simulink que proporciona el modelado,
  la simulación y el análisis de sistemas dinámicos, dentro de un entorno
  gráfico.
- Este sofwtare permite el diseño modular y jerárjico, ayudando al usuario
+ Este sofwtare permite el diseño modular y jerárquico, ayudando al usuario
  en el manejo y creación de sistemas complejos que son conceptualmente simplific
 ados.
  
@@ -2689,14 +2768,14 @@ ados.
 Debido a este amplio uso, la capacidad de diseñar y verificar las implementacion
 es de hardware desde el mismo ambiente de Simulink, se traduce en una mayor
  ventaja para el prototipado rápido de nuevas teorías y diseños.
- Añadiendo las múltiples capas de software y librerias que habilitan la
+ Añadiendo las múltiples capas de software y librerías que habilitan la
  comunicación del ambiente gráfico de Simulink con el mundo exterior, proceso
  conocido como simulación de 
 \emph on
 hardware-in-the-loop
 \emph default
  (co simulación con módulos de adquisición de datos en hardware, que estimulan
- entradas y/o envian resultados al modelo de Simulink), proporciona un enorme
+ entradas y/o envían resultados al modelo de Simulink), proporciona un enorme
  beneficio adicional en el diseño y verificación del algoritmo sin arriesgar
  pérdidas de hardware o errores de implementación
 \begin_inset CommandInset citation
@@ -2757,7 +2836,7 @@ Image Processing Toolbox
 \begin_layout Standard
 Sin embargo, el comportamiento de la simulación matemática de Simulink en
  comparación con la implementación en el hardware, no es exacto.
- Simulink permite que calculos de punto flotante complejos sean completados
+ Simulink permite que cálculos de punto flotante complejos sean completados
  en un solo paso 
 \begin_inset Quotes eld
 \end_inset
@@ -2807,7 +2886,7 @@ o en su contracción,
 \emph on
 Sysgen
 \emph default
-, está pensado para resolver el problema de la interfáz entre el mundo de
+, está pensado para resolver el problema de la interfaz entre el mundo de
  la simulación matemática de Simulink, y el mundo tangible del hardware
  en FPGA.
  
@@ -2868,7 +2947,7 @@ System Generator for DSP, User Guide (UG640)
 \end_inset
 
 .
- Esta herramienta extiende la funcionalidad de Simulnk de muchas maneras,
+ Esta herramienta extiende la funcionalidad de Simulink de muchas maneras,
  con el objetivo de proporcionar un entorno de modelado bastante adecuado
  para el desarrollo de hardware.
  Este toolbox proporciona abstracciones de alto nivel que se compilan automática
@@ -2953,11 +3032,11 @@ añade librerías o
 \emph on
 blocksets
 \emph default
- a la interfáz de Simulink, estos se pueden conectar a los demás toolboxes
+ a la interfaz de Simulink, estos se pueden conectar a los demás toolboxes
  que vienen ya incluidos en la suite de Matlab para generar modelos funcionales
  de sistemas dinámicos.
  Estos bloques proveen abstracciones de funciones matemáticas, lógicas,
- utilización de memorias y funciones DSP que pueden ser facilmente utilizados
+ utilización de memorias y funciones DSP que pueden ser fácilmente utilizados
  en el diseño de sistemas complejos y sofisticados.
  
 \end_layout
@@ -3013,7 +3092,7 @@ o
 \emph on
 VHDL, 
 \emph default
-así como funciones pre diseñadas de matlab (scripts .m) dentro de las conexiones
+así como funciones pre diseñadas de Matlab (scripts .m) dentro de las conexiones
  de Simulink, sin afectar la ejecución de simulación y más importante, garantiza
 ndo la síntesis de todos estos elementos en el FPGA.
  Además, este 
@@ -3052,7 +3131,7 @@ precisión de bits
  el hardware; la 
 \series bold
 \emph on
-presición de ciclo
+precisión de ciclo
 \series default
 \emph default
  produce los valores correspondientes en el tiempo correspondiente.
@@ -3094,7 +3173,7 @@ Este flujo está pensado para llevar a cabo una simulación en tiempo real
  al ambiente de simulación, mostrando así una respuesta tangible y cercana
  a la realidad que el hardware podría brindar.
  En este modo, la información se puede enviar a través del puerto JTAG o
- ethernet, dependiendo de la velocidad de tranmisión requerida.
+ Ethernet, dependiendo de la velocidad de transmisión requerida.
  
 \begin_inset Float figure
 placement H
@@ -3244,7 +3323,7 @@ Reseña de Xilinx ISE.
 El sistema de Xilinx ISE es un entorno de diseño integrado que consiste
  en un conjunto de programas para crear (o capturar), simular e implementar
  diseños digitales en un dispositivo FPGA o CPLD de Xilinx únicamente.
- Todas las herramientas contenidas en este entorno utilizan una interfáz
+ Todas las herramientas contenidas en este entorno utilizan una interfaz
  gráfica de usuario que permiten que todos los programas se ejecuten desde
  la barra de herramientas
 \begin_inset CommandInset citation
@@ -3268,11 +3347,11 @@ reference "fig:Interfáz-principal-del"
 \emph on
 Project Navigator, 
 \emph default
-desde esta interfáz se controlan todos los aspectos del diseño, desde la
+desde esta interfaz se controlan todos los aspectos del diseño, desde la
  creación de un proyecto y la selección de la familia de FPGA que se va
  a utilizar, hasta la edición de archivos de descripción de hardware, diseño
  a base de captura de esquemático y verificación del diseño, sin salir de
- la interfáz.
+ la interfaz.
  
 \end_layout
 
@@ -3298,7 +3377,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Interfáz principal del 
+Interfaz principal del 
 \emph on
 ISE Project Navigator
 \begin_inset CommandInset label
@@ -3438,7 +3517,7 @@ Síntesis:
 Este es el proceso de convertir un diseño descrito en Lenguaje de Descripción
  de Hardware a un netlist con un formato propietario conocido como 
 \emph on
-Archivo Netlist con Información de restriciones físicas
+Archivo Netlist con Información de restricciones físicas
 \series bold
 \emph default
  
@@ -3449,7 +3528,7 @@ NGC
 \series default
 , por sus siglas en Inglés), ejecutando la herramienta llamada 
 \emph on
-Tecnología de Síntests de Xilinx
+Tecnología de Síntesis de Xilinx
 \series bold
 \emph default
  
@@ -3682,7 +3761,7 @@ Front-End
 , por ejemplo, usa un potente motor para el análisis de los archivos HDL
  en el diseño, también puede trabajar con netlist previamente sintetizados
  y resultados de implementación, además de poder crear diferentes versiones
- de implementación, con lo que se pueden explorar multiples óptimizaciones
+ de implementación, con lo que se pueden explorar múltiples optimizaciones
  para un mismo proyecto.
 \end_layout
 
@@ -3707,8 +3786,8 @@ Project Navigator
 \emph on
 PlanAhead
 \emph default
- es muy similar a la interfáz de Vivado, por lo que los diseños podrán migrarse
- facilmente sin necesidad de tener que familiarizarse de nuevo con otra
+ es muy similar a la interfaz de Vivado, por lo que los diseños podrán migrarse
+ fácilmente sin necesidad de tener que familiarizarse de nuevo con otra
  herramienta.
 \end_layout
 
@@ -3735,7 +3814,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Interfáz gráfica de PlanAhead, imagen obtenida del paquete Xilinx ISE.
+Interfaz gráfica de PlanAhead, imagen obtenida del paquete Xilinx ISE.
 \end_layout
 
 \end_inset

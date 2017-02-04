@@ -99,7 +99,7 @@ ADC
  por sus siglas en Inglés), son dispositivos de señal mixta que se encargan
  de producir una salida que representa un valor digital en referencia al
  voltaje o corriente de entrada al mismo, generalmente en código binario
- convencional, aunque también se puden encontrar algunos que generan código
+ convencional, aunque también se pueden encontrar algunos que generan código
  gray,
 \end_layout
 
@@ -122,13 +122,13 @@ Sección
 
 \begin_layout Standard
 En un ADC ideal, las transiciones entre valores son de exactamente 1 bit
- menos significtivo (LSB por sus siglas en Inglés).
+ menos significativo (LSB por sus siglas en Inglés).
  Por lo tanto, para un ADC de N-bits, existen 2N asignaciones.
  El bit LSB equivale a la frecuencia de muestreo (
 \begin_inset Formula $F_{s})$
 \end_inset
 
- dividido por el número de asigaciones (2N).
+ dividido por el número de asignaciones (2N).
  La Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -136,7 +136,7 @@ reference "fig:Función-de-salida"
 
 \end_inset
 
-ilustra dicha respuesta ideal.
+ ilustra dicha respuesta ideal.
 \end_layout
 
 \begin_layout Standard
@@ -144,7 +144,7 @@ ilustra dicha respuesta ideal.
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -187,6 +187,93 @@ name "fig:Función-de-salida"
 \end_layout
 
 \begin_layout Standard
+En otras palabras, todos los A/D trabajan bajo el mismo principio de encontrar
+ la secuencia de bits bN-1, bN-2, ...
+ b0, que representa el valor analógico de Vin, como se muestra en la Ecuación
+ A.1.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{in}=\sum_{n=0}^{N-1}b_{n}2^{n}\frac{V_{ref}}{2^{n}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El símbolo esquemático del ADC se ilustra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ADC_schem"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/500px-ADC_Symbol.svg.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Símbolo esquemático del ADC.
+ Imagen obtenida de 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://commons.wikimedia.org/wiki/File:ADC_Symbol.svg
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ADC_schem"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
 
@@ -199,7 +286,7 @@ Conversión Digital-Analógico.
 
 \begin_layout Standard
 Para convertir una señal digital a una analógica después de que se ha procesado
- por el sistema DSP, se utiliza un conversor D/A (o DAC, por sus siglas
+ por el sistema DSP, se utiliza un convertidor D/A (o DAC, por sus siglas
  en inglés).
  Este proceso se lleva a cabo es interpolando los datos de las señales entre
  las muestras tomadas, es decir, aplicando una aproximación sucesiva al
@@ -332,7 +419,7 @@ no ocurrió.
 \end_layout
 
 \begin_layout Standard
-Mientras que este método es matemáticamente correcto, es dificil generar
+Mientras que este método es matemáticamente correcto, es difícil generar
  esos trenes de pulsos tan estrechos entre si, utilizando componentes electrónic
 os.
  Para poder manejar esta dificultad, la mayoría de los ADC operan manteniendo
@@ -340,7 +427,7 @@ os.
  del DSP.
  A esto se le conoce como 
 \emph on
-retención de órden cero
+retención de orden cero
 \emph default
 , el equivalente del proceso de 
 \emph on
@@ -479,7 +566,7 @@ reference "fig:Estructura-de-un-1"
 
 \series default
 ).
- No es inherentemente monolítico y es muy dificil de fabricar de forma eficáz
+ No es inherentemente monolítico y es muy difícil de fabricar de forma eficaz
  en grandes masas.
  Además, la salida del DAC utilizando el método de ponderación de voltaje
  binaria, cambia con el código de entrada.
@@ -657,16 +744,30 @@ DAC R-2R red en escalera.
 \end_layout
 
 \begin_layout Standard
-El voltaje salida de un DAC ideal se muestra en la 
+El voltaje salida de un DAC ideal se muestra en la Figura
 \series bold
-Figura 
+ 
+\series default
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Modelo-en-NGSpice-1"
 
 \end_inset
 
+
+\series bold
 .
+ 
+\series default
+El símbolo esquemático se observa en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Símbolo-esquemático-del"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -702,6 +803,53 @@ Modelo en NGSpice de un DAC ideal de 4 bits.
 
 \end_inset
 
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/dac_symbol.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Símbolo esquemático del DAC.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Símbolo-esquemático-del"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -897,14 +1045,14 @@ Seleccionar la opción
 \emph on
 'Create Sub-Design'
 \emph default
- y defnir el nombre del módulo principal, por ejemplo 
+ y definir el nombre del módulo principal, por ejemplo 
 \series bold
 lab1_sysgen.
 \end_layout
 
 \begin_layout Enumerate
-La interfáz de Matlab se desplegará en la pantalla, con el toolbox de Sysgen
- añadido a las librerias de Simulink.
+La interfaz de Matlab se desplegará en la pantalla, con el toolbox de Sysgen
+ añadido a las librerías de Simulink.
  En este paso hay que esperar un par de minutos hasta que aparezca el workspace
  principal de Simulink, como se muestra en la Figura 
 \begin_inset CommandInset ref

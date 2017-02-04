@@ -109,29 +109,141 @@ Un ADC tiene una tensión o corriente analógica de referencia utilizada para
  La salida digital del ADC representa el valor de la fracción del voltaje
  de referencia.
  Esto hace que los dispositivos ADC sean conocidos también como divisores.
-\end_layout
-
-\begin_layout Standard
-La conversión A/D utiliza la cuantización, muestreo y codificación binaria
+ La conversión A/D utiliza la cuantización, muestreo y codificación binaria
  como parte del proceso de transformación.
- dichos procesos se resumen a continuación.
-\end_layout
-
-\begin_layout Subsection
-Cuantización.
-\end_layout
-
-\begin_layout Standard
-La cuantización hace que el rango de la señal analógica sea discreto con
- un conjunto de valores finitos, sin embargo este proceso es generalmente
- irreversible y resulta en pérdida de información lo cual produce una distorsión
- que no puede eliminarse.
+ dichos procesos se ilustran en la 
+\series bold
+Sección
+\series default
+ 
+\series bold
+3 Procesamiento Digital de Señales.
 \end_layout
 
 \begin_layout Standard
-Este proceso viene después de la discretización en función del tiempo (muestreo)
-, y no es más que la misma discretización pero esta vez en función de la
- amplitud tomando parámetros 
+En un ADC ideal, las transiciones entre valores son de exactamente 1 bit
+ menos significtivo (LSB por sus siglas en Inglés).
+ Por lo tanto, para un ADC de N-bits, existen 2N asignaciones.
+ El bit LSB equivale a la frecuencia de muestreo (
+\begin_inset Formula $F_{s})$
+\end_inset
+
+ dividido por el número de asigaciones (2N).
+ La Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Función-de-salida"
+
+\end_inset
+
+ilustra dicha respuesta ideal.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/quantization.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Función de salida de un ADC ideal.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Función-de-salida"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En otras palabras, todos los A/D trabajan bajo el mismo principio de encontrar
+ la secuencia de bits bN-1, bN-2, ...
+ b0, que representa el valor analógico de Vin, como se muestra en la Ecuación
+ A.1.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{in}=\sum_{n=0}^{N-1}b_{n}2^{n}\frac{V_{ref}}{2^{n}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El símbolo esquemático del ADC se ilustra en la Figura
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/500px-ADC_Symbol.svg.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -605,16 +717,30 @@ DAC R-2R red en escalera.
 \end_layout
 
 \begin_layout Standard
-El voltaje salida de un DAC ideal se muestra en la 
+El voltaje salida de un DAC ideal se muestra en la Figura
 \series bold
-Figura 
+ 
+\series default
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Modelo-en-NGSpice-1"
 
 \end_inset
 
+
+\series bold
 .
+ 
+\series default
+El símbolo esquemático se observa en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Símbolo-esquemático-del"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -650,6 +776,53 @@ Modelo en NGSpice de un DAC ideal de 4 bits.
 
 \end_inset
 
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/dac_symbol.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Símbolo esquemático del DAC.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Símbolo-esquemático-del"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 
 \end_layout
 

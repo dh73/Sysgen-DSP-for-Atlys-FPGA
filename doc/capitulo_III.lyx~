@@ -166,7 +166,7 @@ Filtrado básico de señales - Introducción práctica a Sysgen.
 \end_layout
 
 \begin_layout Subsection
-Diseño de un filtro FIR pasabajas para la eliminación de ruido en una señal
+Diseño de un filtro FIR pasa bajas para la eliminación de ruido en una señal
  senoidal.
 \end_layout
 
@@ -182,7 +182,7 @@ Una de las aplicaciones más comunes en el mundo del procesamiento digital
 A manera de introducción, se utilizará el ambiente de Matlab/Simulink con
  el toolbox de Sysgen para diseñar un sistema que elimine una componente
  senoidal de alta frecuencia mezclada a una componente senoidal base, mediante
- el uso de un filtro FIR pasabajas ejecutándose en el kit Atlys.
+ el uso de un filtro FIR pasa bajas ejecutándose en el kit Atlys.
 \end_layout
 
 \begin_layout Subsection
@@ -213,7 +213,7 @@ El sistema
 \begin_inset Formula $F_{DSP}$
 \end_inset
 
- debe ser capáz de eliminar señales por encima de 
+ debe ser capaz de eliminar señales por encima de 
 \begin_inset Formula $f_{corte}=7KHz$
 \end_inset
 
@@ -231,7 +231,7 @@ Además, la frecuencia de muestreo del sistema debe ser de
 \end_layout
 
 \begin_layout Enumerate
-En primer lugar, es necesario desarollar la función de las señales 
+En primer lugar, es necesario desarrollar la función de las señales 
 \begin_inset Formula $f_{senBase}$
 \end_inset
 
@@ -377,7 +377,7 @@ y=x(t)*W(t)
 
 \begin_layout Enumerate
 Para efecto de simplificar la implementación y demostrar la versatilidad
- de los lenguajes de alto nivel, se utilizará la funcion 
+ de los lenguajes de alto nivel, se utilizará la función 
 \series bold
 fir1(n, Wn)
 \series default
@@ -389,11 +389,11 @@ Signal Processing Toolbox
 \series bold
 n 
 \series default
-es el órden del filtro y 
+es el orden del filtro y 
 \series bold
 Wn 
 \series default
-es un elemento entre 0 y 1 correspoindiente a la frequencia de Nyquist.
+es un elemento entre 0 y 1 correspondiente a la frecuencia de Nyquist.
  Para calcular el valor de 
 \series bold
 Wn
@@ -541,7 +541,7 @@ Por último, para confirmar que el diseño se ha implementado de una manera
 \series bold
 paso 1 
 \series default
-al fltro que acabamos de desarrollar, la respuesta estricta debe ser una
+al filtro que acabamos de desarrollar, la respuesta estricta debe ser una
  señal senoidal sin alguna componente por encima de la 
 \begin_inset Formula $f_{c}=7KHz$
 \end_inset
@@ -579,7 +579,7 @@ status collapsed
 
 \begin_layout Plain Layout
 Resultado de la implementación del filtro FIR, donde se puede observar la
- señal resultante, de un color más oscuro, en oposición a la senal contaminada.
+ señal resultante, de un color más oscuro, en oposición a la señal contaminada.
  La señal resultante está totalmente reconstruida, lo que valida la implementaci
 ón.
  
@@ -688,7 +688,7 @@ Dar clic en el ícono
 
 \end_inset
 
- posicionado en la barra superior de la interfáz de Matlab, esto abrirá
+ posicionado en la barra superior de la interfaz de Matlab, esto abrirá
  una ventana con los toolboxes de Simulink disponibles en la instalación.
  Los toolboxes de Xilinx se encuentran listados en la pestaña de 
 \series bold
@@ -789,7 +789,7 @@ Aquí es necesario resaltar algunas reglas importantes para hacer uso del
 'Sysgen token'
 \emph default
 , este es un bloque especial que no tiene entrada o salida alguna, pero
- es la interface que convierte los vectores de simulación de Matlab a datos
+ es la interfaz que convierte los vectores de simulación de Matlab a datos
  que la FPGA pueda comprender.
  Además, este bloque contiene la información del proyecto que estamos modelando,
  es decir, aquí se puede definir como el diseño va a ser transformado acorde
@@ -876,8 +876,8 @@ Clocking > Simulink system period:
 \end_deeper
 \begin_layout Enumerate
 Ahora, se necesita agregar uno de los bloques más importantes los cuales
- defininen el módulo que será sintetizado por la FPGA: Los bloques de entrada/sa
-lida, conocidos como 
+ definen el módulo que será sintetizado por la FPGA: Los bloques de entrada/sali
+da, conocidos como 
 \emph on
 'Gateway in' 
 \emph default
@@ -1307,7 +1307,7 @@ Coefficient Width:
 \end_layout
 
 \begin_layout Itemize
-Checar la opción 
+Seleccionar la opción 
 \series bold
 Best Precision Fraction Length.
 \end_layout
@@ -1389,7 +1389,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Interconexión de los bloques de Simulink/Sysgen para la elaboración del
+Interconexiones de los bloques de Simulink/Sysgen para la elaboración del
  filtro FIR.
  
 \begin_inset CommandInset label
@@ -1421,7 +1421,7 @@ Debido a que la señal de interés en este sistema, es la
 \begin_inset Formula $f_{senBase}$
 \end_inset
 
- con 1KHz, para poder observar 10 muestras en el osciloscopio de simulink,
+ con 1KHz, para poder observar 10 muestras en el osciloscopio de Simulink,
  pondremos como valor en el 
 \emph on
 Simulink stop time
@@ -1543,7 +1543,7 @@ El siguiente proceso describe como utilizar el kit Atlys como co-procesador,
  modelo que se describió con anterioridad.
  Mediante el uso de la herramienta Sysgen, se generarán los archivos de
  HDL necesarios así como la síntesis e implementación en segundo plano.
- Al finalizar, La tarjeta de desarrollo será capáz de comunicarse con Simulink
+ Al finalizar, La tarjeta de desarrollo será capaz de comunicarse con Simulink
  para enviar y recibir los datos correspondientes a este modelo.
 \end_layout
 
@@ -1986,7 +1986,7 @@ El códec de audio disponible en la tarjeta Atlys es el AC97 LM4550
 status collapsed
 
 \begin_layout Plain Layout
-Para obetener mayor información técnica a cerca del códec, visitar: 
+Para obtener mayor información técnica a cerca del códec, visitar: 
 \begin_inset Flex URL
 status open
 
@@ -2048,7 +2048,7 @@ bit clock
 
 \begin_layout Itemize
 Selector de 3 bits para escoger la fuente de entrada (Mic, LineIn, headphone)
- y de 5 bits para volúmen.
+ y de 5 bits para volumen.
  Estos se pueden mapear a los switches de la tarjeta Atlys para controlar
  dichos parámetros.
  
@@ -2056,8 +2056,8 @@ Selector de 3 bits para escoger la fuente de entrada (Mic, LineIn, headphone)
 
 \begin_layout Itemize
 Parámetros seleccionados para la mayor calidad de audio posible: 48KHz de
- frecuencia de sampleo, con una palabra de 16 bits en lugar de 18 (por compatibi
-lidad con la mayoria de los formatos de audio disponibles).
+ frecuencia de muestreo, con una palabra de 16 bits en lugar de 18 (por
+ compatibilidad con la mayoría de los formatos de audio disponibles).
 \end_layout
 
 \begin_layout Standard
@@ -2727,7 +2727,7 @@ Los elementos mostrados en el paso
 \series bold
 5
 \series default
-, pueden ser convertidos a subsistema para mantener la sencilléz del sistema
+, pueden ser convertidos a subsistema para mantener la sencillez del sistema
  (seleccionar los bloques y ejecutar CTRL+G, los subsistemas pueden ser
  nombrados a gusto del usuario) y replicados para así, tener los dos canales
  del formato estéreo, como se muestra en la Figura 
@@ -2790,11 +2790,11 @@ name "fig:Conversión-del-filtro"
 
 \end_deeper
 \begin_layout Enumerate
-Como paso final, se deberan arrastrar dos 
+Como paso final, se deberán arrastrar dos 
 \emph on
 'Gateway Out' 
 \emph default
-al espacio de trabajo de simulink, y nombrarlos 
+al espacio de trabajo de Simulink, y nombrarlos 
 \series bold
 AudioLeftOut 
 \series default
@@ -2826,7 +2826,7 @@ reference "fig:Interconección-del-sistema"
 \end_inset
 
 .
- El recuadro girs nombrado 
+ El recuadro gris nombrado 
 \series bold
 Audio_algoritmo 
 \series default
@@ -2857,7 +2857,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Interconección del sistema de eco finalizado.
+Interconexiones del sistema de eco finalizado.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -2978,7 +2978,7 @@ Una vez que obtenemos el resultado esperado, es necesario generar un
 'Netlist' 
 \emph default
 (archivos HDL en Verilog o VHDL) para poder utilizar este modelo dentro
- de la interface del codec de audio\SpecialChar endofsentence
+ de la interfaz del codec de audio\SpecialChar endofsentence
  Esto se logra dando doble clic sobre
  el '
 \emph on
@@ -5433,7 +5433,7 @@ reference "fig:Gráfica-de-utilización"
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -5481,10 +5481,8 @@ Como se puede observar, la mayoría de los recursos utilizados son DSP48A1,
  los cuales ejecutan las funciones matemáticas de los dos filtros FIR utilizados
  en este prototipo.
  Esto asegura que las operaciones con mayor flujo de datos se hacen utilizando
- primitivas especiales para esto, aumentando el paralelismo de una manera
- significativa, puesto que el modelo puede ejecutarse a frecuencias de hasta
- 98 MHz a diferencia de la mayoria de los DSP comerciales, que funcionan
- a frecuencias máximas de 
+ primitivas especiales para cálculos complejos, aumentando el paralelismo
+ de una manera significativa.
 \end_layout
 
 \end_deeper
