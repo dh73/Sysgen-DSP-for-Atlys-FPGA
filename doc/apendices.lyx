@@ -111,26 +111,79 @@ Un ADC tiene una tensión o corriente analógica de referencia utilizada para
  Esto hace que los dispositivos ADC sean conocidos también como divisores.
  La conversión A/D utiliza la cuantización, muestreo y codificación binaria
  como parte del proceso de transformación.
- dichos procesos se resumen a continuación.
-\end_layout
-
-\begin_layout Subsection
-Cuantización.
-\end_layout
-
-\begin_layout Standard
-La cuantización hace que el rango de la señal analógica sea discreto con
- un conjunto de valores finitos, sin embargo este proceso es generalmente
- irreversible y resulta en pérdida de información lo cual produce una distorsión
- que no puede eliminarse.
-\end_layout
-
-\begin_layout Standard
-Este proceso viene después de la discretización en función del tiempo (muestreo)
-, y no es más que la misma discretización pero esta vez en función de la
- amplitud.
- asignándole un valor o estado, que depende del número de bits del ADC.
+ dichos procesos se ilustran en la 
+\series bold
+Sección
+\series default
  
+\series bold
+3 Procesamiento Digital de Señales.
+\end_layout
+
+\begin_layout Standard
+En un ADC ideal, las transiciones entre valores son de exactamente 1 bit
+ menos significtivo (LSB por sus siglas en Inglés).
+ Por lo tanto, para un ADC de N-bits, existen 2N asignaciones.
+ El bit LSB equivale a la frecuencia de muestreo (
+\begin_inset Formula $F_{s})$
+\end_inset
+
+ dividido por el número de asigaciones (2N).
+ La Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Función-de-salida"
+
+\end_inset
+
+ilustra dicha respuesta ideal.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/quantization.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Función de salida de un ADC ideal.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Función-de-salida"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
