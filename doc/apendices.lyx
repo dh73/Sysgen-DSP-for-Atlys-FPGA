@@ -337,9 +337,9 @@ Para convertir una señal digital a una analógica después de que se ha procesa
 \begin_layout Standard
 La manera más sencilla de convertir una señal de analógico a digital, es
  tomando las muestras de dicha señal desde la memoria donde el DSP las almacena,
- y transformarlas en un tren de impulsos, como se muestra en la 
+ y transformarlas en un tren de impulsos, como se muestra en la Figura
 \series bold
-Figura 
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Información-digital-convertida-1"
@@ -482,10 +482,7 @@ del DAC.
 \emph on
 retención de orden cero 
 \emph default
-produce una señal con apariencia de de escalera, como se muestra en la 
-\series bold
-Figura
-\series default
+produce una señal con apariencia de de escalera, como se muestra en la Figura
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -595,9 +592,9 @@ key "binary_dacs_analogdev"
 Ponderación binaria: 
 \series default
 Este DAC basado en resistores en modo voltaje es usualmente la implementación
- más simple utilizada como referencia en los libros de texto (véase 
+ más simple utilizada como referencia en los libros de texto (véase Figura
 \series bold
-Figura 
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Estructura-de-un-1"
@@ -669,11 +666,7 @@ El uso de una redistribución de carga capacitiva ofrece la ventaja de comportar
 e como un circuito de muestreo y retención (SHA, por sus siglas en inglés),
  por lo cual, ningún circuito SHA externo o incluso, alguna construcción
  monolítica SHA dentro del circuito integrado, es requerido al utilizar
- esta estructura (véase 
-\series bold
-Figura
-\series default
- 
+ esta estructura (véase Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:capacitivo_ponderacion_binaria-1"
@@ -732,9 +725,9 @@ Una de las estructuras más comunes de DACs es la muy conocida escalera R-2R,
  en una proporción de 2:1.
  Un DAC de N bits requiere 2N resistores.
  El voltaje de salida se mantiene siempre con la misma impedancia, (véase
- 
+ Figura
 \series bold
-Figura 
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:DAC-R-2R-red-1"
@@ -1194,7 +1187,7 @@ large, title=Instanciación de la IP de audio AC97
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "/home/diego/Documents/Finalized/examples/audio_ac97/AC97_IP/rt_audio_controller.v"
-lstparams "language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={\\color{gray}},keepspaces=true,numberstyle={\\tiny\\color{black}},keywordstyle={\\mlttfamily\\color{blue}},tabsize=2,breaklines=true,columns=flexible,frame=none,linerange={1-33}"
+lstparams "language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={\\color{gray}},keepspaces=true,numberstyle={\\tiny\\color{black}},keywordstyle={\\mlttfamily\\color{blue}},tabsize=2,breaklines=true,breakatwhitespace=true,basewidth={.48em},columns=flexible,frame=none,linerange={1-33}"
 
 \end_inset
 
@@ -1230,7 +1223,7 @@ large, title=Instanciación de la IP de audio AC97
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "/home/diego/Documents/Finalized/examples/audio_ac97/AC97_IP/rt_audio_controller.v"
-lstparams "language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={\\color{gray}},keepspaces=true,numberstyle={\\tiny\\color{black}},keywordstyle={\\mlttfamily\\color{blue}},tabsize=2,breaklines=true,columns=flexible,frame=none,linerange={34-76},firstnumber=34"
+lstparams "language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={\\color{gray}},keepspaces=true,numberstyle={\\tiny\\color{black}},keywordstyle={\\mlttfamily\\color{blue}},tabsize=2,breaklines=true,columns=flexible,frame=none,linerange={34-66},firstnumber=34"
 
 \end_inset
 
@@ -1240,6 +1233,49 @@ lstparams "language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={
 \end_inset
 
  
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Color Box
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+arc=0mm,colback=white, colframe=black, fonttitle=
+\backslash
+sffamily
+\backslash
+bfseries
+\backslash
+large, title=Instanciación de la IP de audio AC97
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "/home/diego/Documents/Finalized/examples/audio_ac97/AC97_IP/rt_audio_controller.v"
+lstparams "language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={\\color{gray}},keepspaces=true,numberstyle={\\tiny\\color{black}},keywordstyle={\\mlttfamily\\color{blue}},tabsize=2,breaklines=true,columns=flexible,frame=none,linerange={67-79},firstnumber=34"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \end_body

@@ -21,11 +21,8 @@
 \usepackage{microtype}
 \usepackage{smartdiagram}
 \usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
 \usepackage{listings}
-%%% New stuff
-%\let\stdsection\section
-%\renewcommand*{\section}{\clearpage\stdsection}
-%%%
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
@@ -41,6 +38,9 @@
 
 %% Footnotes
 \setlength{\footnotesep}{12pt}
+%% Captions
+\usepackage[margin=10pt,font=small,labelfont=bf,labelsep=endash]{caption}
+\bibliographystyle{unsrt}
 \end_preamble
 \use_default_options true
 \begin_modules
@@ -66,7 +66,7 @@ tcolorbox
 \font_sf_scale 100 100
 \font_tt_scale 100 100
 \graphics default
-\default_output_format default
+\default_output_format pdf4
 \output_sync 0
 \bibtex_command default
 \index_command makeindex
@@ -490,7 +490,7 @@ filename "apendices.lyx"
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 bibfiles "bib/mainbib"
-options "bibtotoc,plainnat"
+options "plainnat"
 
 \end_inset
 

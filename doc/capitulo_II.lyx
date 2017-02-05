@@ -195,9 +195,7 @@ El procesamiento digital de señales es una de las tecnologías más vanguardist
  ciencias médicas, diseño de radares, reproductores de música de alta fidelidad,
  por nombrar sólo algunas.
  Esta área se distingue de todas las demás dentro de las Ciencias de la
- Computación, por el tipo de datos único que utiliza: 
-\series bold
-las señales 
+ Computación, por el tipo de datos único que utiliza: las señales
 \begin_inset CommandInset citation
 LatexCommand cite
 key "New1"
@@ -337,7 +335,7 @@ reference "fig:Diagrama-a-bloques"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
@@ -463,7 +461,7 @@ En términos del intervalo del tiempo de muestreo:
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
@@ -481,7 +479,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Banda de espectro limitado típica 
+Banda de espectro limitado típica
 \begin_inset CommandInset citation
 LatexCommand cite
 key "dsp_introduction"
@@ -594,7 +592,7 @@ reference "fig:Ejemplo-de-cuantización"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -712,7 +710,7 @@ El error de cuantización es representado por la secuencia
 \end_layout
 
 \begin_layout Subsection
-Sistemas Discretos Lineales e Invariantes en el Tiempo..
+Sistemas Discretos Lineales e Invariantes en el Tiempo.
 \end_layout
 
 \begin_layout Standard
@@ -930,7 +928,7 @@ unidad de impulso.
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1007,7 +1005,7 @@ respuesta al impulso
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1231,9 +1229,9 @@ Un ejemplo de la convolución tomando como vectores de entrada
 \begin_inset Formula $\mathbf{\overrightarrow{v}_{anterior}=[v_{n,}v_{n-1}...}\mathbf{v_{1}]}$
 \end_inset
 
- se muestra en la 
+ se muestra en la Figura
 \series bold
-Figura 
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Convolución-de-dos"
@@ -1257,7 +1255,7 @@ key "eece_matlab"
 
 \end_inset
 
- .
+.
  Este script muestra el resultado de la convolución discreta de dos impulsos
  
 \begin_inset Formula $\mathbf{y[n]=\delta[n]*\delta[n-1]}$
@@ -1275,7 +1273,7 @@ key "eece_matlab"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1406,9 +1404,9 @@ b_{n}, & 0\leq n\leq M-1\\
 \end_layout
 
 \begin_layout Standard
-Gráficamente, esta ecuación se puede representar como se muestra en la 
+Gráficamente, esta ecuación se puede representar como se muestra en la Figura
 \series bold
-Figura 
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Respuesta-al-impulso"
@@ -1423,7 +1421,7 @@ reference "fig:Respuesta-al-impulso"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1510,9 +1508,9 @@ key "fir_complete"
 \end_inset
 
 , lo que es equivalente a la sumatoria convolucional.
- La estructura se muestra en la 
+ La estructura se muestra en la Figura
 \series bold
-Figura 
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Estructura-en-Forma"
@@ -1535,7 +1533,7 @@ reference "fig:Estructura-en-Forma"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1811,11 +1809,7 @@ y otro filtro FIR inverso con los coeficientes de
 \series bold
 a
 \series default
-, como se muestra en la 
-\series bold
-Figura
-\series default
- 
+, como se muestra en la Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Estructura-IIR"
@@ -1830,7 +1824,7 @@ reference "fig:Estructura-IIR"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2050,9 +2044,9 @@ Recursos de ruteo para proveer la interconectividad de los Bloques Lógicos
 
 \begin_layout Standard
 \noindent
-La 
+La Figura
 \series bold
-Figura 
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Arquitectura-general-de"
@@ -2080,7 +2074,7 @@ reference "fig:Arquitectura-general-de"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
@@ -2098,7 +2092,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Arquitectura general de las FPGA 
+Arquitectura general de las FPGA
 \begin_inset CommandInset citation
 LatexCommand cite
 key "x6vs"
@@ -2126,16 +2120,28 @@ name "fig:Arquitectura-general-de"
 \end_layout
 
 \begin_layout Subsection
-Arquitectura de la familia de FPGAs Xilinx Spartan-6.
+Arquitectura de la familia de FPGAs Xilinx
+\lang spanish
+®
+\lang spanish-mexico
+ Spartan-6
+\lang spanish
+®
+\lang spanish-mexico
+.
 \end_layout
 
 \begin_layout Standard
 \noindent
-La familia Spartan-6 está fuertemente enfocada a proveer capacidades de
- integración de sistemas con el menor costo posible para aplicaciones de
- alto volumen, es decir, es una línea de dispositivos que tienen bloques
- de comunicación de alta velocidad como PCI Express, controladores de memoria
- externa DDR3 y Ethernet, entre otros.
+La familia Spartan-6
+\lang spanish
+®
+\lang spanish-mexico
+ está fuertemente enfocada a proveer capacidades de integración de sistemas
+ con el menor costo posible para aplicaciones de alto volumen, es decir,
+ es una línea de dispositivos que tienen bloques de comunicación de alta
+ velocidad como PCI Express, controladores de memoria externa DDR3 y Ethernet,
+ entre otros.
  Además de una vasta densidad de elementos lógicos y registros disponibles
  que van desde 3,840 hasta 147,443 celdas lógicas, dependiendo del dispositivo
  seleccionado por el diseñador.
@@ -2175,7 +2181,7 @@ bits, como por ejemplo, una RAM de 64 bits o un registro de desplazamiento
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
@@ -2193,7 +2199,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-LUT de seis entradas 
+LUT de seis entradas
 \begin_inset CommandInset citation
 LatexCommand cite
 key "clb_ov"
@@ -2219,12 +2225,16 @@ key "clb_ov"
 
 \begin_layout Standard
 \noindent
-Además, la familia Spartan-6 incluye bloques de memoria RAM (BRAM) de 18Kb,
- una optimización de dispositivos DSP48A1 los cuales sirven para ejecutar
- cálculos complejos de manera paralela, controladores físicos de memoria
- SDRAM, bloques de manejo de reloj internos mejorados para poder generar
- las frecuencias necesarias para controladores de alta velocidad, así como
- opciones de configuración y seguridad de IP más avanzados.
+Además, la familia Spartan-6
+\lang spanish
+®
+\lang spanish-mexico
+ incluye bloques de memoria RAM (BRAM) de 18Kb, una optimización de dispositivos
+ DSP48A1 los cuales sirven para ejecutar cálculos complejos de manera paralela,
+ controladores físicos de memoria SDRAM, bloques de manejo de reloj internos
+ mejorados para poder generar las frecuencias necesarias para controladores
+ de alta velocidad, así como opciones de configuración y seguridad de IP
+ más avanzados.
 \end_layout
 
 \begin_layout Standard
@@ -2234,7 +2244,7 @@ Además, la familia Spartan-6 incluye bloques de memoria RAM (BRAM) de 18Kb,
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
@@ -2252,7 +2262,11 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Diagrama a bloques de una FPGA Spartan-6 
+Diagrama a bloques de una FPGA Spartan-6
+\lang spanish
+®
+\lang spanish-mexico
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "clb_ov"
@@ -2283,7 +2297,14 @@ Debido a la construcción en 45nm, se han podido incorporar una mayor cantidad
  Los CLBs son los recursos lógicos principales necesarios para implementar
  circuitos secuenciales y combinatorios.
  Cada elemento CLB es conectado a una matriz de switches programables para
- acceder a otra matriz de ruteo como se muestra en la Figura 4.
+ acceder a otra matriz de ruteo como se muestra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Bloque-Lógico-Configurable."
+
+\end_inset
+
+.
  Cada elemento CLB contiene un par de SLICEs.
  Estos dos SLICEs no tienen una conexión directa entre si.
  Cada SLICE tiene un bloque de acarreo en cadena (carry chain).
@@ -2296,7 +2317,7 @@ Debido a la construcción en 45nm, se han podido incorporar una mayor cantidad
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
@@ -2316,6 +2337,14 @@ status collapsed
 
 \begin_layout Plain Layout
 Bloque Lógico Configurable.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Bloque-Lógico-Configurable."
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2337,13 +2366,20 @@ Cada SLICE contiene cuatro LUTs, cuatro elementos de almacenamiento (flip
  Adicionalmente, algunos SLICEs pueden implementar dos funciones adicionales:
  almacenar datos al adoptar la función de RAM distribuida y desplazar datos
  adoptando la función de registro de desplazamiento de 32 bits.
- Son llamados SLICEM (por Memoria), los comunes son llamados SLICEL (Por
+ Son llamados SLICEM (por Memoria), los comunes son llamados SLICEL (por
  Lógico).
 \end_layout
 
 \begin_layout Standard
 \noindent
-La Figura describe con detalle la arquitectura de cada SLICE en un CLB.
+La Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Estructura-detallada-de"
+
+\end_inset
+
+ describe con detalle la arquitectura de cada SLICE en un CLB.
  Los multiplexores antes mencionados sirven para proveer la conectividad
  entre los recursos lógicos que rodean a los CLBs, mientras que la red de
  elementos de acarreo en cadena dentro de los CLBs, hacen la función de
@@ -2357,7 +2393,7 @@ La Figura describe con detalle la arquitectura de cada SLICE en un CLB.
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
@@ -2375,7 +2411,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Estructura detallada de un SLICE 
+Estructura detallada de un SLICE
 \begin_inset CommandInset citation
 LatexCommand cite
 key "clb_ov"
@@ -2383,6 +2419,14 @@ key "clb_ov"
 \end_inset
 
 .
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Estructura-detallada-de"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2401,15 +2445,28 @@ key "clb_ov"
 
 \begin_layout Standard
 \noindent
-Los dispositivos Spartan-6 cuentan con un gran número de memorias BRAM de
- 18Kb, las cuales están construidas por dos memorias controladas independienteme
-nte de 9Kb cada una.
+Los dispositivos Spartan-6
+\lang spanish
+®
+\lang spanish-mexico
+ cuentan con un gran número de memorias BRAM de 18Kb, las cuales están construid
+as por dos memorias controladas independientemente de 9Kb cada una.
  Estas memorias son colocadas en columnas, el número total de ellas depende
- del tamaño del dispositivo Spartan-6.
+ del tamaño del dispositivo Spartan-6
+\lang spanish
+®
+\lang spanish-mexico
+.
  Las memorias BRAM se pueden utilizar en cascada para habilitar implementaciones
- de mayor tamaño de Kilo bits, con un pequeño impacto en el timing.
- La Figura 6 muestra una BRAM en cascada con dos distintos puertos de lectura
- y escritura.
+ de mayor tamaño de Kilobits, con un pequeño impacto en el timing.
+ La Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Block-RAM-de"
+
+\end_inset
+
+ muestra una BRAM en cascada con dos distintos puertos de lectura y escritura.
 \end_layout
 
 \begin_layout Standard
@@ -2417,7 +2474,7 @@ nte de 9Kb cada una.
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
@@ -2435,7 +2492,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Block RAM de doble puerto 
+Block RAM de doble puerto
 \begin_inset CommandInset citation
 LatexCommand cite
 key "clb_ov"
@@ -2443,6 +2500,14 @@ key "clb_ov"
 \end_inset
 
 .
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Block-RAM-de"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2460,17 +2525,39 @@ key "clb_ov"
 \end_layout
 
 \begin_layout Subsection
-Kit de desarrollo Atlys de Digilent.
+Kit de desarrollo Atlys
+\lang spanish
+®
+\lang spanish-mexico
+ de Digilent
+\lang spanish
+®
+\lang spanish-mexico
+.
 \end_layout
 
 \begin_layout Standard
-El sistema de desarrollo Atlys fabricado por Digilent bajo el programa Xilinx
+El sistema de desarrollo Atlys
+\lang spanish
+®
+\lang spanish-mexico
+ fabricado por Digilent
+\lang spanish
+®
+\lang spanish-mexico
+ bajo el programa Xilinx
+\lang spanish
+®
+\lang spanish-mexico
  University Program es la plataforma seleccionada para cumplir con los objetivos
  de esta investigación.
- El kit Atlys es una plataforma avanzada para el desarrollo de sistemas
- digitales.
- Está basada en un dispositivo FPGA Xilinx Spartan-6 LX45, la familia LX
- está optimizada para implementaciones lógicas de alto rendimiento
+ Este kit es una plataforma avanzada para el desarrollo de sistemas digitales.
+ Está basada en un dispositivo FPGA Xilinx Spartan-6
+\lang spanish
+®
+\lang spanish-mexico
+ LX45, la familia LX está optimizada para implementaciones lógicas de alto
+ rendimiento
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Digilent_atlys"
@@ -2486,8 +2573,15 @@ Los periféricos que se incluyen son de gama alta, tales como controladores
  Gigabit Ethernet, entrada y salida de video HDMI, memoria RAM DDR2 de 128
  Megabytes de almacenamiento en un bus de 16 bits, además de puertos de
  USB host y entrada y salida de audio a través de un códec AC97.
- Este kit es compatible con toda la suite de diseño de Xilinx ISE, por lo
- que se pueden implementar una gran variedad de diseños para diferentes
+ Este kit es compatible con toda la suite de diseño de Xilinx
+\lang spanish
+®
+\lang spanish-mexico
+ ISE
+\lang spanish
+®
+\lang spanish-mexico
+, por lo que se pueden implementar una gran variedad de diseños para diferentes
  áreas de investigación con un costo relativamente bajo.
 \end_layout
 
@@ -2497,8 +2591,12 @@ Las principales características técnicas de esta plataforma se muestran
 \end_layout
 
 \begin_layout Itemize
-FPGA Spartan-6 LX45-3 con 6,822 slices, cada una contiene 4 LUTS de 6 entradas
- y 8 flip-flops, con una frecuencia máxima de ejecución a 500MHz.
+FPGA Spartan-6
+\lang spanish
+®
+\lang spanish-mexico
+ LX45-3 con 6,822 slices, cada una contiene 4 LUTS de 6 entradas y 8 flip-flops,
+ con una frecuencia máxima de ejecución a 500MHz.
 \begin_inset Foot
 status collapsed
 
@@ -2546,9 +2644,9 @@ Dos entradas y dos salidas de video HDMI.
 
 \begin_layout Standard
 Entre algunas otras.
- En la 
+ En la Figura
 \series bold
-Figura 
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Kit-de-desarrollo"
@@ -2627,11 +2725,23 @@ Plataformas de Software para el diseño de sistemas DSP.
 \end_layout
 
 \begin_layout Subsection
-Introducción a MATLAB y Simulink.
+Introducción a Matlab
+\lang spanish
+®
+\lang spanish-mexico
+ y Simulink
+\lang spanish
+®
+\lang spanish-mexico
+.
 \end_layout
 
 \begin_layout Subsubsection
-MATLAB.
+Matlab
+\lang spanish
+®
+\lang spanish-mexico
+.
 \end_layout
 
 \begin_layout Standard
@@ -2646,8 +2756,12 @@ LAB
 \series default
 oratory (Laboratorio de Matrices), lo cual nos da una referencia de la metodolog
 ía que utiliza.
- MATLAB es un sistema interactivo cuyo elemento básico son matrices las
- cuales, no requieren ser dimensionadas.
+ Matlab
+\lang spanish
+®
+\lang spanish-mexico
+ es un sistema interactivo cuyo elemento básico son matrices las cuales,
+ no requieren ser dimensionadas.
  Está enfocado a resolver problemas técnicos computacionales a través de
  un ambiente completo donde los problemas y soluciones son expresados en
  una notación matemática familiar
@@ -2666,9 +2780,13 @@ s en el área de las ciencias aplicadas.
 
 \begin_layout Standard
 \noindent
-Lo que hace de MATLAB una herramienta muy popular en el ámbito académico
- e industrial, es la rapidez con la que se pueden implementar y resolver
- algoritmos de mediana a gran complejidad.
+Lo que hace de Matlab
+\lang spanish
+®
+\lang spanish-mexico
+ una herramienta muy popular en el ámbito académico e industrial, es la
+ rapidez con la que se pueden implementar y resolver algoritmos de mediana
+ a gran complejidad.
  Esto se debe en gran medida a la facilidad que brinda el intérprete interactivo
  para crear scripts conocidos como Archivos-M (M-files, por sus siglas en
  Inglés) que ayudan a describir sistemas con eficacia, así como el gran
@@ -2731,8 +2849,12 @@ Interfaz Gráfica del Usuario de MATLAB.
 
 \begin_layout Standard
 \noindent
-MATLAB es considerado un lenguaje de programación de alto nivel, debido
- a la gran abstracción de datos con los que trabaja.
+Matlab
+\lang spanish
+®
+\lang spanish-mexico
+ es considerado un lenguaje de programación de alto nivel, debido a la gran
+ abstracción de datos con los que trabaja.
  Algunas propiedades importantes de esta herramienta son:
 \end_layout
 
@@ -2759,19 +2881,41 @@ Los algoritmos diseñados en este paquete de software, pueden ser convertidos
 \end_layout
 
 \begin_layout Itemize
-Matlab en conjunto con Simulink, tienen soporte para la herramienta de diseño
- DSP de Xilinx, lo cual convierte a este ambiente en uno de los más atractivos
- en este ámbito.
+Matlab
+\lang spanish
+®
+\lang spanish-mexico
+ en conjunto con Simulink
+\lang spanish
+®
+\lang spanish-mexico
+, tienen soporte para la herramienta de diseño DSP de Xilinx
+\lang spanish
+®
+\lang spanish-mexico
+, lo cual convierte a este ambiente en uno de los más atractivos en este
+ ámbito.
 \end_layout
 
 \begin_layout Subsubsection
-Simulink.
+Simulink
+\lang spanish
+®
+\lang spanish-mexico
+.
 \end_layout
 
 \begin_layout Standard
-MATLAB tiene un toolbox adicional llamado Simulink que proporciona el modelado,
- la simulación y el análisis de sistemas dinámicos, dentro de un entorno
- gráfico.
+Matlab
+\lang spanish
+®
+\lang spanish-mexico
+ tiene una herramienta adicional llamada Simulink
+\lang spanish
+®
+\lang spanish-mexico
+ que proporciona el modelado, la simulación y el análisis de sistemas dinámicos,
+ dentro de un entorno gráfico.
  Este sofwtare permite el diseño modular y jerárquico, ayudando al usuario
  en el manejo y creación de sistemas complejos que son conceptualmente simplific
 ados.
@@ -2780,18 +2924,28 @@ ados.
 
 \begin_layout Standard
 Debido a este amplio uso, la capacidad de diseñar y verificar las implementacion
-es de hardware desde el mismo ambiente de Simulink, se traduce en una mayor
- ventaja para el prototipado rápido de nuevas teorías y diseños.
- Añadiendo las múltiples capas de software y librerías que habilitan la
- comunicación del ambiente gráfico de Simulink con el mundo exterior, proceso
- conocido como simulación de 
+es de hardware desde el mismo ambiente de Simulink
+\lang spanish
+®
+\lang spanish-mexico
+, se traduce en una mayor ventaja para el prototipado rápido de nuevas teorías
+ y diseños.
+ Añadiendo las múltiples capas de software y bibliotecas que habilitan la
+ comunicación del ambiente gráfico de Simulink
+\lang spanish
+®
+\lang spanish-mexico
+ con el mundo exterior, proceso conocido como simulación de 
 \emph on
 hardware-in-the-loop
 \emph default
  (co simulación con módulos de adquisición de datos en hardware, que estimulan
- entradas y/o envían resultados al modelo de Simulink), proporciona un enorme
- beneficio adicional en el diseño y verificación del algoritmo sin arriesgar
- pérdidas de hardware o errores de implementación
+ entradas y/o envían resultados al modelo de Simulink
+\lang spanish
+®
+\lang spanish-mexico
+), proporciona un enorme beneficio adicional en el diseño y verificación
+ del algoritmo sin arriesgar pérdidas de hardware o errores de implementación
 \begin_inset CommandInset citation
 LatexCommand cite
 key "practical_dsp_algo"
@@ -2806,7 +2960,7 @@ key "practical_dsp_algo"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2823,14 +2977,22 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Entorno de modelado gráfico Simulink de MATLAB.
+Entorno de modelado gráfico Simulink de Matlab
+\lang spanish
+®
+\lang spanish-mexico
+.
  En este ejemplo se puede observar, como se lleva a cabo la ejecución de
  un algoritmo de detección de elementos en una imagen, utilizando solamente
  8 bloques del 
 \emph on
 Image Processing Toolbox
 \emph default
- de Simulink.
+ de Simulink
+\lang spanish
+®
+\lang spanish-mexico
+.
 \end_layout
 
 \end_inset
@@ -2848,10 +3010,17 @@ Image Processing Toolbox
 \end_layout
 
 \begin_layout Standard
-Sin embargo, el comportamiento de la simulación matemática de Simulink en
- comparación con la implementación en el hardware, no es exacto.
- Simulink permite que cálculos de punto flotante complejos sean completados
- en un solo paso 
+Sin embargo, el comportamiento de la simulación matemática de Simulink
+\lang spanish
+®
+\lang spanish-mexico
+ en comparación con la implementación en el hardware, no es exacto.
+ Simulink
+\lang spanish
+®
+\lang spanish-mexico
+ permite que cálculos de punto flotante complejos sean completados en un
+ solo paso 
 \begin_inset Quotes eld
 \end_inset
 
@@ -2871,9 +3040,12 @@ En comparación, la implementación en hardware con FPGA requiere un paso
  Cada uno de estos procesos se ejecutan de manera coherente con un paso
  de tiempo consistente y una longitud de palabra fija.
  La conversión entre estas dos formas de ejecución, es decir, la simulación
- del algoritmo en Simulink y la ejecución del mismo en elementos de hardware,
- debe hacerse de una manera sistemática en donde se tenga en cuenta estas
- diferencias de derivación
+ del algoritmo en Simulink
+\lang spanish
+®
+\lang spanish-mexico
+ y la ejecución del mismo en elementos de hardware, debe hacerse de una
+ manera sistemática en donde se tenga en cuenta estas diferencias de derivación
 \begin_inset CommandInset citation
 LatexCommand cite
 key "vehicle_sysgen_xilinx"
@@ -2884,7 +3056,15 @@ key "vehicle_sysgen_xilinx"
 \end_layout
 
 \begin_layout Subsection
-Xilinx System Generator for DSP.
+Xilinx
+\lang spanish
+®
+\lang spanish-mexico
+ System Generator
+\lang spanish
+®
+\lang spanish-mexico
+ for DSP.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2894,15 +3074,24 @@ Descripción general.
 \begin_layout Standard
 El toolbox incluido en la suite de Xilinx ISE, llamado 
 \emph on
-System Generator for DSP 
+System Generator
+\emph default
+\lang spanish
+®
+\emph on
+\lang spanish-mexico
+ for DSP 
 \emph default
 o en su contracción, 
 \emph on
 Sysgen
 \emph default
 , está pensado para resolver el problema de la interfaz entre el mundo de
- la simulación matemática de Simulink, y el mundo tangible del hardware
- en FPGA.
+ la simulación matemática de Simulink
+\lang spanish
+®
+\lang spanish-mexico
+, y el mundo tangible del hardware en FPGA.
  
 \end_layout
 
@@ -2935,6 +3124,9 @@ key "using_xilinx_fpgas_dsp"
 \emph on
 System Generator
 \emph default
+\lang spanish
+®
+\lang spanish-mexico
  es una herramienta de modelado a nivel sistema que facilita el diseño de
  hardware en FPGA
 \begin_inset Foot
@@ -2961,13 +3153,16 @@ System Generator for DSP, User Guide (UG640)
 \end_inset
 
 .
- Esta herramienta extiende la funcionalidad de Simulink de muchas maneras,
- con el objetivo de proporcionar un entorno de modelado bastante adecuado
- para el desarrollo de hardware.
+ Esta herramienta extiende la funcionalidad de Simulink
+\lang spanish
+®
+\lang spanish-mexico
+ de muchas maneras, con el objetivo de proporcionar un entorno de modelado
+ bastante adecuado para el desarrollo de hardware.
  Este toolbox proporciona abstracciones de alto nivel que se compilan automática
 mente en un FPGA, facilitando la implementación de algoritmos complejos
- en donde intervengan, por ejemplo, hasta varios bloques de hardware complejos
- en diferentes dominios de reloj.
+ en donde intervengan, por ejemplo, hasta varios bloques de hardware en
+ diferentes dominios de reloj.
  También proporciona acceso a recursos o macros primitivas subyacentes del
  FPGA a través de abstracciones de bajo nivel, lo que permite la construcción
  de diseños altamente eficientes
@@ -2985,7 +3180,7 @@ key "sysgen_user_guide"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -3016,7 +3211,11 @@ Wireless communications: from systems to silicon
 \end_inset
 
 , del autor Raghu Rao.
- Wireless Systems Group, Xilinx Inc, 2008.
+ Wireless Systems Group, Xilinx
+\lang spanish
+®
+\lang spanish-mexico
+ Inc, 2008.
 \end_layout
 
 \end_inset
@@ -3039,16 +3238,26 @@ Wireless communications: from systems to silicon
 Syst
 \emph default
 em Generator
+\lang spanish
+®
 \emph on
+\lang spanish-mexico
  
 \emph default
 añade librerías o 
 \emph on
 blocksets
 \emph default
- a la interfaz de Simulink, estos se pueden conectar a los demás toolboxes
- que vienen ya incluidos en la suite de Matlab para generar modelos funcionales
- de sistemas dinámicos.
+ a la interfaz de Simulink
+\lang spanish
+®
+\lang spanish-mexico
+, estos se pueden conectar a los demás toolboxes que vienen ya incluidos
+ en la suite de Matlab
+\lang spanish
+®
+\lang spanish-mexico
+ para generar modelos funcionales de sistemas dinámicos.
  Estos bloques proveen abstracciones de funciones matemáticas, lógicas,
  utilización de memorias y funciones DSP que pueden ser fácilmente utilizados
  en el diseño de sistemas complejos y sofisticados.
@@ -3060,7 +3269,7 @@ blocksets
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -3078,6 +3287,9 @@ status collapsed
 
 \begin_layout Plain Layout
 Ejemplo de blocksets incluidos en el toolbox de Sysgen, en su versión ISE
+\lang spanish
+®
+\lang spanish-mexico
  14.7.
 \end_layout
 
@@ -3106,9 +3318,16 @@ o
 \emph on
 VHDL, 
 \emph default
-así como funciones pre diseñadas de Matlab (scripts .m) dentro de las conexiones
- de Simulink, sin afectar la ejecución de simulación y más importante, garantiza
-ndo la síntesis de todos estos elementos en el FPGA.
+así como funciones pre diseñadas de Matlab
+\lang spanish
+®
+\lang spanish-mexico
+ (scripts .m) dentro de las conexiones de Simulink
+\lang spanish
+®
+\lang spanish-mexico
+, sin afectar la ejecución de simulación y más importante, garantizando
+ la síntesis de todos estos elementos en el FPGA.
  Además, este 
 \emph on
 blockset
@@ -3141,8 +3360,11 @@ La
 precisión de bits
 \series default
 \emph default
- produce valores en Simulink que coinciden con los valores producidos en
- el hardware; la 
+ produce valores en Simulink
+\lang spanish
+®
+\lang spanish-mexico
+ que coinciden con los valores producidos en el hardware; la 
 \series bold
 \emph on
 precisión de ciclo
@@ -3152,7 +3374,14 @@ precisión de ciclo
 \end_layout
 
 \begin_layout Subsubsection
-Co-Diseño de Hardware/Software en el ambiente de Xilinx System Generator
+Co-Diseño de Hardware/Software en el ambiente de Xilinx
+\lang spanish
+®
+\lang spanish-mexico
+ System Generator
+\lang spanish
+®
+\lang spanish-mexico
  for DSP.
  
 \end_layout
@@ -3160,14 +3389,25 @@ Co-Diseño de Hardware/Software en el ambiente de Xilinx System Generator
 \begin_layout Standard
 Es posible que el flujo de diseño con esta herramienta de alto nivel no
  sea tan claro a primera instancia, más para aquellos que tienen experiencia
- trabajando con los paquetes de software de Matlab y Xilinx por separado.
+ trabajando con los paquetes de software de Matlab
+\lang spanish
+®
+\lang spanish-mexico
+ y Xilinx
+\lang spanish
+®
+\lang spanish-mexico
+ por separado.
  Existen varias formas en las que 
 \emph on
 Sysgen
 \emph default
- puede se sintetizado en el kit Atlys, algunos flujos representan ciertas
- ventajas sobre los demás, o simplemente son mejores formas de lograr el
- objetivo deseado de una manera más rápida.
+ puede se sintetizado en el kit Atlys
+\lang spanish
+®
+\lang spanish-mexico
+, algunos flujos representan ciertas ventajas sobre los demás, o simplemente
+ son mejores formas de lograr el objetivo deseado de una manera más rápida.
  Los flujos de implementación soportados por este toolbox son:
 \end_layout
 
@@ -3182,10 +3422,17 @@ Exploración de Algoritmos mediante simulación
 Este flujo está pensado para llevar a cabo una simulación en tiempo real
  de un prototipado o incluso de un análisis realista del desempeño de un
  sistema bajo estudio.
- El bloque de Simulink es sintetizado con una capa extra de hardware que
- le brinda la capacidad al FPGA de enviar y recibir estímulos directamente
- al ambiente de simulación, mostrando así una respuesta tangible y cercana
- a la realidad que el hardware podría brindar.
+ El bloque de Simulink
+\lang spanish
+®
+\lang spanish-mexico
+ es 
+\emph on
+sintetizado
+\emph default
+ con una capa extra de hardware que le brinda la capacidad al FPGA de enviar
+ y recibir estímulos directamente al ambiente de simulación, mostrando así
+ una respuesta tangible y cercana a la realidad que el hardware podría brindar.
  En este modo, la información se puede enviar a través del puerto JTAG o
  Ethernet, dependiendo de la velocidad de transmisión requerida.
  
@@ -3235,7 +3482,11 @@ Hardware-in-the-loop.
 Diseño de una IP como parte de un prototipo más grande: 
 \series default
 Se puede empaquetar el sistema previamente modelado y simulado en Sysgen/Simulin
-k para después ser instanciado como parte de un diseño más grande.
+k
+\lang spanish
+®
+\lang spanish-mexico
+ para después ser instanciado como parte de un diseño más grande.
  
 \emph on
 Sysgen 
@@ -3260,12 +3511,25 @@ timing
 \series bold
 Implementación de un diseño completo: 
 \series default
-La suite de Xilinx contiene herramientas para distintos enfoques, por ejemplo,
- síntesis lógica con lenguajes de descripción de hardware, sistemas embebidos
- basados en la familia de procesadores 
+La suite de Xilinx
+\lang spanish
+®
+\lang spanish-mexico
+ contiene herramientas para distintos enfoques, por ejemplo, síntesis lógica
+ con lenguajes de descripción de hardware, sistemas embebidos basados en
+ la familia de procesadores 
 \emph on
-MicroBlaze/PicoBlaze
+MicroBlaze
 \emph default
+\lang spanish
+®
+\emph on
+\lang spanish-mexico
+/PicoBlaze
+\emph default
+\lang spanish
+®
+\lang spanish-mexico
 , catálogos de IPs para una gran variedad de sistemas ingenieriles y diseño
  de sistemas en lenguajes de alto nivel.
  Sysgen puede trabajar con todos y cada uno de esos enfoques, para lograr
@@ -3326,17 +3590,41 @@ Se puede observar como el procesador Microblaze, puede transmitir y recibir
 \end_layout
 
 \begin_layout Subsection
-Introducción a Xilinx ISE y PlanAhead.
+Introducción a Xilinx
+\lang spanish
+®
+\lang spanish-mexico
+ ISE
+\lang spanish
+®
+\lang spanish-mexico
+ y PlanAhead
+\lang spanish
+®
+\lang spanish-mexico
+.
 \end_layout
 
 \begin_layout Subsubsection
-Reseña de Xilinx ISE.
+Reseña de Xilinx
+\lang spanish
+®
+\lang spanish-mexico
+ ISE
+\lang spanish
+®
+\lang spanish-mexico
+.
 \end_layout
 
 \begin_layout Standard
 El sistema de Xilinx ISE es un entorno de diseño integrado que consiste
  en un conjunto de programas para crear (o capturar), simular e implementar
- diseños digitales en un dispositivo FPGA o CPLD de Xilinx únicamente.
+ diseños digitales en un dispositivo FPGA o CPLD de Xilinx
+\lang spanish
+®
+\lang spanish-mexico
+ únicamente.
  Todas las herramientas contenidas en este entorno utilizan una interfaz
  gráfica de usuario que permiten que todos los programas se ejecuten desde
  la barra de herramientas
@@ -3418,8 +3706,16 @@ name "fig:Interfáz-principal-del"
 \end_layout
 
 \begin_layout Standard
-Xilinx ISE guía al diseñador en el flujo de construcción en FPGA utilizando
- el flujo conocido como 
+Xilinx
+\lang spanish
+®
+\lang spanish-mexico
+ ISE
+\lang spanish
+®
+\lang spanish-mexico
+ guía al diseñador en el flujo de construcción en FPGA utilizando el flujo
+ conocido como 
 \begin_inset Quotes eld
 \end_inset
 
@@ -3438,11 +3734,7 @@ esto significa que todo el proceso está definido, automatizado y sólo basta
 bitstream
 \emph default
 , mediante la ejecución de algunos procesos en segundo plano, los cuales
- se enlistan en la 
-\series bold
-Figura
-\series default
- 
+ se enlistan en la Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Diagrama-a-flujo"
@@ -3543,8 +3835,11 @@ NGC
 , por sus siglas en Inglés), ejecutando la herramienta llamada 
 \emph on
 Tecnología de Síntesis de Xilinx
-\series bold
 \emph default
+\lang spanish
+®
+\series bold
+\lang spanish-mexico
  
 \series default
 (
@@ -3559,7 +3854,15 @@ XST,
 \series bold
 Simulación: 
 \series default
-XIlinx ISE cuenta con un simulador integrado llamado 
+XIlinx
+\lang spanish
+®
+\lang spanish-mexico
+ ISE
+\lang spanish
+®
+\lang spanish-mexico
+ cuenta con un simulador integrado llamado 
 \series bold
 ISE Simulator 
 \series default
@@ -3567,6 +3870,9 @@ o
 \series bold
 ISim
 \series default
+\lang spanish
+®
+\lang spanish-mexico
 , el cual soporta Verilog 2001 y VHDL 93, además del uso de ambos lenguajes
  para diseño y simulación.
  También ofrece capacidades de visualización y rastreo/análisis de formas
@@ -3664,7 +3970,11 @@ Este es el proceso de interconectar los elementos primitivos, a partir de
  la salida dada por el proceso de Map, para así poder finalizar la implementació
 n.
  Este es el paso más importante y el que consume un mayor tiempo de ejecución,
- debido a que la herramienta de Xilinx encargada de hacer la 
+ debido a que la herramienta de Xilinx
+\lang spanish
+®
+\lang spanish-mexico
+ encargada de hacer la 
 \emph on
 colocación 
 \emph default
@@ -3698,7 +4008,11 @@ bitstream
 \end_layout
 
 \begin_layout Subsubsection
-PlanAhead.
+PlanAhead
+\lang spanish
+®
+\lang spanish-mexico
+.
 \end_layout
 
 \begin_layout Standard
@@ -3726,6 +4040,12 @@ PAR
 Generalmente, 
 \emph on
 PlanAhead
+\emph default
+\lang spanish
+®
+\emph on
+\lang spanish-mexico
+
 \begin_inset Foot
 status open
 
@@ -3750,8 +4070,11 @@ Quick Front-to-Back Overview Tutorial
 
 \emph default
  es utilizado por usuarios con más experiencia en el campo de diseño con
- herramientas de Xilinx, puesto que este ambiente ofrece mejoras para la
- optimización en el 
+ herramientas de Xilinx
+\lang spanish
+®
+\lang spanish-mexico
+, puesto que este ambiente ofrece mejoras para la optimización en el 
 \emph on
 Back-end 
 \emph default
@@ -3768,6 +4091,9 @@ Sin embargo,
 \emph on
 PlanAhead
 \emph default
+\lang spanish
+®
+\lang spanish-mexico
  provee plugins bastante útiles para el 
 \emph on
 Front-End
@@ -3782,16 +4108,37 @@ Front-End
 \begin_layout Standard
 En este documento se utilizará 
 \emph on
-PlanAhead 
+PlanAhead
+\emph default
+\lang spanish
+®
+\emph on
+\lang spanish-mexico
+ 
 \emph default
 sobre 
 \emph on
 Project Navigator
 \emph default
- por las ventajas ya mencionadas, además de que, Xilinx descontinuó la suite
- ISE para evolucionar a Vivado desde el año 2013.
- Vivado es una herramienta más poderosa pero no compatible con familias
- inferiores a la serie 7.
+ por las ventajas ya mencionadas, además de que, Xilinx
+\lang spanish
+®
+\lang spanish-mexico
+ descontinuó la suite ISE
+\lang spanish
+®
+\lang spanish-mexico
+ para evolucionar a Vivado
+\lang spanish
+®
+\lang spanish-mexico
+ desde el año 2013.
+ Vivado
+\lang spanish
+®
+\lang spanish-mexico
+ es una herramienta más poderosa pero no compatible con familias inferiores
+ a la serie 7.
  
 \end_layout
 
@@ -3800,9 +4147,15 @@ Project Navigator
 \emph on
 PlanAhead
 \emph default
- es muy similar a la interfaz de Vivado, por lo que los diseños podrán migrarse
- fácilmente sin necesidad de tener que familiarizarse de nuevo con otra
- herramienta.
+\lang spanish
+®
+\lang spanish-mexico
+ es muy similar a la interfaz de Vivado
+\lang spanish
+®
+\lang spanish-mexico
+, por lo que los diseños podrán migrarse fácilmente sin necesidad de tener
+ que familiarizarse de nuevo con otra herramienta.
 \end_layout
 
 \begin_layout Standard

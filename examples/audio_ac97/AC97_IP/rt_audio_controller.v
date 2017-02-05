@@ -24,12 +24,14 @@ module rt_audio_controller( input       clk,
    wire [17:0] 	right_loopback;
 `endif   
 
-   /* FIX1: Puesto que los dos archivos NCG utilizan un IBUF para el puerto CLK, es necesario forzar 
-      a la herramienta a  eliminarlos y utilizar un IBUFG (global) en su lugar, de otra forma 
-      el proceso de MAP fallara con un  enrutamiento ilegal entre clock buffers, resultado esperado:
-      [Opt 31-35] Removing redundant IBUF, controller/clk_IBUF, from the path connected to top-level port: clk 
-      [Opt 31-35] Removing redundant IBUF, datapath/clk_IBUF, from the path connected to top-level port: clk 
-   */
+ /* FIX1: Puesto que los dos archivos NCG utilizan un IBUF 
+      para el puerto CLK, es necesario forzar a la herramienta 
+      a eliminarlos y utilizar un IBUFG (global) en su lugar,
+      de otra forma el proceso de MAP fallara con un  
+      enrutamiento ilegal entre clock buffers. Resultado esperado:
+    [Opt 31-35] Removing redundant IBUF, controller/clk_IBUF, from the path connected to top-level port: clk 
+    [Opt 31-35] Removing redundant IBUF, datapath/clk_IBUF, from the path connected to top-level port: clk 
+ */
    IBUFG FIX1 (.I(clk), .O(gclk));
    
    ac97cmd controller( .clk(gclk),
@@ -74,4 +76,5 @@ module rt_audio_controller( input       clk,
   assign ac97_ready_sig_w = slot_status_signal;
   /* assign source = 3'b000; Ejemplo para forzar una fuente de audio, en este caso el microfono */ 
 endmodule // rt_audio_controller
+
 		

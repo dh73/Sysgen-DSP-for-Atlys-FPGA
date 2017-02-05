@@ -186,7 +186,11 @@ A manera de introducción, se utilizará el ambiente de Matlab/Simulink con
 \end_layout
 
 \begin_layout Subsection
-Especificaciones del modelo del filtro FIR en Matlab.
+Especificaciones del modelo del filtro FIR en Matlab
+\lang spanish
+®
+\lang spanish-mexico
+.
 \end_layout
 
 \begin_layout Standard
@@ -612,13 +616,27 @@ Simulación del sistema en Sysgen.
 
 \begin_layout Standard
 Las instrucciones para transformar el algoritmo que hemos diseñado ya, a
- un modelo que se pueda ejecutar en la tarjeta de desarrollo Atlys, se muestran
- a continuación:
+ un modelo que se pueda ejecutar en la tarjeta de desarrollo Atlys
+\lang spanish
+®
+\lang spanish-mexico
+, se muestran a continuación:
 \end_layout
 
 \begin_layout Enumerate
-Para ejecutar Sysgen, no se abre Matlab directamente puesto que el toolbox
- de Xilinx no aparecerá en las librerías de Simulink.
+Para ejecutar Sysgen, no se abre Matlab
+\lang spanish
+®
+\lang spanish-mexico
+ directamente puesto que el toolbox de Xilinx
+\lang spanish
+®
+\lang spanish-mexico
+ no aparecerá en las librerías de Simulink
+\lang spanish
+®
+\lang spanish-mexico
+.
  La forma de hacerlo es ir a la barra de 
 \series bold
 Inicio > Todos los programas > Xilinx Design Tools > ISE > System Generator
@@ -638,7 +656,7 @@ reference "fig:Mensaje-de-instalación"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -655,7 +673,11 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Mensaje de instalación del toolbox de Sysgen en Matlab R2013a.
+Mensaje de instalación del toolbox de Sysgen en Matlab
+\lang spanish
+®
+\lang spanish-mexico
+ R2013a.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -688,9 +710,20 @@ Dar clic en el ícono
 
 \end_inset
 
- posicionado en la barra superior de la interfaz de Matlab, esto abrirá
- una ventana con los toolboxes de Simulink disponibles en la instalación.
- Los toolboxes de Xilinx se encuentran listados en la pestaña de 
+ posicionado en la barra superior de la interfaz de Matlab
+\lang spanish
+®
+\lang spanish-mexico
+, esto abrirá una ventana con los toolboxes de Simulink
+\lang spanish
+®
+\lang spanish-mexico
+ disponibles en la instalación.
+ Los toolboxes de Xilinx
+\lang spanish
+®
+\lang spanish-mexico
+ se encuentran listados en la pestaña de 
 \series bold
 Bibliotecas
 \series default
@@ -737,7 +770,7 @@ reference "fig:Instanciación-del-System"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -782,15 +815,29 @@ name "fig:Instanciación-del-System"
 \begin_deeper
 \begin_layout Standard
 Aquí es necesario resaltar algunas reglas importantes para hacer uso del
- toolbox de Xilinx.
- La primera es que, en todo diseño de Simulink donde se involucren bloques
- de Xilinx, debe existir el 
+ toolbox de Xilinx
+\lang spanish
+®
+\lang spanish-mexico
+.
+ La primera es que, en todo diseño de Simulink
+\lang spanish
+®
+\lang spanish-mexico
+ donde se involucren bloques de Xilinx
+\lang spanish
+®
+\lang spanish-mexico
+, debe existir el 
 \emph on
 'Sysgen token'
 \emph default
 , este es un bloque especial que no tiene entrada o salida alguna, pero
- es la interfaz que convierte los vectores de simulación de Matlab a datos
- que la FPGA pueda comprender.
+ es la interfaz que convierte los vectores de simulación de Matlab
+\lang spanish
+®
+\lang spanish-mexico
+ a datos que la FPGA pueda comprender.
  Además, este bloque contiene la información del proyecto que estamos modelando,
  es decir, aquí se puede definir como el diseño va a ser transformado acorde
  a los flujos discutidos en la 
@@ -800,6 +847,18 @@ sección
  
 \series bold
 5.5.2
+\series default
+ 
+\series bold
+Co-Diseño de Hardware/Software en el ambiente de Xilinx
+\lang spanish
+®
+\lang spanish-mexico
+ System Generator
+\lang spanish
+®
+\lang spanish-mexico
+ for DSP
 \series default
 .
 \end_layout
@@ -934,11 +993,15 @@ En otras palabras, los únicos bloques que pueden comunicarse directamente
 Gateway In/Out
 \emph default
 .
- Este par de bloques transforman los estímulos de Simulink en datos que
- el FPGA puede procesar, también son capaces de capturar la información
- del tipo de dato a utilizar (punto fijo o punto flotante), la frecuencia
- de muestreo e incluso alguna locación física dentro de los puertos de entrada
- y salida generales de la FPGA, para funcionar como disparadores externos.
+ Este par de bloques transforman los estímulos de Simulink
+\lang spanish
+®
+\lang spanish-mexico
+ en datos que el FPGA puede procesar, también son capaces de capturar la
+ información del tipo de dato a utilizar (punto fijo o punto flotante),
+ la frecuencia de muestreo e incluso alguna locación física dentro de los
+ puertos de entrada y salida generales de la FPGA, para funcionar como disparado
+res externos.
 \end_layout
 
 \begin_layout Standard
@@ -985,7 +1048,11 @@ Sample period:
 \begin_layout Enumerate
 Como se utilizó en el algoritmo de Matlab, será necesario generar la señal
  que deseamos filtrar, a partir de utilizar dos generadores de señal senoidal
- del toolbox de Simulink, ubicados en 
+ del toolbox de Simulink
+\lang spanish
+®
+\lang spanish-mexico
+, ubicados en 
 \series bold
 Simulink > Sources > Sine Wave, 
 \series default
@@ -1003,7 +1070,7 @@ reference "fig:Generadores-de-función"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1355,8 +1422,11 @@ Configuración del bloque FIR Compiler.
 
 \end_deeper
 \begin_layout Enumerate
-Una vez teniendo estos elementos en el nuevo modelo de Simulink, se deben
- conectar como se muestra en la Figura 
+Una vez teniendo estos elementos en el nuevo modelo de Simulink
+\lang spanish
+®
+\lang spanish-mexico
+, se deben conectar como se muestra en la Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Interconexión-de-los"
@@ -1372,7 +1442,7 @@ reference "fig:Interconexión-de-los"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1421,8 +1491,11 @@ Debido a que la señal de interés en este sistema, es la
 \begin_inset Formula $f_{senBase}$
 \end_inset
 
- con 1KHz, para poder observar 10 muestras en el osciloscopio de Simulink,
- pondremos como valor en el 
+ con 1KHz, para poder observar 10 muestras en el osciloscopio de Simulink
+\lang spanish
+®
+\lang spanish-mexico
+, pondremos como valor en el 
 \emph on
 Simulink stop time
 \emph default
@@ -1534,7 +1607,11 @@ name "fig:Resultado-de-la-1"
 
 \end_deeper
 \begin_layout Subsection
-Implementación del sistema en el kit Atlys.
+Implementación del sistema en el kit Atlys
+\lang spanish
+®
+\lang spanish-mexico
+.
 \end_layout
 
 \begin_layout Standard
@@ -1544,6 +1621,9 @@ El siguiente proceso describe como utilizar el kit Atlys como co-procesador,
  Mediante el uso de la herramienta Sysgen, se generarán los archivos de
  HDL necesarios así como la síntesis e implementación en segundo plano.
  Al finalizar, La tarjeta de desarrollo será capaz de comunicarse con Simulink
+\lang spanish
+®
+\lang spanish-mexico
  para enviar y recibir los datos correspondientes a este modelo.
 \end_layout
 
@@ -1572,8 +1652,11 @@ Dar clic en
 'Generate'.
  
 \emph default
-Esto ejecutará a PlanAhead en segundo plano, con la intención de generar
- el 
+Esto ejecutará a PlanAhead
+\lang spanish
+®
+\lang spanish-mexico
+ en segundo plano, con la intención de generar el 
 \emph on
 bitfile
 \series bold
@@ -1678,9 +1761,13 @@ Conexión del bloque de Co-simulación.
 \end_deeper
 \begin_layout Enumerate
 Al integrar el bloque generado por Sysgen, es necesario conectar el kit
- Atlys a la PC antes de volver a ejecutar la simulación, puesto que ahora,
- el bitfile se descargará en el kit y podremos observar los resultados en
- el segundo osciloscopio, como se muestra en la Figura 
+ Atlys
+\lang spanish
+®
+\lang spanish-mexico
+ a la PC antes de volver a ejecutar la simulación, puesto que ahora, el
+ bitfile se descargará en el kit y podremos observar los resultados en el
+ segundo osciloscopio, como se muestra en la Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Comparación-entre-el"
@@ -1853,6 +1940,13 @@ name "fig:Utilización-de-recursos"
 \end_layout
 
 \end_deeper
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Procesamiento de Audio - Algoritmo de eco.
 \end_layout
@@ -2118,8 +2212,11 @@ Los pasos para llevar a cabo la implementación del algoritmo de eco se muestran
 \end_layout
 
 \begin_layout Enumerate
-A partir de tener el nuevo espacio de trabajo en Simulink (se pueden seguir
- los pasos 1 a 4 de la subsección 
+A partir de tener el nuevo espacio de trabajo en Simulink
+\lang spanish
+®
+\lang spanish-mexico
+ (se pueden seguir los pasos 1 a 4 de la subsección 
 \series bold
 6.3 Simulación del sistema en Sysgen
 \series default
@@ -2473,8 +2570,11 @@ reference "fig:Comb_filter"
 
 \end_inset
 
- con algunas alteraciones necesarias para adaptarlo al kit Atlys, mismas
- que se explicarán posteriormente.
+ con algunas alteraciones necesarias para adaptarlo al kit Atlys
+\lang spanish
+®
+\lang spanish-mexico
+, mismas que se explicarán posteriormente.
  El bloque debe quedar como se muestra en la Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2969,7 +3069,11 @@ name "fig:Gráfica-resultante-del"
 
 \end_deeper
 \begin_layout Subsection
-Implementación en el kit Atlys.
+Implementación en el kit Atlys
+\lang spanish
+®
+\lang spanish-mexico
+.
 \end_layout
 
 \begin_layout Enumerate
@@ -3070,7 +3174,7 @@ loopback
 \begin_deeper
 \begin_layout Standard
 \begin_inset Flex Color Box
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Argument 1
@@ -3092,7 +3196,7 @@ large, title=Puertos del módulo principal
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "/home/diego/Documents/Finalized/examples/audio_ac97/AC97_IP/rt_audio_controller.v"
-lstparams "language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={\\color{gray}},keepspaces=true,numberstyle={\\tiny\\color{black}},keywordstyle={\\mlttfamily\\color{blue}},tabsize=2,breaklines=true,columns=flexible,linerange={1-10},frame=none"
+lstparams "language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={\\color{gray}},keepspaces=true,numberstyle={\\tiny\\color{black}},keywordstyle={\\mlttfamily\\color{blue}},tabsize=2,breaklines=true,columns=flexible,linerange={1-11},frame=none"
 
 \end_inset
 
@@ -3126,7 +3230,7 @@ para ser utilizada.
 \begin_deeper
 \begin_layout Standard
 \begin_inset Flex Color Box
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Argument 1
@@ -3148,7 +3252,7 @@ large, title=Instanciación de la IP de audio AC97
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "/home/diego/Documents/Finalized/examples/audio_ac97/AC97_IP/rt_audio_controller.v"
-lstparams "language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={\\color{gray}},keepspaces=true,numberstyle={\\tiny\\color{black}},keywordstyle={\\mlttfamily\\color{blue}},tabsize=2,breaklines=true,columns=flexible,linerange={35-64},frame=none"
+lstparams "language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={\\color{gray}},keepspaces=true,numberstyle={\\tiny\\color{black}},keywordstyle={\\mlttfamily\\color{blue}},tabsize=2,breaklines=true,columns=flexible,linerange={35-67},frame=none,firstnumber=35"
 
 \end_inset
 
@@ -3171,7 +3275,7 @@ Por último, el módulo generado por Sysgen está instanciado como se muestra
 \begin_deeper
 \begin_layout Standard
 \begin_inset Flex Color Box
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Argument 1
@@ -3193,7 +3297,7 @@ large, title=Instanciación del algoritmo de eco generado por Sysgen
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "/home/diego/Documents/Finalized/examples/audio_ac97/AC97_IP/rt_audio_controller.v"
-lstparams "language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={\\color{gray}},keepspaces=true,numberstyle={\\tiny\\color{black}},keywordstyle={\\mlttfamily\\color{blue}},tabsize=2,breaklines=true,columns=flexible,linerange={66-73},frame=none"
+lstparams "language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={\\color{gray}},keepspaces=true,numberstyle={\\tiny\\color{black}},keywordstyle={\\mlttfamily\\color{blue}},tabsize=2,breaklines=true,columns=flexible,linerange={68-75},frame=none,firstnumber=68"
 
 \end_inset
 
@@ -3552,6 +3656,13 @@ name "fig:Conexiones-a-la"
 \end_layout
 
 \end_deeper
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Procesamiento de imágenes - Detección de bordes.
 \end_layout
@@ -5153,7 +5264,7 @@ reference "fig:Interconexión-del-algoritmo"
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center

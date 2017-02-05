@@ -21,11 +21,8 @@
 \usepackage{microtype}
 \usepackage{smartdiagram}
 \usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
 \usepackage{listings}
-%%% New stuff
-%\let\stdsection\section
-%\renewcommand*{\section}{\clearpage\stdsection}
-%%%
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
@@ -68,7 +65,7 @@ tcolorbox
 \font_sf_scale 100 100
 \font_tt_scale 100 100
 \graphics default
-\default_output_format default
+\default_output_format pdf4
 \output_sync 0
 \bibtex_command default
 \index_command makeindex
@@ -492,7 +489,7 @@ filename "apendices.lyx"
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 bibfiles "bib/mainbib"
-options "bibtotoc,plainnat"
+options "unsrt"
 
 \end_inset
 
