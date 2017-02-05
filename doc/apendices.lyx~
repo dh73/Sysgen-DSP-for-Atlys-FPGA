@@ -508,7 +508,7 @@ key "chapter_3"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -605,7 +605,7 @@ reference "fig:Estructura-de-un-1"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -671,7 +671,7 @@ reference "fig:capacitivo_ponderacion_binaria-1"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -733,7 +733,7 @@ reference "fig:DAC-R-2R-red-1"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -801,7 +801,7 @@ reference "fig:Símbolo-esquemático-del"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -842,7 +842,7 @@ Modelo en NGSpice de un DAC ideal de 4 bits.
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1036,7 +1036,7 @@ como se muestra a continuación:
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1053,7 +1053,11 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Selección del tipo de proyecto en PlanAhead.
+Selección del tipo de proyecto en PlanAhead
+\lang spanish
+®
+\lang spanish-mexico
+.
 \end_layout
 
 \end_inset
@@ -1093,7 +1097,7 @@ reference "fig:Modelo-de-ejemplo-1"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
