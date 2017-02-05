@@ -179,8 +179,15 @@ Una de las aplicaciones más comunes en el mundo del procesamiento digital
 \end_layout
 
 \begin_layout Standard
-A manera de introducción, se utilizará el ambiente de Matlab/Simulink con
- el toolbox de Sysgen para diseñar un sistema que elimine una componente
+A manera de introducción, se utilizará el ambiente de Matlab
+\lang spanish
+®
+\lang spanish-mexico
+/Simulink
+\lang spanish
+®
+\lang spanish-mexico
+ con el toolbox de Sysgen para diseñar un sistema que elimine una componente
  senoidal de alta frecuencia mezclada a una componente senoidal base, mediante
  el uso de un filtro FIR pasa bajas ejecutándose en el kit Atlys.
 \end_layout
@@ -244,7 +251,11 @@ En primer lugar, es necesario desarrollar la función de las señales
 \end_inset
 
  para utilizarlas para ejercitar el filtro FIR, utilizando el script de
- Matlab que se muestra en el Algoritmo 
+ Matlab
+\lang spanish
+®
+\lang spanish-mexico
+ que se muestra en el Algoritmo 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "alg:Generación-de-la"
@@ -263,7 +274,7 @@ reference "fig:Gráfica-derivada-de"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -311,7 +322,7 @@ name "alg:Generación-de-la"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -328,7 +339,11 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Gráfica derivada de la función diseñada en Matlab para este ejercicio.
+Gráfica derivada de la función diseñada en Matlab
+\lang spanish
+®
+\lang spanish-mexico
+ para este ejercicio.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -359,7 +374,11 @@ Para el diseño del filtro FIR, se usará el método por ventana de Hamming
 \series bold
 sección 3.2.2
 \series default
- de este documento.
+ 
+\series bold
+Filtros FIR
+\series default
+, de este documento.
  La ecuación del filtro por ventana de Hamming queda como sigue:
 \begin_inset Formula 
 \begin{equation}
@@ -389,7 +408,11 @@ fir1(n, Wn)
 \emph on
 Signal Processing Toolbox
 \emph default
- de Matlab, donde 
+ de Matlab
+\lang spanish
+®
+\lang spanish-mexico
+, donde 
 \series bold
 n 
 \series default
@@ -403,9 +426,17 @@ es un elemento entre 0 y 1 correspondiente a la frecuencia de Nyquist.
 Wn
 \series default
 , necesitamos normalizar la frecuencia de corte para cumplir con el teorema
- de muestreo discutido en la sección 
+ de muestreo discutido en la subsección 
 \series bold
-3.1.1 
+3.1.1
+\series default
+ 
+\series bold
+Teorema de muestreo
+\series default
+,
+\series bold
+ 
 \series default
 mediante el uso de las siguientes fórmulas
 \series bold
@@ -451,7 +482,7 @@ reference "fig:Respuesta-en-magnitud"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -492,7 +523,7 @@ name "alg:Implementación-del-filtro"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -541,9 +572,9 @@ name "fig:Respuesta-en-magnitud"
 
 \begin_layout Enumerate
 Por último, para confirmar que el diseño se ha implementado de una manera
- correcta, aplicamos la señal generada en el 
+ correcta, aplicamos la señal generada en el paso 1
 \series bold
-paso 1 
+ 
 \series default
 al filtro que acabamos de desarrollar, la respuesta estricta debe ser una
  señal senoidal sin alguna componente por encima de la 
@@ -565,7 +596,7 @@ reference "fig:Resultado-de-la"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -950,7 +981,7 @@ y
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1459,8 +1490,11 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Interconexiones de los bloques de Simulink/Sysgen para la elaboración del
- filtro FIR.
+Interconexiones de los bloques de Simulink
+\lang spanish
+®
+\lang spanish-mexico
+/Sysgen para la elaboración del filtro FIR.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -1563,7 +1597,7 @@ reference "fig:Resultado-de-la"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1607,11 +1641,7 @@ name "fig:Resultado-de-la-1"
 
 \end_deeper
 \begin_layout Subsection
-Implementación del sistema en el kit Atlys
-\lang spanish
-®
-\lang spanish-mexico
-.
+Implementación del sistema en el kit Atlys.
 \end_layout
 
 \begin_layout Standard
@@ -1675,7 +1705,7 @@ o ejecutable que se descargará en la FPGA.
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1692,9 +1722,12 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Generación de la representación del kit Atlys en Simulink, el cual contiene
- los recursos de hardware necesario para ejecutar el algoritmo del filtro
- FIR.
+Generación de la representación del kit Atlys en Simulink
+\lang spanish
+®
+\lang spanish-mexico
+, el cual contiene los recursos de hardware necesario para ejecutar el algoritmo
+ del filtro FIR.
  
 \end_layout
 
@@ -1724,7 +1757,7 @@ Con el nuevo bloque generado, se deben actualizar las conexiones de la siguiente
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1741,7 +1774,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Conexión del bloque de Co-simulación.
+Conexión del bloque de co-simulación.
 \end_layout
 
 \end_inset
@@ -1761,13 +1794,9 @@ Conexión del bloque de Co-simulación.
 \end_deeper
 \begin_layout Enumerate
 Al integrar el bloque generado por Sysgen, es necesario conectar el kit
- Atlys
-\lang spanish
-®
-\lang spanish-mexico
- a la PC antes de volver a ejecutar la simulación, puesto que ahora, el
- bitfile se descargará en el kit y podremos observar los resultados en el
- segundo osciloscopio, como se muestra en la Figura 
+ Atlys a la PC antes de volver a ejecutar la simulación, puesto que ahora,
+ el bitfile se descargará en el kit y podremos observar los resultados en
+ el segundo osciloscopio, como se muestra en la Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Comparación-entre-el"
@@ -1783,7 +1812,7 @@ reference "fig:Comparación-entre-el"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1844,7 +1873,7 @@ netlist > hwcosim > nombre_del_proyecto.ppr
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1897,7 +1926,7 @@ reference "fig:Utilización-de-recursos"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2016,7 +2045,7 @@ reference "fig:Comb_filter"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2159,7 +2188,7 @@ Parámetros seleccionados para la mayor calidad de audio posible: 48KHz de
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2513,7 +2542,7 @@ reference "fig:Configuración-del-tipo"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2560,8 +2589,11 @@ name "fig:Configuración-del-tipo"
 \begin_layout Enumerate
 Como se mostró al principio de la 
 \series bold
-subsección 7.1
+subsección 7.1 Filtros FIR peine o 
+\emph on
+comb filter
 \series default
+\emph default
 , ahora será necesario construir el filtro comb, siguiendo el bloque de
  la Figura 
 \begin_inset CommandInset ref
@@ -2570,11 +2602,8 @@ reference "fig:Comb_filter"
 
 \end_inset
 
- con algunas alteraciones necesarias para adaptarlo al kit Atlys
-\lang spanish
-®
-\lang spanish-mexico
-, mismas que se explicarán posteriormente.
+ con algunas alteraciones necesarias para adaptarlo al kit Atlys, mismas
+ que se explicarán posteriormente.
  El bloque debe quedar como se muestra en la Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2591,7 +2620,7 @@ reference "fig:Filtro-comb-(FIR)"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2663,7 +2692,7 @@ reference "fig:Parámetros-de-la"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2746,7 +2775,7 @@ reference "fig:Ganancia-de-retroalimentación"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2823,14 +2852,11 @@ Se pueden modificar los valores de retraso y ganancias con el fin de obtener
 
 \end_deeper
 \begin_layout Enumerate
-Los elementos mostrados en el paso 
-\series bold
-5
-\series default
-, pueden ser convertidos a subsistema para mantener la sencillez del sistema
- (seleccionar los bloques y ejecutar CTRL+G, los subsistemas pueden ser
- nombrados a gusto del usuario) y replicados para así, tener los dos canales
- del formato estéreo, como se muestra en la Figura 
+Los elementos mostrados en el paso 5, pueden ser convertidos a subsistema
+ para mantener la sencillez del sistema (seleccionar los bloques y ejecutar
+ CTRL+G, los subsistemas pueden ser nombrados a gusto del usuario) y replicados
+ para así, tener los dos canales del formato estéreo, como se muestra en
+ la Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Conversión-del-filtro"
@@ -2846,7 +2872,7 @@ reference "fig:Conversión-del-filtro"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2940,7 +2966,7 @@ representa ambos filtros desarrollados.
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2989,7 +3015,11 @@ Para hacer la simulación de este modelo, utilizaremos un valor menor a la
 \emph on
 'stop time'
 \emph default
- en Simulink.
+ en Simulink
+\lang spanish
+®
+\lang spanish-mexico
+.
  El efecto es perfectamente audible utilizando el valor de 
 \series bold
 10.0(s)
@@ -3021,7 +3051,7 @@ reference "fig:Gráfica-resultante-del"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -3069,11 +3099,7 @@ name "fig:Gráfica-resultante-del"
 
 \end_deeper
 \begin_layout Subsection
-Implementación en el kit Atlys
-\lang spanish
-®
-\lang spanish-mexico
-.
+Implementación en el kit Atlys.
 \end_layout
 
 \begin_layout Enumerate
@@ -3094,8 +3120,11 @@ Sysgen Token'
 \end_layout
 
 \begin_layout Enumerate
-Al terminar el proceso anterior, lanzar PlanAhead y crear un nuevo proyecto
- RTL
+Al terminar el proceso anterior, lanzar PlanAhead
+\lang spanish
+®
+\lang spanish-mexico
+ y crear un nuevo proyecto RTL
 \begin_inset Foot
 status collapsed
 
@@ -3113,7 +3142,10 @@ Apéndice D:
  
 \series bold
 Creación de proyectos usando PlanAhead
+\lang spanish
+®
 \series default
+\lang spanish-mexico
  para más detalles).
  Se deben agregar primeramente los archivos 
 \series bold
@@ -3329,7 +3361,7 @@ reference "fig:Vista-jerárjica-de"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -3413,7 +3445,7 @@ reference "fig:Archivos-de-Verilog"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -3492,7 +3524,7 @@ reference "fig:Esquemático-completo-de"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -3550,7 +3582,7 @@ reference "fig:Utilización-y-frecuencia"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -3613,7 +3645,7 @@ reference "fig:Conexiones-a-la"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -3715,7 +3747,7 @@ reference "fig:Imagen-utilizada-para"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -3868,7 +3900,11 @@ El proceso mostrado a continuación muestra como separar las componentes
 \end_layout
 
 \begin_layout Enumerate
-En un nuevo modelo de Simulink, instanciar un objeto 
+En un nuevo modelo de Simulink
+\lang spanish
+®
+\lang spanish-mexico
+, instanciar un objeto 
 \emph on
 'Image From File' 
 \emph default
@@ -3892,7 +3928,7 @@ reference "fig:Parámetros-de-configuración"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -3982,7 +4018,7 @@ reference "fig:bloques_sobel_imagen"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -4063,7 +4099,7 @@ reference "fig:Conexión-de-los"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -4124,7 +4160,7 @@ reference "fig:Conexión-entre-la"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -4283,7 +4319,7 @@ reference "fig:Configuración-para-las"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -4354,7 +4390,7 @@ timing
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -4421,7 +4457,7 @@ reference "fig:Configuración-de-los"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -4497,7 +4533,7 @@ reference "fig:Modelo-completo-que"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -4594,7 +4630,7 @@ reference "fig:Reconstrucción-de-la"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -4645,7 +4681,7 @@ name "fig:Parámetros-necesarios-para"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -4708,7 +4744,7 @@ reference "fig:Resultado-esperado-de"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -4824,7 +4860,7 @@ reference "fig:Coeficientes-del-filtro"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -4878,7 +4914,7 @@ Adicionalmente, se deben especificar los siguientes parámetros del tipo
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -4928,7 +4964,7 @@ Se debe hacer lo mismo para el filtro del eje Y, en este caso el vector
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -4985,7 +5021,7 @@ reference "fig:Conexión-de-los-1"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -5054,7 +5090,7 @@ de los filtros FIR, lo que supone utilizar el bloque
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -5155,7 +5191,7 @@ reference "fig:Modelo-para-obtener"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -5209,7 +5245,7 @@ El modelo completo del filtro Sobel se muestra a continuación.
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -5264,7 +5300,7 @@ reference "fig:Interconexión-del-algoritmo"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -5330,7 +5366,7 @@ reference "fig:Resultado-de-la"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -5400,7 +5436,7 @@ reference "fig:Bloque-de-Co-Simulación"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -5417,7 +5453,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Bloque de Co-Simulación del filtro Sobel, que se ejecuta en FPGA.
+Bloque de co-simulación del filtro Sobel, que se ejecuta en FPGA.
  
 \begin_inset CommandInset label
 LatexCommand label

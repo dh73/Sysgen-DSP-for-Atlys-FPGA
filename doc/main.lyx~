@@ -40,7 +40,6 @@
 \setlength{\footnotesep}{12pt}
 %% Captions
 \usepackage[margin=10pt,font=small,labelfont=bf,labelsep=endash]{caption}
-\bibliographystyle{unsrt}
 \end_preamble
 \use_default_options true
 \begin_modules
@@ -490,7 +489,7 @@ filename "apendices.lyx"
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 bibfiles "bib/mainbib"
-options "plainnat"
+options "unsrt"
 
 \end_inset
 

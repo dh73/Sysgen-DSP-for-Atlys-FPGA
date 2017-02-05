@@ -7,6 +7,7 @@
 \textclass extarticle
 \begin_preamble
 \date{}
+\usepackage{textcomp}
 \usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
 \usepackage{listings}
 \usepackage{color}

@@ -9,6 +9,7 @@
 %\date{}
 %\usepackage{setspace}
 %\doublespacing
+\usepackage{textcomp}
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
@@ -189,22 +190,45 @@ Con el fin de explotar las ventajas que las FPGA poseen y poderlos aplicar
 
 \begin_layout Standard
 Teniendo como objetivo principal el recortar la curva de aprendizaje, las
- empresas líderes en FPGA como Xilinx
-\lang spanish
-®
-\lang spanish-mexico
-, Altera
-\lang spanish
-®
-\lang spanish-mexico
+ empresas líderes en FPGA como Xilinx®, Altera
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered
+\end_layout
+
+\end_inset
+
  y Synopsys
-\lang spanish
-®
-\lang spanish-mexico
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered
+\end_layout
+
+\end_inset
+
  proporcionan plataformas de trabajo que puede interactuar con Matlab
-\lang spanish
-®
-\lang spanish-mexico
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered
+\end_layout
+
+\end_inset
+
  (software especializado que permite la implementación y prueba de algoritmos).
  De esta forma, el alumno puede poner en práctica de forma ágil y sin complicaci
 ones los conocimientos adquiridos en las áreas de procesamiento digital
@@ -265,7 +289,56 @@ Objetivos específicos.
 Facilitar el diseño e implementación de un sistema de procesamiento de audio
  en tiempo real, basado en el desarrollo de un algoritmo de eco, así como
  un sistema de detección de bordes en una imagen basado en el algoritmo
- Sobel, ambos utilizando bloques de Xilinx® System Generator® para Simulink®.
+ Sobel, ambos utilizando bloques de Xilinx
+\lang spanish-mexico
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered{
+\end_layout
+
+\end_inset
+
+
+\lang spanish
+ System Generator
+\lang spanish-mexico
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered{
+\end_layout
+
+\end_inset
+
+
+\lang spanish
+ para Simulink
+\lang spanish-mexico
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered{
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Itemize
@@ -275,7 +348,24 @@ Facilitar el diseño e implementación de un sistema de procesamiento de audio
 \lang spanish
 Mostrar la conversión de los algoritmos matemáticos básicos que intervienen
  en el procesamiento de señales, a hardware en FPGA, haciendo uso de la
- abstracción que proporciona Simulink®
+ abstracción que proporciona Simulink
+\lang spanish-mexico
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered{
+\end_layout
+
+\end_inset
+
+ 
+\lang spanish
+.
 \end_layout
 
 \begin_layout Itemize
@@ -284,8 +374,24 @@ Mostrar la conversión de los algoritmos matemáticos básicos que intervienen
 
 \lang spanish
 Describir las técnicas de implementación más eficientes para obtener el
- mayor rendimiento sobre la familia FPGA Spartan-6® utilizada en la tarjeta
- Atlys®
+ mayor rendimiento sobre la familia FPGA Spartan-6
+\lang spanish-mexico
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered{
+\end_layout
+
+\end_inset
+
+
+\lang spanish
+ utilizada en la tarjeta Atlys.
 \end_layout
 
 \begin_layout Itemize
@@ -295,7 +401,41 @@ Describir las técnicas de implementación más eficientes para obtener el
 \lang spanish
 Diseñar las propiedades intelectuales (IPs) más comunes en el tratamiento
  de señales tales como bloques de filtros FIR, IIR y convoluciones, utilizando
- los entornos de programación de Matlab® y Xilinx®.
+ los entornos de programación de Matlab
+\lang spanish-mexico
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered{
+\end_layout
+
+\end_inset
+
+
+\lang spanish
+ y Xilinx
+\lang spanish-mexico
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered{
+\end_layout
+
+\end_inset
+
+ 
+\lang spanish
+.
 \end_layout
 
 \begin_layout Itemize
@@ -304,7 +444,7 @@ Diseñar las propiedades intelectuales (IPs) más comunes en el tratamiento
 
 \lang spanish
 Explicar los diferentes métodos de ejecución del hardware diseñado en Simulink®,
- sobre la tarjeta Atlys®.
+ sobre la tarjeta Atlys.
  
 \end_layout
 
@@ -313,8 +453,9 @@ Explicar los diferentes métodos de ejecución del hardware diseñado en Simulin
 \noindent
 
 \lang spanish
-Justificar el uso de MATLAB/Simulink® y Xilinx/ISE® para el diseño e implementac
-ión de algoritmos complejos en contraste con el uso tradicional de HDL puro.
+Justificar el uso de Matlab®, Simulink® y Xilinx/ISE® para el diseño e implement
+ación de algoritmos complejos en contraste con el uso tradicional de HDL
+ puro.
 \end_layout
 
 \begin_layout Standard

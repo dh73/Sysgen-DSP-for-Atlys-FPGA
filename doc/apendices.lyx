@@ -133,15 +133,11 @@ Conversión Analógico-Digital.
 \end_layout
 
 \begin_layout Standard
-Los conversores de señal analógica a digital (
-\series bold
-ADC
-\series default
- por sus siglas en Inglés), son dispositivos de señal mixta que se encargan
- de producir una salida que representa un valor digital en referencia al
- voltaje o corriente de entrada al mismo, generalmente en código binario
- convencional, aunque también se pueden encontrar algunos que generan código
- gray,
+Los conversores de señal analógica a digital (ADC por sus siglas en Inglés),
+ son dispositivos de señal mixta que se encargan de producir una salida
+ que representa un valor digital en referencia al voltaje o corriente de
+ entrada al mismo, generalmente en código binario convencional, aunque también
+ se pueden encontrar algunos que generan código gray,
 \end_layout
 
 \begin_layout Standard
@@ -152,11 +148,7 @@ Un ADC tiene una tensión o corriente analógica de referencia utilizada para
  Esto hace que los dispositivos ADC sean conocidos también como divisores.
  La conversión A/D utiliza la cuantización, muestreo y codificación binaria
  como parte del proceso de transformación.
- dichos procesos se ilustran en la 
-\series bold
-Sección
-\series default
- 
+ dichos procesos se ilustran en la sección 
 \series bold
 3 Procesamiento Digital de Señales.
 \end_layout
@@ -185,7 +177,7 @@ reference "fig:Función-de-salida"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -261,7 +253,7 @@ reference "fig:ADC_schem"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -367,7 +359,7 @@ Teorema de Nyquist
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -384,7 +376,14 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Información digital convertida en un tren de impulsos 
+Información digital convertida en un tren de impulsos
+\begin_inset CommandInset citation
+LatexCommand cite
+key "New1"
+
+\end_inset
+
+ 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Información-digital-convertida-1"
@@ -392,13 +391,6 @@ name "fig:Información-digital-convertida-1"
 \end_inset
 
 .
-\begin_inset CommandInset citation
-LatexCommand cite
-key "New1"
-
-\end_inset
-
-
 \end_layout
 
 \end_inset
@@ -516,7 +508,7 @@ key "chapter_3"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -613,7 +605,7 @@ reference "fig:Estructura-de-un-1"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -679,7 +671,7 @@ reference "fig:capacitivo_ponderacion_binaria-1"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -741,7 +733,7 @@ reference "fig:DAC-R-2R-red-1"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -809,7 +801,7 @@ reference "fig:Símbolo-esquemático-del"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -850,7 +842,7 @@ Modelo en NGSpice de un DAC ideal de 4 bits.
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1044,7 +1036,7 @@ como se muestra a continuación:
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1061,7 +1053,11 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Selección del tipo de proyecto en PlanAhead.
+Selección del tipo de proyecto en PlanAhead
+\lang spanish
+®
+\lang spanish-mexico
+.
 \end_layout
 
 \end_inset
@@ -1101,7 +1097,7 @@ reference "fig:Modelo-de-ejemplo-1"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center

@@ -512,7 +512,7 @@ name "fig:Banda-de-espectro"
 
 \begin_layout Standard
 La velocidad de muestreo mínima permitida por el teorema de muestreo, que
- es (4.1), es llamada 
+ es (3.2), es llamada 
 \emph on
 Tasa de muestreo de Nyquist.
  
@@ -1156,7 +1156,7 @@ En otras palabras, una señal de entrada
 \end_layout
 
 \begin_layout Standard
-Tomando la ecuación 4.5 como guía, siendo 
+Tomando la ecuación 3.5 como guía, siendo 
 \begin_inset Formula $\mathbf{x[n]}$
 \end_inset
 
@@ -1500,7 +1500,7 @@ Existen muchos métodos de implementación de esto filtros, la estructura
 forma directa, 
 \emph default
 la cual consta de utilizar la ecuación en diferencia, no recursiva, mostrada
- en (4.7)
+ en (3.7)
 \begin_inset CommandInset citation
 LatexCommand cite
 key "fir_complete"
@@ -1623,7 +1623,7 @@ Mínimos Cuadrados.
 \end_layout
 
 \begin_layout Standard
-La implementación más popular utilizada en FPGA es la del Método por Ventanas
+La implementación más popular utilizada en FPGA es la del Método por ventanas
  debido a que muchos de los paquetes de software incluidos en las herramientas
  de diseño de filtros, utilizan este método como el principal, lo cual recorta
  el tiempo de desarrollo del mismo.
@@ -1734,8 +1734,12 @@ key "iir_0"
 
 \end_inset
 
- .
- Dado que este tipo de filtros no serán utilizados en el marco metodológico
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Dado que este tipo de filtros no serán utilizados en el marco metodológico
  de este documento, sólo se abarcarán las características fundamentales
  de ellos.
 \end_layout
@@ -1796,12 +1800,8 @@ muy complicado en términos de implementación.
 
 \begin_layout Standard
 La estructura de un filtro IIR se puede representar mediante la ecuación
- 
-\series bold
-(4.11)
-\series default
-, en donde se puede observar que es similar a tener un filtro FIR que comprende
- los coeficientes de 
+ 3.11, en donde se puede observar que es similar a tener un filtro FIR que
+ comprende los coeficientes de 
 \series bold
 b 
 \series default
@@ -1975,14 +1975,33 @@ Existe una numerosa cantidad de fabricantes pero sólo dos tipos de FPGAs:
  energizado.
  Anteriormente, las FPGAs basadas en Flash tenían la característica de ser
  OTP, pero hoy en día existen dispositivos basados en esta tecnología que
- pueden ser reprogramados tales como las MAX 10 de Altera.
+ pueden ser reprogramados tales como las MAX-10
+\lang spanish
+®
+\lang spanish-mexico
+ de Altera
+\lang spanish
+®
+\lang spanish-mexico
+.
 \end_layout
 
 \begin_layout Standard
 \noindent
 En la próxima sección se cubrirá a detalle, la arquitectura de la familia
- Spartan6 de Xilinx, ya que es esta la que se encuentra en el kit de desarrollo
- Atlys de Digilent.
+ Spartan-6
+\lang spanish
+®
+\lang spanish-mexico
+ de Xilinx
+\lang spanish
+®
+\lang spanish-mexico
+, ya que es esta la que se encuentra en el kit de desarrollo Atlys de Digilent
+\lang spanish
+®
+\lang spanish-mexico
+.
 \end_layout
 
 \begin_layout Subsection
@@ -2053,9 +2072,9 @@ reference "fig:Arquitectura-general-de"
 
 \end_inset
 
-
+ 
 \series default
- muestra la arquitectura típica de una FPGA con los bloques de construcción
+muestra la arquitectura típica de una FPGA con los bloques de construcción
  básicos.
  Es importante mencionar que algunos elementos como las Block RAM, bloques
  DSP, controladores de memoria, etcétera, que se muestran en la imagen,
@@ -2120,14 +2139,19 @@ name "fig:Arquitectura-general-de"
 \end_layout
 
 \begin_layout Subsection
-Arquitectura de la familia de FPGAs Xilinx
-\lang spanish
-®
-\lang spanish-mexico
- Spartan-6
-\lang spanish
-®
-\lang spanish-mexico
+Arquitectura de la familia de FPGAs Spartan-6
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered{}
+\end_layout
+
+\end_inset
+
 .
 \end_layout
 
@@ -2146,8 +2170,11 @@ La familia Spartan-6
  que van desde 3,840 hasta 147,443 celdas lógicas, dependiendo del dispositivo
  seleccionado por el diseñador.
  Consume la mitad de la potencia comparado con la familia anterior de FPGAs
- Spartan 3, gracias a que están construidas con una avanzada tecnología
- de 45nm.
+ Spartan-3
+\lang spanish
+®
+\lang spanish-mexico
+, gracias a que están construidas con una avanzada tecnología de 45nm.
  Esta línea de FPGAs son muy populares ya que son el balance óptimo entre
  costo, potencia y rendimiento
 \begin_inset CommandInset citation
@@ -2181,7 +2208,7 @@ bits, como por ejemplo, una RAM de 64 bits o un registro de desplazamiento
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
@@ -2266,7 +2293,7 @@ Diagrama a bloques de una FPGA Spartan-6
 \lang spanish
 ®
 \lang spanish-mexico
-
+, ilustración de: 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "clb_ov"
@@ -2366,8 +2393,8 @@ Cada SLICE contiene cuatro LUTs, cuatro elementos de almacenamiento (flip
  Adicionalmente, algunos SLICEs pueden implementar dos funciones adicionales:
  almacenar datos al adoptar la función de RAM distribuida y desplazar datos
  adoptando la función de registro de desplazamiento de 32 bits.
- Son llamados SLICEM (por Memoria), los comunes son llamados SLICEL (por
- Lógico).
+ Son llamados SLICEM (terminación M por Memoria), los comunes son llamados
+ SLICEL (terminación L por Lógico).
 \end_layout
 
 \begin_layout Standard
@@ -2525,23 +2552,11 @@ name "fig:Block-RAM-de"
 \end_layout
 
 \begin_layout Subsection
-Kit de desarrollo Atlys
-\lang spanish
-®
-\lang spanish-mexico
- de Digilent
-\lang spanish
-®
-\lang spanish-mexico
-.
+Kit de desarrollo Atlys.
 \end_layout
 
 \begin_layout Standard
-El sistema de desarrollo Atlys
-\lang spanish
-®
-\lang spanish-mexico
- fabricado por Digilent
+El sistema de desarrollo Atlys fabricado por Digilent
 \lang spanish
 ®
 \lang spanish-mexico
@@ -2595,7 +2610,7 @@ FPGA Spartan-6
 \lang spanish
 ®
 \lang spanish-mexico
- LX45-3 con 6,822 slices, cada una contiene 4 LUTS de 6 entradas y 8 flip-flops,
+ LX45 con 6,822 slices, cada una contiene 4 LUTS de 6 entradas y 8 flip-flops,
  con una frecuencia máxima de ejecución a 500MHz.
 \begin_inset Foot
 status collapsed
@@ -2727,20 +2742,51 @@ Plataformas de Software para el diseño de sistemas DSP.
 \begin_layout Subsection
 Introducción a Matlab
 \lang spanish
-®
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered{
+\end_layout
+
+\end_inset
+
+
 \lang spanish-mexico
  y Simulink
-\lang spanish
-®
-\lang spanish-mexico
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered{}
+\end_layout
+
+\end_inset
+
 .
 \end_layout
 
 \begin_layout Subsubsection
 Matlab
-\lang spanish
-®
-\lang spanish-mexico
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered{}
+\end_layout
+
+\end_inset
+
 .
 \end_layout
 
@@ -2788,15 +2834,15 @@ Lo que hace de Matlab
  rapidez con la que se pueden implementar y resolver algoritmos de mediana
  a gran complejidad.
  Esto se debe en gran medida a la facilidad que brinda el intérprete interactivo
- para crear scripts conocidos como Archivos-M (M-files, por sus siglas en
- Inglés) que ayudan a describir sistemas con eficacia, así como el gran
- número de funciones prediseñadas incluidas en los complementos conocidos
- como 
-\begin_inset Quotes fld
+ para crear scripts conocidos como Archivos-M (mejor conocidos como M-files,
+ por sus siglas en Inglés) que ayudan a describir sistemas con eficacia,
+ así como el gran número de funciones prediseñadas incluidas en los complementos
+ conocidos como 
+\begin_inset Quotes eld
 \end_inset
 
 cajas de herramienta
-\begin_inset Quotes frd
+\begin_inset Quotes erd
 \end_inset
 
  o Toolboxes, los cuales contienen colecciones de funciones para un gran
@@ -2812,7 +2858,7 @@ cajas de herramienta
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
@@ -2830,7 +2876,11 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Interfaz Gráfica del Usuario de MATLAB.
+Interfaz Gráfica de usuario de Matlab
+\lang spanish
+®
+\lang spanish-mexico
+.
 \end_layout
 
 \end_inset
@@ -2899,9 +2949,18 @@ Matlab
 
 \begin_layout Subsubsection
 Simulink
-\lang spanish
-®
-\lang spanish-mexico
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered{}
+\end_layout
+
+\end_inset
+
 .
 \end_layout
 
@@ -2977,10 +3036,36 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Entorno de modelado gráfico Simulink de Matlab
+Entorno de modelado gráfico Simulink
 \lang spanish
-®
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered{
+\end_layout
+
+\end_inset
+
+
 \lang spanish-mexico
+ de Matlab
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered{}
+\end_layout
+
+\end_inset
+
 .
  En este ejemplo se puede observar, como se lleva a cabo la ejecución de
  un algoritmo de detección de elementos en una imagen, utilizando solamente
@@ -2989,9 +3074,18 @@ Entorno de modelado gráfico Simulink de Matlab
 Image Processing Toolbox
 \emph default
  de Simulink
-\lang spanish
-®
-\lang spanish-mexico
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered{}
+\end_layout
+
+\end_inset
+
 .
 \end_layout
 
@@ -3058,11 +3152,37 @@ key "vehicle_sysgen_xilinx"
 \begin_layout Subsection
 Xilinx
 \lang spanish
-®
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered{
+\end_layout
+
+\end_inset
+
+
 \lang spanish-mexico
  System Generator
 \lang spanish
-®
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered{
+\end_layout
+
+\end_inset
+
+
 \lang spanish-mexico
  for DSP.
 \end_layout
@@ -3197,8 +3317,38 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Flujo de diseño con System Generator de Xilinx, imagen obtenida del documento
- 
+Flujo de diseño con System Generator
+\lang spanish
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered{
+\end_layout
+
+\end_inset
+
+
+\lang spanish-mexico
+ de Xilinx
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered{}
+\end_layout
+
+\end_inset
+
+.
+ Imagen obtenida del documento 
 \begin_inset Quotes eld
 \end_inset
 
@@ -3213,7 +3363,20 @@ Wireless communications: from systems to silicon
 , del autor Raghu Rao.
  Wireless Systems Group, Xilinx
 \lang spanish
-®
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered{
+\end_layout
+
+\end_inset
+
+
 \lang spanish-mexico
  Inc, 2008.
 \end_layout
@@ -3288,7 +3451,20 @@ status open
 \begin_layout Plain Layout
 Ejemplo de blocksets incluidos en el toolbox de Sysgen, en su versión ISE
 \lang spanish
-®
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered{
+\end_layout
+
+\end_inset
+
+
 \lang spanish-mexico
  14.7.
 \end_layout
@@ -3322,7 +3498,7 @@ así como funciones pre diseñadas de Matlab
 \lang spanish
 ®
 \lang spanish-mexico
- (scripts .m) dentro de las conexiones de Simulink
+ dentro de las conexiones de Simulink
 \lang spanish
 ®
 \lang spanish-mexico
@@ -3376,11 +3552,37 @@ precisión de ciclo
 \begin_layout Subsubsection
 Co-Diseño de Hardware/Software en el ambiente de Xilinx
 \lang spanish
-®
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered{
+\end_layout
+
+\end_inset
+
+
 \lang spanish-mexico
  System Generator
 \lang spanish
-®
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered{
+\end_layout
+
+\end_inset
+
+
 \lang spanish-mexico
  for DSP.
  
@@ -3402,12 +3604,9 @@ Es posible que el flujo de diseño con esta herramienta de alto nivel no
 \emph on
 Sysgen
 \emph default
- puede se sintetizado en el kit Atlys
-\lang spanish
-®
-\lang spanish-mexico
-, algunos flujos representan ciertas ventajas sobre los demás, o simplemente
- son mejores formas de lograr el objetivo deseado de una manera más rápida.
+ puede se sintetizado en el kit Atlys, algunos flujos representan ciertas
+ ventajas sobre los demás, o simplemente son mejores formas de lograr el
+ objetivo deseado de una manera más rápida.
  Los flujos de implementación soportados por este toolbox son:
 \end_layout
 
@@ -3539,7 +3738,7 @@ MicroBlaze
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -3557,7 +3756,20 @@ status collapsed
 
 \begin_layout Plain Layout
 Ejemplo de implementación de un diseño completo utilizando el toolbox de
- Sysgen en Simulink.
+ Sysgen en Simulink
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered
+\end_layout
+
+\end_inset
+
+.
  Imagen tomada de la guía de usuario 
 \begin_inset Quotes eld
 \end_inset
@@ -3571,8 +3783,20 @@ System Generator for DSP User Guide, UG640
 .
  
 \emph default
-Se puede observar como el procesador Microblaze, puede transmitir y recibir
- impulsos del modelo en Sysgen.
+Se puede observar como el procesador Microblaze
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered
+\end_layout
+
+\end_inset
+
+, puede transmitir y recibir impulsos del modelo en Sysgen.
 \end_layout
 
 \end_inset
@@ -3592,35 +3816,100 @@ Se puede observar como el procesador Microblaze, puede transmitir y recibir
 \begin_layout Subsection
 Introducción a Xilinx
 \lang spanish
-®
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered{
+\end_layout
+
+\end_inset
+
+
 \lang spanish-mexico
  ISE
 \lang spanish
-®
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered{
+\end_layout
+
+\end_inset
+
+
 \lang spanish-mexico
  y PlanAhead
-\lang spanish
-®
-\lang spanish-mexico
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered{}
+\end_layout
+
+\end_inset
+
 .
 \end_layout
 
 \begin_layout Subsubsection
 Reseña de Xilinx
 \lang spanish
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered{
+\end_layout
+
+\end_inset
+
+
+\lang spanish-mexico
+ ISE
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered{}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+El sistema de Xilinx
+\lang spanish
 ®
 \lang spanish-mexico
  ISE
 \lang spanish
 ®
 \lang spanish-mexico
-.
-\end_layout
-
-\begin_layout Standard
-El sistema de Xilinx ISE es un entorno de diseño integrado que consiste
- en un conjunto de programas para crear (o capturar), simular e implementar
- diseños digitales en un dispositivo FPGA o CPLD de Xilinx
+ es un entorno de diseño integrado que consiste en un conjunto de programas
+ para crear (o capturar), simular e implementar diseños digitales en un
+ dispositivo FPGA o CPLD de Xilinx
 \lang spanish
 ®
 \lang spanish-mexico
@@ -3662,7 +3951,7 @@ desde esta interfaz se controlan todos los aspectos del diseño, desde la
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -3681,7 +3970,26 @@ status collapsed
 \begin_layout Plain Layout
 Interfaz principal del 
 \emph on
-ISE Project Navigator
+ISE
+\emph default
+\lang spanish
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered{
+\end_layout
+
+\end_inset
+
+
+\emph on
+\lang spanish-mexico
+ Project Navigator
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Interfáz-principal-del"
@@ -3749,7 +4057,7 @@ reference "fig:Diagrama-a-flujo"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -4009,9 +4317,18 @@ bitstream
 
 \begin_layout Subsubsection
 PlanAhead
-\lang spanish
-®
-\lang spanish-mexico
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered{}
+\end_layout
+
+\end_inset
+
 .
 \end_layout
 
@@ -4047,7 +4364,7 @@ PlanAhead
 \lang spanish-mexico
 
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Se recomienda leer la guía 
@@ -4163,7 +4480,7 @@ PlanAhead
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -4181,7 +4498,50 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Interfaz gráfica de PlanAhead, imagen obtenida del paquete Xilinx ISE.
+Interfaz gráfica de PlanAhead
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered
+\end_layout
+
+\end_inset
+
+, imagen obtenida del paquete Xilinx
+\lang spanish
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered{
+\end_layout
+
+\end_inset
+
+
+\lang spanish-mexico
+ ISE
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered{}
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \end_inset
