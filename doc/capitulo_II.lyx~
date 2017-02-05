@@ -3786,8 +3786,8 @@ Project Navigator
 \emph on
 PlanAhead
 \emph default
- es muy similar a la interfáz de Vivado, por lo que los diseños podrán migrarse
- facilmente sin necesidad de tener que familiarizarse de nuevo con otra
+ es muy similar a la interfaz de Vivado, por lo que los diseños podrán migrarse
+ fácilmente sin necesidad de tener que familiarizarse de nuevo con otra
  herramienta.
 \end_layout
 
@@ -3814,7 +3814,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Interfáz gráfica de PlanAhead, imagen obtenida del paquete Xilinx ISE.
+Interfaz gráfica de PlanAhead, imagen obtenida del paquete Xilinx ISE.
 \end_layout
 
 \end_inset

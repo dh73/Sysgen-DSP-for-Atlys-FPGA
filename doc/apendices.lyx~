@@ -87,6 +87,40 @@ tcolorbox
 Apéndices.
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{
+\backslash
+fill}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Conversión Analógico-Digital.
 \end_layout
@@ -99,7 +133,7 @@ ADC
  por sus siglas en Inglés), son dispositivos de señal mixta que se encargan
  de producir una salida que representa un valor digital en referencia al
  voltaje o corriente de entrada al mismo, generalmente en código binario
- convencional, aunque también se puden encontrar algunos que generan código
+ convencional, aunque también se pueden encontrar algunos que generan código
  gray,
 \end_layout
 
@@ -122,13 +156,13 @@ Sección
 
 \begin_layout Standard
 En un ADC ideal, las transiciones entre valores son de exactamente 1 bit
- menos significtivo (LSB por sus siglas en Inglés).
+ menos significativo (LSB por sus siglas en Inglés).
  Por lo tanto, para un ADC de N-bits, existen 2N asignaciones.
  El bit LSB equivale a la frecuencia de muestreo (
 \begin_inset Formula $F_{s})$
 \end_inset
 
- dividido por el número de asigaciones (2N).
+ dividido por el número de asignaciones (2N).
  La Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1051,8 +1085,8 @@ lab1_sysgen.
 \end_layout
 
 \begin_layout Enumerate
-La interfáz de Matlab se desplegará en la pantalla, con el toolbox de Sysgen
- añadido a las librerias de Simulink.
+La interfaz de Matlab se desplegará en la pantalla, con el toolbox de Sysgen
+ añadido a las librerías de Simulink.
  En este paso hay que esperar un par de minutos hasta que aparezca el workspace
  principal de Simulink, como se muestra en la Figura 
 \begin_inset CommandInset ref

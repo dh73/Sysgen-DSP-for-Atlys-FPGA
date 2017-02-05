@@ -2978,7 +2978,7 @@ Una vez que obtenemos el resultado esperado, es necesario generar un
 'Netlist' 
 \emph default
 (archivos HDL en Verilog o VHDL) para poder utilizar este modelo dentro
- de la interfaz del codec de audio\SpecialChar endofsentence
+ de la interfaz del códec de audio\SpecialChar endofsentence
  Esto se logra dando doble clic sobre
  el '
 \emph on
@@ -3008,7 +3008,7 @@ Apéndice D:
 \series default
  
 \series bold
-Creación de projectos usando PlanAhead
+Creación de proyectos usando PlanAhead
 \series default
  para más detalles).
  Se deben agregar primeramente los archivos 
@@ -3051,7 +3051,7 @@ este último es el top module o módulo principal., que se conforma de las
 
 \begin_deeper
 \begin_layout Itemize
-En primer lugar se definen los puertos de la interfáz principal entre el
+En primer lugar se definen los puertos de la interfaz principal entre el
  códec de audio y la FPGA.
  La directiva de compilación de la línea 1, 
 \emph on
@@ -3242,7 +3242,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Vista jerárjica de las fuentes utilizadas para el proyecto.
+Vista jerárquica de las fuentes utilizadas para el proyecto.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -3373,7 +3373,7 @@ o archivo de configuración que se deberá descargar al kit Atlys.
 
 \begin_deeper
 \begin_layout Standard
-El esqemático de módulo princpial se muestra en la Figura 
+El esquemático de módulo principal se muestra en la Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Esquemático-completo-de"
@@ -3491,7 +3491,7 @@ name "fig:Utilización-y-frecuencia"
 \end_deeper
 \begin_layout Enumerate
 Para ejecutar este diseño en la tarjeta Atlys, se debe conectar una fuente
- de audio (micrófono, reproductor MP3, étc) en el plug de color azul (Line
+ de audio (micrófono, reproductor MP3, etc) en el plug de color azul (Line
  In) y unos audífonos o bocina en el plug verde (Line Out), como se muestra
  en la Figura 
 \begin_inset CommandInset ref
@@ -3563,7 +3563,7 @@ Características técnicas y arquitectura del modelo a implementar.
 \begin_layout Standard
 El flujo fundamental del diseño de algoritmos para el procesamiento digital
  de señales, se basa en la simulación y refinamiento del prototipo a implementar.
- Una vez que se tiene el resultado esperado del filtro en la imágen, se
+ Una vez que se tiene el resultado esperado del filtro en la imagen, se
  puede implementar en un modelo más complejo.
 \end_layout
 
@@ -3659,7 +3659,7 @@ La detección de bordes mediante la implementación del filtro Sobel es una
 status collapsed
 
 \begin_layout Plain Layout
-Se utilizan imagenes a escala de grises y de dimensiones pequeñas para diseñar
+Se utilizan imágenes a escala de grises y de dimensiones pequeñas para diseñar
  operaciones sobre ellas, puesto que simplifican la potencia computacional
  necesaria para obtener un resultado satisfactorio.
 \end_layout
@@ -3671,7 +3671,7 @@ den a los bordes.
 \end_layout
 
 \begin_layout Standard
-El principio de implementación se basa en utilizar dos operadores de convolción
+El principio de implementación se basa en utilizar dos operadores de convolución
  matriciales o 
 \series bold
 kernels
@@ -3969,7 +3969,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Conexión de los bloques necesarios para convertir la matríz 2D en un vector
+Conexión de los bloques necesarios para convertir la matriz 2D en un vector
  de 1D necesario para cada una de las componentes del espacio de color.
  
 \begin_inset CommandInset label
@@ -4030,7 +4030,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Conexión entre la fuente de imágen hacia el bloque de conversión de la matríz
+Conexión entre la fuente de imagen hacia el bloque de conversión de la matríz
  2D a vectores por espacio de color.
  
 \begin_inset CommandInset label
@@ -4156,7 +4156,7 @@ Añadir un
 \emph on
 'Gateway In'
 \emph default
- por cada espacio de color, con la configuracion mostrada en la Figura 
+ por cada espacio de color, con la configuración mostrada en la Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Configuración-para-las"
@@ -4435,7 +4435,7 @@ name "fig:Modelo-completo-que"
 
 \end_deeper
 \begin_layout Enumerate
-El subsustema 
+El subsistema 
 \emph on
 'VideoView Gray'
 \emph default
@@ -4471,7 +4471,7 @@ reference "fig:Reconstrucción-de-la"
 \end_inset
 
 .
- El princpial objetivo de este bloque es, reconstruir los datos multiplicados
+ El principal objetivo de este bloque es, reconstruir los datos multiplicados
  por el operador de luminosidad mostrada en la Ecuación 8.4 y al mismo tiempo,
  ensamblar esos datos en una matriz 2D que representa la imagen obtenida.
  
@@ -4645,7 +4645,7 @@ Si se compara la salida de este modelo, con la popular función de Matlab,
 \emph on
 'rgb2gray'
 \emph default
-, las matrices tendran los mismos valores puesto que dicha función está
+, las matrices tendrán los mismos valores puesto que dicha función está
  basada en el mismo principio que el modelo desarrollado en esta sección.
 \end_layout
 
@@ -4659,7 +4659,7 @@ Como se mencionó en la subsección
 \series bold
 8.2 Algoritmo del filtro Sobel
 \series default
-, serán necesarios dos kernels que realizen el filtrado de la imagen construida
+, serán necesarios dos kernels que realicen el filtrado de la imagen construida
  en la subsección 
 \series bold
 8.4 Modelo de conversión RGB a escala de grises
@@ -5134,8 +5134,15 @@ Modelo completo del filtro Sobel.
 
 \end_deeper
 \begin_layout Enumerate
-Este modelo se convirtió en subsistema, para conectarse como se muestra
- en la Figura .
+Este modelo del paso 8 se convirtió en subsistema, para conectarse como
+ se muestra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Interconexión-del-algoritmo"
+
+\end_inset
+
+.
  La conversión a subsistema es opcional, sólo le da más legibilidad a modelos
  complejos con gran cantidad de bloques.
 \end_layout
@@ -5146,7 +5153,7 @@ Este modelo se convirtió en subsistema, para conectarse como se muestra
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -5163,6 +5170,15 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+Interconexión del algoritmo de conversión RGB a escala de grises y el subsistema
+ de filtros FIR.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Interconexión-del-algoritmo"
+
+\end_inset
+
 
 \end_layout
 

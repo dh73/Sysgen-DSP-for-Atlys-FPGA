@@ -1853,6 +1853,13 @@ name "fig:Utilización-de-recursos"
 \end_layout
 
 \end_deeper
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Procesamiento de Audio - Algoritmo de eco.
 \end_layout
@@ -3552,6 +3559,13 @@ name "fig:Conexiones-a-la"
 \end_layout
 
 \end_deeper
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Procesamiento de imágenes - Detección de bordes.
 \end_layout
@@ -5134,8 +5148,15 @@ Modelo completo del filtro Sobel.
 
 \end_deeper
 \begin_layout Enumerate
-Este modelo se convirtió en subsistema, para conectarse como se muestra
- en la Figura .
+Este modelo del paso 8 se convirtió en subsistema, para conectarse como
+ se muestra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Interconexión-del-algoritmo"
+
+\end_inset
+
+.
  La conversión a subsistema es opcional, sólo le da más legibilidad a modelos
  complejos con gran cantidad de bloques.
 \end_layout
@@ -5163,6 +5184,15 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+Interconexión del algoritmo de conversión RGB a escala de grises y el subsistema
+ de filtros FIR.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Interconexión-del-algoritmo"
+
+\end_inset
+
 
 \end_layout
 

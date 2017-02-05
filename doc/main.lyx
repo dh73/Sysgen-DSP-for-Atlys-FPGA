@@ -29,16 +29,20 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[RO,LE]{Dise\~{n}o de sistemas DSP en FPGA}
-\fancyhead[LO]{\nouppercase{\leftmark}}
-\fancyhead[RE]{\nouppercase{\rightmark}}
-\fancyfoot[C]{\thepage}
+\fancyhead[RO,LE]{Dise\~{n}o e Implementaci\'{o}n de Sistemas DSP en FPGA - \thepage}
+%%\fancyhead[LO]{\nouppercase{\leftmark}}
+%%\fancyhead[RE]{\nouppercase{\rightmark}}
+%%\fancyfoot[C]{\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.0pt}
 \usepackage{pslatex}
-
 %\setlength{\topskip}{0mm}
 %\setlength{\parindent}{0mm}
+
+%% Footnotes
+\setlength{\footnotesep}{12pt}
+%% Captions
+\usepackage[margin=10pt,font=small,labelfont=bf,labelsep=endash]{caption}
 \end_preamble
 \use_default_options true
 \begin_modules
@@ -53,11 +57,11 @@ tcolorbox
 \language_package default
 \inputencoding default
 \fontencoding global
-\font_roman "default" "default"
+\font_roman "times" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
-\font_math "auto" "auto"
-\font_default_family default
+\font_math "default" "auto"
+\font_default_family rmdefault
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
@@ -69,7 +73,7 @@ tcolorbox
 \bibtex_command default
 \index_command makeindex
 \float_placement H
-\paperfontsize default
+\paperfontsize 12
 \spacing double
 \use_hyperref false
 \papersize default
@@ -241,10 +245,6 @@ begin{spacing}{1}
 \end_inset
 
 
-\begin_inset Separator latexpar
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -255,7 +255,7 @@ status open
 
 
 \backslash
-thispagestyle{empty} 
+pagestyle{empty} 
 \end_layout
 
 \end_inset
@@ -282,7 +282,7 @@ status open
 
 
 \backslash
-thispagestyle{empty} 
+pagestyle{empty} 
 \end_layout
 
 \end_inset
@@ -332,55 +332,6 @@ status open
 
 \backslash
 pagestyle{empty} 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage cleardoublepage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-thispagestyle{empty} 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\noindent
-\align block
-\begin_inset FloatList table
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-thispagestyle{empty} 
 \end_layout
 
 \end_inset

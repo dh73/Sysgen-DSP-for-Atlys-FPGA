@@ -1900,6 +1900,13 @@ LaTeX
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Plataformas FPGA.
 \end_layout
@@ -2603,6 +2610,13 @@ name "fig:Kit-de-desarrollo"
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
 \end_inset
 
 

@@ -85,24 +85,20 @@
 \begin_layout Title
 
 \series bold
-Uso de Simulink y la Tarjeta de desarrollo Atlys de Xilinx para la implementació
-n de Sistemas de Procesamiento de Señales e imágenes.
+Diseño e Implementación de Sistemas DSP en FPGA.
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace 1cm
-\end_inset
+\align block
 
-
-\end_layout
-
-\begin_layout Standard
-\align center
+\series bold
+Sustentante: 
+\series default
 Diego Armando Hernández Ramírez.
 \end_layout
 
 \begin_layout Standard
-\align center
+\align block
 
 \series bold
 Asesor técnico:
@@ -112,13 +108,31 @@ Asesor técnico:
 \end_layout
 
 \begin_layout Standard
-\align center
+\align block
 
 \series bold
 Asesor metodológico:
 \series default
  Mtro.
  Cuauhtémoc Rafael Aguilera Galicia.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{
+\backslash
+fill}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
