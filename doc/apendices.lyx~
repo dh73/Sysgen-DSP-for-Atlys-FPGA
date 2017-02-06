@@ -177,7 +177,7 @@ reference "fig:Función-de-salida"
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -253,7 +253,7 @@ reference "fig:ADC_schem"
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -359,7 +359,7 @@ Teorema de Nyquist
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -508,7 +508,7 @@ key "chapter_3"
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -605,7 +605,7 @@ reference "fig:Estructura-de-un-1"
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -671,7 +671,7 @@ reference "fig:capacitivo_ponderacion_binaria-1"
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -733,7 +733,7 @@ reference "fig:DAC-R-2R-red-1"
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -801,7 +801,7 @@ reference "fig:Símbolo-esquemático-del"
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -842,7 +842,7 @@ Modelo en NGSpice de un DAC ideal de 4 bits.
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -892,7 +892,7 @@ name "fig:Símbolo-esquemático-del"
 \end_layout
 
 \begin_layout Section
-Script en Matlab de la Convolución de dos vectores de forma interactiva.
+Script interactivo para la convolución de dos vectores.
 \end_layout
 
 \begin_layout Standard
@@ -948,11 +948,37 @@ Ilustración interactiva de la convolución, usada en la subsección
 \end_layout
 
 \begin_layout Section
-Creación de proyectos usando PlanAhead.
+Creación de proyectos usando PlanAhead
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-Abrir PlanAhead y seleccionar 
+Abrir PlanAhead
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered
+\end_layout
+
+\end_inset
+
+ y seleccionar 
 \emph on
 'Create New Project'.
 \end_layout
@@ -1054,9 +1080,18 @@ status open
 
 \begin_layout Plain Layout
 Selección del tipo de proyecto en PlanAhead
-\lang spanish
-®
-\lang spanish-mexico
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered
+\end_layout
+
+\end_inset
+
 .
 \end_layout
 
@@ -1081,10 +1116,36 @@ lab1_sysgen.
 \end_layout
 
 \begin_layout Enumerate
-La interfaz de Matlab se desplegará en la pantalla, con el toolbox de Sysgen
- añadido a las librerías de Simulink.
+La interfaz de Matlab
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered
+\end_layout
+
+\end_inset
+
+ se desplegará en la pantalla, con el toolbox de Sysgen añadido a las librerías
+ de Simulink
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered
+\end_layout
+
+\end_inset
+
+.
  En este paso hay que esperar un par de minutos hasta que aparezca el workspace
- principal de Simulink, como se muestra en la Figura 
+ principal, como se muestra en la Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Modelo-de-ejemplo-1"
@@ -1148,6 +1209,285 @@ Instalación del plugin de Sysgen para el kit Atlys.
 \end_layout
 
 \begin_layout Standard
+El kit Atlys no es oficialmente soportado por Xilinx
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered
+\end_layout
+
+\end_inset
+
+ puesto que esta tarjeta es desarrollada por Digilent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered
+\end_layout
+
+\end_inset
+
+.
+ Sin embargo, existen los archivos necesarios para agregar esta tarjeta
+ de desarrollo a la suite de ISE
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered
+\end_layout
+
+\end_inset
+
+ y poder utilizarla con Sysgen.
+\end_layout
+
+\begin_layout Standard
+Los pasos para instalar este plugin se muestran a continuación:
+\end_layout
+
+\begin_layout Enumerate
+Es necesario visitar la siguiente página para descargar los archivos necesarios:
+ 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://www.xilinx.com/support/university/ise/ise-workshops/ise-dsp-design-flow.htm
+l
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+En la parte inferior derecha, se encuentra la tabla 
+\emph on
+'14.x Workshop Material > Atlys Board'.
+ 
+\emph default
+Se debe descargar el archivo 
+\emph on
+'Lab Source Files'.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/appendix_atlys.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Página principal del programa universitario de Xilinx
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\noindent
+\align block
+Descomprimir el archivo descargado, esto generará dos archivos más: 
+\emph on
+'labs.zip' 
+\emph default
+y 
+\emph on
+'atlys_board_plugin.zip'.
+ 
+\emph default
+Este último es el de nuestro interés, el cual se debe descomprimir, para
+ sistemas Windows
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered
+\end_layout
+
+\end_inset
+
+, en la ruta: 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+C:
+\backslash
+Xilinx
+\backslash
+ISE
+\backslash
+14.7
+\backslash
+ISE_DS
+\backslash
+ISE
+\backslash
+sysgen
+\backslash
+plugins
+\backslash
+compilation
+\backslash
+Hardware Co-Simulation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\noindent
+\align block
+Para sistemas Unix, la ruta debe ser 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+$ISE_ROOT/ISE_DS/ISE/sysgen/plugins/compilation/Hardware
+\backslash
+ Co-Simulation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Una vez realizado el paso anterior, el 
+\emph on
+'Sysgen Token' 
+\emph default
+tendrá la información necesaria del kit Atlys, para generar los archivos
+ ejecutables por la FPGA, como se muestra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Actualización-del-'Sysgen"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/atlys_sysgen_token.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Actualización del 
+\emph on
+'Sysgen Token' 
+\emph default
+con la información necesaria del kit Atlys.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Actualización-del-'Sysgen"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
 
@@ -1155,8 +1495,7 @@ Instalación del plugin de Sysgen para el kit Atlys.
 \end_layout
 
 \begin_layout Section
-Código Verilog completo del módulo de procesamiento de audio con el códec
- AC97.
+Código Verilog de la IP para el controlador del códec AC97.
 \end_layout
 
 \begin_layout Standard
@@ -1183,7 +1522,7 @@ large, title=Instanciación de la IP de audio AC97
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "/home/diego/Documents/Finalized/examples/audio_ac97/AC97_IP/rt_audio_controller.v"
-lstparams "language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={\\color{gray}},keepspaces=true,numberstyle={\\tiny\\color{black}},keywordstyle={\\mlttfamily\\color{blue}},tabsize=2,breaklines=true,breakatwhitespace=true,basewidth={.48em},columns=flexible,frame=none,linerange={1-33}"
+lstparams "language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={\\color{gray}},keepspaces=true,numberstyle={\\tiny\\color{black}},keywordstyle={\\mlttfamily\\color{blue}},tabsize=2,breaklines=true,breakatwhitespace=true,basewidth={.48em},columns=flexible,frame=none,linerange={1-33},xleftmargin=2em"
 
 \end_inset
 
@@ -1219,7 +1558,7 @@ large, title=Instanciación de la IP de audio AC97
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "/home/diego/Documents/Finalized/examples/audio_ac97/AC97_IP/rt_audio_controller.v"
-lstparams "language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={\\color{gray}},keepspaces=true,numberstyle={\\tiny\\color{black}},keywordstyle={\\mlttfamily\\color{blue}},tabsize=2,breaklines=true,columns=flexible,frame=none,linerange={34-66},firstnumber=34"
+lstparams "language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={\\color{gray}},keepspaces=true,numberstyle={\\tiny\\color{black}},keywordstyle={\\mlttfamily\\color{blue}},tabsize=2,breaklines=true,columns=flexible,frame=none,linerange={34-66},firstnumber=34,xleftmargin=2em"
 
 \end_inset
 
@@ -1255,7 +1594,7 @@ large, title=Instanciación de la IP de audio AC97
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "/home/diego/Documents/Finalized/examples/audio_ac97/AC97_IP/rt_audio_controller.v"
-lstparams "language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={\\color{gray}},keepspaces=true,numberstyle={\\tiny\\color{black}},keywordstyle={\\mlttfamily\\color{blue}},tabsize=2,breaklines=true,columns=flexible,frame=none,linerange={67-79},firstnumber=34"
+lstparams "language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={\\color{gray}},keepspaces=true,numberstyle={\\tiny\\color{black}},keywordstyle={\\mlttfamily\\color{blue}},tabsize=2,breaklines=true,columns=flexible,frame=none,linerange={67-79},firstnumber=34,xleftmargin=2em"
 
 \end_inset
 

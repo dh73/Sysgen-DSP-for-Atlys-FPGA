@@ -87,20 +87,57 @@ tcolorbox
 Apéndices.
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{
+\backslash
+fill}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Conversión Analógico-Digital.
 \end_layout
 
 \begin_layout Standard
-Los conversores de señal analógica a digital (
-\series bold
-ADC
-\series default
- por sus siglas en Inglés), son dispositivos de señal mixta que se encargan
- de producir una salida que representa un valor digital en referencia al
- voltaje o corriente de entrada al mismo, generalmente en código binario
- convencional, aunque también se puden encontrar algunos que generan código
- gray,
+Los conversores de señal analógica a digital (ADC por sus siglas en Inglés),
+ son dispositivos de señal mixta que se encargan de producir una salida
+ que representa un valor digital en referencia al voltaje o corriente de
+ entrada al mismo, generalmente en código binario convencional, aunque también
+ se pueden encontrar algunos que generan código gray,
 \end_layout
 
 \begin_layout Standard
@@ -111,24 +148,20 @@ Un ADC tiene una tensión o corriente analógica de referencia utilizada para
  Esto hace que los dispositivos ADC sean conocidos también como divisores.
  La conversión A/D utiliza la cuantización, muestreo y codificación binaria
  como parte del proceso de transformación.
- dichos procesos se ilustran en la 
-\series bold
-Sección
-\series default
- 
+ dichos procesos se ilustran en la sección 
 \series bold
 3 Procesamiento Digital de Señales.
 \end_layout
 
 \begin_layout Standard
 En un ADC ideal, las transiciones entre valores son de exactamente 1 bit
- menos significtivo (LSB por sus siglas en Inglés).
+ menos significativo (LSB por sus siglas en Inglés).
  Por lo tanto, para un ADC de N-bits, existen 2N asignaciones.
  El bit LSB equivale a la frecuencia de muestreo (
 \begin_inset Formula $F_{s})$
 \end_inset
 
- dividido por el número de asigaciones (2N).
+ dividido por el número de asignaciones (2N).
  La Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -136,7 +169,7 @@ reference "fig:Función-de-salida"
 
 \end_inset
 
-ilustra dicha respuesta ideal.
+ ilustra dicha respuesta ideal.
 \end_layout
 
 \begin_layout Standard
@@ -205,7 +238,14 @@ V_{in}=\sum_{n=0}^{N-1}b_{n}2^{n}\frac{V_{ref}}{2^{n}}
 \end_layout
 
 \begin_layout Standard
-El símbolo esquemático del ADC se ilustra en la Figura
+El símbolo esquemático del ADC se ilustra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ADC_schem"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -213,9 +253,10 @@ El símbolo esquemático del ADC se ilustra en la Figura
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename img/500px-ADC_Symbol.svg.png
 	scale 40
@@ -229,6 +270,25 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+Símbolo esquemático del ADC.
+ Imagen obtenida de 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://commons.wikimedia.org/wiki/File:ADC_Symbol.svg
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ADC_schem"
+
+\end_inset
+
 
 \end_layout
 
@@ -259,7 +319,7 @@ Conversión Digital-Analógico.
 
 \begin_layout Standard
 Para convertir una señal digital a una analógica después de que se ha procesado
- por el sistema DSP, se utiliza un conversor D/A (o DAC, por sus siglas
+ por el sistema DSP, se utiliza un convertidor D/A (o DAC, por sus siglas
  en inglés).
  Este proceso se lleva a cabo es interpolando los datos de las señales entre
  las muestras tomadas, es decir, aplicando una aproximación sucesiva al
@@ -269,9 +329,9 @@ Para convertir una señal digital a una analógica después de que se ha procesa
 \begin_layout Standard
 La manera más sencilla de convertir una señal de analógico a digital, es
  tomando las muestras de dicha señal desde la memoria donde el DSP las almacena,
- y transformarlas en un tren de impulsos, como se muestra en la 
+ y transformarlas en un tren de impulsos, como se muestra en la Figura
 \series bold
-Figura 
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Información-digital-convertida-1"
@@ -316,7 +376,14 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Información digital convertida en un tren de impulsos 
+Información digital convertida en un tren de impulsos
+\begin_inset CommandInset citation
+LatexCommand cite
+key "New1"
+
+\end_inset
+
+ 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Información-digital-convertida-1"
@@ -324,13 +391,6 @@ name "fig:Información-digital-convertida-1"
 \end_inset
 
 .
-\begin_inset CommandInset citation
-LatexCommand cite
-key "New1"
-
-\end_inset
-
-
 \end_layout
 
 \end_inset
@@ -392,7 +452,7 @@ no ocurrió.
 \end_layout
 
 \begin_layout Standard
-Mientras que este método es matemáticamente correcto, es dificil generar
+Mientras que este método es matemáticamente correcto, es difícil generar
  esos trenes de pulsos tan estrechos entre si, utilizando componentes electrónic
 os.
  Para poder manejar esta dificultad, la mayoría de los ADC operan manteniendo
@@ -400,7 +460,7 @@ os.
  del DSP.
  A esto se le conoce como 
 \emph on
-retención de órden cero
+retención de orden cero
 \emph default
 , el equivalente del proceso de 
 \emph on
@@ -414,10 +474,7 @@ del DAC.
 \emph on
 retención de orden cero 
 \emph default
-produce una señal con apariencia de de escalera, como se muestra en la 
-\series bold
-Figura
-\series default
+produce una señal con apariencia de de escalera, como se muestra en la Figura
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -527,9 +584,9 @@ key "binary_dacs_analogdev"
 Ponderación binaria: 
 \series default
 Este DAC basado en resistores en modo voltaje es usualmente la implementación
- más simple utilizada como referencia en los libros de texto (véase 
+ más simple utilizada como referencia en los libros de texto (véase Figura
 \series bold
-Figura 
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Estructura-de-un-1"
@@ -539,7 +596,7 @@ reference "fig:Estructura-de-un-1"
 
 \series default
 ).
- No es inherentemente monolítico y es muy dificil de fabricar de forma eficáz
+ No es inherentemente monolítico y es muy difícil de fabricar de forma eficaz
  en grandes masas.
  Además, la salida del DAC utilizando el método de ponderación de voltaje
  binaria, cambia con el código de entrada.
@@ -601,11 +658,7 @@ El uso de una redistribución de carga capacitiva ofrece la ventaja de comportar
 e como un circuito de muestreo y retención (SHA, por sus siglas en inglés),
  por lo cual, ningún circuito SHA externo o incluso, alguna construcción
  monolítica SHA dentro del circuito integrado, es requerido al utilizar
- esta estructura (véase 
-\series bold
-Figura
-\series default
- 
+ esta estructura (véase Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:capacitivo_ponderacion_binaria-1"
@@ -664,9 +717,9 @@ Una de las estructuras más comunes de DACs es la muy conocida escalera R-2R,
  en una proporción de 2:1.
  Un DAC de N bits requiere 2N resistores.
  El voltaje de salida se mantiene siempre con la misma impedancia, (véase
- 
+ Figura
 \series bold
-Figura 
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:DAC-R-2R-red-1"
@@ -1000,7 +1053,11 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Selección del tipo de proyecto en PlanAhead.
+Selección del tipo de proyecto en PlanAhead
+\lang spanish
+®
+\lang spanish-mexico
+.
 \end_layout
 
 \end_inset
@@ -1018,14 +1075,14 @@ Seleccionar la opción
 \emph on
 'Create Sub-Design'
 \emph default
- y defnir el nombre del módulo principal, por ejemplo 
+ y definir el nombre del módulo principal, por ejemplo 
 \series bold
 lab1_sysgen.
 \end_layout
 
 \begin_layout Enumerate
-La interfáz de Matlab se desplegará en la pantalla, con el toolbox de Sysgen
- añadido a las librerias de Simulink.
+La interfaz de Matlab se desplegará en la pantalla, con el toolbox de Sysgen
+ añadido a las librerías de Simulink.
  En este paso hay que esperar un par de minutos hasta que aparezca el workspace
  principal de Simulink, como se muestra en la Figura 
 \begin_inset CommandInset ref
@@ -1091,6 +1148,194 @@ Instalación del plugin de Sysgen para el kit Atlys.
 \end_layout
 
 \begin_layout Standard
+El kit Atlys no es oficialmente soportado por Xilinx
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered
+\end_layout
+
+\end_inset
+
+ puesto que esta tarjeta es desarrollada por Digilent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered
+\end_layout
+
+\end_inset
+
+.
+ Sin embargo, existen los archivos necesarios para agregar esta tarjeta
+ de desarrollo a la suite de ISE
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered
+\end_layout
+
+\end_inset
+
+ y poder utilizarla con Sysgen.
+\end_layout
+
+\begin_layout Standard
+Los pasos para instalar este plugin se muestran a continuación:
+\end_layout
+
+\begin_layout Enumerate
+Es necesario visitar la página 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://www.xilinx.com/support/university/ise/ise-workshops/ise-dsp-design-flow.htm
+l
+\end_layout
+
+\end_inset
+
+, donde se encuentran los archivos necesarios.
+\end_layout
+
+\begin_layout Enumerate
+En la parte inferior derecha, se encuentra la tabla 
+\emph on
+'14.x Workshop Material > Atlys Board'.
+ 
+\emph default
+Se debe descargar el archivo 
+\emph on
+'Lab Source Files'.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/appendix_atlys.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Página principal del programa universitario de Xilinx
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Descomprimir el archivo descargado, esto generará dos archivos más: 
+\emph on
+'labs.zip' 
+\emph default
+y 
+\emph on
+'atlys_board_plugin.zip'.
+ 
+\emph default
+Este último es el de nuestro interés, el cual se debe descomprimir en la
+ ruta 
+\emph on
+C:
+\backslash
+Xilinx
+\backslash
+ISE
+\backslash
+14.7
+\backslash
+ISE_DS
+\backslash
+ISE
+\backslash
+sysgen
+\backslash
+plugins
+\backslash
+compilation
+\backslash
+Hardware Co-Simulation 
+\emph default
+en sistemas Windows
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered
+\end_layout
+
+\end_inset
+
+.
+ Para sistemas Unix, la ruta debe ser 
+\emph on
+$ISE_ROOT/14.7/ISE_DS/ISE/sysgen/plugins/compilation/Hardware
+\backslash
+ Co-Simulation/.
+\end_layout
+
+\begin_layout Enumerate
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
 
@@ -1126,7 +1371,7 @@ large, title=Instanciación de la IP de audio AC97
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "/home/diego/Documents/Finalized/examples/audio_ac97/AC97_IP/rt_audio_controller.v"
-lstparams "language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={\\color{gray}},keepspaces=true,numberstyle={\\tiny\\color{black}},keywordstyle={\\mlttfamily\\color{blue}},tabsize=2,breaklines=true,columns=flexible,frame=none,linerange={1-33}"
+lstparams "language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={\\color{gray}},keepspaces=true,numberstyle={\\tiny\\color{black}},keywordstyle={\\mlttfamily\\color{blue}},tabsize=2,breaklines=true,breakatwhitespace=true,basewidth={.48em},columns=flexible,frame=none,linerange={1-33},xleftmargin=2em"
 
 \end_inset
 
@@ -1162,7 +1407,7 @@ large, title=Instanciación de la IP de audio AC97
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "/home/diego/Documents/Finalized/examples/audio_ac97/AC97_IP/rt_audio_controller.v"
-lstparams "language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={\\color{gray}},keepspaces=true,numberstyle={\\tiny\\color{black}},keywordstyle={\\mlttfamily\\color{blue}},tabsize=2,breaklines=true,columns=flexible,frame=none,linerange={34-76},firstnumber=34"
+lstparams "language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={\\color{gray}},keepspaces=true,numberstyle={\\tiny\\color{black}},keywordstyle={\\mlttfamily\\color{blue}},tabsize=2,breaklines=true,columns=flexible,frame=none,linerange={34-66},firstnumber=34,xleftmargin=2em"
 
 \end_inset
 
@@ -1172,6 +1417,49 @@ lstparams "language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={
 \end_inset
 
  
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Color Box
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+arc=0mm,colback=white, colframe=black, fonttitle=
+\backslash
+sffamily
+\backslash
+bfseries
+\backslash
+large, title=Instanciación de la IP de audio AC97
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "/home/diego/Documents/Finalized/examples/audio_ac97/AC97_IP/rt_audio_controller.v"
+lstparams "language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={\\color{gray}},keepspaces=true,numberstyle={\\tiny\\color{black}},keywordstyle={\\mlttfamily\\color{blue}},tabsize=2,breaklines=true,columns=flexible,frame=none,linerange={67-79},firstnumber=34,xleftmargin=2em"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \end_body

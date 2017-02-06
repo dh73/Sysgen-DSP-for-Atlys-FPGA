@@ -11,6 +11,41 @@
 %\doublespacing
 %\usepackage{setspace}	% linespacing
 %\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\date{}
+\usepackage{textcomp}
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage{listings}
+\usepackage{color}
+\usepackage[numbered,framed]{matlab-prettifier}
+\lstset{style=Matlab-editor}
+\usepackage{tikz}
+\usetikzlibrary{dsp,chains}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+\newcommand{\z}{\mathpzc{z}}
+\newcommand{\TikZ}{Ti\textit{k}Z\xspace}
+\usepackage{amsmath}
+\usepackage{microtype}
+\usepackage{smartdiagram}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{listings}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RO,LE]{Dise\~{n}o e Implementaci\'{o}n de Sistemas DSP en FPGA - \thepage}
+%%\fancyhead[LO]{\nouppercase{\leftmark}}
+%%\fancyhead[RE]{\nouppercase{\rightmark}}
+%%\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.0pt}
+\usepackage{pslatex}
+%\setlength{\topskip}{0mm}
+%\setlength{\parindent}{0mm}
+
+%% Footnotes
+\setlength{\footnotesep}{12pt}
+%% Captions
+\usepackage[margin=10pt,font=small,labelfont=bf,labelsep=endash]{caption}
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
@@ -18,11 +53,11 @@
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman "default" "default"
+\font_roman "times" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
 \font_math "auto" "auto"
-\font_default_family default
+\font_default_family rmdefault
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
@@ -33,8 +68,8 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
-\paperfontsize default
-\spacing single
+\paperfontsize 12
+\spacing double
 \use_hyperref false
 \papersize default
 \use_geometry true
@@ -67,8 +102,8 @@
 \bottommargin 1in
 \secnumdepth 3
 \tocdepth 3
-\paragraph_separation indent
-\paragraph_indentation default
+\paragraph_separation skip
+\defskip bigskip
 \quotes_language french
 \papercolumns 1
 \papersides 1
@@ -89,31 +124,51 @@ Diseño e Implementación de Sistemas DSP en FPGA.
 \end_layout
 
 \begin_layout Standard
-\align block
+\begin_inset VSpace 2cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
 
 \series bold
 Sustentante: 
-\series default
+\end_layout
+
+\begin_layout Standard
+\align center
 Diego Armando Hernández Ramírez.
 \end_layout
 
 \begin_layout Standard
-\align block
+\align center
 
 \series bold
 Asesor técnico:
 \series default
- Mtro.
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+Mtro.
  José María Valencia Velasco.
 \end_layout
 
 \begin_layout Standard
-\align block
+\align center
 
 \series bold
 Asesor metodológico:
 \series default
- Mtro.
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+Mtro.
  Cuauhtémoc Rafael Aguilera Galicia.
 \end_layout
 
@@ -125,9 +180,7 @@ status open
 
 
 \backslash
-vspace*{
-\backslash
-fill}
+thispagestyle{empty}
 \end_layout
 
 \end_inset
@@ -136,22 +189,7 @@ fill}
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-thispagestyle{empty} 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
+\align block
 \begin_inset Newpage newpage
 \end_inset
 
