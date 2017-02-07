@@ -168,9 +168,9 @@ o de voz para determinar quién es la persona que habla; para determinar,
 \align block
 El procesamiento de señales involucra la realización de operaciones matemáticas
  sobre las señales, las cuales son llevadas por sistemas cuya única función
- es precisamente el llevar a cabo esas operaciones, los procesadores digitales
- de señales (DSP, por sus siglas en Inglés) y los arreglos programables
- (FPGA, por sus siglas en Inglés) son los encargados de ello.
+ es precisamente el llevar a cabo esas operaciones, los Procesadores Digitales
+ de Señales (DSP, por sus siglas en Inglés) y la Matriz de Compuertas Programabl
+es en Campo (FPGA, por sus siglas en Inglés) son los encargados de ello.
  
 \end_layout
 

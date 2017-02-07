@@ -168,8 +168,8 @@ o de voz para determinar quién es la persona que habla; para determinar,
 \align block
 El procesamiento de señales involucra la realización de operaciones matemáticas
  sobre las señales, las cuales son llevadas por sistemas cuya única función
- es precisamente el llevar a cabo esas operaciones, los procesadores digitales
- de señales (DSP, por sus siglas en Inglés) y los arreglos programables
+ es precisamente el llevar a cabo esas operaciones, los Procesadores Digitales
+ de Señales (DSP, por sus siglas en Inglés) y los Arreglos Programables
  (FPGA, por sus siglas en Inglés) son los encargados de ello.
  
 \end_layout
@@ -209,33 +209,8 @@ Con el fin de explotar las ventajas que las FPGA poseen y poderlos aplicar
 \noindent
 \align block
 Teniendo como objetivo principal el recortar la curva de aprendizaje, las
- empresas líderes en FPGA como Xilinx®, Altera
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-textregistered
-\end_layout
-
-\end_inset
-
- y Synopsys
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-textregistered
-\end_layout
-
-\end_inset
-
- proporcionan plataformas de trabajo que puede interactuar con Matlab
+ empresas líderes en FPGA como Xilinx®, Altera® y Synopsys® proporcionan
+ plataformas de trabajo que puede interactuar con Matlab
 \begin_inset ERT
 status open
 
