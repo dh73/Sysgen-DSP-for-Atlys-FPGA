@@ -196,9 +196,10 @@ filename "aprobacion.lyx"
 \begin_layout Standard
 \noindent
 \align block
-\begin_inset CommandInset include
-LatexCommand input
-filename "description.lyx"
+\begin_inset External
+	template PDFPages
+	filename pdf/description.pdf
+	display false
 
 \end_inset
 

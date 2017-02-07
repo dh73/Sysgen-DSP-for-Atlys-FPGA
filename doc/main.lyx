@@ -184,9 +184,20 @@ thispagestyle{empty}
 \begin_layout Standard
 \noindent
 \align block
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align block
 \begin_inset CommandInset include
 LatexCommand input
 filename "aprobacion.lyx"
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 

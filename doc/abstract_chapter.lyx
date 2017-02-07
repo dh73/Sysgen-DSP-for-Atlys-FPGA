@@ -72,7 +72,15 @@
 \begin_body
 
 \begin_layout Abstract
-Placeholder, TBD;
+Las plataformas reconfigurables basadas en dispositivos FPGA se han convertido
+ en una solución muy conveniente para aplicaciones de alto rendimiento en
+ el campo del procesamiento digital de señales, debido a la flexibilidad
+ de implementación, las altas frecuencias de operación que se pueden alcanzar
+ y la baja potencia requerida por estos dispositivos.
+ Sin embargo, la complejidad de las aplicaciones que se pueden realizar
+ a partir de utilizar dichas plataformas y la misma arquitectura de las
+ FPGA, demanda conocimientos sólidos en varias áreas del desarrollo electrónico
+ que muchas veces no se poseen.
 \end_layout
 
 \begin_layout Abstract
