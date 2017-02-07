@@ -194,9 +194,18 @@ A manera de introducción, se utilizará el ambiente de Matlab
 
 \begin_layout Subsection
 Especificaciones del modelo del filtro FIR en Matlab
-\lang spanish
-®
-\lang spanish-mexico
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered
+\end_layout
+
+\end_inset
+
 .
 \end_layout
 
@@ -270,6 +279,11 @@ reference "fig:Gráfica-derivada-de"
 \end_inset
 
 .
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align block
 \begin_inset Float algorithm
 placement H
 wide false
@@ -318,11 +332,15 @@ name "alg:Generación-de-la"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\align block
 \begin_inset Float figure
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -341,7 +359,20 @@ status collapsed
 \begin_layout Plain Layout
 Gráfica derivada de la función diseñada en Matlab
 \lang spanish
-®
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered{
+\end_layout
+
+\end_inset
+
+
 \lang spanish-mexico
  para este ejercicio.
  
@@ -368,6 +399,7 @@ name "fig:Gráfica-derivada-de"
 
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
 Para el diseño del filtro FIR, se usará el método por ventana de Hamming
  por la facilidad de implementación discutida en la 
@@ -478,6 +510,10 @@ reference "fig:Respuesta-en-magnitud"
 \end_inset
 
  
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
 \begin_inset Float algorithm
 placement H
 wide false
@@ -519,6 +555,9 @@ name "alg:Implementación-del-filtro"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 placement H
 wide false
@@ -570,6 +609,7 @@ name "fig:Respuesta-en-magnitud"
 
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
 Por último, para confirmar que el diseño se ha implementado de una manera
  correcta, aplicamos la señal generada en el paso 1
@@ -591,12 +631,13 @@ reference "fig:Resultado-de-la"
 .
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
 \begin_inset Float figure
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -641,17 +682,15 @@ name "fig:Resultado-de-la"
 
 \end_layout
 
+\end_deeper
 \begin_layout Subsection
 Simulación del sistema en Sysgen.
 \end_layout
 
 \begin_layout Standard
 Las instrucciones para transformar el algoritmo que hemos diseñado ya, a
- un modelo que se pueda ejecutar en la tarjeta de desarrollo Atlys
-\lang spanish
-®
-\lang spanish-mexico
-, se muestran a continuación:
+ un modelo que se pueda ejecutar en la tarjeta de desarrollo Atlys, se muestran
+ a continuación:
 \end_layout
 
 \begin_layout Enumerate
@@ -683,11 +722,15 @@ reference "fig:Mensaje-de-instalación"
 
 .
  
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
 \begin_inset Float figure
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -706,7 +749,20 @@ status collapsed
 \begin_layout Plain Layout
 Mensaje de instalación del toolbox de Sysgen en Matlab
 \lang spanish
-®
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered{
+\end_layout
+
+\end_inset
+
+
 \lang spanish-mexico
  R2013a.
  
@@ -733,6 +789,7 @@ name "fig:Mensaje-de-instalación"
  
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
 Dar clic en el ícono 
 \begin_inset Graphics
@@ -797,11 +854,15 @@ reference "fig:Instanciación-del-System"
 
 .
  
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
 \begin_inset Float figure
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -843,7 +904,6 @@ name "fig:Instanciación-del-System"
 
 \end_layout
 
-\begin_deeper
 \begin_layout Standard
 Aquí es necesario resaltar algunas reglas importantes para hacer uso del
  toolbox de Xilinx
@@ -977,11 +1037,15 @@ y
 \emph default
 .
  
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
 \begin_inset Float figure
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1016,7 +1080,6 @@ Bloques de entrada/salida que acotan la implementación en el FPGA del algoritmo
 
 \end_layout
 
-\begin_deeper
 \begin_layout Standard
 En otras palabras, los únicos bloques que pueden comunicarse directamente
  con otros toolboxes de Simulink son los 
@@ -1097,11 +1160,17 @@ reference "fig:Generadores-de-función"
 \end_inset
 
 .
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
 \begin_inset Float figure
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1147,7 +1216,6 @@ name "fig:Generadores-de-función"
  
 \end_layout
 
-\begin_deeper
 \begin_layout Standard
 Se deben utilizar dos generadores de señal senoidal, con los parámetros
  mostrados a continuación: 
@@ -1193,7 +1261,7 @@ Sample time:
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1269,7 +1337,7 @@ Sample time:
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1419,10 +1487,6 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename img/fircompiler_opts.png
@@ -1490,11 +1554,8 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Interconexiones de los bloques de Simulink
-\lang spanish
-®
-\lang spanish-mexico
-/Sysgen para la elaboración del filtro FIR.
+Interconexiones de los bloques de Sysgen para la elaboración del filtro
+ FIR.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -1542,7 +1603,7 @@ Simulink stop time
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1597,7 +1658,7 @@ reference "fig:Resultado-de-la"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1705,7 +1766,7 @@ o ejecutable que se descargará en la FPGA.
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1723,9 +1784,18 @@ status collapsed
 
 \begin_layout Plain Layout
 Generación de la representación del kit Atlys en Simulink
-\lang spanish
-®
-\lang spanish-mexico
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered{}
+\end_layout
+
+\end_inset
+
 , el cual contiene los recursos de hardware necesario para ejecutar el algoritmo
  del filtro FIR.
  
@@ -3284,7 +3354,7 @@ large, title=Instanciación de la IP de audio AC97
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "/home/diego/Documents/Finalized/examples/audio_ac97/AC97_IP/rt_audio_controller.v"
-lstparams "language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={\\color{gray}},keepspaces=true,numberstyle={\\tiny\\color{black}},keywordstyle={\\mlttfamily\\color{blue}},tabsize=2,breaklines=true,columns=flexible,linerange={35-67},frame=none,firstnumber=35"
+lstparams "language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={\\color{gray}},keepspaces=true,numberstyle={\\tiny\\color{black}},keywordstyle={\\mlttfamily\\color{blue}},tabsize=2,breaklines=true,columns=flexible,linerange={35-67},frame=none,firstnumber=35,xleftmargin=2em"
 
 \end_inset
 
@@ -3329,7 +3399,7 @@ large, title=Instanciación del algoritmo de eco generado por Sysgen
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "/home/diego/Documents/Finalized/examples/audio_ac97/AC97_IP/rt_audio_controller.v"
-lstparams "language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={\\color{gray}},keepspaces=true,numberstyle={\\tiny\\color{black}},keywordstyle={\\mlttfamily\\color{blue}},tabsize=2,breaklines=true,columns=flexible,linerange={68-75},frame=none,firstnumber=68"
+lstparams "language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={\\color{gray}},keepspaces=true,numberstyle={\\tiny\\color{black}},keywordstyle={\\mlttfamily\\color{blue}},tabsize=2,breaklines=true,columns=flexible,linerange={68-75},frame=none,firstnumber=68,xleftmargin=2em"
 
 \end_inset
 

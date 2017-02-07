@@ -110,7 +110,7 @@ fill}
 \end_layout
 
 \begin_layout Part
-Conclusiones.
+Resultados y conclusiones.
 \end_layout
 
 \begin_layout Standard
@@ -154,7 +154,120 @@ thispagestyle{empty}
 \begin_layout Standard
 
 \lang spanish-mexico
-\begin_inset Newpage pagebreak
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\lang spanish-mexico
+Resultados obtenidos.
+\end_layout
+
+\begin_layout Standard
+Los alcances obtenidos durante el desarollo de esta investigación, se enlistan
+ a continuación:
+\end_layout
+
+\begin_layout Itemize
+Se logró demostrar la correcta ejecución de sistemas DSP complejos, basándose
+ en el algoritmo de alto nivel previamente descrito en Matlab
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered
+\end_layout
+
+\end_inset
+
+, y cómo analizar dichos algoritmos desde la perspectiva de hardware, para
+ así lograr definir la mejor arquitectura a implementar en FPGA.
+\end_layout
+
+\begin_layout Itemize
+Se mencionaron técnicas avanzadas de diseño en FPGA a lo largo de los prototipos
+ ilustrados, describiendo la importancia de utilizarlos para incrementar
+ el desempeño del sistema y así obtener resultados de calidad y libres de
+ errores.
+\end_layout
+
+\begin_layout Itemize
+La implementación de filtros digitales es un tema fundamental en el ámbito
+ del Procesamiento Digital de Señales.
+ Esta investigación demostró, en primer instancia, como realizar el diseño
+ de filtros FIR a partir de tener una especificación real que resuelve un
+ problema común como es la presencia de ruido en señales, y además, como
+ se puede llevar la especificación a un FPGA para poder observar la ejecución
+ en forma real y no solo basándose en un resultado obtenido en un ambiente
+ artificial, como lo es la simulación pura.
+\end_layout
+
+\begin_layout Itemize
+Se utilizaron diferentes ingredientes para resolver el problema que se planteaba
+ en cada uno de los modelos diseñados, desde lenguajes HDL (Verilog) y scripts
+ M, hasta diferentes maneras de exportar el producto obtenido desde Sysgen,
+ para así poder animar al alumno a explorar otras vias de diseño disponibles
+ por las herramientas utilizadas en esta documentación, y no sólo las que
+ el autor muestra.
+\end_layout
+
+\begin_layout Itemize
+Uno de los campos más atractivos en el área de diseño electrónico actual,
+ es el campo del procesamiento de imágenes y video basado en FPGAs.
+ Esta investigación desarrolló una de las implementaciones más populares
+ en dicho ámbito, aprovechando la abstracción que Matlab
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered
+\end_layout
+
+\end_inset
+
+ provee y logrando ilustrar las bases para prototipos más complejos.
+\end_layout
+
+\begin_layout Itemize
+Técnicas avanzadas de diseño de sistemas DSP con Sysgen fueron implementadas
+ al llevar el algoritmo de procesamiento de audio, a ejecución en tiempo
+ real.
+ Se pudo implementar correctamente el modelo aún cuando existian diferentes
+ dominios de reloj necesarios tanto para el controlador del códec, como
+ para la ejecución del modelo de Sysgen y el filtro peine, obteniendo resultados
+ satisfactorios.
+\end_layout
+
+\begin_layout Itemize
+A lo largo de los prototipos desarollados, se hizo énfasis en la metodología
+ del co-diseño de hardware y software y las ventajas de utilizar los diferentes
+ niveles de abstracción para un mejor resultado.
+\end_layout
+
+\begin_layout Section
+Conclusiones.
+\end_layout
+
+\begin_layout Standard
+El objetivo primordial de este tema de investigación fue demostrar el flujo
+ de implementación para sistemas de Procesamiento Digital de Señales complejos
+\end_layout
+
+\begin_layout Section
+Trabajo futuro.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
 \end_inset
 
 
