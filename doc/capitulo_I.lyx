@@ -209,33 +209,8 @@ Con el fin de explotar las ventajas que las FPGA poseen y poderlos aplicar
 \noindent
 \align block
 Teniendo como objetivo principal el recortar la curva de aprendizaje, las
- empresas líderes en FPGA como Xilinx®, Altera
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-textregistered
-\end_layout
-
-\end_inset
-
- y Synopsys
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-textregistered
-\end_layout
-
-\end_inset
-
- proporcionan plataformas de trabajo que puede interactuar con Matlab
+ empresas líderes en FPGA como Xilinx®, Altera® y Synopsys® proporcionan
+ plataformas de trabajo que puede interactuar con Matlab
 \begin_inset ERT
 status open
 

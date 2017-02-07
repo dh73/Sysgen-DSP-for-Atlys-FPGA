@@ -2422,14 +2422,23 @@ y configurarlo como sigue:
 \series bold
 File name: 
 \series default
-En este documento se proporciona el archivo partita_e_major.wav obtenida
- libremente de 
-\begin_inset Flex URL
+En este documento se proporciona el archivo partita_e_major.wav
+\begin_inset Foot
 status open
+
+\begin_layout Plain Layout
+Obtenido libremente de 
+\begin_inset Flex URL
+status collapsed
 
 \begin_layout Plain Layout
 
 http://www.music.helsinki.fi/tmt/opetus/uusmedia/esim/index-e.html
+\end_layout
+
+\end_inset
+
+ 
 \end_layout
 
 \end_inset

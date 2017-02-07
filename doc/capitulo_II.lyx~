@@ -2289,11 +2289,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Diagrama a bloques de una FPGA Spartan-6
-\lang spanish
-®
-\lang spanish-mexico
-, ilustración de: 
+Diagrama a bloques de una FPGA Spartan-6®, ilustración de: 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "clb_ov"
@@ -3784,9 +3780,18 @@ System Generator for DSP User Guide, UG640
  
 \emph default
 Se puede observar como el procesador Microblaze
-\lang spanish
-®
-\lang spanish-mexico
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered
+\end_layout
+
+\end_inset
+
 , puede transmitir y recibir impulsos del modelo en Sysgen.
 \end_layout
 

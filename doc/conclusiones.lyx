@@ -160,7 +160,7 @@ thispagestyle{empty}
 
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 
 \lang spanish-mexico
 Resultados obtenidos.
@@ -221,20 +221,8 @@ Se utilizaron diferentes ingredientes para resolver el problema que se planteaba
 Uno de los campos más atractivos en el área de diseño electrónico actual,
  es el campo del procesamiento de imágenes y video basado en FPGAs.
  Esta investigación desarrolló una de las implementaciones más populares
- en dicho ámbito, aprovechando la abstracción que Matlab
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-textregistered
-\end_layout
-
-\end_inset
-
- provee y logrando ilustrar las bases para prototipos más complejos.
+ en dicho ámbito, aprovechando la abstracción que Matlab® provee y logrando
+ ilustrar las bases para prototipos más complejos.
 \end_layout
 
 \begin_layout Itemize
@@ -253,18 +241,320 @@ A lo largo de los prototipos desarollados, se hizo énfasis en la metodología
  niveles de abstracción para un mejor resultado.
 \end_layout
 
-\begin_layout Section
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
 Conclusiones.
 \end_layout
 
 \begin_layout Standard
-El objetivo primordial de este tema de investigación fue demostrar el flujo
- de implementación para sistemas de Procesamiento Digital de Señales complejos,
- utilizando disositivos reconfigurables para así 
+Los objetivos particulares planteados en este tema de investigación fueron
+ demostrar, a través de la experimentación, el flujo de diseño para sistemas
+ DSP complejos utilizando dispositivos FPGA y sus ventajas sobre procesadores
+ digitales de señal especializados.
+ Esto se cumplió satisfactoriamente al realizar las implementaciones descritas
+ en este documento y mediante la explicación de las diferentes técnicas
+ existentes para poder resolver el problema que cada uno de los modelos
+ implicaba.
 \end_layout
 
-\begin_layout Section
-Trabajo futuro.
+\begin_layout Standard
+Las arquitecturas de FPGA modernas facilitan la implementación de algoritmos
+ DSP debido a que cuentan con macros optimizadas para este tipo de tareas,
+ habilitando el uso del paralelismo para obtener los resultados de operaciones
+ sobre los datos de interés, de una manera más eficiente.
+ 
+\end_layout
+
+\begin_layout Standard
+Además, la flexibilidad de implementación en dispositivos reconfigurables
+ permite utilizar métodos avanzados de síntesis basados en el balance de
+ área y desempeño, como se utilizó en el desarrollo del algoritmo de audio,
+ los cuales no pueden ser utilizados en otro tipo de dispositivos y que
+ brindan una significante ventaja sobre estos.
+\end_layout
+
+\begin_layout Standard
+El uso de software de alto nivel como Matlab® para apoyar el proceso de
+ diseño y verificación, resulta en la posibilidad de crear sistemas de alta
+ complejidad, en sólo una fracción del tiempo que llevaría al utilizar otra
+ metodología.
+ 
+\end_layout
+
+\begin_layout Standard
+Las arquitecturas utilizadas en esta investigación fueron verificadas utilizando
+ el vector de prueba definido desde Simulink®, para emular las entradas
+ al sistema, sin necesidad de adquirir equipamiento costoso como convertidores
+ A/D y D/A de alta precisión.
+ Sin embargo, estos mismos modelos pueden ser acondicionados para trabajar
+ con adquisición de datos en altas frecuencias, con tan sólo cambiar los
+ parámetros de generación en el 
+\emph on
+'Sysgen Token'.
+\end_layout
+
+\begin_layout Standard
+A pesar de que Sysgen brinda al usuario la capacidad de crear modelos con
+ relativa facilidad, es fundamental tener en cuanta todos los conceptos
+ técnicos para poder resolver los problemas que se presenten durante la
+ implementación de cualquier algoritmo.
+ 
+\end_layout
+
+\begin_layout Standard
+Por experiencia, uno de los problemas más comunes se encuentra al utilizar
+ diferentes dominios de reloj para un mismo sistema.
+ Por ejemplo, al realizar el algoritmo de procesamiento de audio, la frecuencia
+ principal del controlador del códec AC97 era de 100MHz, no así la velocidad
+ de procesamiento de los archivos .wav que debía ser estrictamente de 48KHz.
+ Al intentar implementar ambos modelos desde Sysgen, la única salida en
+ los puertos de audio era una señal de ruido constante.
+\end_layout
+
+\begin_layout Standard
+Se pueden realizar diferentes técnicas para resolver estos detalles con
+ múltiples frecuencias, que van desde el uso de memorias FIFO, bloques 
+\emph on
+'downsample' 
+\emph default
+y 
+\emph on
+'upsample'
+\emph default
+ y algunas más complicadas.
+ Sin embargo, lo más sencillo es isolar los diferentes bloques y especificar
+ en el 
+\emph on
+'Sysgen Token' 
+\emph default
+las frecuencias de trabajo requeridas en los campos 
+\emph on
+'FPGA clock period (ns)' 
+\emph default
+y 
+\emph on
+'Simulink system period
+\emph default
+ (ns)', 
+\series bold
+siempre y cuando el modelo se vaya a exportar como netlist en HDL
+\series default
+.
+ Esto obligará a la herramienta a insertar lógica adicional para cumplir
+ los requerimientos, en lugar de cargar esta tarea al diseñador.
+\end_layout
+
+\begin_layout Standard
+Todas las implementaciones expuestas fueron pensadas para usar el menor
+ número de recursos disponibles en el kit Atlys, así como cumplir los requerimie
+ntos de 
+\emph on
+'timing'
+\emph default
+ que cada instancia necesitaba.
+ La implementación con más área utilizada, fue el prototipo completo del
+ algoritmo de eco, con un 17% de utilización de elementos lógicos.
+ 
+\end_layout
+
+\begin_layout Standard
+También fue posible lograr ejecutar algoritmos complejos como lo es el filtro
+ Sobel, desde la conversión de la imagen a escala de grises, sin ocupar
+ más del 4% de recursos lógicos y 65% de las macros DSP48A disponibles en
+ la tarjeta Atlys (alrededor de 38 DSP48A)
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Cabe recordar que, el dispositivo Spartan-6® utilizado en este kit, es el
+ de mediana capacidad lógica y cuenta sólo con 58 elementos DSP48A.
+\end_layout
+
+\end_inset
+
+.
+ Este resultado da como referencia, la capacidad de integración de sistemas
+ DSP utilizando Sysgen, sin necesidad de recurrir a dispositivos FPGA más
+ complejos y por ende, más costosos, lo que hace de esta metodologia, una
+ forma viable de prototipado para el sector académico e inclusive, el industrial.
+\end_layout
+
+\begin_layout Standard
+Es importante aclarar que no todos los conceptos de Sysgen fueron cubiertos
+ en este documento.
+ Existen numerosas técnicas de diseño para diferentes niveles de abstracción
+ bastante atractivas, desde la utilización de código m (scripts de Matlab®)
+ como bloques sintetizables, hasta el uso de procesadores como PicoBlaze®/MicroB
+laze® para generar un sistema embebido completo, sin depender del vector
+ de simulación de Simulink®.
+ Se recomeinda siempre tener a la mano el documento '
+\emph on
+System Generator for DSP, User Guide (UG640)' 
+\emph default
+para comprender a fondo todo lo ilustrado en esta guía y demás conceptos
+ fundamentales y limitaciones.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Trabajo futuro y recomendaciones.
+\end_layout
+
+\begin_layout Standard
+El autor recomienda las siguientes implementaciones para cada uno de los
+ modelos desarrollados, a manera de seguimiento.
+\end_layout
+
+\begin_layout Subsubsection
+Filtrado básico de señales.
+\end_layout
+
+\begin_layout Itemize
+Utilizar el bloque de 
+\emph on
+'ChipScope®'
+\emph default
+ con el fin de observar la señal filtrada en el analizador lógico que el
+ paquete de Xilinx® provee, en lugar de usar el 
+\emph on
+'scope'
+\emph default
+ de Simulink®.
+ Controlar la ganancia de la señal de ruido con los switches disponibles
+ en el kit, para observar la respuesta en tiempo real del modelo ante cambios
+ externos.
+\end_layout
+
+\begin_layout Itemize
+Implementar el filtro FIR pasabajas en Verilog, utilizar el bloque 
+\emph on
+'Black Box' 
+\emph default
+para usar esa implementación en HDL como bloque de Sysgen, y comparar resultados.
+ Los coeficientes del filtro fueron previamente calculados, lo que le quita
+ complejidad a la implementación en Verilog.
+\end_layout
+
+\begin_layout Itemize
+Cambiar el bloque 
+\emph on
+'Fir Compiler' 
+\emph default
+por uno 
+\emph on
+'n-tap MAC FIR Filter' 
+\emph default
+el cual se puede optimizar para esta aplicación en particular.
+ Calcular el periodo de muestreo requerido a partir del número de coeficientes
+ necesarios y comparar resultados de ejecución e implementación.
+\end_layout
+
+\begin_layout Subsubsection
+Procesamiento de audio.
+\end_layout
+
+\begin_layout Itemize
+Desarrollar un algoritmo diferente al de eco, por ejemplo, reberveración,
+ y ejecutarlo en tiempo real con la IP del códec AC97 facilitada por el
+ autor.
+\end_layout
+
+\begin_layout Itemize
+Debido a la naturaleza de este diseño, se pueden presentar pequeñas fluctuacione
+s en el audio reproducido, sobre todo cuando el volumen es incrementado.
+ Se puede utilizar el bloque de 
+\emph on
+'ChipScope®' 
+\emph default
+y 
+\emph on
+'Spectrum Analyzer'
+\emph default
+ para obtener la información necesaria de la magnitud en frecuencia de la
+ señal de ruido inducida por el incremento de ganancia, y eliminarla usando
+ el filtro descrito en la sección 
+\series bold
+6 Filtrado básico de señales
+\series default
+,
+\series bold
+ 
+\series default
+con los parámetros obtenidos.
+\end_layout
+
+\begin_layout Itemize
+Se puede implementar un sistema de reconocimiento de voz, usando como base
+ el modelo para el algoritmo de eco.
+ Se necesita utilizar, en lugar del filtro peine, un bloque de la Transformada
+ Rápida de Fourier, incluído en Sysgen como '
+\emph on
+Fast Fourier Transform', 
+\emph default
+y lógica adicional
+\emph on
+ 
+\emph default
+dependiendo de la especificación u objetivo de reconocimiento.
+\end_layout
+
+\begin_layout Subsubsection
+Procesamiento de imagenes.
+\end_layout
+
+\begin_layout Itemize
+Con el desarrollo descrito en esta sección, se pueden implementar diferentes
+ algoritmos y transformaciones como obtener el negativo de la imagen, rotación,
+ incremento o decremento de valores como brillo, étc.
+ Ya sea en escala de grises, o en mapa de color RGB.
+\end_layout
+
+\begin_layout Itemize
+Utilizar video en lugar de imagen como entrada a filtrar.
+ El bloque 
+\emph on
+\lang spanish-mexico
+'Image From File' 
+\emph default
+acepta videos en diferentes formatos y es posible basarse en la implementación
+ del filtro Sobel en imagen, para usar video.
+\end_layout
+
+\begin_layout Itemize
+
+\lang spanish-mexico
+Una implementación mucho más compleja sería visualizar la imagen procesada,
+ en algún monitor, utilizando los puertos HDMI de la tarjeta Atlys.
+ Esto es posible ya sea, exportando el modelo en un sistema basado en el
+ procesador MicroBlaze® y desarrollar los drivers y firmware necesario,
+ en lenguaje C, o bien, desarrollando la interfaz que controle los puertos
+ HDMI de la tarjeta Atlys y utilizando el modelo en Sysgen como parte de
+ la misma interfaz.
+ Digilent® provee ejemplos que pueden ayudar a realizar esta implementación
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+
+\lang spanish-mexico
+Referirse a: https://reference.digilentinc.com/atlys:atlys:atlys
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard

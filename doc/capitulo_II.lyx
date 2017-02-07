@@ -2289,11 +2289,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Diagrama a bloques de una FPGA Spartan-6
-\lang spanish
-®
-\lang spanish-mexico
-, ilustración de: 
+Diagrama a bloques de una FPGA Spartan-6®, ilustración de: 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "clb_ov"
@@ -2305,10 +2301,6 @@ key "clb_ov"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -2658,8 +2650,7 @@ Dos entradas y dos salidas de video HDMI.
 \end_layout
 
 \begin_layout Standard
-Entre algunas otras.
- En la Figura
+En la Figura
 \series bold
  
 \begin_inset CommandInset ref

@@ -288,7 +288,7 @@ reference "fig:Gráfica-derivada-de"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -518,7 +518,7 @@ reference "fig:Respuesta-en-magnitud"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -562,7 +562,7 @@ name "alg:Implementación-del-filtro"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1484,7 +1484,7 @@ Best Precision Fraction Length.
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1537,7 +1537,7 @@ reference "fig:Interconexión-de-los"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1827,7 +1827,7 @@ Con el nuevo bloque generado, se deben actualizar las conexiones de la siguiente
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1882,7 +1882,7 @@ reference "fig:Comparación-entre-el"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1943,7 +1943,7 @@ netlist > hwcosim > nombre_del_proyecto.ppr
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1996,7 +1996,7 @@ reference "fig:Utilización-de-recursos"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2115,7 +2115,7 @@ reference "fig:Comb_filter"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2176,7 +2176,7 @@ Implementación en FPGA del códec de audio AC97.
 \begin_layout Standard
 El códec de audio disponible en la tarjeta Atlys es el AC97 LM4550
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Para obtener mayor información técnica a cerca del códec, visitar: 
@@ -2258,7 +2258,7 @@ Parámetros seleccionados para la mayor calidad de audio posible: 48KHz de
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2422,10 +2422,10 @@ y configurarlo como sigue:
 \series bold
 File name: 
 \series default
-En este documento se proporciona el archivo partita_e_major.wav obtenida
+En este documento se proporciona el archivo partita_e_major.wav obtenido
  libremente de 
 \begin_inset Flex URL
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -2474,7 +2474,7 @@ Outputs > Audio output sampling mode:
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2612,7 +2612,7 @@ reference "fig:Configuración-del-tipo"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2690,7 +2690,7 @@ reference "fig:Filtro-comb-(FIR)"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2762,7 +2762,7 @@ reference "fig:Parámetros-de-la"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2845,7 +2845,7 @@ reference "fig:Ganancia-de-retroalimentación"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2942,7 +2942,7 @@ reference "fig:Conversión-del-filtro"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -3036,7 +3036,7 @@ representa ambos filtros desarrollados.
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -3121,7 +3121,7 @@ reference "fig:Gráfica-resultante-del"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -3196,7 +3196,7 @@ Al terminar el proceso anterior, lanzar PlanAhead
 \lang spanish-mexico
  y crear un nuevo proyecto RTL
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Se añade un proyecto previamente configurado y funcionando con este documento,
@@ -3240,7 +3240,7 @@ rt_audio_controller.v
 \series default
 
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Estos archivos se encuentran adjuntos en el proyecto de referencia.
@@ -3431,7 +3431,7 @@ reference "fig:Vista-jerárjica-de"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -3515,7 +3515,7 @@ reference "fig:Archivos-de-Verilog"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -3594,7 +3594,7 @@ reference "fig:Esquemático-completo-de"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -3652,7 +3652,7 @@ reference "fig:Utilización-y-frecuencia"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -3715,7 +3715,7 @@ reference "fig:Conexiones-a-la"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -3817,7 +3817,7 @@ reference "fig:Imagen-utilizada-para"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -3869,7 +3869,7 @@ La detección de bordes mediante la implementación del filtro Sobel es una
  Este algoritmo es utilizado para la extracción de características de imágenes
  en 2D a escala de grises
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Se utilizan imágenes a escala de grises y de dimensiones pequeñas para diseñar
@@ -3998,7 +3998,7 @@ reference "fig:Parámetros-de-configuración"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -4088,7 +4088,7 @@ reference "fig:bloques_sobel_imagen"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -4169,7 +4169,7 @@ reference "fig:Conexión-de-los"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -4230,7 +4230,7 @@ reference "fig:Conexión-entre-la"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -4389,7 +4389,7 @@ reference "fig:Configuración-para-las"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -4460,7 +4460,7 @@ timing
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -4527,7 +4527,7 @@ reference "fig:Configuración-de-los"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -4603,7 +4603,7 @@ reference "fig:Modelo-completo-que"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -4700,7 +4700,7 @@ reference "fig:Reconstrucción-de-la"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -4751,7 +4751,7 @@ name "fig:Parámetros-necesarios-para"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -4814,7 +4814,7 @@ reference "fig:Resultado-esperado-de"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -4930,7 +4930,7 @@ reference "fig:Coeficientes-del-filtro"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -4984,7 +4984,7 @@ Adicionalmente, se deben especificar los siguientes parámetros del tipo
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -5034,7 +5034,7 @@ Se debe hacer lo mismo para el filtro del eje Y, en este caso el vector
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -5091,7 +5091,7 @@ reference "fig:Conexión-de-los-1"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -5160,7 +5160,7 @@ de los filtros FIR, lo que supone utilizar el bloque
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -5261,7 +5261,7 @@ reference "fig:Modelo-para-obtener"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -5315,7 +5315,7 @@ El modelo completo del filtro Sobel se muestra a continuación.
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -5370,7 +5370,7 @@ reference "fig:Interconexión-del-algoritmo"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -5436,7 +5436,7 @@ reference "fig:Resultado-de-la"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -5506,7 +5506,7 @@ reference "fig:Bloque-de-Co-Simulación"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -5559,7 +5559,7 @@ El bloque generado en el paso 2, se conecta de la siguiente manera:
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -5620,7 +5620,7 @@ reference "fig:Conexión-del-modelo"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 TBD
@@ -5666,7 +5666,7 @@ reference "fig:Gráfica-de-utilización"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center

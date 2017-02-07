@@ -82,6 +82,8 @@
 \begin_body
 
 \begin_layout Standard
+\noindent
+\align block
 \begin_inset ERT
 status open
 
@@ -100,10 +102,13 @@ fill}
 \end_layout
 
 \begin_layout Part
+\noindent
 Introducción.
 \end_layout
 
 \begin_layout Standard
+\noindent
+\align block
 \begin_inset ERT
 status open
 
@@ -122,6 +127,8 @@ fill}
 \end_layout
 
 \begin_layout Standard
+\noindent
+\align block
 \begin_inset Newpage pagebreak
 \end_inset
 
@@ -129,11 +136,13 @@ fill}
 \end_layout
 
 \begin_layout Section
-\paragraph_spacing double
+\noindent
 Planteamiento del problema.
 \end_layout
 
 \begin_layout Standard
+\noindent
+\align block
 En la actualidad la electrónica está presente en prácticamente en todos
  los aspectos de nuestra vida a través de una gran infinidad de dispositivos
  y sistemas: teléfonos inteligentes, monitores de ritmo cardíaco, cámaras
@@ -142,6 +151,8 @@ En la actualidad la electrónica está presente en prácticamente en todos
 \end_layout
 
 \begin_layout Standard
+\noindent
+\align block
 Todos estos dispositivos realizan de manera interna la manipulación e interpreta
 ción de señales eléctricas, que en otras palabras es lo que se conoce como
  procesamiento de señales.
@@ -153,6 +164,8 @@ o de voz para determinar quién es la persona que habla; para determinar,
 \end_layout
 
 \begin_layout Standard
+\noindent
+\align block
 El procesamiento de señales involucra la realización de operaciones matemáticas
  sobre las señales, las cuales son llevadas por sistemas cuya única función
  es precisamente el llevar a cabo esas operaciones, los procesadores digitales
@@ -162,6 +175,8 @@ El procesamiento de señales involucra la realización de operaciones matemátic
 \end_layout
 
 \begin_layout Standard
+\noindent
+\align block
 En muchas aplicaciones de procesamiento de señales se requiere una velocidad
  de procesamiento elevada (por ejemplo procesamiento de video) por lo que,
  debido al paralelismo de su operación, las FPGA son aptos para ser utilizados
@@ -177,6 +192,8 @@ key "kehtarnavaz_digital_2010"
 \end_layout
 
 \begin_layout Standard
+\noindent
+\align block
 Con el fin de explotar las ventajas que las FPGA poseen y poderlos aplicar
  de una manera eficaz en el procesamiento de señales, es necesario contar
  con sólidos conocimientos principalmente en metodologías de diseño digital
@@ -189,6 +206,8 @@ Con el fin de explotar las ventajas que las FPGA poseen y poderlos aplicar
 \end_layout
 
 \begin_layout Standard
+\noindent
+\align block
 Teniendo como objetivo principal el recortar la curva de aprendizaje, las
  empresas líderes en FPGA como Xilinx®, Altera
 \begin_inset ERT
@@ -238,6 +257,8 @@ ones los conocimientos adquiridos en las áreas de procesamiento digital
 \end_layout
 
 \begin_layout Standard
+\noindent
+\align block
 Muchas veces la información que el fabricante proporciona sobre sus plataformas
  de trabajo es escasa y poco concreta, lo que puede impactar negativamente
  en el interés del alumno, provocando que los conocimientos y conceptos
@@ -246,6 +267,8 @@ Muchas veces la información que el fabricante proporciona sobre sus plataformas
 \end_layout
 
 \begin_layout Standard
+\noindent
+\align block
 \begin_inset Newpage newpage
 \end_inset
 
@@ -253,11 +276,11 @@ Muchas veces la información que el fabricante proporciona sobre sus plataformas
 \end_layout
 
 \begin_layout Section
+\noindent
 Propósito.
 \end_layout
 
 \begin_layout Subsection
-\paragraph_spacing double
 \noindent
 
 \lang spanish
@@ -265,8 +288,8 @@ Objetivo general.
 \end_layout
 
 \begin_layout Itemize
-\paragraph_spacing double
 \noindent
+\align block
 
 \lang spanish
 Describir el proceso de implementación de un sistema de procesamiento de
@@ -275,7 +298,6 @@ Describir el proceso de implementación de un sistema de procesamiento de
 \end_layout
 
 \begin_layout Subsection
-\paragraph_spacing double
 \noindent
 
 \lang spanish
@@ -283,8 +305,8 @@ Objetivos específicos.
 \end_layout
 
 \begin_layout Itemize
-\paragraph_spacing double
 \noindent
+\align block
 
 \lang spanish
 Facilitar el diseño e implementación de un sistema de procesamiento de audio
@@ -343,8 +365,8 @@ textregistered{
 \end_layout
 
 \begin_layout Itemize
-\paragraph_spacing double
 \noindent
+\align block
 
 \lang spanish
 Mostrar la conversión de los algoritmos matemáticos básicos que intervienen
@@ -370,8 +392,8 @@ textregistered{
 \end_layout
 
 \begin_layout Itemize
-\paragraph_spacing double
 \noindent
+\align block
 
 \lang spanish
 Describir las técnicas de implementación más eficientes para obtener el
@@ -396,8 +418,8 @@ textregistered{
 \end_layout
 
 \begin_layout Itemize
-\paragraph_spacing double
 \noindent
+\align block
 
 \lang spanish
 Diseñar las propiedades intelectuales (IPs) más comunes en el tratamiento
@@ -440,8 +462,8 @@ textregistered{
 \end_layout
 
 \begin_layout Itemize
-\paragraph_spacing double
 \noindent
+\align block
 
 \lang spanish
 Explicar los diferentes métodos de ejecución del hardware diseñado en Simulink®,
@@ -450,8 +472,8 @@ Explicar los diferentes métodos de ejecución del hardware diseñado en Simulin
 \end_layout
 
 \begin_layout Itemize
-\paragraph_spacing double
 \noindent
+\align block
 
 \lang spanish
 Justificar el uso de Matlab®, Simulink® y Xilinx/ISE® para el diseño e implement
@@ -460,6 +482,8 @@ ación de algoritmos complejos en contraste con el uso tradicional de HDL
 \end_layout
 
 \begin_layout Standard
+\noindent
+\align block
 
 \lang spanish
 \begin_inset Newpage pagebreak

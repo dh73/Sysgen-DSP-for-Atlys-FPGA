@@ -1,0 +1,299 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extarticle
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+\lang spanish-mexico
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+topskip0pt
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish-mexico
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{
+\backslash
+fill}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Resultados y conclusiones.
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish-mexico
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{
+\backslash
+fill}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish-mexico
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish-mexico
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\lang spanish-mexico
+Resultados obtenidos.
+\end_layout
+
+\begin_layout Standard
+Los alcances obtenidos durante el desarollo de esta investigación, se enlistan
+ a continuación:
+\end_layout
+
+\begin_layout Itemize
+Se logró demostrar la correcta ejecución de sistemas DSP complejos, basándose
+ en el algoritmo de alto nivel previamente descrito en Matlab
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered
+\end_layout
+
+\end_inset
+
+, y cómo analizar dichos algoritmos desde la perspectiva de hardware, para
+ así lograr definir la mejor arquitectura a implementar en FPGA.
+\end_layout
+
+\begin_layout Itemize
+Se mencionaron técnicas avanzadas de diseño en FPGA a lo largo de los prototipos
+ ilustrados, describiendo la importancia de utilizarlos para incrementar
+ el desempeño del sistema y así obtener resultados de calidad y libres de
+ errores.
+\end_layout
+
+\begin_layout Itemize
+La implementación de filtros digitales es un tema fundamental en el ámbito
+ del Procesamiento Digital de Señales.
+ Esta investigación demostró, en primer instancia, como realizar el diseño
+ de filtros FIR a partir de tener una especificación real que resuelve un
+ problema común como es la presencia de ruido en señales, y además, como
+ se puede llevar la especificación a un FPGA para poder observar la ejecución
+ en forma real y no solo basándose en un resultado obtenido en un ambiente
+ artificial, como lo es la simulación pura.
+\end_layout
+
+\begin_layout Itemize
+Se utilizaron diferentes ingredientes para resolver el problema que se planteaba
+ en cada uno de los modelos diseñados, desde lenguajes HDL (Verilog) y scripts
+ M, hasta diferentes maneras de exportar el producto obtenido desde Sysgen,
+ para así poder animar al alumno a explorar otras vias de diseño disponibles
+ por las herramientas utilizadas en esta documentación, y no sólo las que
+ el autor muestra.
+\end_layout
+
+\begin_layout Itemize
+Uno de los campos más atractivos en el área de diseño electrónico actual,
+ es el campo del procesamiento de imágenes y video basado en FPGAs.
+ Esta investigación desarrolló una de las implementaciones más populares
+ en dicho ámbito, aprovechando la abstracción que Matlab® provee y logrando
+ ilustrar las bases para prototipos más complejos.
+\end_layout
+
+\begin_layout Itemize
+Técnicas avanzadas de diseño de sistemas DSP con Sysgen fueron implementadas
+ al llevar el algoritmo de procesamiento de audio, a ejecución en tiempo
+ real.
+ Se pudo implementar correctamente el modelo aún cuando existian diferentes
+ dominios de reloj necesarios tanto para el controlador del códec, como
+ para la ejecución del modelo de Sysgen y el filtro peine, obteniendo resultados
+ satisfactorios.
+\end_layout
+
+\begin_layout Itemize
+A lo largo de los prototipos desarollados, se hizo énfasis en la metodología
+ del co-diseño de hardware y software y las ventajas de utilizar los diferentes
+ niveles de abstracción para un mejor resultado.
+\end_layout
+
+\begin_layout Section
+Conclusiones.
+\end_layout
+
+\begin_layout Standard
+Los objetivos particulares planteados en este tema de investigación fueron
+ demostrar, a través de la experimentación, el flujo de diseño para sistemas
+ DSP complejos utilizando dispositivos FPGA y sus ventajas sobre procesadores
+ digitales de señal especializados.
+ Esto se cumplió satisfactoriamente al realizar las implementaciones descritas
+ en este documento y mediante la explicación de las diferentes técnicas
+ existentes para poder resolver el problema que cada uno de los modelos
+ implicaba.
+\end_layout
+
+\begin_layout Standard
+Las arquitecturas de FPGA modernas facilitan la implementación de algoritmos
+ DSP debido a que cuentan con macros optimizadas para este tipo de tareas,
+ habilitando el uso del paralelismo para obtener los resultados de operaciones
+ sobre datos de interés, de una manera más eficiente.
+ Además, la flexibilidad de implementación en dispositivos reconfigurables
+ permite utilizar métodos avanzados de síntesis basados en el balance de
+ área y desempeño, como se utilizó en el desarrollo del algoritmo de audio,
+ los cuales no pueden ser utilizados en otro tipo de dispositivos y que
+ brindan una significante ventaja sobre estos.
+\end_layout
+
+\begin_layout Standard
+El uso de software de alto nivel como Matlab® para apoyar el proceso de
+ diseño y verificación, resulta en la posibilidad de crear sistemas de alta
+ complejidad, en sólo una fracción del tiempo que llevaría al utilizar otra
+ metodología.
+ Las arquitecturas utilizadas en esta investigación fueron verificadas utilizand
+o el vector de prueba definido desde Simulink®, para emular las entradas
+ al sistema, sin necesidad de adquirir equipamiento costoso como convertidores
+ A/D y D/A de alta precisión.
+ Sin embargo, estos mismos modelos pueden ser acondicionados para trabajar
+ con adquisición de datos en altas frecuencias, con tan sólo cambiar los
+ parámetros de generación en el 
+\emph on
+'Sysgen Token'.
+\end_layout
+
+\begin_layout Section
+Trabajo futuro.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
