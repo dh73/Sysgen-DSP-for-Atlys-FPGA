@@ -48,11 +48,11 @@
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman "default" "default"
+\font_roman "times" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
 \font_math "auto" "auto"
-\font_default_family default
+\font_default_family rmdefault
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
@@ -63,7 +63,7 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
-\paperfontsize default
+\paperfontsize 12
 \spacing single
 \use_hyperref false
 \papersize default
@@ -109,21 +109,22 @@
 \begin_body
 
 \begin_layout Abstract
-Las plataformas reconfigurables basadas en Matriz de Compuertas Programables
- en Campo (FPGA) se han convertido en una solución muy conveniente para
- aplicaciones de alto rendimiento en el campo del Procesamiento Digital
- de Señales (DSP), sobre todo por la flexibilidad en el flujo de diseño,
- las altas frecuencias de operación que se pueden alcanzar y la baja potencia
- requerida por estos dispositivos.
+Las plataformas reconfigurables basadas en arreglos de compuertas programables
+ en campo (FPGA por sus siglas en Inglés) se han convertido en una solución
+ muy conveniente para aplicaciones de alto rendimiento en el campo del procesami
+ento digital de señales (DSP), sobre todo por la flexibilidad en el flujo
+ de diseño, las altas frecuencias de operación que se pueden alcanzar y
+ la baja potencia requerida por estos dispositivos.
  Sin embargo, al mismo tiempo que aumenta la complejidad de las aplicaciones
- que se pueden realizar en dichas plataformas, también lo hacen los conocimiento
-s requeridos para poder garantizar una implementación exitosa.
+ que se pueden realizar en dichas plataformas, también se requieren conocimiento
+s especializados para poder garantizar una implementación exitosa.
  Esta investigación simplifica la conceptualización, modelado e implementación
- de sistemas DSP complejos, utilizando una metodología de diseño en alto
- nivel de abstracción basada en el uso de Matlab® y lenguajes de Descripción
- de Hardware (HDL), reduciendo así la curva de aprendizaje.
+ de sistemas DSP complejos.
+ Utilizando una metodología de diseño en alto nivel de abstracción basada
+ en el uso de Matlab® y lenguajes de Descripción de Hardware (HDL), reduciendo
+ así la curva de aprendizaje.
  A través del documento se presenta la elaboración de una arquitectura de
- un filtro de Respuesta al Impulso Finito (FIR), el cual elimina una componente
+ un filtro de respuesta al impulso finito (FIR), el cual elimina una componente
  no deseada en una señal senoidal, utilizando los vectores de simulación
  de Simulink®.
  
@@ -131,18 +132,20 @@ s requeridos para poder garantizar una implementación exitosa.
 
 \begin_layout Abstract
 Utilizando los mismos fundamentos de los filtros digitales, se desarrolló
- un filtro peine que realiza el efecto de agregar un retraso controlado
- a una señal de audio, el cual se exportó como bloque HDL y se incorporó
- a un sistema más grande con las interfaces para ejercitar dicho filtro
- en tiempo real, con audio extraído de un códec AC97.
+ un filtro tipo peine que realiza el efecto de agregar un retraso controlado
+ a una señal de audio.
+ El cual se exportó como bloque HDL y se incorporó a un sistema más grande
+ con las interfaces para ejercitar dicho filtro en tiempo real, con audio
+ extraído de un codificador AC97.
 \end_layout
 
 \begin_layout Abstract
 Por último, se describe un sistema de procesamiento de imagen utilizando
- el algoritmo del operador Sobel y los conceptos de las implementaciones
- anteriores, para encontrar los bordes de una imagen, ejecutando todas las
- operaciones necesarias en la FPGA, el cual arrojó resultados satisfactorios
- utilizando una cantidad de elementos lógicos relativamente minúscula.
+ el algoritmo del operador Sobel y con los conceptos de las implementaciones
+ anteriores, para encontrar los bordes de una imagen.
+ Ejecutando todas las operaciones necesarias en la FPGA, el cual arrojó
+ resultados satisfactorios utilizando una cantidad de elementos lógicos
+ relativamente minúscula.
 \end_layout
 
 \begin_layout Abstract

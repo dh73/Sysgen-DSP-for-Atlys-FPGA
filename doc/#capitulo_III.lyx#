@@ -166,7 +166,7 @@ Filtrado básico de señales - Introducción práctica a Sysgen.
 \end_layout
 
 \begin_layout Subsection
-Diseño de un filtro FIR pasabajas para la eliminación de ruido en una señal
+Diseño de un filtro FIR pasa bajas para la eliminación de ruido en una señal
  senoidal.
 \end_layout
 
@@ -179,14 +179,34 @@ Una de las aplicaciones más comunes en el mundo del procesamiento digital
 \end_layout
 
 \begin_layout Standard
-A manera de introducción, se utilizará el ambiente de Matlab/Simulink con
- el toolbox de Sysgen para diseñar un sistema que elimine una componente
+A manera de introducción, se utilizará el ambiente de Matlab
+\lang spanish
+®
+\lang spanish-mexico
+/Simulink
+\lang spanish
+®
+\lang spanish-mexico
+ con el toolbox de Sysgen para diseñar un sistema que elimine una componente
  senoidal de alta frecuencia mezclada a una componente senoidal base, mediante
- el uso de un filtro FIR pasabajas ejecutándose en el kit Atlys.
+ el uso de un filtro FIR pasa bajas ejecutándose en el kit Atlys.
 \end_layout
 
 \begin_layout Subsection
-Especificaciones del modelo del filtro FIR en Matlab.
+Especificaciones del modelo del filtro FIR en Matlab
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -204,7 +224,7 @@ Existe una señal de entrada a nuestro sistema
 \end_inset
 
  con una amplitud de 1 y 0.5 respectivamente, esta suma de señales representará
- el fenómeno no deseado.
+ la señal contaminada.
  
 \end_layout
 
@@ -213,7 +233,7 @@ El sistema
 \begin_inset Formula $F_{DSP}$
 \end_inset
 
- debe ser capáz de eliminar señales por encima de 
+ debe ser capaz de eliminar señales por encima de 
 \begin_inset Formula $f_{corte}=7KHz$
 \end_inset
 
@@ -231,7 +251,7 @@ Además, la frecuencia de muestreo del sistema debe ser de
 \end_layout
 
 \begin_layout Enumerate
-En primer lugar, es necesario desarollar la función de las señales 
+En primer lugar, es necesario desarrollar la función de las señales 
 \begin_inset Formula $f_{senBase}$
 \end_inset
 
@@ -240,7 +260,11 @@ En primer lugar, es necesario desarollar la función de las señales
 \end_inset
 
  para utilizarlas para ejercitar el filtro FIR, utilizando el script de
- Matlab que se muestra en el Algoritmo 
+ Matlab
+\lang spanish
+®
+\lang spanish-mexico
+ que se muestra en el Algoritmo 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "alg:Generación-de-la"
@@ -255,11 +279,16 @@ reference "fig:Gráfica-derivada-de"
 \end_inset
 
 .
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align block
 \begin_inset Float algorithm
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -303,11 +332,15 @@ name "alg:Generación-de-la"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\align block
 \begin_inset Float figure
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -324,7 +357,24 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Gráfica derivada de la función diseñada en Matlab para este ejercicio.
+Gráfica derivada de la función diseñada en Matlab
+\lang spanish
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered{
+\end_layout
+
+\end_inset
+
+
+\lang spanish-mexico
+ para este ejercicio.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -349,14 +399,19 @@ name "fig:Gráfica-derivada-de"
 
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
-Para el diseño del filtro FIR, se usará el método por ventana de Hamming
+Para el diseño del filtro FIR, se usará el método de ventana de Hamming
  por la facilidad de implementación discutida en la 
 \series bold
 sección 3.2.2
 \series default
- de este documento.
- La ecuación del filtro por ventana de Hamming queda como sigue:
+ 
+\series bold
+Filtros FIR
+\series default
+, de este documento.
+ La ecuación del filtro de ventana de Hamming queda como sigue:
 \begin_inset Formula 
 \begin{equation}
 W=0.54-0.46*cos(2\pi t/T)
@@ -377,7 +432,7 @@ y=x(t)*W(t)
 
 \begin_layout Enumerate
 Para efecto de simplificar la implementación y demostrar la versatilidad
- de los lenguajes de alto nivel, se utilizará la funcion 
+ de los lenguajes de alto nivel, se utilizará la función 
 \series bold
 fir1(n, Wn)
 \series default
@@ -385,23 +440,35 @@ fir1(n, Wn)
 \emph on
 Signal Processing Toolbox
 \emph default
- de Matlab, donde 
+ de Matlab
+\lang spanish
+®
+\lang spanish-mexico
+, donde 
 \series bold
 n 
 \series default
-es el órden del filtro y 
+es el orden del filtro y 
 \series bold
 Wn 
 \series default
-es un elemento entre 0 y 1 correspoindiente a la frequencia de Nyquist.
+es un elemento entre 0 y 1 correspondiente a la frecuencia de Nyquist.
  Para calcular el valor de 
 \series bold
 Wn
 \series default
 , necesitamos normalizar la frecuencia de corte para cumplir con el teorema
- de muestreo discutido en la sección 
+ de muestreo discutido en la subsección 
 \series bold
-3.1.1 
+3.1.1
+\series default
+ 
+\series bold
+Teorema de muestreo
+\series default
+,
+\series bold
+ 
 \series default
 mediante el uso de las siguientes fórmulas
 \series bold
@@ -443,11 +510,15 @@ reference "fig:Respuesta-en-magnitud"
 \end_inset
 
  
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
 \begin_inset Float algorithm
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -484,11 +555,14 @@ name "alg:Implementación-del-filtro"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -535,13 +609,14 @@ name "fig:Respuesta-en-magnitud"
 
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
 Por último, para confirmar que el diseño se ha implementado de una manera
- correcta, aplicamos la señal generada en el 
+ correcta, aplicamos la señal generada en el paso 1
 \series bold
-paso 1 
+ 
 \series default
-al fltro que acabamos de desarrollar, la respuesta estricta debe ser una
+al filtro que acabamos de desarrollar, la respuesta estricta debe ser una
  señal senoidal sin alguna componente por encima de la 
 \begin_inset Formula $f_{c}=7KHz$
 \end_inset
@@ -556,12 +631,13 @@ reference "fig:Resultado-de-la"
 .
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
 \begin_inset Float figure
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -579,7 +655,7 @@ status collapsed
 
 \begin_layout Plain Layout
 Resultado de la implementación del filtro FIR, donde se puede observar la
- señal resultante, de un color más oscuro, en oposición a la senal contaminada.
+ señal resultante, de un color más oscuro, en oposición a la señal contaminada.
  La señal resultante está totalmente reconstruida, lo que valida la implementaci
 ón.
  
@@ -606,19 +682,31 @@ name "fig:Resultado-de-la"
 
 \end_layout
 
+\end_deeper
 \begin_layout Subsection
 Simulación del sistema en Sysgen.
 \end_layout
 
 \begin_layout Standard
-Las instrucciones para transformar el algoritmo que hemos diseñado ya, a
- un modelo que se pueda ejecutar en la tarjeta de desarrollo Atlys, se muestran
- a continuación:
+Las instrucciones para transformar el algoritmo diseñado en la sección anterior,
+ a un modelo que se pueda ejecutar en la tarjeta de desarrollo Atlys, se
+ muestran a continuación:
 \end_layout
 
 \begin_layout Enumerate
-Para ejecutar Sysgen, no se abre Matlab directamente puesto que el toolbox
- de Xilinx no aparecerá en las librerías de Simulink.
+Para ejecutar Sysgen, no se abre Matlab
+\lang spanish
+®
+\lang spanish-mexico
+ directamente puesto que el toolbox de Xilinx
+\lang spanish
+®
+\lang spanish-mexico
+ no aparecerá en las librerías de Simulink
+\lang spanish
+®
+\lang spanish-mexico
+.
  La forma de hacerlo es ir a la barra de 
 \series bold
 Inicio > Todos los programas > Xilinx Design Tools > ISE > System Generator
@@ -634,11 +722,15 @@ reference "fig:Mensaje-de-instalación"
 
 .
  
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
 \begin_inset Float figure
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -655,7 +747,24 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Mensaje de instalación del toolbox de Sysgen en Matlab R2013a.
+Mensaje de instalación del toolbox de Sysgen en Matlab
+\lang spanish
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered{
+\end_layout
+
+\end_inset
+
+
+\lang spanish-mexico
+ R2013a.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -680,6 +789,7 @@ name "fig:Mensaje-de-instalación"
  
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
 Dar clic en el ícono 
 \begin_inset Graphics
@@ -688,9 +798,20 @@ Dar clic en el ícono
 
 \end_inset
 
- posicionado en la barra superior de la interfáz de Matlab, esto abrirá
- una ventana con los toolboxes de Simulink disponibles en la instalación.
- Los toolboxes de Xilinx se encuentran listados en la pestaña de 
+ posicionado en la barra superior de la interfaz de Matlab
+\lang spanish
+®
+\lang spanish-mexico
+, esto abrirá una ventana con los toolboxes de Simulink
+\lang spanish
+®
+\lang spanish-mexico
+ disponibles en la instalación.
+ Los toolboxes de Xilinx
+\lang spanish
+®
+\lang spanish-mexico
+ se encuentran listados en la pestaña de 
 \series bold
 Bibliotecas
 \series default
@@ -733,11 +854,15 @@ reference "fig:Instanciación-del-System"
 
 .
  
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
 \begin_inset Float figure
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -779,18 +904,31 @@ name "fig:Instanciación-del-System"
 
 \end_layout
 
-\begin_deeper
 \begin_layout Standard
 Aquí es necesario resaltar algunas reglas importantes para hacer uso del
- toolbox de Xilinx.
- La primera es que, en todo diseño de Simulink donde se involucren bloques
- de Xilinx, debe existir el 
+ toolbox de Xilinx
+\lang spanish
+®
+\lang spanish-mexico
+.
+ La primera es, en todo diseño de Simulink
+\lang spanish
+®
+\lang spanish-mexico
+ donde se involucren bloques de Xilinx
+\lang spanish
+®
+\lang spanish-mexico
+, debe existir el 
 \emph on
 'Sysgen token'
 \emph default
 , este es un bloque especial que no tiene entrada o salida alguna, pero
- es la interface que convierte los vectores de simulación de Matlab a datos
- que la FPGA pueda comprender.
+ es la interfaz que convierte los vectores de simulación de Matlab
+\lang spanish
+®
+\lang spanish-mexico
+ a datos que la FPGA pueda comprender.
  Además, este bloque contiene la información del proyecto que estamos modelando,
  es decir, aquí se puede definir como el diseño va a ser transformado acorde
  a los flujos discutidos en la 
@@ -800,6 +938,18 @@ sección
  
 \series bold
 5.5.2
+\series default
+ 
+\series bold
+Co-Diseño de Hardware/Software en el ambiente de Xilinx
+\lang spanish
+®
+\lang spanish-mexico
+ System Generator
+\lang spanish
+®
+\lang spanish-mexico
+ for DSP
 \series default
 .
 \end_layout
@@ -876,8 +1026,8 @@ Clocking > Simulink system period:
 \end_deeper
 \begin_layout Enumerate
 Ahora, se necesita agregar uno de los bloques más importantes los cuales
- defininen el módulo que será sintetizado por la FPGA: Los bloques de entrada/sa
-lida, conocidos como 
+ definen el módulo que será sintetizado por la FPGA: Los bloques de entrada/sali
+da, conocidos como 
 \emph on
 'Gateway in' 
 \emph default
@@ -887,11 +1037,15 @@ y
 \emph default
 .
  
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
 \begin_inset Float figure
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -926,7 +1080,6 @@ Bloques de entrada/salida que acotan la implementación en el FPGA del algoritmo
 
 \end_layout
 
-\begin_deeper
 \begin_layout Standard
 En otras palabras, los únicos bloques que pueden comunicarse directamente
  con otros toolboxes de Simulink son los 
@@ -934,11 +1087,15 @@ En otras palabras, los únicos bloques que pueden comunicarse directamente
 Gateway In/Out
 \emph default
 .
- Este par de bloques transforman los estímulos de Simulink en datos que
- el FPGA puede procesar, también son capaces de capturar la información
- del tipo de dato a utilizar (punto fijo o punto flotante), la frecuencia
- de muestreo e incluso alguna locación física dentro de los puertos de entrada
- y salida generales de la FPGA, para funcionar como disparadores externos.
+ Este par de bloques transforman los estímulos de Simulink
+\lang spanish
+®
+\lang spanish-mexico
+ en datos que el FPGA puede procesar, también son capaces de capturar la
+ información del tipo de dato a utilizar (punto fijo o punto flotante),
+ la frecuencia de muestreo e incluso alguna locación física dentro de los
+ puertos de entrada y salida generales de la FPGA, para funcionar como disparado
+res externos.
 \end_layout
 
 \begin_layout Standard
@@ -985,7 +1142,11 @@ Sample period:
 \begin_layout Enumerate
 Como se utilizó en el algoritmo de Matlab, será necesario generar la señal
  que deseamos filtrar, a partir de utilizar dos generadores de señal senoidal
- del toolbox de Simulink, ubicados en 
+ del toolbox de Simulink
+\lang spanish
+®
+\lang spanish-mexico
+, ubicados en 
 \series bold
 Simulink > Sources > Sine Wave, 
 \series default
@@ -999,11 +1160,17 @@ reference "fig:Generadores-de-función"
 \end_inset
 
 .
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
 \begin_inset Float figure
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1049,7 +1216,6 @@ name "fig:Generadores-de-función"
  
 \end_layout
 
-\begin_deeper
 \begin_layout Standard
 Se deben utilizar dos generadores de señal senoidal, con los parámetros
  mostrados a continuación: 
@@ -1095,7 +1261,7 @@ Sample time:
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1171,7 +1337,7 @@ Sample time:
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1307,7 +1473,7 @@ Coefficient Width:
 \end_layout
 
 \begin_layout Itemize
-Checar la opción 
+Seleccionar la opción 
 \series bold
 Best Precision Fraction Length.
 \end_layout
@@ -1318,11 +1484,7 @@ Best Precision Fraction Length.
 placement H
 wide false
 sideways false
-status collapsed
-
-\begin_layout Plain Layout
-
-\end_layout
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1355,8 +1517,11 @@ Configuración del bloque FIR Compiler.
 
 \end_deeper
 \begin_layout Enumerate
-Una vez teniendo estos elementos en el nuevo modelo de Simulink, se deben
- conectar como se muestra en la Figura 
+Una vez teniendo estos elementos en el nuevo modelo de Simulink
+\lang spanish
+®
+\lang spanish-mexico
+, se deben conectar como se muestra en la Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Interconexión-de-los"
@@ -1372,7 +1537,7 @@ reference "fig:Interconexión-de-los"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1389,8 +1554,8 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Interconexión de los bloques de Simulink/Sysgen para la elaboración del
- filtro FIR.
+Interconexiones de los bloques de Sysgen para la elaboración del filtro
+ FIR.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -1421,8 +1586,11 @@ Debido a que la señal de interés en este sistema, es la
 \begin_inset Formula $f_{senBase}$
 \end_inset
 
- con 1KHz, para poder observar 10 muestras en el osciloscopio de simulink,
- pondremos como valor en el 
+ con 1KHz, para poder observar 10 muestras en el osciloscopio de Simulink
+\lang spanish
+®
+\lang spanish-mexico
+, pondremos como valor en el 
 \emph on
 Simulink stop time
 \emph default
@@ -1435,7 +1603,7 @@ Simulink stop time
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1490,7 +1658,7 @@ reference "fig:Resultado-de-la"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1534,7 +1702,7 @@ name "fig:Resultado-de-la-1"
 
 \end_deeper
 \begin_layout Subsection
-Implementación del sistema en el kit Atlys.
+Implementación del sistema en la tarjeta de desarrollo Atlys.
 \end_layout
 
 \begin_layout Standard
@@ -1543,7 +1711,10 @@ El siguiente proceso describe como utilizar el kit Atlys como co-procesador,
  modelo que se describió con anterioridad.
  Mediante el uso de la herramienta Sysgen, se generarán los archivos de
  HDL necesarios así como la síntesis e implementación en segundo plano.
- Al finalizar, La tarjeta de desarrollo será capáz de comunicarse con Simulink
+ Al finalizar, La tarjeta de desarrollo será capaz de comunicarse con Simulink
+\lang spanish
+®
+\lang spanish-mexico
  para enviar y recibir los datos correspondientes a este modelo.
 \end_layout
 
@@ -1572,8 +1743,11 @@ Dar clic en
 'Generate'.
  
 \emph default
-Esto ejecutará a PlanAhead en segundo plano, con la intención de generar
- el 
+Esto ejecutará a PlanAhead
+\lang spanish
+®
+\lang spanish-mexico
+ en segundo plano, con la intención de generar el 
 \emph on
 bitfile
 \series bold
@@ -1592,7 +1766,7 @@ o ejecutable que se descargará en la FPGA.
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1609,9 +1783,21 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Generación de la representación del kit Atlys en Simulink, el cual contiene
- los recursos de hardware necesario para ejecutar el algoritmo del filtro
- FIR.
+Generación de la representación del kit Atlys en Simulink
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textregistered{}
+\end_layout
+
+\end_inset
+
+, el cual contiene los recursos de hardware necesario para ejecutar el algoritmo
+ del filtro FIR.
  
 \end_layout
 
@@ -1641,7 +1827,7 @@ Con el nuevo bloque generado, se deben actualizar las conexiones de la siguiente
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1658,7 +1844,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Conexión del bloque de Co-simulación.
+Conexión del bloque de co-simulación.
 \end_layout
 
 \end_inset
@@ -1696,7 +1882,7 @@ reference "fig:Comparación-entre-el"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1757,7 +1943,7 @@ netlist > hwcosim > nombre_del_proyecto.ppr
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1810,7 +1996,7 @@ reference "fig:Utilización-de-recursos"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1853,8 +2039,15 @@ name "fig:Utilización-de-recursos"
 \end_layout
 
 \end_deeper
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
-Procesamiento de Audio - Algoritmo de eco.
+Procesamiento de Audio - Algoritmo de Eco.
 \end_layout
 
 \begin_layout Subsection
@@ -1922,7 +2115,7 @@ reference "fig:Comb_filter"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1977,7 +2170,7 @@ A partir de esto podemos observar que, la estructura se conforma de elementos
 \end_layout
 
 \begin_layout Subsection
-Implementación en FPGA del códec de audio AC97.
+Implementación en FPGA del codificador de audio AC97.
 \end_layout
 
 \begin_layout Standard
@@ -1986,7 +2179,7 @@ El códec de audio disponible en la tarjeta Atlys es el AC97 LM4550
 status collapsed
 
 \begin_layout Plain Layout
-Para obetener mayor información técnica a cerca del códec, visitar: 
+Para obtener mayor información técnica a cerca del códec, visitar: 
 \begin_inset Flex URL
 status open
 
@@ -2048,7 +2241,7 @@ bit clock
 
 \begin_layout Itemize
 Selector de 3 bits para escoger la fuente de entrada (Mic, LineIn, headphone)
- y de 5 bits para volúmen.
+ y de 5 bits para volumen.
  Estos se pueden mapear a los switches de la tarjeta Atlys para controlar
  dichos parámetros.
  
@@ -2056,8 +2249,8 @@ Selector de 3 bits para escoger la fuente de entrada (Mic, LineIn, headphone)
 
 \begin_layout Itemize
 Parámetros seleccionados para la mayor calidad de audio posible: 48KHz de
- frecuencia de sampleo, con una palabra de 16 bits en lugar de 18 (por compatibi
-lidad con la mayoria de los formatos de audio disponibles).
+ frecuencia de muestreo, con una palabra de 16 bits en lugar de 18 (por
+ compatibilidad con la mayoría de los formatos de audio disponibles).
 \end_layout
 
 \begin_layout Standard
@@ -2065,7 +2258,7 @@ lidad con la mayoria de los formatos de audio disponibles).
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2118,8 +2311,11 @@ Los pasos para llevar a cabo la implementación del algoritmo de eco se muestran
 \end_layout
 
 \begin_layout Enumerate
-A partir de tener el nuevo espacio de trabajo en Simulink (se pueden seguir
- los pasos 1 a 4 de la subsección 
+A partir de tener el nuevo espacio de trabajo en Simulink
+\lang spanish
+®
+\lang spanish-mexico
+ (se pueden seguir los pasos 1 a 4 de la subsección 
 \series bold
 6.3 Simulación del sistema en Sysgen
 \series default
@@ -2226,14 +2422,23 @@ y configurarlo como sigue:
 \series bold
 File name: 
 \series default
-En este documento se proporciona el archivo partita_e_major.wav obtenida
- libremente de 
+En este documento se proporciona el archivo partita_e_major.wav
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Obtenido libremente de 
 \begin_inset Flex URL
 status collapsed
 
 \begin_layout Plain Layout
 
 http://www.music.helsinki.fi/tmt/opetus/uusmedia/esim/index-e.html
+\end_layout
+
+\end_inset
+
+ 
 \end_layout
 
 \end_inset
@@ -2278,7 +2483,7 @@ Outputs > Audio output sampling mode:
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2318,8 +2523,8 @@ From multimedia File
 
 \end_deeper
 \begin_layout Enumerate
-El archivo de audio representa una matiz de 1x1 (datos, frecuencia de muestreo).
- Es necesario convertir esta matriz a un vector de un solo elemento mediante
+El archivo de audio representa un escalar de 1x1 (datos, frecuencia de muestreo).
+ Es necesario convertir este escalar a un vector de un solo elemento mediante
  el uso de los bloques 
 \emph on
 'Reshape' 
@@ -2416,7 +2621,7 @@ reference "fig:Configuración-del-tipo"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2463,8 +2668,11 @@ name "fig:Configuración-del-tipo"
 \begin_layout Enumerate
 Como se mostró al principio de la 
 \series bold
-subsección 7.1
+subsección 7.1 Filtros FIR peine o 
+\emph on
+comb filter
 \series default
+\emph default
 , ahora será necesario construir el filtro comb, siguiendo el bloque de
  la Figura 
 \begin_inset CommandInset ref
@@ -2491,7 +2699,7 @@ reference "fig:Filtro-comb-(FIR)"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2563,7 +2771,7 @@ reference "fig:Parámetros-de-la"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2646,7 +2854,7 @@ reference "fig:Ganancia-de-retroalimentación"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2714,7 +2922,7 @@ y así evitar problemas de timing
 \emph default
 debido al 
 \emph on
-cruce de reloj cruzado (CDC por sus siglas en Inglés).
+dominio de reloj cruzado (CDC por sus siglas en Inglés).
  
 \emph default
 Se pueden modificar los valores de retraso y ganancias con el fin de obtener
@@ -2723,14 +2931,11 @@ Se pueden modificar los valores de retraso y ganancias con el fin de obtener
 
 \end_deeper
 \begin_layout Enumerate
-Los elementos mostrados en el paso 
-\series bold
-5
-\series default
-, pueden ser convertidos a subsistema para mantener la sencilléz del sistema
- (seleccionar los bloques y ejecutar CTRL+G, los subsistemas pueden ser
- nombrados a gusto del usuario) y replicados para así, tener los dos canales
- del formato estéreo, como se muestra en la Figura 
+Los elementos mostrados en el paso 5, pueden ser convertidos a subsistema
+ para mantener la sencillez del sistema (seleccionar los bloques y ejecutar
+ CTRL+G, los subsistemas pueden ser nombrados a gusto del usuario) y replicados
+ para así, tener los dos canales del formato estéreo, como se muestra en
+ la Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Conversión-del-filtro"
@@ -2746,7 +2951,7 @@ reference "fig:Conversión-del-filtro"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2790,11 +2995,11 @@ name "fig:Conversión-del-filtro"
 
 \end_deeper
 \begin_layout Enumerate
-Como paso final, se deberan arrastrar dos 
+Como paso final, se deberán arrastrar dos 
 \emph on
 'Gateway Out' 
 \emph default
-al espacio de trabajo de simulink, y nombrarlos 
+al espacio de trabajo de Simulink, y nombrarlos 
 \series bold
 AudioLeftOut 
 \series default
@@ -2826,7 +3031,7 @@ reference "fig:Interconección-del-sistema"
 \end_inset
 
 .
- El recuadro girs nombrado 
+ El recuadro gris nombrado 
 \series bold
 Audio_algoritmo 
 \series default
@@ -2840,7 +3045,7 @@ representa ambos filtros desarrollados.
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2857,7 +3062,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Interconección del sistema de eco finalizado.
+Interconexiones del sistema de eco finalizado.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -2885,11 +3090,16 @@ name "fig:Interconección-del-sistema"
 \end_deeper
 \begin_layout Enumerate
 Para hacer la simulación de este modelo, utilizaremos un valor menor a la
- duración en segundos del archivo de audio como 
+ duración en segundos (máximo 56 segundos para este ejemplo) del archivo
+ de audio como 
 \emph on
 'stop time'
 \emph default
- en Simulink.
+ en Simulink
+\lang spanish
+®
+\lang spanish-mexico
+.
  El efecto es perfectamente audible utilizando el valor de 
 \series bold
 10.0(s)
@@ -2921,7 +3131,7 @@ reference "fig:Gráfica-resultante-del"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2969,16 +3179,16 @@ name "fig:Gráfica-resultante-del"
 
 \end_deeper
 \begin_layout Subsection
-Implementación en el kit Atlys.
+Implementación y Resultados.
 \end_layout
 
 \begin_layout Enumerate
-Una vez que obtenemos el resultado esperado, es necesario generar un 
+Una vez que obtenemos el efecto esperado, es necesario generar un 
 \emph on
 'Netlist' 
 \emph default
 (archivos HDL en Verilog o VHDL) para poder utilizar este modelo dentro
- de la interface del codec de audio\SpecialChar endofsentence
+ de la interfaz del códec de audio\SpecialChar endofsentence
  Esto se logra dando doble clic sobre
  el '
 \emph on
@@ -2990,10 +3200,13 @@ Sysgen Token'
 \end_layout
 
 \begin_layout Enumerate
-Al terminar el proceso anterior, lanzar PlanAhead y crear un nuevo proyecto
- RTL
+Al terminar el proceso anterior, lanzar PlanAhead
+\lang spanish
+®
+\lang spanish-mexico
+ y crear un nuevo proyecto RTL
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Se añade un proyecto previamente configurado y funcionando con este documento,
@@ -3008,8 +3221,11 @@ Apéndice D:
 \series default
  
 \series bold
-Creación de projectos usando PlanAhead
+Creación de proyectos usando PlanAhead
+\lang spanish
+®
 \series default
+\lang spanish-mexico
  para más detalles).
  Se deben agregar primeramente los archivos 
 \series bold
@@ -3034,7 +3250,7 @@ rt_audio_controller.v
 \series default
 
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Estos archivos se encuentran adjuntos en el proyecto de referencia.
@@ -3045,13 +3261,13 @@ Estos archivos se encuentran adjuntos en el proyecto de referencia.
 
 , 
 \emph default
-este último es el top module o módulo principal., que se conforma de las
+este último es el top module o módulo principal, que se conforma de las
  siguientes estructuras:
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-En primer lugar se definen los puertos de la interfáz principal entre el
+En primer lugar se definen los puertos de la interfaz principal entre el
  códec de audio y la FPGA.
  La directiva de compilación de la línea 1, 
 \emph on
@@ -3070,7 +3286,7 @@ loopback
 \begin_deeper
 \begin_layout Standard
 \begin_inset Flex Color Box
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Argument 1
@@ -3092,7 +3308,7 @@ large, title=Puertos del módulo principal
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "/home/diego/Documents/Finalized/examples/audio_ac97/AC97_IP/rt_audio_controller.v"
-lstparams "language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={\\color{gray}},keepspaces=true,numberstyle={\\tiny\\color{black}},keywordstyle={\\mlttfamily\\color{blue}},tabsize=2,breaklines=true,columns=flexible,linerange={1-10},frame=none"
+lstparams "language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={\\color{gray}},keepspaces=true,numberstyle={\\tiny\\color{black}},keywordstyle={\\mlttfamily\\color{blue}},tabsize=2,breaklines=true,columns=flexible,linerange={1-11},frame=none,xleftmargin=2em"
 
 \end_inset
 
@@ -3126,7 +3342,7 @@ para ser utilizada.
 \begin_deeper
 \begin_layout Standard
 \begin_inset Flex Color Box
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Argument 1
@@ -3148,7 +3364,7 @@ large, title=Instanciación de la IP de audio AC97
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "/home/diego/Documents/Finalized/examples/audio_ac97/AC97_IP/rt_audio_controller.v"
-lstparams "language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={\\color{gray}},keepspaces=true,numberstyle={\\tiny\\color{black}},keywordstyle={\\mlttfamily\\color{blue}},tabsize=2,breaklines=true,columns=flexible,linerange={35-64},frame=none"
+lstparams "language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={\\color{gray}},keepspaces=true,numberstyle={\\tiny\\color{black}},keywordstyle={\\mlttfamily\\color{blue}},tabsize=2,breaklines=true,columns=flexible,linerange={35-67},frame=none,firstnumber=35,xleftmargin=2em"
 
 \end_inset
 
@@ -3171,7 +3387,7 @@ Por último, el módulo generado por Sysgen está instanciado como se muestra
 \begin_deeper
 \begin_layout Standard
 \begin_inset Flex Color Box
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Argument 1
@@ -3193,7 +3409,7 @@ large, title=Instanciación del algoritmo de eco generado por Sysgen
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "/home/diego/Documents/Finalized/examples/audio_ac97/AC97_IP/rt_audio_controller.v"
-lstparams "language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={\\color{gray}},keepspaces=true,numberstyle={\\tiny\\color{black}},keywordstyle={\\mlttfamily\\color{blue}},tabsize=2,breaklines=true,columns=flexible,linerange={66-73},frame=none"
+lstparams "language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={\\color{gray}},keepspaces=true,numberstyle={\\tiny\\color{black}},keywordstyle={\\mlttfamily\\color{blue}},tabsize=2,breaklines=true,columns=flexible,linerange={68-75},frame=none,firstnumber=68,xleftmargin=2em"
 
 \end_inset
 
@@ -3225,7 +3441,7 @@ reference "fig:Vista-jerárjica-de"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -3242,7 +3458,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Vista jerárjica de las fuentes utilizadas para el proyecto.
+Vista jerárquica de los códigos fuente utilizadas para el proyecto.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -3309,7 +3525,7 @@ reference "fig:Archivos-de-Verilog"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -3373,7 +3589,7 @@ o archivo de configuración que se deberá descargar al kit Atlys.
 
 \begin_deeper
 \begin_layout Standard
-El esqemático de módulo princpial se muestra en la Figura 
+El esquemático de módulo principal se muestra en la Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Esquemático-completo-de"
@@ -3388,7 +3604,7 @@ reference "fig:Esquemático-completo-de"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -3446,7 +3662,7 @@ reference "fig:Utilización-y-frecuencia"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -3491,7 +3707,7 @@ name "fig:Utilización-y-frecuencia"
 \end_deeper
 \begin_layout Enumerate
 Para ejecutar este diseño en la tarjeta Atlys, se debe conectar una fuente
- de audio (micrófono, reproductor MP3, étc) en el plug de color azul (Line
+ de audio (micrófono, reproductor MP3, etc) en el plug de color azul (Line
  In) y unos audífonos o bocina en el plug verde (Line Out), como se muestra
  en la Figura 
 \begin_inset CommandInset ref
@@ -3509,7 +3725,7 @@ reference "fig:Conexiones-a-la"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -3552,6 +3768,13 @@ name "fig:Conexiones-a-la"
 \end_layout
 
 \end_deeper
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Procesamiento de imágenes - Detección de bordes.
 \end_layout
@@ -3563,8 +3786,8 @@ Características técnicas y arquitectura del modelo a implementar.
 \begin_layout Standard
 El flujo fundamental del diseño de algoritmos para el procesamiento digital
  de señales, se basa en la simulación y refinamiento del prototipo a implementar.
- Una vez que se tiene el resultado esperado del filtro en la imágen, se
- puede implementar en un modelo más complejo.
+ Una vez que se tiene el resultado esperado del filtro en el archivo de
+  la imagen, se puede implementar en un modelo más complejo.
 \end_layout
 
 \begin_layout Standard
@@ -3604,7 +3827,7 @@ reference "fig:Imagen-utilizada-para"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -3656,10 +3879,10 @@ La detección de bordes mediante la implementación del filtro Sobel es una
  Este algoritmo es utilizado para la extracción de características de imágenes
  en 2D a escala de grises
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
-Se utilizan imagenes a escala de grises y de dimensiones pequeñas para diseñar
+Se utilizan imágenes a escala de grises y de dimensiones pequeñas para diseñar
  operaciones sobre ellas, puesto que simplifican la potencia computacional
  necesaria para obtener un resultado satisfactorio.
 \end_layout
@@ -3671,7 +3894,7 @@ den a los bordes.
 \end_layout
 
 \begin_layout Standard
-El principio de implementación se basa en utilizar dos operadores de convolción
+El principio de implementación se basa en utilizar dos operadores de convolución
  matriciales o 
 \series bold
 kernels
@@ -3757,7 +3980,11 @@ El proceso mostrado a continuación muestra como separar las componentes
 \end_layout
 
 \begin_layout Enumerate
-En un nuevo modelo de Simulink, instanciar un objeto 
+En un nuevo modelo de Simulink
+\lang spanish
+®
+\lang spanish-mexico
+, instanciar un objeto 
 \emph on
 'Image From File' 
 \emph default
@@ -3781,7 +4008,7 @@ reference "fig:Parámetros-de-configuración"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -3871,7 +4098,7 @@ reference "fig:bloques_sobel_imagen"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -3952,7 +4179,7 @@ reference "fig:Conexión-de-los"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -3969,7 +4196,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Conexión de los bloques necesarios para convertir la matríz 2D en un vector
+Conexión de los bloques necesarios para convertir la matriz 2D en un vector
  de 1D necesario para cada una de las componentes del espacio de color.
  
 \begin_inset CommandInset label
@@ -4013,7 +4240,7 @@ reference "fig:Conexión-entre-la"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -4030,7 +4257,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Conexión entre la fuente de imágen hacia el bloque de conversión de la matríz
+Conexión entre la fuente de imagen hacia el bloque de conversión de la matríz
  2D a vectores por espacio de color.
  
 \begin_inset CommandInset label
@@ -4156,7 +4383,7 @@ Añadir un
 \emph on
 'Gateway In'
 \emph default
- por cada espacio de color, con la configuracion mostrada en la Figura 
+ por cada espacio de color, con la configuración mostrada en la Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Configuración-para-las"
@@ -4172,7 +4399,7 @@ reference "fig:Configuración-para-las"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -4243,7 +4470,7 @@ timing
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -4310,7 +4537,7 @@ reference "fig:Configuración-de-los"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -4386,7 +4613,7 @@ reference "fig:Modelo-completo-que"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -4435,7 +4662,7 @@ name "fig:Modelo-completo-que"
 
 \end_deeper
 \begin_layout Enumerate
-El subsustema 
+El subsistema 
 \emph on
 'VideoView Gray'
 \emph default
@@ -4471,7 +4698,7 @@ reference "fig:Reconstrucción-de-la"
 \end_inset
 
 .
- El princpial objetivo de este bloque es, reconstruir los datos multiplicados
+ El principal objetivo de este bloque es, reconstruir los datos multiplicados
  por el operador de luminosidad mostrada en la Ecuación 8.4 y al mismo tiempo,
  ensamblar esos datos en una matriz 2D que representa la imagen obtenida.
  
@@ -4483,7 +4710,7 @@ reference "fig:Reconstrucción-de-la"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -4534,7 +4761,7 @@ name "fig:Parámetros-necesarios-para"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -4597,7 +4824,7 @@ reference "fig:Resultado-esperado-de"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -4645,7 +4872,7 @@ Si se compara la salida de este modelo, con la popular función de Matlab,
 \emph on
 'rgb2gray'
 \emph default
-, las matrices tendran los mismos valores puesto que dicha función está
+, las matrices tendrán los mismos valores puesto que dicha función está
  basada en el mismo principio que el modelo desarrollado en esta sección.
 \end_layout
 
@@ -4659,7 +4886,7 @@ Como se mencionó en la subsección
 \series bold
 8.2 Algoritmo del filtro Sobel
 \series default
-, serán necesarios dos kernels que realizen el filtrado de la imagen construida
+, serán necesarios dos kernels que realicen el filtrado de la imagen construida
  en la subsección 
 \series bold
 8.4 Modelo de conversión RGB a escala de grises
@@ -4713,7 +4940,7 @@ reference "fig:Coeficientes-del-filtro"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -4767,7 +4994,7 @@ Adicionalmente, se deben especificar los siguientes parámetros del tipo
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -4817,7 +5044,7 @@ Se debe hacer lo mismo para el filtro del eje Y, en este caso el vector
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -4874,7 +5101,7 @@ reference "fig:Conexión-de-los-1"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -4943,7 +5170,7 @@ de los filtros FIR, lo que supone utilizar el bloque
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -5044,7 +5271,7 @@ reference "fig:Modelo-para-obtener"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -5098,7 +5325,7 @@ El modelo completo del filtro Sobel se muestra a continuación.
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -5134,8 +5361,15 @@ Modelo completo del filtro Sobel.
 
 \end_deeper
 \begin_layout Enumerate
-Este modelo se convirtió en subsistema, para conectarse como se muestra
- en la Figura .
+Este modelo del paso 8 se convirtió en subsistema, para conectarse como
+ se muestra en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Interconexión-del-algoritmo"
+
+\end_inset
+
+.
  La conversión a subsistema es opcional, sólo le da más legibilidad a modelos
  complejos con gran cantidad de bloques.
 \end_layout
@@ -5146,7 +5380,7 @@ Este modelo se convirtió en subsistema, para conectarse como se muestra
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -5163,6 +5397,15 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+Interconexión del algoritmo de conversión RGB a escala de grises y el subsistema
+ de filtros FIR.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Interconexión-del-algoritmo"
+
+\end_inset
+
 
 \end_layout
 
@@ -5203,7 +5446,7 @@ reference "fig:Resultado-de-la"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -5273,7 +5516,7 @@ reference "fig:Bloque-de-Co-Simulación"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -5290,7 +5533,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Bloque de Co-Simulación del filtro Sobel, que se ejecuta en FPGA.
+Bloque de co-simulación del filtro Sobel, que se ejecuta en FPGA.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -5317,7 +5560,7 @@ name "fig:Bloque-de-Co-Simulación"
 
 \end_deeper
 \begin_layout Enumerate
-El bloque generado en el Paso 2, se conecta de la siguiente manera:
+El bloque generado en el paso 2, se conecta de la siguiente manera:
 \end_layout
 
 \begin_deeper
@@ -5326,7 +5569,7 @@ El bloque generado en el Paso 2, se conecta de la siguiente manera:
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -5384,15 +5627,24 @@ reference "fig:Conexión-del-modelo"
 \begin_deeper
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
-TBD
+\align center
+\begin_inset Graphics
+	filename img/sobel_results_fpga.png
+	scale 30
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -5416,9 +5668,75 @@ Resultado de la ejecución en FPGA del modelo del filtro Sobel.
 \end_deeper
 \begin_layout Enumerate
 Las estadísticas de recursos utilizados y frecuencia máxima de trabajo de
- este  
+ este prototipo, se muestran en la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Gráfica-de-utilización"
+
+\end_inset
+
+.
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/sobel_utilization.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Gráfica de utilización de recursos en la FPGA al implementar el modelo del
+ operador Sobel.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Gráfica-de-utilización"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como se puede observar, la mayoría de los recursos utilizados son DSP48A1,
+ los cuales ejecutan las funciones matemáticas de los dos filtros FIR utilizados
+ en este prototipo.
+ Esto asegura que las operaciones con mayor flujo de datos se hacen utilizando
+ primitivas especiales para cálculos complejos, aumentando el paralelismo
+ de una manera significativa.
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset

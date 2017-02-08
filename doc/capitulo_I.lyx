@@ -168,9 +168,9 @@ o de voz para determinar quién es la persona que habla; para determinar,
 \align block
 El procesamiento de señales involucra la realización de operaciones matemáticas
  sobre las señales, las cuales son llevadas por sistemas cuya única función
- es precisamente el llevar a cabo esas operaciones, los Procesadores Digitales
- de Señales (DSP, por sus siglas en Inglés) y la Matriz de Compuertas Programabl
-es en Campo (FPGA, por sus siglas en Inglés) son los encargados de ello.
+ es precisamente el llevar a cabo esas operaciones, los procesadores digitales
+ de señales (DSP, por sus siglas en Inglés) y la matriz de compuertas programabl
+es en campo (FPGA, por sus siglas en Inglés) son los encargados de ello.
  
 \end_layout
 
@@ -208,7 +208,7 @@ Con el fin de explotar las ventajas que las FPGA poseen y poderlos aplicar
 \begin_layout Standard
 \noindent
 \align block
-Teniendo como objetivo principal el recortar la curva de aprendizaje, las
+Teniendo como objetivo principal el acelerar la curva de aprendizaje, las
  empresas líderes en FPGA como Xilinx®, Altera® y Synopsys® proporcionan
  plataformas de trabajo que puede interactuar con Matlab
 \begin_inset ERT
@@ -267,9 +267,11 @@ Objetivo general.
 \align block
 
 \lang spanish
-Describir el proceso de implementación de un sistema de procesamiento de
- señales e imágenes mediante hardware reconfigurable (FPGA) y la tarjeta
+Describir el proceso de implementación de sistemas de procesamiento de señales
+ e imágenes mediante hardware reconfigurable (FPGA) específicamente la tarjeta
  de desarrollo Atlys.
+ Con el fin de contribuir en la formación técnica en esta área, de los estudiant
+es del CETI.
 \end_layout
 
 \begin_layout Subsection
@@ -345,8 +347,8 @@ textregistered{
 
 \lang spanish
 Mostrar la conversión de los algoritmos matemáticos básicos que intervienen
- en el procesamiento de señales, a hardware en FPGA, haciendo uso de la
- abstracción que proporciona Simulink
+ en el procesamiento de señales, a hardware en FPGA, haciendo uso de modelos
+ de alto nivel de abstracción que proporciona Simulink
 \lang spanish-mexico
 
 \begin_inset ERT
@@ -398,7 +400,7 @@ textregistered{
 
 \lang spanish
 Diseñar las propiedades intelectuales (IPs) más comunes en el tratamiento
- de señales tales como bloques de filtros FIR, IIR y convoluciones, utilizando
+ de señales tales como bloques de filtros FIR, y convoluciones, utilizando
  los entornos de programación de Matlab
 \lang spanish-mexico
 
@@ -441,8 +443,8 @@ textregistered{
 \align block
 
 \lang spanish
-Explicar los diferentes métodos de ejecución del hardware diseñado en Simulink®,
- sobre la tarjeta Atlys.
+Explicar los diferentes métodos de ejecución del hardware diseñado en Simulink®/
+Sysgen, sobre la tarjeta de desarrollo Atlys.
  
 \end_layout
 

@@ -172,8 +172,9 @@ Los alcances obtenidos durante el desarollo de esta investigación, se enlistan
 \end_layout
 
 \begin_layout Itemize
-Se logró demostrar la correcta ejecución de sistemas DSP complejos, basándose
- en el algoritmo de alto nivel previamente descrito en Matlab
+Se logró demostrar el correcto diseño e implementación de tres tipos de
+ sistemas DSP complejos, basándose en algoritmos de alto nivel de abstracción
+ previamente descritos en Matlab
 \begin_inset ERT
 status open
 
@@ -186,59 +187,64 @@ textregistered
 
 \end_inset
 
-, y cómo analizar dichos algoritmos desde la perspectiva de hardware, para
- así lograr definir la mejor arquitectura a implementar en FPGA.
+.
+ En el presente trabajo se analizaron dichos algoritmos desde la perspectiva
+ de hardware, para así lograr definir la mejor arquitectura implementada
+ en FPGA.
 \end_layout
 
 \begin_layout Itemize
-Se mencionaron técnicas avanzadas de diseño en FPGA a lo largo de los prototipos
+Se mencionaron técnicas avanzadas de diseño con FPGA a través de los prototipos
  ilustrados, describiendo la importancia de utilizarlos para incrementar
- el desempeño del sistema y así obtener resultados de calidad y libres de
- errores.
+ el desempeño del sistema y así obtener resultados de calidad tendiendo
+ a reducir al mínimo los errores.
 \end_layout
 
 \begin_layout Itemize
 La implementación de filtros digitales es un tema fundamental en el ámbito
- del Procesamiento Digital de Señales.
+ del procesamiento digital de señales.
  Esta investigación demostró, en primer instancia, como realizar el diseño
  de filtros FIR a partir de tener una especificación real que resuelve un
- problema común como es la presencia de ruido en señales, y además, como
- se puede llevar la especificación a un FPGA para poder observar la ejecución
- en forma real y no solo basándose en un resultado obtenido en un ambiente
- artificial, como lo es la simulación pura.
+ problema común como es la presencia de ruido en señales.
+ Además, se explicó cómo se puede llevar la especificación a un FPGA para
+ poder observar la ejecución en forma real y no solo basándose en un resultado
+ obtenido en un ambiente virtual, como lo es la simulación pura.
 \end_layout
 
 \begin_layout Itemize
 Se utilizaron diferentes ingredientes para resolver el problema que se planteaba
  en cada uno de los modelos diseñados, desde lenguajes HDL (Verilog) y scripts
- M, hasta diferentes maneras de exportar el producto obtenido desde Sysgen,
- para así poder animar al alumno a explorar otras vias de diseño disponibles
- por las herramientas utilizadas en esta documentación, y no sólo las que
- el autor muestra.
+ de Matlab, hasta diferentes maneras de exportar el diseño obtenido con
+ Sysgen.
+ Esto con la intención de motivar al estudiante a explorar la gran cantidad
+ de recursos disponibles en las herramientas utilizadas en este trabajo,
+ presentadas y explicadas en esta documentación.
 \end_layout
 
 \begin_layout Itemize
 Uno de los campos más atractivos en el área de diseño electrónico actual,
  es el campo del procesamiento de imágenes y video basado en FPGAs.
  Esta investigación desarrolló una de las implementaciones más populares
- en dicho ámbito, aprovechando la abstracción que Matlab® provee y logrando
- ilustrar las bases para prototipos más complejos.
+ en dicho ámbito, aprovechando la abstracción que Matlab® provee y el poder
+ de las herramientas de síntesis.
+ Logrando ilustrar las bases para prototipos más complejos.
 \end_layout
 
 \begin_layout Itemize
 Técnicas avanzadas de diseño de sistemas DSP con Sysgen fueron implementadas
  al llevar el algoritmo de procesamiento de audio, a ejecución en tiempo
  real.
- Se pudo implementar correctamente el modelo aún cuando existian diferentes
- dominios de reloj necesarios tanto para el controlador del códec, como
- para la ejecución del modelo de Sysgen y el filtro peine, obteniendo resultados
- satisfactorios.
+ Se pudo implementar correctamente el modelo con resultados satisfactorios,
+ aún cuando existian diferentes dominios de reloj necesarios tanto para
+ el controlador del códec, como para la ejecución del modelo de Sysgen y
+ el filtro peine.
 \end_layout
 
 \begin_layout Itemize
 A lo largo de los prototipos desarollados, se hizo énfasis en la metodología
  del co-diseño de hardware y software y las ventajas de utilizar los diferentes
- niveles de abstracción para un mejor resultado.
+ niveles de abstracción para acelerar la implementación con buenos resultados
+ a nivel de hardware.
 \end_layout
 
 \begin_layout Standard
@@ -255,19 +261,16 @@ Conclusiones.
 \begin_layout Standard
 Los objetivos particulares planteados en este tema de investigación fueron
  demostrar, a través de la experimentación, el flujo de diseño para sistemas
- DSP complejos utilizando dispositivos FPGA y sus ventajas sobre procesadores
- digitales de señal especializados.
- Esto se cumplió satisfactoriamente al realizar las implementaciones descritas
- en este documento y mediante la explicación de las diferentes técnicas
- existentes para poder resolver el problema que cada uno de los modelos
- implicaba.
+ DSP complejos utilizando dispositivos FPGA.
+ Esto se cumplió satisfactoriamente al realizar tres algoritmos para procesamien
+to de señales en el ámbito de audio y video.
 \end_layout
 
 \begin_layout Standard
 Las arquitecturas de FPGA modernas facilitan la implementación de algoritmos
- DSP debido a que cuentan con macros optimizadas para este tipo de tareas,
- habilitando el uso del paralelismo para obtener los resultados de operaciones
- sobre los datos de interés, de una manera más eficiente.
+ DSP debido a que cuentan con macros optimizadas para este tipo de tareas.
+ Habilitando el uso del cómputo paralelo para obtener resultados con un
+ mayor desempeño sobre los datos de interés.
  
 \end_layout
 
@@ -291,7 +294,7 @@ El uso de software de alto nivel como Matlab® para apoyar el proceso de
 Las arquitecturas utilizadas en esta investigación fueron verificadas utilizando
  el vector de prueba definido desde Simulink®, para emular las entradas
  al sistema, sin necesidad de adquirir equipamiento costoso como convertidores
- A/D y D/A de alta precisión.
+ A/D y D/A de distinta velocidad y precisión.
  Sin embargo, estos mismos modelos pueden ser acondicionados para trabajar
  con adquisición de datos en altas frecuencias, con tan sólo cambiar los
  parámetros de generación en el 
@@ -301,7 +304,7 @@ Las arquitecturas utilizadas en esta investigación fueron verificadas utilizand
 
 \begin_layout Standard
 A pesar de que Sysgen brinda al usuario la capacidad de crear modelos con
- relativa facilidad, es fundamental tener en cuanta todos los conceptos
+ relativa facilidad, es fundamental tener en cuenta todos los conceptos
  técnicos para poder resolver los problemas que se presenten durante la
  implementación de cualquier algoritmo.
  
@@ -313,12 +316,9 @@ Por experiencia, uno de los problemas más comunes se encuentra al utilizar
  Por ejemplo, al realizar el algoritmo de procesamiento de audio, la frecuencia
  principal del controlador del códec AC97 era de 100MHz, no así la velocidad
  de procesamiento de los archivos .wav que debía ser estrictamente de 48KHz.
- Al intentar implementar ambos modelos desde Sysgen, la única salida en
+ Al tratar de implementar ambos modelos desde Sysgen, la única salida en
  los puertos de audio era una señal de ruido constante.
-\end_layout
-
-\begin_layout Standard
-Se pueden realizar diferentes técnicas para resolver estos detalles con
+ Se pueden realizar diferentes técnicas para resolver estos detalles con
  múltiples frecuencias, que van desde el uso de memorias FIFO, bloques 
 \emph on
 'downsample' 
@@ -328,7 +328,7 @@ y
 'upsample'
 \emph default
  y algunas más complicadas.
- Sin embargo, lo más sencillo es isolar los diferentes bloques y especificar
+ Sin embargo, lo más sencillo es aislar los diferentes bloques y especificar
  en el 
 \emph on
 'Sysgen Token' 
@@ -364,9 +364,9 @@ ntos de
 \end_layout
 
 \begin_layout Standard
-También fue posible lograr ejecutar algoritmos complejos como lo es el filtro
- Sobel, desde la conversión de la imagen a escala de grises, sin ocupar
- más del 4% de recursos lógicos y 65% de las macros DSP48A disponibles en
+También fue posible lograr implementar algoritmos complejos como el filtro
+ Sobel, desde la conversión de la imagen a escala de grises, ocupando no
+ más de 4% de recursos lógicos y 65% de las macros DSP48A disponibles en
  la tarjeta Atlys (alrededor de 38 DSP48A)
 \begin_inset Foot
 status collapsed
@@ -381,24 +381,25 @@ Cabe recordar que, el dispositivo Spartan-6® utilizado en este kit, es el
 .
  Este resultado da como referencia, la capacidad de integración de sistemas
  DSP utilizando Sysgen, sin necesidad de recurrir a dispositivos FPGA más
- complejos y por ende, más costosos, lo que hace de esta metodologia, una
- forma viable de prototipado para el sector académico e inclusive, el industrial.
+ complejos y por ende, más costosos.
+ Lo que hace de esta metodologia, una forma viable de prototipado para el
+ sector académico e inclusive, el industrial de bajo volúmen.
 \end_layout
 
 \begin_layout Standard
 Es importante aclarar que no todos los conceptos de Sysgen fueron cubiertos
  en este documento.
  Existen numerosas técnicas de diseño para diferentes niveles de abstracción
- bastante atractivas, desde la utilización de código m (scripts de Matlab®)
- como bloques sintetizables, hasta el uso de procesadores como PicoBlaze®/MicroB
-laze® para generar un sistema embebido completo, sin depender del vector
+ bastante atractivas, desde la utilización de scripts de Matlab® para bloques
+ sintetizables, hasta el uso de procesadores como PicoBlaze®/MicroBlaze®
+ para generar un sistema embebido completo independiente de los vectores
  de simulación de Simulink®.
  Se recomeinda siempre tener a la mano el documento '
 \emph on
 System Generator for DSP, User Guide (UG640)' 
 \emph default
-para comprender a fondo todo lo ilustrado en esta guía y demás conceptos
- fundamentales y limitaciones.
+para comprender a fondo todo lo ilustrado en esta guía, otras IPs funcionales
+ y sus limitaciones.
 \end_layout
 
 \begin_layout Standard

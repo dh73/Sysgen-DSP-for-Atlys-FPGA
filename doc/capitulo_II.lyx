@@ -271,7 +271,7 @@ conversión analógico-digital
 \noindent
 Los muestreos digitalizados son procesados por un 
 \emph on
-Procesador Digital de Señales
+procesador digital de señales
 \emph default
 .
 \end_layout
@@ -574,7 +574,8 @@ precisión finita
 
 \end_inset
 
-.La cuantización es el proceso de convertir una señal discreta en el tiempo
+.
+ La cuantización es el proceso de convertir una señal discreta en el tiempo
  de amplitud continua, a una señal digital, representando cada valor muestreado
  como un número finito de dígitos.
  La Figura 
@@ -716,7 +717,7 @@ Sistemas Discretos Lineales e Invariantes en el Tiempo.
 \begin_layout Standard
 La relación entrada/salida de de los sistemas 
 \emph on
-Lineales e Invariantes en el Tiempo
+lineales e invariantes en el tiempo
 \emph default
  (LTI, por sus siglas en inglés) está definida por la 
 \emph on
@@ -730,11 +731,11 @@ en tiempo discreto de la respuesta del impulso finito aplicado a la entrada
 Los sistemas LTI pueden ser clasificados en dos tipos, dependiendo de si
  su respuesta al impulso tiene duración finita o infinita, estos son:
 \emph on
- Respuesta al Impulso Finito
+ respuesta al impulso finito
 \emph default
  (FIR, por sus siglas en inglés) o 
 \emph on
-Respuesta al Impulso Infinito
+respuesta al impulso infinito
 \emph default
  (IIR, por sus siglas en inglés).
 \end_layout
@@ -1248,7 +1249,7 @@ En el
 Apéndice C
 \series default
  se muestra el script interactivo que se puede ejecutar en el ambiente de
- Matlab, el cual fue tomado de 
+ Matlab®, el cual fue tomado de 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "eece_matlab"
@@ -1910,7 +1911,7 @@ Descripción general.
 \end_layout
 
 \begin_layout Standard
-La Matriz de Compuertas Programables en Campo (FPGA) es un circuito integrado
+La matriz de compuertas programables en campo (FPGA) es un circuito integrado
  reconfigurable que puede ser utilizado para diseñar circuitos digitales.
  La configuración de la FPGA es normalmente especificada usando lenguajes
  de descripción de hardware como SystemVerilog o VHDL y después es traducida,
@@ -1929,7 +1930,7 @@ La Matriz de Compuertas Programables en Campo (FPGA) es un circuito integrado
 
 \begin_layout Standard
 \noindent
-La arquitectura de una FPGA se basa en Bloques de Matrices Configurables
+La arquitectura de una FPGA se basa en bloques de matrices configurables
  (CLBs, por sus siglas en Inglés), las cuales proporcionan la lógica programable
  y una jerarquía de interconexiones reconfigurables para interconectar los
  CLBs entre sí.

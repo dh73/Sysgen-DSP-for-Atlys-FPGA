@@ -224,7 +224,7 @@ Existe una señal de entrada a nuestro sistema
 \end_inset
 
  con una amplitud de 1 y 0.5 respectivamente, esta suma de señales representará
- el fenómeno no deseado.
+ la señal contaminada.
  
 \end_layout
 
@@ -401,7 +401,7 @@ name "fig:Gráfica-derivada-de"
 
 \end_deeper
 \begin_layout Enumerate
-Para el diseño del filtro FIR, se usará el método por ventana de Hamming
+Para el diseño del filtro FIR, se usará el método de ventana de Hamming
  por la facilidad de implementación discutida en la 
 \series bold
 sección 3.2.2
@@ -411,7 +411,7 @@ sección 3.2.2
 Filtros FIR
 \series default
 , de este documento.
- La ecuación del filtro por ventana de Hamming queda como sigue:
+ La ecuación del filtro de ventana de Hamming queda como sigue:
 \begin_inset Formula 
 \begin{equation}
 W=0.54-0.46*cos(2\pi t/T)
@@ -688,9 +688,9 @@ Simulación del sistema en Sysgen.
 \end_layout
 
 \begin_layout Standard
-Las instrucciones para transformar el algoritmo que hemos diseñado ya, a
- un modelo que se pueda ejecutar en la tarjeta de desarrollo Atlys, se muestran
- a continuación:
+Las instrucciones para transformar el algoritmo diseñado en la sección anterior,
+ a un modelo que se pueda ejecutar en la tarjeta de desarrollo Atlys, se
+ muestran a continuación:
 \end_layout
 
 \begin_layout Enumerate
@@ -911,7 +911,7 @@ Aquí es necesario resaltar algunas reglas importantes para hacer uso del
 ®
 \lang spanish-mexico
 .
- La primera es que, en todo diseño de Simulink
+ La primera es, en todo diseño de Simulink
 \lang spanish
 ®
 \lang spanish-mexico
@@ -1702,7 +1702,7 @@ name "fig:Resultado-de-la-1"
 
 \end_deeper
 \begin_layout Subsection
-Implementación del sistema en el kit Atlys.
+Implementación del sistema en la tarjeta de desarrollo Atlys.
 \end_layout
 
 \begin_layout Standard
@@ -2047,7 +2047,7 @@ name "fig:Utilización-de-recursos"
 \end_layout
 
 \begin_layout Section
-Procesamiento de Audio - Algoritmo de eco.
+Procesamiento de Audio - Algoritmo de Eco.
 \end_layout
 
 \begin_layout Subsection
@@ -2170,13 +2170,13 @@ A partir de esto podemos observar que, la estructura se conforma de elementos
 \end_layout
 
 \begin_layout Subsection
-Implementación en FPGA del códec de audio AC97.
+Implementación en FPGA del codificador de audio AC97.
 \end_layout
 
 \begin_layout Standard
 El códec de audio disponible en la tarjeta Atlys es el AC97 LM4550
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Para obtener mayor información técnica a cerca del códec, visitar: 
@@ -2523,8 +2523,8 @@ From multimedia File
 
 \end_deeper
 \begin_layout Enumerate
-El archivo de audio representa una matiz de 1x1 (datos, frecuencia de muestreo).
- Es necesario convertir esta matriz a un vector de un solo elemento mediante
+El archivo de audio representa un escalar de 1x1 (datos, frecuencia de muestreo).
+ Es necesario convertir este escalar a un vector de un solo elemento mediante
  el uso de los bloques 
 \emph on
 'Reshape' 
@@ -2922,7 +2922,7 @@ y así evitar problemas de timing
 \emph default
 debido al 
 \emph on
-cruce de reloj cruzado (CDC por sus siglas en Inglés).
+dominio de reloj cruzado (CDC por sus siglas en Inglés).
  
 \emph default
 Se pueden modificar los valores de retraso y ganancias con el fin de obtener
@@ -3090,7 +3090,8 @@ name "fig:Interconección-del-sistema"
 \end_deeper
 \begin_layout Enumerate
 Para hacer la simulación de este modelo, utilizaremos un valor menor a la
- duración en segundos del archivo de audio como 
+ duración en segundos (máximo 56 segundos para este ejemplo) del archivo
+ de audio como 
 \emph on
 'stop time'
 \emph default
@@ -3178,11 +3179,11 @@ name "fig:Gráfica-resultante-del"
 
 \end_deeper
 \begin_layout Subsection
-Implementación en el kit Atlys.
+Implementación y Resultados.
 \end_layout
 
 \begin_layout Enumerate
-Una vez que obtenemos el resultado esperado, es necesario generar un 
+Una vez que obtenemos el efecto esperado, es necesario generar un 
 \emph on
 'Netlist' 
 \emph default
@@ -3260,7 +3261,7 @@ Estos archivos se encuentran adjuntos en el proyecto de referencia.
 
 , 
 \emph default
-este último es el top module o módulo principal., que se conforma de las
+este último es el top module o módulo principal, que se conforma de las
  siguientes estructuras:
 \end_layout
 
@@ -3457,7 +3458,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Vista jerárquica de las fuentes utilizadas para el proyecto.
+Vista jerárquica de los códigos fuente utilizadas para el proyecto.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -3785,8 +3786,10 @@ Características técnicas y arquitectura del modelo a implementar.
 \begin_layout Standard
 El flujo fundamental del diseño de algoritmos para el procesamiento digital
  de señales, se basa en la simulación y refinamiento del prototipo a implementar.
- Una vez que se tiene el resultado esperado del filtro en la imagen, se
- puede implementar en un modelo más complejo.
+ Una vez que se tiene el resultado esperado del filtro en la imagen de archivo,
+ se puede implementar un sistema más completo para procesar video en tiempo
+ real.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -3802,7 +3805,7 @@ La transformación de RGB a escala de grises se debe hacer directo en la
 \end_layout
 
 \begin_layout Itemize
-La frecuencia (periodo) del modelo de Simulink debe ser de 5.0863ns.
+El periodo para el modelo de Simulink debe ser de 5.0863ns.
 \end_layout
 
 \begin_layout Itemize
@@ -3818,7 +3821,7 @@ reference "fig:Imagen-utilizada-para"
 
 \end_inset
 
-, con una dimensión de 512*384.
+, con una dimensión de 512*384 pixeles.
 \end_layout
 
 \begin_layout Standard
@@ -3966,7 +3969,7 @@ Canny
 Roberts Cross
 \emph default
 , es menos sensible al ruido lo que significa que es más estable, aunque
- es más lento en cuanto a términos de computación de resultados.
+ es más lento en cuanto a computación de resultados.
 \end_layout
 
 \begin_layout Subsection
@@ -4222,7 +4225,7 @@ Las entradas a esta estructura vienen del bloque
 \emph on
 'Image From File'
 \emph default
-, y a las salidas se puede conectar ya, el modelo de conversión RGB a escala
+, y a las salidas se puede conectar el modelo de conversión RGB a escala
  de grises.
  La Figura 
 \begin_inset CommandInset ref
@@ -4805,7 +4808,7 @@ name "fig:Reconstrucción-de-la"
 \end_deeper
 \begin_layout Enumerate
 Como tiempo de simulación, se recomienda generalmente utilizar el número
- de filas por el número de columnas, en este caso 512*384.
+ de filas por el número de columnas, en este caso 512*384 unidades de tiempo.
  Al ejecutar la simulación, el resultado debe ser como se muestra en la
  Figura 
 \begin_inset CommandInset ref
@@ -5360,8 +5363,8 @@ Modelo completo del filtro Sobel.
 
 \end_deeper
 \begin_layout Enumerate
-Este modelo del paso 8 se convirtió en subsistema, para conectarse como
- se muestra en la Figura 
+El modelo del paso 8 se convirtió en subsistema, para conectarse como se
+ muestra en la Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Interconexión-del-algoritmo"
@@ -5648,6 +5651,8 @@ status open
 
 \begin_layout Plain Layout
 Resultado de la ejecución en FPGA del modelo del filtro Sobel.
+ A la izquierda se observa el resultado de la simulación mientras que la
+ imagen de la derecha, muestra el resultado obtenido desde la FPGA.
 \end_layout
 
 \end_inset
