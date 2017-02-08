@@ -82,6 +82,24 @@
 \begin_body
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+fancyhead[RO,LE]{
+\backslash
+thepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \noindent
 \align block
 \begin_inset ERT
@@ -169,8 +187,8 @@ o de voz para determinar quién es la persona que habla; para determinar,
 El procesamiento de señales involucra la realización de operaciones matemáticas
  sobre las señales, las cuales son llevadas por sistemas cuya única función
  es precisamente el llevar a cabo esas operaciones, los Procesadores Digitales
- de Señales (DSP, por sus siglas en Inglés) y los Arreglos Programables
- (FPGA, por sus siglas en Inglés) son los encargados de ello.
+ de Señales (DSP, por sus siglas en Inglés) y la Matriz de Compuertas Programabl
+es en Campo (FPGA, por sus siglas en Inglés) son los encargados de ello.
  
 \end_layout
 

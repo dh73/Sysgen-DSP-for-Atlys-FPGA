@@ -7,6 +7,7 @@
 \textclass extarticle
 \begin_preamble
 \date{}
+\pagenumbering{roman}
 \usepackage{textcomp}
 \usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
 \usepackage{listings}
@@ -31,7 +32,7 @@
 %%\fancyhead[LO]{\nouppercase{\leftmark}}
 %%\fancyhead[RE]{\nouppercase{\rightmark}}
 %%\fancyfoot[C]{\thepage}
-\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrulewidth}{0.0pt}
 \renewcommand{\footrulewidth}{0.0pt}
 \usepackage{pslatex}
 %\setlength{\topskip}{0mm}
@@ -143,22 +144,6 @@ tcolorbox
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-thispagestyle{empty} 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
 
@@ -166,6 +151,10 @@ thispagestyle{empty}
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
@@ -174,6 +163,11 @@ status open
 
 \backslash
 thispagestyle{empty} 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -197,6 +191,24 @@ filename "aprobacion.lyx"
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+fancyhead[RO,LE]{
+\backslash
+thepage}
 \end_layout
 
 \end_inset
@@ -244,7 +256,7 @@ filename "agradecimiento.lyx"
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
@@ -292,22 +304,6 @@ begin{spacing}{1}
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pagestyle{empty} 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \noindent
 \align block
 \begin_inset CommandInset toc
@@ -319,39 +315,7 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pagestyle{empty} 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Newpage cleardoublepage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pagestyle{empty} 
-\end_layout
-
 \end_inset
 
 
@@ -368,22 +332,6 @@ pagestyle{empty}
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pagestyle{empty} 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Newpage cleardoublepage
 \end_inset
 
@@ -392,22 +340,6 @@ pagestyle{empty}
 
 \begin_layout Standard
 \SpecialChar ligaturebreak
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-thispagestyle{empty} 
-\end_layout
-
-\end_inset
-
 
 \end_layout
 
@@ -435,23 +367,7 @@ end{spacing}
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-thispagestyle{empty} 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage newpage
+\begin_inset Newpage cleardoublepage
 \end_inset
 
 
@@ -468,6 +384,22 @@ status open
 setlength{
 \backslash
 parindent}{12pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagenumbering{arabic}
 \end_layout
 
 \end_inset
