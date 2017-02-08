@@ -1,0 +1,217 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extarticle
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package default
+\inputencoding default
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Índice
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1.54in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section*
+Agradecimientos
+\end_layout
+
+\begin_layout Standard
+Mi especial agradecimiento a las personas que hicieron posible el desarrollo
+ de esta investigación: 
+\end_layout
+
+\begin_layout Standard
+A el PhD 
+\series bold
+Omar Humberto Longoria Gandara
+\series default
+, quien siempre estuvo apoyándome en todos los aspectos, tanto personales
+ como profesionales, sin importar sus múltiples ocupaciones.
+\end_layout
+
+\begin_layout Standard
+A el Mtro 
+\series bold
+José María Valencia Velasco
+\series default
+, profesor excepcional, director técnico de tésis visionario y siempre acertado,
+ que me acercó al mundo de las FPGAs del cual sigo aprendiendo hasta el
+ dia de hoy.
+\end_layout
+
+\begin_layout Standard
+A el Mtro 
+\series bold
+Cuauhtémoc Aguilera Galicia
+\series default
+, amigo y director metodológico de tésis, siempre dispuesto a enseñarme
+ el valor de mezclar la amistad con el trabajo para así disfrutarlo aún
+ más y obtener un rendimiento superior.
+\end_layout
+
+\begin_layout Standard
+A mis amigos considerados hermanos, el Ing 
+\series bold
+César Alan López López
+\series default
+ y el Ing 
+\series bold
+José Ramón Mata García
+\series default
+, por las enseñanzas que día a día me obsequian y ser los principales motivadore
+s a continuar buscando nuevos retos.
+\end_layout
+
+\begin_layout Standard
+A mis amigos, Ing Química 
+\series bold
+Ana Teresa Rodriguez Barajas
+\series default
+, Ing 
+\series bold
+Octavio Gómez Navarro
+\series default
+, Ing 
+\series bold
+Oswaldo González
+\series default
+ 
+\series bold
+Delgado
+\series default
+, Ing 
+\series bold
+Isaac Gutiérrez Arrazola
+\series default
+, Ing 
+\series bold
+Julio Alfonso Castillo Cruz
+\series default
+ e Ing 
+\series bold
+Antonio Martín Altamirano Cornejo
+\series default
+, por todo el apoyo inmensurable hasta el dia de hoy.
+\end_layout
+
+\begin_layout Standard
+A 
+\series bold
+Dania Graciela Baldenebro López
+\series default
+, por su comprensión y palabras de aliento.
+\end_layout
+
+\begin_layout Standard
+A mi hermano 
+\series bold
+Ricardo Damián Hernández Ramírez
+\series default
+, mis padres 
+\series bold
+Esperanza Ramírez Padilla 
+\series default
+y 
+\series bold
+Ricardo Hernández Godínez
+\series default
+, que siempre demuestran su apoyo y cariño.
+\end_layout
+
+\begin_layout Standard
+A todos los profesores que contribuyeron a formarme profesionalmente.
+\end_layout
+
+\begin_layout Standard
+Este trabajo no habría sido posible, sin ustedes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

@@ -184,9 +184,20 @@ thispagestyle{empty}
 \begin_layout Standard
 \noindent
 \align block
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align block
 \begin_inset CommandInset include
 LatexCommand input
 filename "aprobacion.lyx"
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -209,9 +220,31 @@ filename "aprobacion.lyx"
 \begin_layout Standard
 \noindent
 \align block
+\begin_inset External
+	template PDFPages
+	filename pdf/abstract_chapter.pdf
+	display false
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align block
 \begin_inset CommandInset include
 LatexCommand input
 filename "abstract_chapter.lyx"
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 

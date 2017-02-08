@@ -185,7 +185,7 @@ thispagestyle{empty}
 \noindent
 \align block
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
@@ -222,7 +222,41 @@ filename "aprobacion.lyx"
 \align block
 \begin_inset CommandInset include
 LatexCommand input
+filename "agradecimiento.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align block
+\begin_inset External
+	template PDFPages
+	filename pdf/abstract_chapter.pdf
+	display false
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align block
+\begin_inset CommandInset include
+LatexCommand input
 filename "abstract_chapter.lyx"
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 

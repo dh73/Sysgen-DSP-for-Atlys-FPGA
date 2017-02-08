@@ -1,0 +1,31 @@
+Could not open plug-in of the type: digilent_plugin. Please check to make sure the correct plug-in for this type is properly installed.
+The following targetNames are available:
+  xilinx_svffile (libCseSvfFilePlugin)
+  xilinx_tcf (libCseTcfPlugin)
+  auto (libCseXilCommPlugin)
+  xilinx_parallel (libCseXilCommPlugin)
+  xilinx_platformusb (libCseXilCommPlugin)
+  xilinx_file (libCseXilCommPlugin)
+  xilinx_xvc (libCseXvcPlugin)
+Unsupported frequency.  Using default frequency: 6 MHz.
+ Using windrvr6 driver.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+File version of /home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/ISE/bin/lin64/xusbdfwu.hex = 1030.
+File version of /usr/share/xusbdfwu.hex = 1030.
+ libusb-driver.so version: 2017-01-02 15:19:49.
+ Cable PID = 0008.
+ Max current requested during enumeration is 74 mA.
+Type = 0x0004.
+ Cable Type = 3, Revision = 0.
+ Setting cable speed to 6 MHz.
+Cable connection established.
+Firmware version = 1028.
+File version of /home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/ISE/data/xusb_xlp.hex = 1303.
+Firmware hex file version = 1303.
+Downloading /home/diego/EDA/Xilinx/ISE/14.7/ISE_DS/ISE/data/xusb_xlp.hex.
+Downloaded firmware version = 1303.
+PLD file version = 0012h.
+ PLD version = 0012h.
+Type = 0x0004.
+ESN option: 000014C5D83F01.

@@ -5632,10 +5632,18 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-TBD
+\align center
+\begin_inset Graphics
+	filename img/sobel_results_fpga.png
+	scale 30
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
