@@ -195,7 +195,8 @@ El procesamiento digital de señales es una de las tecnologías más vanguardist
  ciencias médicas, diseño de radares, reproductores de música de alta fidelidad,
  por nombrar sólo algunas.
  Esta área se distingue de todas las demás dentro de las Ciencias de la
- Computación, por el tipo de datos único que utiliza: las señales
+ Computación por ser capáz de utilizar señales continuas y digitalizarlas
+ para así poder manejar la información de las mismas 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "New1"
@@ -429,14 +430,14 @@ La frecuencia de muestreo
 \begin_inset Formula $\mathbf{f_{s}}$
 \end_inset
 
-debe ser elegida para ser al menos el doble de la frecuencia máxima 
+ debe ser elegida para ser al menos el doble de la frecuencia máxima 
 \begin_inset Formula $\mathbf{f_{s}}$
 \end_inset
 
 , es decir,
 \begin_inset Formula 
 \begin{equation}
-\mathbf{f_{s}\leq2f_{max}}
+\mathbf{f_{s}\geq2f_{max}}
 \end{equation}
 
 \end_inset
@@ -448,7 +449,7 @@ debe ser elegida para ser al menos el doble de la frecuencia máxima
 En términos del intervalo del tiempo de muestreo:
 \begin_inset Formula 
 \begin{equation}
-\mathbf{T\leq\frac{1}{2f_{max}}}
+\mathbf{T\geq\frac{1}{2f_{max}}}
 \end{equation}
 
 \end_inset
@@ -479,7 +480,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Banda de espectro limitado típica
+Banda de espectro limitado típica 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "dsp_introduction"
@@ -521,7 +522,7 @@ Para valores arbitrarios de
 \begin_inset Formula $\mathbf{f_{s}}$
 \end_inset
 
-, la magnitud de 
+, el valor de 
 \begin_inset Formula $\mathbf{\mathbf{\frac{f_{s}}{2}}}$
 \end_inset
 
@@ -550,7 +551,7 @@ El muestreo y la cuantización son requisitos indispensables para cualquier
  operación de procesamiento digital en señales analógicas.
  Una señal digital es una secuencia de números
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Esta secuencia es conocida como 
@@ -562,7 +563,7 @@ Muestra.
 
  en donde cada muestra es representada por un número finito de dígitos
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 En el diseño de sistemas DSP, se dice que la señal es de 
@@ -760,11 +761,15 @@ En términos matemáticos, se dice que un sistema es lineal cuando, por ejemplo,
 
  respectivamente.
  Entonces, la salida del sistema al impulso 
-\begin_inset Formula $\mathbf{\alpha_{1}x_{1}(t)+\alpha_{2}x_{2}(t)}$
+\begin_inset Formula $\mathbf{\alpha_{1}}$
 \end_inset
 
  es 
-\begin_inset Formula $\mathbf{\alpha_{1}y_{1}(t)+\alpha_{2}y_{2}(t)}$
+\begin_inset Formula $\mathbf{\alpha_{1}y_{1}(t)}$
+\end_inset
+
+ para 
+\begin_inset Formula $\mathbf{\alpha_{1}x_{1}(t)}$
 \end_inset
 
 .
@@ -800,7 +805,12 @@ También, un sistema es invariante en el tiempo cuando
 
 .
  Es decir, si agregamos un retraso a la entrada o salida, el resultado debe
- ser exactamente el mismo.
+ ser exactamente el mismo más un desfaze equivalente a la misma unidad de
+ 
+\series bold
+𝜏
+\series default
+ que se le aplicó a su entrada.
 \end_layout
 
 \begin_layout Standard
@@ -959,7 +969,14 @@ Función
 \noun off
 \color none
 \lang english
-delta graficada.
+delta 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "New1"
+
+\end_inset
+
+.
 \end_layout
 
 \end_inset
@@ -981,7 +998,7 @@ Por otra parte, la
 \series bold
 respuesta al impulso
 \series default
- es la señal que existe en el sistema cuando una función delta es aplicada
+ es la señal que entrega el sistema cuando una función delta es aplicada
  a la entrada.
  Si dos sistemas son diferentes en cualquier manera, ambos tendrán diferentes
  respuestas al impulso.
@@ -1114,7 +1131,14 @@ impulso
 \noun off
 \color none
 \lang english
- graficada.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "New1"
+
+\end_inset
+
+.
 \end_layout
 
 \end_inset
@@ -1132,7 +1156,7 @@ En otras palabras, una señal de entrada
 \begin_inset Formula $\mathbf{x[n]}$
 \end_inset
 
- , entra en un sistema linear con una respuesta al impulso 
+ , entra en un sistema lineal con una respuesta al impulso 
 \begin_inset Formula $\mathbf{h[n]}$
 \end_inset
 
@@ -1297,7 +1321,7 @@ name "fig:Convolución-de-dos"
 
 \end_inset
 
-Convolución de dos vectores en Matlab.
+Convolución de dos señales en Matlab®.
 \end_layout
 
 \end_inset
@@ -1343,7 +1367,7 @@ L
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\mathbf{y[n]=f[n]*x[n]=\sum_{k=0}^{L-1}f[k]x[n-k]}
+\mathbf{y[n]=h[n]*x[n]=\sum_{k=0}^{L-1}h[k]x[n-k]}
 \end{equation}
 
 \end_inset
@@ -1356,7 +1380,11 @@ Para un tren de impulsos en el dominio del tiempo a la entrada
 \begin_inset Formula $\mathbf{x[n]}$
 \end_inset
 
- , la ecuación queda como:
+ , teniendo coeficientes 
+\begin_inset Formula $\mathbf{b}_{N}$
+\end_inset
+
+, la ecuación queda como:
 \end_layout
 
 \begin_layout Standard
@@ -1436,8 +1464,8 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Respuesta al impulso de un filtro FIR con 
-\begin_inset Formula $\mathbf{b_{0}=0.9}$
+Respuesta al impulso de un filtro FIR con coeficientes 
+\begin_inset Formula $\mathbf{b_{k}=[0,\,...,\,0.9]}$
 \end_inset
 
 .
@@ -1559,35 +1587,6 @@ name "fig:Estructura-en-Forma"
 \end_inset
 
 .
- Imagen creada usando el paquete 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-textup{Ti
-\backslash
-textit{k}Z}
-\end_layout
-
-\end_inset
-
- de 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-LaTeX
-\end_layout
-
-\end_inset
-
- 
 \end_layout
 
 \end_inset
@@ -1850,34 +1849,6 @@ name "fig:Estructura-IIR"
 \end_inset
 
 .
- Imagen creada usando el paquete 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-textup{Ti
-\backslash
-textit{k}Z}
-\end_layout
-
-\end_inset
-
- de 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-LaTeX
-\end_layout
-
-\end_inset
-
  
 \end_layout
 
@@ -1945,8 +1916,8 @@ s para operaciones de DSP, microprocesadores físicos y algunas funciones
 \begin_layout Standard
 La tendencia reciente en la tecnología FPGA es trabajar con arquitecturas
  de hardware en alto nivel de abstracción, agregarle bloques DSP, procesadores
- embebidos y transductores de alta velocidad para formar un Sistema Programable
- en Chip completo (SoPC).
+ embebidos y transductores de alta velocidad para formar un sistema en un
+ chip programable (System on a Programmable Chip).
  Además, las FPGA toman ventaja del paralelismo natural del hardware, ya
  que exceden el poder computacional de los Procesadores Digitales de Señales,
  rompiendo el paradigma de la ejecución secuencial y lograr un mayor rendimiento.
@@ -1962,8 +1933,8 @@ Una de las aplicaciones principales de las FPGA es poder ejecutar y modificar
  hacer cambios iterativamente en cuestión de horas en lugar de semanas.
  También, debido a la creciente oferta de herramientas de diseño en alto
  nivel, se ha decrementado la curva de aprendizaje y con frecuencia, estas
- herramientas incluyen valiosas Propiedades Intelectuales (IP) para control
- y procesamiento de señales avanzadas.
+ herramientas incluyen valiosas propiedades intelectuales (Intellectual
+ Property) para control y procesamiento de señales avanzadas.
 \end_layout
 
 \begin_layout Standard
@@ -1989,7 +1960,7 @@ Existe una numerosa cantidad de fabricantes pero sólo dos tipos de FPGAs:
 
 \begin_layout Standard
 \noindent
-En la próxima sección se cubrirá a detalle, la arquitectura de la familia
+En la siguiente sección se cubrirá a detalle la arquitectura de la familia
  Spartan-6
 \lang spanish
 ®
@@ -2064,15 +2035,15 @@ Recursos de ruteo para proveer la interconectividad de los Bloques Lógicos
 
 \begin_layout Standard
 \noindent
-La Figura
-\series bold
- 
+La Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Arquitectura-general-de"
 
 \end_inset
 
+
+\series bold
  
 \series default
 muestra la arquitectura típica de una FPGA con los bloques de construcción
@@ -2112,7 +2083,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Arquitectura general de las FPGA
+Arquitectura general de las FPGA 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "x6vs"
@@ -2165,8 +2136,8 @@ La familia Spartan-6
  está fuertemente enfocada a proveer capacidades de integración de sistemas
  con el menor costo posible para aplicaciones de alto volumen, es decir,
  es una línea de dispositivos que tienen bloques de comunicación de alta
- velocidad como PCI Express, controladores de memoria externa DDR3 y Ethernet,
- entre otros.
+ velocidad como PCI (Peripheral Component Interconnect) Express, controladores
+ de memoria externa DDR3 y Ethernet, entre otros.
  Además de una vasta densidad de elementos lógicos y registros disponibles
  que van desde 3,840 hasta 147,443 celdas lógicas, dependiendo del dispositivo
  seleccionado por el diseñador.
@@ -2189,14 +2160,14 @@ key "Xil_DS160"
 
 \begin_layout Standard
 \noindent
-La innovación más notable en estas FPGA es la re estructuración de la arquitectu
-ra interna para implementar LUTs de 6 entradas y doble registro de salida
+La innovación más notable en estas FPGA es la reestructuración de la arquitectur
+a interna para implementar LUTs de 6 entradas y doble registro de salida
  en cada LUT, esto significa que una sola LUT puede implementar funciones
  lógicas de 
 \begin_inset Formula $2^{6}=64$
 \end_inset
 
-bits, como por ejemplo, una RAM de 64 bits o un registro de desplazamiento
+ bits, como por ejemplo, una RAM de 64 bits o un registro de desplazamiento
  de 32 bits.
  Anteriormente, la arquitectura se basaba en LUTs de 4 entradas, como se
  muestra a continuación.
@@ -2209,7 +2180,7 @@ bits, como por ejemplo, una RAM de 64 bits o un registro de desplazamiento
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
@@ -2227,7 +2198,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-LUT de seis entradas
+LUT de seis entradas 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "clb_ov"
@@ -2290,7 +2261,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Diagrama a bloques de una FPGA Spartan-6®, ilustración de: 
+Diagrama a bloques de una FPGA Spartan-6® 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "clb_ov"
@@ -2431,7 +2402,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Estructura detallada de un SLICE
+Estructura detallada de un SLICE 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "clb_ov"
@@ -2512,7 +2483,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Block RAM de doble puerto
+Block RAM de doble puerto 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "clb_ov"
@@ -2606,7 +2577,7 @@ FPGA Spartan-6
  LX45 con 6,822 slices, cada una contiene 4 LUTS de 6 entradas y 8 flip-flops,
  con una frecuencia máxima de ejecución a 500MHz.
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Para una mayor comprensión de estas características técnicas, referirse
@@ -2670,7 +2641,7 @@ se puede observar una imagen de esta plataforma.
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2687,8 +2658,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Kit de desarrollo Atlys Spartan-6 de Digilent, obtenida del sitio web del
- fabricante
+Kit de desarrollo Atlys Spartan-6 de Digilent 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Digilent_atlys"
@@ -2967,7 +2937,7 @@ Matlab
 \lang spanish-mexico
  que proporciona el modelado, la simulación y el análisis de sistemas dinámicos,
  dentro de un entorno gráfico.
- Este sofwtare permite el diseño modular y jerárquico, ayudando al usuario
+ Este software permite el diseño modular y jerárquico, ayudando al usuario
  en el manejo y creación de sistemas complejos que son conceptualmente simplific
 ados.
  
@@ -3242,7 +3212,7 @@ System Generator
  es una herramienta de modelado a nivel sistema que facilita el diseño de
  hardware en FPGA
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Se recomienda leer la documentación de Xilinx: 
@@ -3631,7 +3601,7 @@ sintetizado
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -3762,17 +3732,8 @@ textregistered
 \end_inset
 
 .
- Imagen tomada de la guía de usuario 
-\begin_inset Quotes eld
-\end_inset
-
 
 \emph on
-System Generator for DSP User Guide, UG640
-\begin_inset Quotes erd
-\end_inset
-
-.
  
 \emph default
 Se puede observar como el procesador Microblaze
@@ -3793,10 +3754,6 @@ textregistered
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -4066,36 +4023,7 @@ filename "misc/fpgabuild_flow.tex"
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Diagrama a flujo del proceso de compilación en FPGA, elaborado usando el
- paquete 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-textup{Ti
-\backslash
-textit{k}Z}
-\end_layout
-
-\end_inset
-
- de 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-LaTeX
-\end_layout
-
-\end_inset
-
-.
+Diagrama a flujo del proceso de compilación en FPGA.
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Diagrama-a-flujo"
@@ -4178,7 +4106,7 @@ ISim
  También ofrece capacidades de visualización y rastreo/análisis de formas
  de onda tanto analógicas
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 La visualización de formas de onda analógicas requiere de una licencia adicional.
@@ -4188,7 +4116,7 @@ La visualización de formas de onda analógicas requiere de una licencia adicion
 
  como digitales y depuración de fuentes HDL, entre muchas otras características
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Para obtener una lista más completa de las características de 
@@ -4228,7 +4156,7 @@ por sus siglas en Inglés).
 \emph on
 timing closure
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -4356,7 +4284,7 @@ PlanAhead
 \lang spanish-mexico
 
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Se recomienda leer la guía 

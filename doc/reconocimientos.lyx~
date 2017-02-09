@@ -75,6 +75,22 @@
 
 \begin_body
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+fancyhead[RO,LE]{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section*
 Agradecimientos
 \end_layout
@@ -85,7 +101,12 @@ Mi especial agradecimiento a las personas que hicieron posible el desarrollo
 \end_layout
 
 \begin_layout Standard
-A el PhD 
+A el 
+\series bold
+PhD.
+
+\series default
+ 
 \series bold
 Omar Humberto Longoria Gandara
 \series default
@@ -94,7 +115,12 @@ Omar Humberto Longoria Gandara
 \end_layout
 
 \begin_layout Standard
-A el Mtro 
+A el 
+\series bold
+Mtro.
+
+\series default
+ 
 \series bold
 José María Valencia Velasco
 \series default
@@ -104,9 +130,10 @@ José María Valencia Velasco
 \end_layout
 
 \begin_layout Standard
-A el Mtro 
+A el 
 \series bold
-Cuauhtémoc Rafael Aguilera Galicia
+Mtro.
+ Cuauhtémoc Rafael Aguilera Galicia
 \series default
 , amigo y director metodológico de tesis, siempre dispuesto a enseñarme
  el valor de mezclar la amistad con el trabajo para así disfrutarlo aún
@@ -114,11 +141,21 @@ Cuauhtémoc Rafael Aguilera Galicia
 \end_layout
 
 \begin_layout Standard
-A mis amigos considerados hermanos, el Ing 
+A mis amigos considerados hermanos, el 
+\series bold
+Ing.
+
+\series default
+ 
 \series bold
 César Alan López López
 \series default
- y el Ing 
+ y el 
+\series bold
+Ing.
+
+\series default
+ 
 \series bold
 José Ramón Mata García
 \series default
@@ -127,15 +164,30 @@ s a continuar buscando nuevos retos.
 \end_layout
 
 \begin_layout Standard
-A mis amigos, Ing Química 
+A mis amigos, 
+\series bold
+Ing.
+ Química
+\series default
+ 
 \series bold
 Ana Teresa Rodríguez Barajas
 \series default
-, Ing 
+, 
+\series bold
+Ing.
+
+\series default
+ 
 \series bold
 Octavio Gómez Navarro
 \series default
-, Ing 
+, 
+\series bold
+Ing.
+
+\series default
+ 
 \series bold
 Oswaldo González
 \series default
@@ -143,31 +195,43 @@ Oswaldo González
 \series bold
 Delgado
 \series default
-, Ing 
+, 
+\series bold
+Ing
+\series default
+.
+ 
 \series bold
 Isaac Gutiérrez Arrazola
 \series default
-, Ing 
+, 
+\series bold
+Ing
+\series default
+.
+ 
 \series bold
 Julio Alfonso Castillo Cruz
 \series default
-, Ing 
+, 
+\series bold
+Ing
+\series default
+.
+ 
 \series bold
 Antonio Martín Altamirano Cornejo
 \series default
-, e Ing 
+, e 
+\series bold
+Ing
+\series default
+.
+ 
 \series bold
 Matias Ezequiel Leonetti 
 \series default
 por todo el apoyo inmensurable hasta el día de hoy.
-\end_layout
-
-\begin_layout Standard
-A 
-\series bold
-Dania Graciela Baldenebro López
-\series default
-, por su comprensión y palabras de aliento.
 \end_layout
 
 \begin_layout Standard
@@ -187,8 +251,13 @@ Ricardo Hernández Godínez
 \end_layout
 
 \begin_layout Standard
-A todos los profesores que contribuyeron a formarme profesionalmente.
- Este trabajo no habría sido posible, sin ustedes.
+A 
+\series bold
+Dania Graciela Baldenebro López
+\series default
+, por su comprensión y palabras de aliento, asì como a los profesores que
+ contribuyeron a mi formación.
+ 
 \end_layout
 
 \begin_layout Standard

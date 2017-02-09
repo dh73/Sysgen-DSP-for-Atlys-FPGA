@@ -374,7 +374,7 @@ textregistered{
 
 
 \lang spanish-mexico
- para este ejercicio.
+, donde se puede observar el resultado a la salida del filtro FIR.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -5757,7 +5757,7 @@ Como se puede observar, la mayoría de los recursos utilizados son DSP48A1,
 \begin_layout Standard
 Se provee la solución completa de este diseño, bajo la ruta 
 \series bold
-ejemplos/sobel_img/algodev.slx.
+ejemplos/sobel_img/sobel_t.slx.
 \end_layout
 
 \begin_layout Standard

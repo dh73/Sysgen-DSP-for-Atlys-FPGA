@@ -133,7 +133,7 @@ Conversión Analógico-Digital.
 \end_layout
 
 \begin_layout Standard
-Los conversores de señal analógica a digital (ADC por sus siglas en Inglés),
+Los convertidores de señal analógica a digital (ADC por sus siglas en Inglés),
  son dispositivos de señal mixta que se encargan de producir una salida
  que representa un valor digital en referencia al voltaje o corriente de
  entrada al mismo, generalmente en código binario convencional, aunque también
@@ -177,7 +177,7 @@ reference "fig:Función-de-salida"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -253,7 +253,7 @@ reference "fig:ADC_schem"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -271,17 +271,6 @@ status collapsed
 
 \begin_layout Plain Layout
 Símbolo esquemático del ADC.
- Imagen obtenida de 
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-https://commons.wikimedia.org/wiki/File:ADC_Symbol.svg
-\end_layout
-
-\end_inset
-
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -359,7 +348,7 @@ Teorema de Nyquist
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -376,7 +365,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Información digital convertida en un tren de impulsos
+Información digital convertida en un tren de impulsos 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "New1"
@@ -416,7 +405,7 @@ frecuencia de Nyquist
 \emph on
 aliasing
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Múltiples señales en tiempo continuo pueden producir series de muestras
@@ -484,7 +473,7 @@ reference "fig:Representación-gráfica-de-1"
 
 
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Información obtenida de 
@@ -508,7 +497,7 @@ key "chapter_3"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -560,7 +549,7 @@ name "fig:Representación-gráfica-de-1"
 Hay diferentes formas de implementar estas conversiones D/A utilizando component
 es electrónicos discretos y circuitos integrados, por ejemplo
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Para obtener más información sobre este tema, se puede referir a 
@@ -605,7 +594,7 @@ reference "fig:Estructura-de-un-1"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -628,8 +617,7 @@ name "fig:Estructura-de-un-1"
 
 \end_inset
 
-Estructura de un DAC resistivo de ponderación binaria.
- Imagen adaptada de: 
+Estructura de un DAC resistivo de ponderación binaria 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "ad_resistive_one"
@@ -671,7 +659,7 @@ reference "fig:capacitivo_ponderacion_binaria-1"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -733,7 +721,7 @@ reference "fig:DAC-R-2R-red-1"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -801,7 +789,7 @@ reference "fig:Símbolo-esquemático-del"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -842,7 +830,7 @@ Modelo en NGSpice de un DAC ideal de 4 bits.
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -900,7 +888,7 @@ Script Interactivo para la Convolución de Dos Vectores.
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1291,7 +1279,7 @@ Se debe descargar el archivo
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1440,7 +1428,7 @@ reference "fig:Actualización-del-'Sysgen"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1500,7 +1488,7 @@ Código Verilog de la IP para el Controlador del Codificador AC97.
 
 \begin_layout Standard
 \begin_inset Flex Color Box
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Argument 1
@@ -1572,7 +1560,7 @@ lstparams "language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={
 
 \begin_layout Standard
 \begin_inset Flex Color Box
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Argument 1

@@ -374,7 +374,7 @@ textregistered{
 
 
 \lang spanish-mexico
- para este ejercicio.
+, donde se puede observar el resultado a la salida del filtro FIR.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -3465,7 +3465,8 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Vista jerárquica de los códigos fuente utilizadas para el proyecto.
+Vista jerárquica de los códigos fuente utilizadas para la generación del
+ bitfile que ejecuta el algoritmo de eco.
  
 \begin_inset CommandInset label
 LatexCommand label

@@ -142,10 +142,10 @@ Utilizando los mismos fundamentos de los filtros digitales, se desarrolló
 \begin_layout Abstract
 Por último, se describe un sistema de procesamiento de imagen utilizando
  el algoritmo del operador Sobel y con los conceptos de las implementaciones
- anteriores, para encontrar los bordes de la misma.
- Ejecutando todas las operaciones necesarias en la FPGA, la cual arrojó
- resultados satisfactorios utilizando una cantidad de elementos lógicos
- relativamente minúscula.
+ anteriores, para encontrar los bordes de la misma mediante la ejecución
+ de todas las operaciones necesarias en la FPGA, la cual arrojó resultados
+ satisfactorios utilizando una cantidad de elementos lógicos relativamente
+ minúscula.
 \end_layout
 
 \begin_layout Abstract
