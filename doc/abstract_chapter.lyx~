@@ -121,7 +121,7 @@ s especializados para poder garantizar una implementación exitosa.
  Esta investigación simplifica la conceptualización, modelado e implementación
  de sistemas DSP complejos.
  Utilizando una metodología de diseño en alto nivel de abstracción basada
- en el uso de Matlab® y lenguajes de Descripción de Hardware (HDL), reduciendo
+ en el uso de Matlab® y lenguajes de descripción de hardware (HDL), reduciendo
  así la curva de aprendizaje.
  A través del documento se presenta la elaboración de una arquitectura de
  un filtro de respuesta al impulso finito (FIR), el cual elimina una componente
@@ -136,14 +136,14 @@ Utilizando los mismos fundamentos de los filtros digitales, se desarrolló
  a una señal de audio.
  El cual se exportó como bloque HDL y se incorporó a un sistema más grande
  con las interfaces para ejercitar dicho filtro en tiempo real, con audio
- extraído de un codificador AC97.
+ extraído desde un codificador AC97.
 \end_layout
 
 \begin_layout Abstract
 Por último, se describe un sistema de procesamiento de imagen utilizando
  el algoritmo del operador Sobel y con los conceptos de las implementaciones
- anteriores, para encontrar los bordes de una imagen.
- Ejecutando todas las operaciones necesarias en la FPGA, el cual arrojó
+ anteriores, para encontrar los bordes de la misma.
+ Ejecutando todas las operaciones necesarias en la FPGA, la cual arrojó
  resultados satisfactorios utilizando una cantidad de elementos lógicos
  relativamente minúscula.
 \end_layout

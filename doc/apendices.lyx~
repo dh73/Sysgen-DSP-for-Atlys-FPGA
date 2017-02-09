@@ -892,7 +892,7 @@ name "fig:Símbolo-esquemático-del"
 \end_layout
 
 \begin_layout Section
-Script interactivo para la convolución de dos vectores.
+Script Interactivo para la Convolución de Dos Vectores.
 \end_layout
 
 \begin_layout Standard
@@ -948,7 +948,7 @@ Ilustración interactiva de la convolución, usada en la subsección
 \end_layout
 
 \begin_layout Section
-Creación de proyectos usando PlanAhead
+Creación de Proyectos usando PlanAhead
 \begin_inset ERT
 status open
 
@@ -1205,7 +1205,7 @@ name "fig:Modelo-de-ejemplo-1"
 \end_layout
 
 \begin_layout Section
-Instalación del plugin de Sysgen para el kit Atlys.
+Instalación del Plugin de Sysgen para la Tarjeta de Desarrollo Atlys.
 \end_layout
 
 \begin_layout Standard
@@ -1495,7 +1495,7 @@ name "fig:Actualización-del-'Sysgen"
 \end_layout
 
 \begin_layout Section
-Código Verilog de la IP para el controlador del códec AC97.
+Código Verilog de la IP para el Controlador del Codificador AC97.
 \end_layout
 
 \begin_layout Standard
@@ -1621,7 +1621,7 @@ sffamily
 \backslash
 bfseries
 \backslash
-large, title=Archivo UCF
+large, title=Archivo UCF para la implementación
 \end_layout
 
 \end_inset

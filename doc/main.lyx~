@@ -32,8 +32,8 @@
 %%\fancyhead[LO]{\nouppercase{\leftmark}}
 %%\fancyhead[RE]{\nouppercase{\rightmark}}
 %%\fancyfoot[C]{\thepage}
-%\renewcommand{\headrulewidth}{0.4pt}
-%\renewcommand{\footrulewidth}{0.0pt}
+\renewcommand{\headrulewidth}{0.0pt}
+\renewcommand{\footrulewidth}{0.0pt}
 \usepackage{pslatex}
 %\setlength{\topskip}{0mm}
 %\setlength{\parindent}{0mm}
@@ -144,17 +144,6 @@ tcolorbox
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage newpage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
@@ -170,29 +159,8 @@ thispagestyle{empty}
 
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
 \begin_layout Standard
-\noindent
-\align block
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-\noindent
-\align block
-\begin_inset CommandInset include
-LatexCommand input
-filename "aprobacion.lyx"
-
-\end_inset
-
-
-\end_layout
-
+\begin_inset Newpage newpage
 \end_inset
 
 
@@ -206,9 +174,7 @@ status open
 
 
 \backslash
-fancyhead[RO,LE]{
-\backslash
-thepage}
+thispagestyle{empty} 
 \end_layout
 
 \end_inset
@@ -255,19 +221,14 @@ filename "agradecimiento.lyx"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status collapsed
+\begin_inset ERT
+status open
 
 \begin_layout Plain Layout
-\noindent
-\align block
-\begin_inset CommandInset include
-LatexCommand input
-filename "abstract_chapter.lyx"
-
-\end_inset
 
 
+\backslash
+thispagestyle{empty} 
 \end_layout
 
 \end_inset
@@ -296,6 +257,24 @@ status open
 
 \backslash
 begin{spacing}{1}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+fancyhead[RO,LE]{
+\backslash
+thepage}
 \end_layout
 
 \end_inset
@@ -340,6 +319,22 @@ LatexCommand tableofcontents
 
 \begin_layout Standard
 \SpecialChar ligaturebreak
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -400,6 +395,28 @@ status open
 
 \backslash
 pagenumbering{arabic}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+fancyhead[RO,LE]{Dise
+\backslash
+~{n}o e Implementaci
+\backslash
+'{o}n de Sistemas DSP en FPGA - 
+\backslash
+thepage}
 \end_layout
 
 \end_inset

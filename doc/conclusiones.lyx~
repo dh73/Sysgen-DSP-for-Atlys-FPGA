@@ -7,7 +7,7 @@
 \textclass extarticle
 \use_default_options true
 \maintain_unincluded_children false
-\language english
+\language spanish-mexico
 \language_package default
 \inputencoding auto
 \fontencoding global
@@ -58,7 +58,7 @@
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\quotes_language french
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -72,8 +72,6 @@
 \begin_body
 
 \begin_layout Standard
-
-\lang spanish-mexico
 \begin_inset ERT
 status open
 
@@ -90,8 +88,6 @@ topskip0pt
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish-mexico
 \begin_inset ERT
 status open
 
@@ -110,12 +106,10 @@ fill}
 \end_layout
 
 \begin_layout Part
-Resultados y conclusiones.
+Resultados y Conclusiones.
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish-mexico
 \begin_inset ERT
 status open
 
@@ -134,8 +128,6 @@ fill}
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish-mexico
 \begin_inset ERT
 status open
 
@@ -152,8 +144,6 @@ thispagestyle{empty}
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish-mexico
 \begin_inset Newpage newpage
 \end_inset
 
@@ -161,13 +151,11 @@ thispagestyle{empty}
 \end_layout
 
 \begin_layout Subsection
-
-\lang spanish-mexico
-Resultados obtenidos.
+Resultados Obtenidos.
 \end_layout
 
 \begin_layout Standard
-Los alcances obtenidos durante el desarollo de esta investigación, se enlistan
+Los alcances obtenidos durante el desarrollo de esta investigación, se enlistan
  a continuación:
 \end_layout
 
@@ -235,13 +223,13 @@ Técnicas avanzadas de diseño de sistemas DSP con Sysgen fueron implementadas
  al llevar el algoritmo de procesamiento de audio, a ejecución en tiempo
  real.
  Se pudo implementar correctamente el modelo con resultados satisfactorios,
- aún cuando existian diferentes dominios de reloj necesarios tanto para
+ aún cuando existían diferentes dominios de reloj necesarios tanto para
  el controlador del códec, como para la ejecución del modelo de Sysgen y
  el filtro peine.
 \end_layout
 
 \begin_layout Itemize
-A lo largo de los prototipos desarollados, se hizo énfasis en la metodología
+A lo largo de los prototipos desarrollados, se hizo énfasis en la metodología
  del co-diseño de hardware y software y las ventajas de utilizar los diferentes
  niveles de abstracción para acelerar la implementación con buenos resultados
  a nivel de hardware.
@@ -382,8 +370,8 @@ Cabe recordar que, el dispositivo Spartan-6® utilizado en este kit, es el
  Este resultado da como referencia, la capacidad de integración de sistemas
  DSP utilizando Sysgen, sin necesidad de recurrir a dispositivos FPGA más
  complejos y por ende, más costosos.
- Lo que hace de esta metodologia, una forma viable de prototipado para el
- sector académico e inclusive, el industrial de bajo volúmen.
+ Lo que hace de esta metodología, una forma viable de prototipado para el
+ sector académico e inclusive, el industrial de bajo volumen.
 \end_layout
 
 \begin_layout Standard
@@ -394,11 +382,11 @@ Es importante aclarar que no todos los conceptos de Sysgen fueron cubiertos
  sintetizables, hasta el uso de procesadores como PicoBlaze®/MicroBlaze®
  para generar un sistema embebido completo independiente de los vectores
  de simulación de Simulink®.
- Se recomeinda siempre tener a la mano el documento '
+ Se recomienda siempre tener a la mano el documento '
 \emph on
 System Generator for DSP, User Guide (UG640)' 
 \emph default
-para comprender a fondo todo lo ilustrado en esta guía y otras IPs funcionales
+para comprender a fondo todo lo ilustrado en esta guía, otras IPs funcionales
  y sus limitaciones.
 \end_layout
 
@@ -410,7 +398,7 @@ para comprender a fondo todo lo ilustrado en esta guía y otras IPs funcionales
 \end_layout
 
 \begin_layout Subsection
-Trabajo futuro y recomendaciones.
+Trabajo Futuro y Recomendaciones.
 \end_layout
 
 \begin_layout Standard
@@ -419,7 +407,7 @@ El autor recomienda las siguientes implementaciones para cada uno de los
 \end_layout
 
 \begin_layout Subsubsection
-Filtrado básico de señales.
+Filtrado Básico de Señales.
 \end_layout
 
 \begin_layout Itemize
@@ -463,11 +451,11 @@ el cual se puede optimizar para esta aplicación en particular.
 \end_layout
 
 \begin_layout Subsubsection
-Procesamiento de audio.
+Procesamiento de Audio.
 \end_layout
 
 \begin_layout Itemize
-Desarrollar un algoritmo diferente al de eco, por ejemplo, reberveración,
+Desarrollar un algoritmo diferente al de eco, por ejemplo, reverberación,
  y ejecutarlo en tiempo real con la IP del códec AC97 facilitada por el
  autor.
 \end_layout
@@ -500,7 +488,7 @@ con los parámetros obtenidos.
 Se puede implementar un sistema de reconocimiento de voz, usando como base
  el modelo para el algoritmo de eco.
  Se necesita utilizar, en lugar del filtro peine, un bloque de la Transformada
- Rápida de Fourier, incluído en Sysgen como '
+ Rápida de Fourier, incluido en Sysgen como '
 \emph on
 Fast Fourier Transform', 
 \emph default
@@ -512,13 +500,13 @@ dependiendo de la especificación u objetivo de reconocimiento.
 \end_layout
 
 \begin_layout Subsubsection
-Procesamiento de imagenes.
+Procesamiento de Imágenes.
 \end_layout
 
 \begin_layout Itemize
 Con el desarrollo descrito en esta sección, se pueden implementar diferentes
  algoritmos y transformaciones como obtener el negativo de la imagen, rotación,
- incremento o decremento de valores como brillo, étc.
+ incremento o decremento de valores como brillo, etc.
  Ya sea en escala de grises, o en mapa de color RGB.
 \end_layout
 
@@ -526,7 +514,6 @@ Con el desarrollo descrito en esta sección, se pueden implementar diferentes
 Utilizar video en lugar de imagen como entrada a filtrar.
  El bloque 
 \emph on
-\lang spanish-mexico
 'Image From File' 
 \emph default
 acepta videos en diferentes formatos y es posible basarse en la implementación
@@ -534,8 +521,6 @@ acepta videos en diferentes formatos y es posible basarse en la implementación
 \end_layout
 
 \begin_layout Itemize
-
-\lang spanish-mexico
 Una implementación mucho más compleja sería visualizar la imagen procesada,
  en algún monitor, utilizando los puertos HDMI de la tarjeta Atlys.
  Esto es posible ya sea, exportando el modelo en un sistema basado en el
@@ -548,8 +533,6 @@ Una implementación mucho más compleja sería visualizar la imagen procesada,
 status open
 
 \begin_layout Plain Layout
-
-\lang spanish-mexico
 Referirse a: https://reference.digilentinc.com/atlys:atlys:atlys
 \end_layout
 

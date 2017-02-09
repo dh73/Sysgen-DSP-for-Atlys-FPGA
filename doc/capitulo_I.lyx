@@ -101,6 +101,22 @@ fill}
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Part
 \noindent
 Introducción.
@@ -137,7 +153,7 @@ fill}
 
 \begin_layout Section
 \noindent
-Planteamiento del problema.
+Planteamiento del Problema.
 \end_layout
 
 \begin_layout Standard
@@ -168,9 +184,15 @@ o de voz para determinar quién es la persona que habla; para determinar,
 \align block
 El procesamiento de señales involucra la realización de operaciones matemáticas
  sobre las señales, las cuales son llevadas por sistemas cuya única función
- es precisamente el llevar a cabo esas operaciones, los procesadores digitales
- de señales (DSP, por sus siglas en Inglés) y la matriz de compuertas programabl
-es en campo (FPGA, por sus siglas en Inglés) son los encargados de ello.
+ es precisamente el llevar a cabo esas operaciones, los 
+\emph on
+procesadores digitales de señales
+\emph default
+ (DSP por sus siglas en Inglés) y la 
+\emph on
+matriz de compuertas programables en campo
+\emph default
+ (FPGA por sus siglas en Inglés) son los encargados de ello.
  
 \end_layout
 
@@ -178,9 +200,9 @@ es en campo (FPGA, por sus siglas en Inglés) son los encargados de ello.
 \noindent
 \align block
 En muchas aplicaciones de procesamiento de señales se requiere una velocidad
- de procesamiento elevada (por ejemplo procesamiento de video) por lo que,
- debido al paralelismo de su operación, las FPGA son aptos para ser utilizados
- en ellas
+ de procesamiento elevada, por ejemplo, en el procesamiento de video.
+ Los dispositivos FPGA ofrecen procesamiento orientado al paralelismo, haciéndol
+os aptos para ser utilizados en dichas aplicaciones de alto rendimiento
 \begin_inset CommandInset citation
 LatexCommand cite
 key "kehtarnavaz_digital_2010"
@@ -197,11 +219,11 @@ key "kehtarnavaz_digital_2010"
 Con el fin de explotar las ventajas que las FPGA poseen y poderlos aplicar
  de una manera eficaz en el procesamiento de señales, es necesario contar
  con sólidos conocimientos principalmente en metodologías de diseño digital
- e implementación matemática de algoritmos; estos conocimientos deben adquirirse
- desde la academia, puesto que es el tiempo ideal en que el futuro ingeniero
- o arquitecto de sistemas puede ir desarrollando, a través de la experimentación
-, las habilidades necesarias para crear prototipos en el que se involucre
- el procesamiento de señales.
+ e implementación matemática de algoritmos.
+ Estos conocimientos deben adquirirse desde la academia, puesto que es el
+ tiempo ideal en que el futuro ingeniero o arquitecto de sistemas puede
+ ir desarrollando, a través de la experimentación, las habilidades necesarias
+ para crear prototipos en el que se involucre el procesamiento de señales.
  
 \end_layout
 
@@ -234,6 +256,12 @@ ones los conocimientos adquiridos en las áreas de procesamiento digital
 \begin_layout Standard
 \noindent
 \align block
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align block
 Muchas veces la información que el fabricante proporciona sobre sus plataformas
  de trabajo es escasa y poco concreta, lo que puede impactar negativamente
  en el interés del alumno, provocando que los conocimientos y conceptos
@@ -241,9 +269,9 @@ Muchas veces la información que el fabricante proporciona sobre sus plataformas
  
 \end_layout
 
-\begin_layout Standard
-\noindent
-\align block
+\end_inset
+
+
 \begin_inset Newpage newpage
 \end_inset
 
@@ -259,7 +287,7 @@ Propósito.
 \noindent
 
 \lang spanish
-Objetivo general.
+Objetivo General.
 \end_layout
 
 \begin_layout Itemize
@@ -278,7 +306,7 @@ es del CETI.
 \noindent
 
 \lang spanish
-Objetivos específicos.
+Objetivos Específicos.
 \end_layout
 
 \begin_layout Itemize

@@ -185,7 +185,7 @@ Procesamiento Digital de Señales.
 \end_layout
 
 \begin_layout Subsection
-Elementos de un sistema DSP.
+Elementos de un Sistema DSP.
 \end_layout
 
 \begin_layout Standard
@@ -383,7 +383,7 @@ Las secciones a continuación describen con más detalle, los teoremas y técnic
 \end_layout
 
 \begin_layout Subsubsection
-Teorema de muestreo.
+Teorema de Muestreo.
 \end_layout
 
 \begin_layout Standard
@@ -1907,7 +1907,7 @@ Plataformas FPGA.
 \end_layout
 
 \begin_layout Subsection
-Descripción general.
+Descripción General.
 \end_layout
 
 \begin_layout Standard
@@ -1930,8 +1930,8 @@ La matriz de compuertas programables en campo (FPGA) es un circuito integrado
 
 \begin_layout Standard
 \noindent
-La arquitectura de una FPGA se basa en bloques de matrices configurables
- (CLBs, por sus siglas en Inglés), las cuales proporcionan la lógica programable
+La arquitectura de una FPGA se basa en bloques lógicos configurables (CLBs,
+ por sus siglas en Inglés), las cuales proporcionan la lógica programable
  y una jerarquía de interconexiones reconfigurables para interconectar los
  CLBs entre sí.
  Además de estos componentes básicos, las FPGA actuales contienen bloques
@@ -2006,7 +2006,7 @@ En la próxima sección se cubrirá a detalle, la arquitectura de la familia
 \end_layout
 
 \begin_layout Subsection
-Estructura general de las FPGA.
+Estructura General de las FPGA.
 \end_layout
 
 \begin_layout Standard
@@ -2140,7 +2140,7 @@ name "fig:Arquitectura-general-de"
 \end_layout
 
 \begin_layout Subsection
-Arquitectura de la familia de FPGAs Spartan-6
+Arquitectura de la Familia de FPGAs Spartan-6
 \begin_inset ERT
 status open
 
@@ -2545,7 +2545,7 @@ name "fig:Block-RAM-de"
 \end_layout
 
 \begin_layout Subsection
-Kit de desarrollo Atlys.
+Kit de Desarrollo Atlys.
 \end_layout
 
 \begin_layout Standard
@@ -2643,7 +2643,7 @@ Oscilador CMOS a 100 MHz como reloj base para PLL/DCM.
 \end_layout
 
 \begin_layout Itemize
-Códec de audio AC97 con líneas de entrada/salida de audio y auriculares.
+Codificador de audio AC97 con líneas de entrada/salida de audio y auriculares.
 \end_layout
 
 \begin_layout Itemize
@@ -2728,7 +2728,7 @@ name "fig:Kit-de-desarrollo"
 \end_layout
 
 \begin_layout Section
-Plataformas de Software para el diseño de sistemas DSP.
+Plataformas de Software para el Diseño de Sistemas DSP.
 \end_layout
 
 \begin_layout Subsection
@@ -2967,7 +2967,7 @@ Matlab
 \lang spanish-mexico
  que proporciona el modelado, la simulación y el análisis de sistemas dinámicos,
  dentro de un entorno gráfico.
- Este sofwtare permite el diseño modular y jerárquico, ayudando al usuario
+ Este software permite el diseño modular y jerárquico, ayudando al usuario
  en el manejo y creación de sistemas complejos que son conceptualmente simplific
 ados.
  
@@ -3180,7 +3180,7 @@ textregistered{
 \end_layout
 
 \begin_layout Subsubsection
-Descripción general.
+Descripción General.
 \end_layout
 
 \begin_layout Standard
@@ -3542,7 +3542,7 @@ precisión de ciclo
 \end_layout
 
 \begin_layout Subsubsection
-Co-Diseño de Hardware/Software en el ambiente de Xilinx
+Co-Diseño de Hardware/Software en el Ambiente de Xilinx
 \lang spanish
 
 \begin_inset ERT
@@ -3611,8 +3611,8 @@ Exploración de Algoritmos mediante simulación
 \series default
 \emph default
 Este flujo está pensado para llevar a cabo una simulación en tiempo real
- de un prototipado o incluso de un análisis realista del desempeño de un
- sistema bajo estudio.
+ de un prototipo o incluso de un análisis realista del desempeño de un sistema
+ bajo estudio.
  El bloque de Simulink
 \lang spanish
 ®
@@ -4208,8 +4208,8 @@ ISim
 \series bold
 Map: 
 \series default
-En este paso se translada la salida generada en el proceso de síntesis,
- a primitivos de la FPGA especificada en el proyecto.
+En este paso se traslada la salida generada en el proceso de síntesis, a
+ primitivos de la FPGA especificada en el proyecto.
  Al finalizar, el ejecutable llamado igual que el proceso (
 \series bold
 Map
@@ -4224,7 +4224,7 @@ NCD
 \series default
 por sus siglas en Inglés).
  Es importante recalcar que en este proceso es donde se llevan a cabo las
- optimizaciónes de 
+ optimizaciones de 
 \emph on
 timing closure
 \begin_inset Foot

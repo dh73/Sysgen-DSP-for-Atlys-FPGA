@@ -75,22 +75,6 @@
 
 \begin_body
 
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-thispagestyle{empty}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section*
 Agradecimientos
 \end_layout
@@ -114,17 +98,17 @@ A el Mtro
 \series bold
 José María Valencia Velasco
 \series default
-, profesor excepcional, director técnico de tésis visionario y siempre acertado,
+, profesor excepcional, director técnico de tesis visionario y siempre acertado,
  que me acercó al mundo de las FPGAs del cual sigo aprendiendo hasta el
- dia de hoy.
+ día de hoy.
 \end_layout
 
 \begin_layout Standard
 A el Mtro 
 \series bold
-Cuauhtémoc Aguilera Galicia
+Cuauhtémoc Rafael Aguilera Galicia
 \series default
-, amigo y director metodológico de tésis, siempre dispuesto a enseñarme
+, amigo y director metodológico de tesis, siempre dispuesto a enseñarme
  el valor de mezclar la amistad con el trabajo para así disfrutarlo aún
  más y obtener un rendimiento superior.
 \end_layout
@@ -145,7 +129,7 @@ s a continuar buscando nuevos retos.
 \begin_layout Standard
 A mis amigos, Ing Química 
 \series bold
-Ana Teresa Rodriguez Barajas
+Ana Teresa Rodríguez Barajas
 \series default
 , Ing 
 \series bold
@@ -175,7 +159,7 @@ Antonio Martín Altamirano Cornejo
 \series bold
 Matias Ezequiel Leonetti 
 \series default
-por todo el apoyo inmensurable hasta el dia de hoy.
+por todo el apoyo inmensurable hasta el día de hoy.
 \end_layout
 
 \begin_layout Standard
@@ -204,10 +188,7 @@ Ricardo Hernández Godínez
 
 \begin_layout Standard
 A todos los profesores que contribuyeron a formarme profesionalmente.
-\end_layout
-
-\begin_layout Standard
-Este trabajo no habría sido posible, sin ustedes.
+ Este trabajo no habría sido posible, sin ustedes.
 \end_layout
 
 \begin_layout Standard
@@ -227,7 +208,7 @@ thispagestyle{empty}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage newpage
+\begin_inset Newpage pagebreak
 \end_inset
 
 

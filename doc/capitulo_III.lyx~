@@ -117,7 +117,7 @@ fill}
 \end_layout
 
 \begin_layout Part
-Marco metodológico.
+Marco Metodológico.
 \end_layout
 
 \begin_layout Standard
@@ -162,12 +162,12 @@ thispagestyle{empty}
 \end_layout
 
 \begin_layout Section
-Filtrado básico de señales - Introducción práctica a Sysgen.
+Filtrado Básico de Señales - Introducción Práctica a Sysgen.
 \end_layout
 
 \begin_layout Subsection
-Diseño de un filtro FIR pasa bajas para la eliminación de ruido en una señal
- senoidal.
+Diseño de un Filtro FIR Pasabajas para la Eliminación de Ruido en una Señal
+ Senoidal.
 \end_layout
 
 \begin_layout Standard
@@ -193,7 +193,7 @@ A manera de introducción, se utilizará el ambiente de Matlab
 \end_layout
 
 \begin_layout Subsection
-Especificaciones del modelo del filtro FIR en Matlab
+Especificaciones del Modelo del Filtro FIR en Matlab
 \begin_inset ERT
 status open
 
@@ -464,7 +464,7 @@ Wn
 \series default
  
 \series bold
-Teorema de muestreo
+Teorema de Muestreo
 \series default
 ,
 \series bold
@@ -684,7 +684,7 @@ name "fig:Resultado-de-la"
 
 \end_deeper
 \begin_layout Subsection
-Simulación del sistema en Sysgen.
+Simulación del Sistema en Sysgen.
 \end_layout
 
 \begin_layout Standard
@@ -941,7 +941,7 @@ sección
 \series default
  
 \series bold
-Co-Diseño de Hardware/Software en el ambiente de Xilinx
+Co-Diseño de Hardware/Software en el Ambiente de Xilinx
 \lang spanish
 ®
 \lang spanish-mexico
@@ -1378,7 +1378,7 @@ Parámetros de configuración para la componente de ruido de entrada al sistema
 También se necesitará un sumador de señales para mezclar ambas funciones
  senoidales, el cual se encuentra en 
 \series bold
-Simulink > Math Operations Sum: 
+Simulink > Math Operations > Sum: 
 \begin_inset Graphics
 	filename img/sum_simulink.png
 	scale 40
@@ -1645,7 +1645,7 @@ Ejecutar el sistema.
  deformación, como se muestra en la Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:Resultado-de-la"
+reference "fig:Resultado-de-la-1"
 
 \end_inset
 
@@ -1702,7 +1702,7 @@ name "fig:Resultado-de-la-1"
 
 \end_deeper
 \begin_layout Subsection
-Implementación del sistema en la tarjeta de desarrollo Atlys.
+Implementación y Resultados.
 \end_layout
 
 \begin_layout Standard
@@ -1996,7 +1996,7 @@ reference "fig:Utilización-de-recursos"
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -2040,6 +2040,12 @@ name "fig:Utilización-de-recursos"
 
 \end_deeper
 \begin_layout Standard
+Se provee la solución completa de este diseño, bajo la ruta 
+\series bold
+ejemplos/noise_removal/noise_removal.slx.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
 
@@ -2051,9 +2057,9 @@ Procesamiento de Audio - Algoritmo de Eco.
 \end_layout
 
 \begin_layout Subsection
-Filtros FIR peine o 
+Filtros FIR Tipo Peine o 
 \emph on
-comb filter.
+Comb Filter.
 \end_layout
 
 \begin_layout Standard
@@ -2067,13 +2073,13 @@ El efecto de eco es uno de los más utilizados en el procesamiento de señales
 Esta implementación está basada en la utilización del filtro FIR conocido
  como 
 \series bold
-peine 
+tipo peine 
 \series default
-o en inglés como 
+o 
 \emph on
 fir comb filter
 \emph default
-.
+ en inglés.
  La entrada del filtro es retrasada por un tiempo definido y el efecto sólo
  será audible cuando la señal procesada sea combinada con la original (de
  ahí el nombre de 
@@ -2170,16 +2176,17 @@ A partir de esto podemos observar que, la estructura se conforma de elementos
 \end_layout
 
 \begin_layout Subsection
-Implementación en FPGA del codificador de audio AC97.
+Implementación en FPGA del Codificador de Audio AC97.
 \end_layout
 
 \begin_layout Standard
-El códec de audio disponible en la tarjeta Atlys es el AC97 LM4550
+El codificador de audio disponible en la tarjeta Atlys es el AC97 LM4550
 \begin_inset Foot
 status collapsed
 
 \begin_layout Plain Layout
-Para obtener mayor información técnica a cerca del códec, visitar: 
+Para obtener mayor información técnica a cerca del codificador, visitar:
+ 
 \begin_inset Flex URL
 status open
 
@@ -2195,9 +2202,9 @@ http://www.xilinx.com/products/boards/ml510/datasheets/lm4550.pdf
 
 \end_inset
 
- de National Semiconductor; AC97 es un standard desarrollado por Intel en
- 1997, el cual es utilizado en tarjetas madre de ordenadores, módems y tarjetas
- de sonido.
+ de National Semiconductor; AC97 es un standard desarrollado por Intel®
+ en 1997, el cual es utilizado en tarjetas madre de ordenadores, módems
+ y tarjetas de sonido.
 \end_layout
 
 \begin_layout Standard
@@ -2205,15 +2212,15 @@ El formato de datos del LM4550 es serial, de 18 bits con una frecuencia
  de muestreo a 48KHz.
  Es importante mantener este dato en consideración a la hora de realizar
  cualquier algoritmo de procesamiento, puesto que, si la magnitud de la
- trama enviada al códec es mayor o menor a la requerida, será necesario
+ trama enviada al codificador es mayor o menor a la requerida, será necesario
  alinear los datos para que la señal de audio no sea deformada, haciéndola
  parecer como una señal de ruido.
 \end_layout
 
 \begin_layout Standard
 Puesto que el objetivo de este documento no es detallar el desarrollo del
- controlador del códec, se provee un netlist pre-sintetizado (Verilog) el
- cual tiene toda las siguientes características (véase Figura 
+ controlador del codificador, se provee un netlist pre-sintetizado (Verilog)
+ el cual tiene toda las siguientes características (véase Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:AC97_schem"
@@ -2236,13 +2243,13 @@ Reloj de 12.288MHz desde el puerto
 \emph on
 bit clock
 \emph default
- del códec.
+ del codificador.
 \end_layout
 
 \begin_layout Itemize
 Selector de 3 bits para escoger la fuente de entrada (Mic, LineIn, headphone)
  y de 5 bits para volumen.
- Estos se pueden mapear a los switches de la tarjeta Atlys para controlar
+ Estos se pueden redireccionar a los switches de la tarjeta Atlys para controlar
  dichos parámetros.
  
 \end_layout
@@ -2275,8 +2282,8 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Diagrama a bloques de la implementación del controlador para el códec AC97
- en Verilog.
+Diagrama a bloques de la implementación del controlador para el codificador
+ AC97 en Verilog.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -2302,7 +2309,7 @@ name "fig:AC97_schem"
 \end_layout
 
 \begin_layout Subsection
-Desarrollo del modelo en Sysgen.
+Desarrollo del Modelo en Sysgen.
 \end_layout
 
 \begin_layout Standard
@@ -2317,7 +2324,7 @@ A partir de tener el nuevo espacio de trabajo en Simulink
 \lang spanish-mexico
  (se pueden seguir los pasos 1 a 4 de la subsección 
 \series bold
-6.3 Simulación del sistema en Sysgen
+6.3 Simulación del Sistema en Sysgen
 \series default
 ), el bloque 
 \emph on
@@ -2604,8 +2611,8 @@ AudioLeftIn
 AudioRightIn
 \series default
  respectivamente, cuidando de siempre mantener los mismos nombres o de lo
- contrario, el archivo NCG del controlador del códec marcará un error al
- intentar utilizar el netlist de Sysgen.
+ contrario, el archivo NCG del controlador del codificador marcará un error
+ al intentar utilizar el netlist de Sysgen.
  Se deben configurar como se muestra en la Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -3009,7 +3016,7 @@ AudioRightIn
 \series default
 respectivamente, así como un bloque 
 \emph on
-Mux 
+'Mux' 
 \emph default
 (
 \series bold
@@ -3017,7 +3024,7 @@ Simulink > Commonly Used Blocks
 \series default
 ) y un bloque 
 \emph on
-To Multimedia File 
+'To Multimedia File' 
 \emph default
 (
 \series bold
@@ -3221,7 +3228,7 @@ Apéndice D:
 \series default
  
 \series bold
-Creación de proyectos usando PlanAhead
+Creación de Proyectos usando PlanAhead
 \lang spanish
 ®
 \series default
@@ -3725,7 +3732,7 @@ reference "fig:Conexiones-a-la"
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -3769,6 +3776,12 @@ name "fig:Conexiones-a-la"
 
 \end_deeper
 \begin_layout Standard
+Se provee la solución completa de este diseño, bajo la ruta 
+\series bold
+ejemplos/audio_ac97/algodev.slx.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
 
@@ -3776,11 +3789,11 @@ name "fig:Conexiones-a-la"
 \end_layout
 
 \begin_layout Section
-Procesamiento de imágenes - Detección de bordes.
+Procesamiento de Imágenes - Detección de Bordes.
 \end_layout
 
 \begin_layout Subsection
-Características técnicas y arquitectura del modelo a implementar.
+Características Técnicas y Arquitectura del Modelo a Implementar.
 \end_layout
 
 \begin_layout Standard
@@ -3872,7 +3885,7 @@ name "fig:Imagen-utilizada-para"
 \end_layout
 
 \begin_layout Subsection
-Algoritmo del filtro Sobel.
+Algoritmo del Filtro Sobel.
 \end_layout
 
 \begin_layout Standard
@@ -3973,7 +3986,7 @@ Roberts Cross
 \end_layout
 
 \begin_layout Subsection
-Descomposición del espacio de colores RGB.
+Descomposición del Espacio de Colores RGB.
 \end_layout
 
 \begin_layout Standard
@@ -4259,7 +4272,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Conexión entre la fuente de imagen hacia el bloque de conversión de la matríz
+Conexión entre la fuente de imagen hacia el bloque de conversión de la matriz
  2D a vectores por espacio de color.
  
 \begin_inset CommandInset label
@@ -4287,7 +4300,7 @@ name "fig:Conexión-entre-la"
 
 \end_deeper
 \begin_layout Subsection
-Modelo de conversión RGB a escala de grises.
+Modelo de Conversión RGB a Escala de Grises.
 \end_layout
 
 \begin_layout Standard
@@ -4880,7 +4893,7 @@ Si se compara la salida de este modelo, con la popular función de Matlab,
 
 \end_deeper
 \begin_layout Subsection
-Operador Sobel usando filtros FIR.
+Operador Sobel usando Filtros FIR.
 \end_layout
 
 \begin_layout Standard
@@ -5427,7 +5440,7 @@ name "fig:Interconexión-del-algoritmo"
 
 \end_deeper
 \begin_layout Subsection
-Implementación y resultados.
+Implementación y Resultados.
 \end_layout
 
 \begin_layout Enumerate
@@ -5492,7 +5505,7 @@ name "fig:Resultados-de-la"
 
 \end_deeper
 \begin_layout Enumerate
-Para generar el modelo de Co-simulación, basta con abrir el '
+Para generar el modelo de co-simulación, basta con abrir el '
 \emph on
 Sysgen Token' 
 \emph default
@@ -5651,6 +5664,8 @@ status open
 
 \begin_layout Plain Layout
 Resultado de la ejecución en FPGA del modelo del filtro Sobel.
+ A la izquierda se observa el resultado de la simulación mientras que la
+ imagen de la derecha, muestra el resultado obtenido desde la FPGA.
 \end_layout
 
 \end_inset
@@ -5686,7 +5701,7 @@ reference "fig:Gráfica-de-utilización"
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -5739,6 +5754,12 @@ Como se puede observar, la mayoría de los recursos utilizados son DSP48A1,
 \end_layout
 
 \end_deeper
+\begin_layout Standard
+Se provee la solución completa de este diseño, bajo la ruta 
+\series bold
+ejemplos/sobel_img/algodev.slx.
+\end_layout
+
 \begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
