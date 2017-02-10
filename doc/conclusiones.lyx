@@ -330,11 +330,11 @@ y
 \emph on
 'Simulink system period
 \emph default
- (ns)', 
+ (ns)',
 \series bold
-siempre y cuando el modelo se vaya a exportar como netlist en HDL
+ 
 \series default
-.
+siempre y cuando el modelo se vaya a exportar como netlist en HDL.
  Esto obligará a la herramienta a insertar lógica adicional para cumplir
  los requerimientos, en lugar de cargar esta tarea al diseñador.
 \end_layout
@@ -474,11 +474,7 @@ y
 \emph default
  para obtener la información necesaria de la magnitud en frecuencia de la
  señal de ruido inducida por el incremento de ganancia, y eliminarla usando
- el filtro descrito en la sección 
-\series bold
-6 Filtrado básico de señales
-\series default
-,
+ el filtro descrito en la sección 6 Filtrado básico de señales,
 \series bold
  
 \series default

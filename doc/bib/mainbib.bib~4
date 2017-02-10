@@ -304,3 +304,16 @@
 	year = {2012}
 }
 
+@inbook{using_xilinx_fpgas_dsp,
+	author = {Sundararajan, Arvind and Churiwala, Sanjay},
+	booktitle = {{Designing with Xilinx FPGAs Using Vivado}},
+	chapter = {VIII - SysGen for DSP},
+	edition = {I},
+	isbn = {978-3-319-42438-5},
+	month = oct,
+	organization = {Springer},
+	pages = {257},
+	title = {{SysGen for DSP}},
+	year = {2017}
+}
+

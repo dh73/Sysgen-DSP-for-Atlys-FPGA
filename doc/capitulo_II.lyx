@@ -224,7 +224,7 @@ El propósito principal de un sistema de procesamiento digital de señales
 \noindent
 Generalmente las operaciones que se realizan sobre dichas señales son adiciones,
  sustracciones, multiplicaciones y divisiones, mismas que se deben ejecutar
- muy rápidamente con el fin de generar una salida mucho más precisa
+ muy rápidamente con el fin de generar una salida mucho más precisa 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "analog_devices"
@@ -321,14 +321,7 @@ key "Tratamiendo_senales"
 \begin_layout Standard
 \paragraph_spacing double
 \noindent
-Un sistema DSP típico se muestra en la Figura 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Diagrama-a-bloques"
-
-\end_inset
-
-.
+Un sistema DSP típico se muestra en la siguiente Figura.
 \end_layout
 
 \begin_layout Standard
@@ -711,6 +704,13 @@ El error de cuantización es representado por la secuencia
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Sistemas Discretos Lineales e Invariantes en el Tiempo.
 \end_layout
@@ -906,17 +906,18 @@ y
 Descomposición por el método de Fourier.
  
 \emph default
-Cuando la Descomposición por impulsos es utilizada, el procedimiento se
- puede describir matemáticamente utilizando la 
-\series bold
-convolución.
+Cuando la descomposición por impulsos es utilizada, el procedimiento se
+ puede describir matemáticamente utilizando la convolución.
 \end_layout
 
 \begin_layout Standard
 Esta operación se basa en dos términos importantes en los sistemas DSP.
  El primero es la 
+\emph on
+función delta,
 \series bold
-función delta, 
+\emph default
+ 
 \series default
 simbolizada por 
 \begin_inset Formula $\mathbf{\mathbf{\mathbf{\delta}[n]}}$
@@ -927,10 +928,10 @@ simbolizada por
  con un valor asignado de una unidad, mientras que las otras muestras tienen
  asignadas un valor de cero.
  Por esta razón, la función delta es llamada 
-\series bold
+\emph on
 unidad de impulso.
 
-\series default
+\emph default
  
 \end_layout
 
@@ -995,9 +996,9 @@ key "New1"
 
 \begin_layout Standard
 Por otra parte, la 
-\series bold
+\emph on
 respuesta al impulso
-\series default
+\emph default
  es la señal que entrega el sistema cuando una función delta es aplicada
  a la entrada.
  Si dos sistemas son diferentes en cualquier manera, ambos tendrán diferentes
@@ -1205,7 +1206,7 @@ M
 \emph on
 M-1
 \emph default
-
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "dspguide_conv"
@@ -1268,12 +1269,8 @@ reference "fig:Convolución-de-dos"
 \end_layout
 
 \begin_layout Standard
-En el 
-\series bold
-Apéndice C
-\series default
- se muestra el script interactivo que se puede ejecutar en el ambiente de
- Matlab®, el cual fue tomado de 
+En el Apéndice C se muestra el script interactivo que se puede ejecutar
+ en el ambiente de Matlab®, el cual fue tomado de 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "eece_matlab"
@@ -1321,7 +1318,7 @@ name "fig:Convolución-de-dos"
 
 \end_inset
 
-Convolución de dos señales en Matlab®.
+Ejemplo de la convolución de dos señales en Matlab®.
 \end_layout
 
 \end_inset
@@ -1436,6 +1433,8 @@ b_{n}, & 0\leq n\leq M-1\\
 Gráficamente, esta ecuación se puede representar como se muestra en la Figura
 \series bold
  
+\series default
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Respuesta-al-impulso"
@@ -1500,9 +1499,10 @@ Este tipo de filtros son más populares en cuanto a implementación, dado
 
 \begin_layout Itemize
 
-\series bold
 \emph on
-Fase Lineal: 
+Fase Lineal:
+\series bold
+ 
 \series default
 \emph default
 Esta propiedad implica que la fase es una función lineal de la frecuencia,
@@ -1512,10 +1512,8 @@ Esta propiedad implica que la fase es una función lineal de la frecuencia,
 
 \begin_layout Itemize
 
-\series bold
 \emph on
 Estabilidad:
-\series default
 \emph default
  Para una entrada finita, la salida siempre es finita, además son no recursivos,
  es decir, no hay una conexión de retro alimentación envuelta en la estructura
@@ -1529,7 +1527,7 @@ Existen muchos métodos de implementación de esto filtros, la estructura
 forma directa, 
 \emph default
 la cual consta de utilizar la ecuación en diferencia, no recursiva, mostrada
- en (3.7)
+ en (3.7) 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "fir_complete"
@@ -1537,17 +1535,13 @@ key "fir_complete"
 \end_inset
 
 , lo que es equivalente a la sumatoria convolucional.
- La estructura se muestra en la Figura
-\series bold
- 
+ La estructura se muestra en la Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Estructura-en-Forma"
 
 \end_inset
 
-
-\series default
 , el cual representa un filtro con un número de coeficientes 
 \begin_inset Formula $\mathbf{b_{0..3}+1}$
 \end_inset
@@ -1651,13 +1645,13 @@ y
 anticipación, 
 \emph default
 por lo que es conocido como un 
-\series bold
+\emph on
 sistema discreto recursivo
-\series default
+\emph default
 , a diferencia del filtro FIR que se caracteriza por ser 
-\series bold
+\emph on
 no recursivo
-\series default
+\emph default
 , esto significa que la función de salida del filtro puede continuar indefinidam
 ente aún cuando la entrada tienda a cero y permanezca en cero.
 \end_layout
@@ -1695,7 +1689,7 @@ promedio móvil
 \begin_inset Quotes erd
 \end_inset
 
- o la parte FIR
+ o la parte FIR 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "ECE423_lectures_IIR"
@@ -1727,7 +1721,7 @@ Butterworth
 Bessel
 \emph default
 , además de que es posible utilizar un gran número de tablas pre diseñadas,
- disponibles en los libros afines al tema en cuestión
+ disponibles en los libros afines al tema en cuestión 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "iir_0"
@@ -1770,6 +1764,7 @@ Butterworth
 representa la mejor aproximación de un filtro ideal pasa bajas en frecuencias
  analógicas.
  La respuesta en la banda de paso y la banda de corte es máximamente plana
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Xilinx_IIR_impl"
@@ -2052,7 +2047,7 @@ muestra la arquitectura típica de una FPGA con los bloques de construcción
  DSP, controladores de memoria, etcétera, que se muestran en la imagen,
  son construidos sobre el mismo silicio, sin quitarle espacio a los elementos
  lógicos.
- También cabe mencionar que, las Tablas de Búsqueda, mejor conocidas como
+ También cabe mencionar que, las tablas de búsqueda, mejor conocidas como
  Look Up Tables (LUT) que hay dentro de los bloques lógicos son usadas para
  crear funciones de lógica combinacional, pero también pueden ser configuradas
  como memorias RAM o registros de desplazamiento.
@@ -2146,9 +2141,9 @@ La familia Spartan-6
 \lang spanish
 ®
 \lang spanish-mexico
-, gracias a que están construidas con una avanzada tecnología de 45nm.
+, gracias a que están construidas con una avanzada tecnología de 45 nm.
  Esta línea de FPGAs son muy populares ya que son el balance óptimo entre
- costo, potencia y rendimiento
+ costo, potencia y rendimiento 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Xil_DS160"
@@ -2536,7 +2531,7 @@ El sistema de desarrollo Atlys fabricado por Digilent
 ®
 \lang spanish-mexico
  LX45, la familia LX está optimizada para implementaciones lógicas de alto
- rendimiento
+ rendimiento 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Digilent_atlys"
@@ -2577,7 +2572,7 @@ FPGA Spartan-6
  LX45 con 6,822 slices, cada una contiene 4 LUTS de 6 entradas y 8 flip-flops,
  con una frecuencia máxima de ejecución a 500MHz.
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Para una mayor comprensión de estas características técnicas, referirse
@@ -2588,7 +2583,11 @@ Para una mayor comprensión de estas características técnicas, referirse
 \begin_inset Quotes eld
 \end_inset
 
-4.3 Arquitectura de la familia de FPGAs Xilinx Spartan-6
+
+\series default
+4.3 Arquitectura de la familia de FPGAs Xilinx® Spartan-6
+\series bold
+®
 \begin_inset Quotes erd
 \end_inset
 
@@ -2625,15 +2624,15 @@ Dos entradas y dos salidas de video HDMI.
 En la Figura
 \series bold
  
+\series default
+
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Kit-de-desarrollo"
 
 \end_inset
 
- 
-\series default
-se puede observar una imagen de esta plataforma.
+ se puede observar una imagen de esta plataforma.
 \end_layout
 
 \begin_layout Standard
@@ -2772,7 +2771,7 @@ oratory (Laboratorio de Matrices), lo cual nos da una referencia de la metodolog
  no requieren ser dimensionadas.
  Está enfocado a resolver problemas técnicos computacionales a través de
  un ambiente completo donde los problemas y soluciones son expresados en
- una notación matemática familiar
+ una notación matemática familiar 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Matlab_overview"
@@ -2796,7 +2795,7 @@ Lo que hace de Matlab
  rapidez con la que se pueden implementar y resolver algoritmos de mediana
  a gran complejidad.
  Esto se debe en gran medida a la facilidad que brinda el intérprete interactivo
- para crear scripts conocidos como Archivos-M (mejor conocidos como M-files,
+ para crear scripts conocidos como archivos-m (mejor conocidos como M-files,
  por sus siglas en Inglés) que ayudan a describir sistemas con eficacia,
  así como el gran número de funciones prediseñadas incluidas en los complementos
  conocidos como 
@@ -2838,11 +2837,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Interfaz Gráfica de usuario de Matlab
-\lang spanish
-®
-\lang spanish-mexico
-.
+Interfaz Gráfica de usuario de Matlab®.
 \end_layout
 
 \end_inset
@@ -2861,9 +2856,9 @@ Interfaz Gráfica de usuario de Matlab
 
 \begin_layout Standard
 \noindent
-Matlab
+Matla
 \lang spanish
-®
+b®
 \lang spanish-mexico
  es considerado un lenguaje de programación de alto nivel, debido a la gran
  abstracción de datos con los que trabaja.
@@ -2967,6 +2962,7 @@ hardware-in-the-loop
 \lang spanish-mexico
 ), proporciona un enorme beneficio adicional en el diseño y verificación
  del algoritmo sin arriesgar pérdidas de hardware o errores de implementación
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "practical_dsp_algo"
@@ -3102,6 +3098,7 @@ En comparación, la implementación en hardware con FPGA requiere un paso
 \lang spanish-mexico
  y la ejecución del mismo en elementos de hardware, debe hacerse de una
  manera sistemática en donde se tenga en cuenta estas diferencias de derivación
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "vehicle_sysgen_xilinx"
@@ -3182,13 +3179,12 @@ El desarrollo de algoritmos DSP implica transformar las muestras de entrada
  provenientes de la etapa de conversión A/D, utilizando numerosas operaciones
  matemáticas complejas sobre dichas señales como la convolución o la aplicación
  de alguna transformación como la 
-\series bold
 \emph on
 Transformada Rápida de Fourier (FFT)
-\series default
 \emph default
  y además, es necesario tener el equipo de laboratorio requerido para para
  poder visualizar los espectros de las señales a través de todo el diseño
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "using_xilinx_fpgas_dsp"
@@ -3197,7 +3193,7 @@ key "using_xilinx_fpgas_dsp"
 
 .
  Todo este proceso se vuelve una labor muy intensa cuando se utilizan técnicas
- tradicionales de RTL en un FPGA.
+ tradicionales de RTL (Register Transfer Level) en un FPGA.
  
 \end_layout
 
@@ -3212,7 +3208,7 @@ System Generator
  es una herramienta de modelado a nivel sistema que facilita el diseño de
  hardware en FPGA
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Se recomienda leer la documentación de Xilinx: 
@@ -3247,7 +3243,7 @@ mente en un FPGA, facilitando la implementación de algoritmos complejos
  diferentes dominios de reloj.
  También proporciona acceso a recursos o macros primitivas subyacentes del
  FPGA a través de abstracciones de bajo nivel, lo que permite la construcción
- de diseños altamente eficientes
+ de diseños altamente eficientes 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "sysgen_user_guide"
@@ -3309,38 +3305,15 @@ textregistered{}
 
 \end_inset
 
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "raoxil"
+
+\end_inset
+
 .
- Imagen obtenida del documento 
-\begin_inset Quotes eld
-\end_inset
-
-
-\emph on
-Wireless communications: from systems to silicon
-\emph default
-
-\begin_inset Quotes erd
-\end_inset
-
-, del autor Raghu Rao.
- Wireless Systems Group, Xilinx
-\lang spanish
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-textregistered{
-\end_layout
-
-\end_inset
-
-
-\lang spanish-mexico
- Inc, 2008.
+ 
 \end_layout
 
 \end_inset
@@ -3471,19 +3444,17 @@ así como funciones pre diseñadas de Matlab
 blockset
 \emph default
  trabaja con 
-\series bold
 \emph on
 precisión de bits
-\series default
 \emph default
  (
 \emph on
 bit-accurate
 \emph default
 ) y 
-\series bold
 \emph on
 precisión de ciclo
+\series bold
 \emph default
  
 \series default
@@ -3493,22 +3464,19 @@ cycle-accurate).
  
 \emph default
 La 
-\series bold
 \emph on
 precisión de bits
-\series default
 \emph default
  produce valores en Simulink
 \lang spanish
 ®
 \lang spanish-mexico
  que coinciden con los valores producidos en el hardware; la 
-\series bold
 \emph on
 precisión de ciclo
-\series default
 \emph default
- produce los valores correspondientes en el tiempo correspondiente.
+ produce los valores correspondientes al tiempo que corresponden, comparada
+ con de la trama de datos real.
 \end_layout
 
 \begin_layout Subsubsection
@@ -3573,11 +3541,11 @@ Sysgen
 \end_layout
 
 \begin_layout Itemize
-
-\series bold
-Exploración de Algoritmos mediante simulación
+Exploración de algoritmos mediante simulación
 \emph on
- Hardware-in-the-Loop: 
+ Hardware-in-the-Loop:
+\series bold
+ 
 \series default
 \emph default
 Este flujo está pensado para llevar a cabo una simulación en tiempo real
@@ -3638,9 +3606,9 @@ Hardware-in-the-loop.
 \end_layout
 
 \begin_layout Itemize
-
+Diseño de una IP como parte de un prototipo más grande:
 \series bold
-Diseño de una IP como parte de un prototipo más grande: 
+ 
 \series default
 Se puede empaquetar el sistema previamente modelado y simulado en Sysgen/Simulin
 k
@@ -3648,9 +3616,9 @@ k
 ®
 \lang spanish-mexico
  para después ser instanciado como parte de un diseño más grande.
- 
+ Sysgen
 \emph on
-Sysgen 
+ 
 \emph default
 tiene bastante limitaciones a la hora de trabajar con interfaces que necesitan
  estrictos requerimientos de 
@@ -3668,9 +3636,9 @@ timing
 \end_layout
 
 \begin_layout Itemize
-
+Implementación de un diseño completo:
 \series bold
-Implementación de un diseño completo: 
+ 
 \series default
 La suite de Xilinx
 \lang spanish
@@ -3731,25 +3699,12 @@ textregistered
 
 \end_inset
 
-.
 
 \emph on
  
 \emph default
-Se puede observar como el procesador Microblaze
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-textregistered
-\end_layout
-
-\end_inset
-
-, puede transmitir y recibir impulsos del modelo en Sysgen.
+en la que se ilustra como el procesador Microblaze® está siendo utilizado
+ para transmitir y recibir impulsos del modelo en Sysgen.
 \end_layout
 
 \end_inset
@@ -3865,7 +3820,7 @@ El sistema de Xilinx
  únicamente.
  Todas las herramientas contenidas en este entorno utilizan una interfaz
  gráfica de usuario que permiten que todos los programas se ejecuten desde
- la barra de herramientas
+ la barra de herramientas 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "ise_tut_0"
@@ -3938,7 +3893,11 @@ textregistered{
 
 \emph on
 \lang spanish-mexico
- Project Navigator
+ 
+\emph default
+Project Navigator
+\emph on
+
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Interfáz-principal-del"
@@ -4044,9 +4003,9 @@ name "fig:Diagrama-a-flujo"
 \end_layout
 
 \begin_layout Itemize
-
+Síntesis:
 \series bold
-Síntesis: 
+ 
 \series default
 Este es el proceso de convertir un diseño descrito en Lenguaje de Descripción
  de Hardware a un netlist con un formato propietario conocido como 
@@ -4056,11 +4015,7 @@ Archivo Netlist con Información de restricciones físicas
 \emph default
  
 \series default
-(
-\series bold
-NGC
-\series default
-, por sus siglas en Inglés), ejecutando la herramienta llamada 
+(NGC, por sus siglas en Inglés), ejecutando la herramienta llamada 
 \emph on
 Tecnología de Síntesis de Xilinx
 \emph default
@@ -4078,9 +4033,9 @@ XST,
 \end_layout
 
 \begin_layout Itemize
-
+Simulación:
 \series bold
-Simulación: 
+ 
 \series default
 XIlinx
 \lang spanish
@@ -4090,14 +4045,11 @@ XIlinx
 \lang spanish
 ®
 \lang spanish-mexico
- cuenta con un simulador integrado llamado 
+ cuenta con un simulador integrado llamado ISE Simulator
 \series bold
-ISE Simulator 
+ 
 \series default
-o 
-\series bold
-ISim
-\series default
+o ISim
 \lang spanish
 ®
 \lang spanish-mexico
@@ -4119,11 +4071,8 @@ La visualización de formas de onda analógicas requiere de una licencia adicion
 status open
 
 \begin_layout Plain Layout
-Para obtener una lista más completa de las características de 
-\series bold
-ISim
-\series default
-, puede visitar el sitio web https://www.xilinx.com/products/design-tools/isim.html
+Para obtener una lista más completa de las características de ISim, puede
+ visitar el sitio web https://www.xilinx.com/products/design-tools/isim.html
 \end_layout
 
 \end_inset
@@ -4132,23 +4081,20 @@ ISim
 \end_layout
 
 \begin_layout Itemize
-
+Map:
 \series bold
-Map: 
+ 
 \series default
 En este paso se traslada la salida generada en el proceso de síntesis, a
  primitivos de la FPGA especificada en el proyecto.
- Al finalizar, el ejecutable llamado igual que el proceso (
-\series bold
-Map
-\series default
-) genera un netlist más, pero en un formato conocido como 
+ Al finalizar, el ejecutable llamado igual que el proceso (Map) genera un
+ netlist más, pero en un formato conocido como 
 \emph on
 Descripción Nativa del Circuito 
 \emph default
-(
+(NCD
 \series bold
-NCD 
+ 
 \series default
 por sus siglas en Inglés).
  Es importante recalcar que en este proceso es donde se llevan a cabo las
@@ -4156,7 +4102,7 @@ por sus siglas en Inglés).
 \emph on
 timing closure
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -4179,7 +4125,7 @@ es el proceso mediante el cual se modifica un diseño FPGA para cumplir con
 \series bold
  
 \series default
-relacionadas con el desempeño final del diseño
+relacionadas con el desempeño final del diseño 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "power_tips"
@@ -4190,9 +4136,9 @@ key "power_tips"
 \end_layout
 
 \begin_layout Itemize
-
+Place and Route (PAR):
 \series bold
-Place and Route (PAR): 
+ 
 \series default
 Este es el proceso de interconectar los elementos primitivos, a partir de
  la salida dada por el proceso de Map, para así poder finalizar la implementació
@@ -4219,6 +4165,10 @@ bitstream.
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
 
 \emph on
 Project Navigator
@@ -4233,6 +4183,11 @@ se encarga de ejecutar el flujo de implementación descrito, así como generar
 bitstream
 \emph default
  generado.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -4274,10 +4229,7 @@ PAR
 \end_layout
 
 \begin_layout Standard
-Generalmente, 
-\emph on
-PlanAhead
-\emph default
+Generalmente, PlanAhead
 \lang spanish
 ®
 \emph on
@@ -4287,9 +4239,7 @@ PlanAhead
 status open
 
 \begin_layout Plain Layout
-Se recomienda leer la guía 
-\series bold
-UG673: 
+Se recomienda leer la guía UG673: 
 \begin_inset Quotes eld
 \end_inset
 
@@ -4297,8 +4247,6 @@ Quick Front-to-Back Overview Tutorial
 \begin_inset Quotes erd
 \end_inset
 
-
-\series default
  para mayor detalle en el uso de PlanAhead.
 \end_layout
 
@@ -4315,19 +4263,12 @@ Quick Front-to-Back Overview Tutorial
 \emph on
 Back-end 
 \emph default
-que en el 
-\emph on
-Project Navigator
-\emph default
- no se exponen con la misma facilidad.
+que en el Project Navigator no se exponen con la misma facilidad.
  
 \end_layout
 
 \begin_layout Standard
-Sin embargo, 
-\emph on
 PlanAhead
-\emph default
 \lang spanish
 ®
 \lang spanish-mexico
@@ -4335,7 +4276,8 @@ PlanAhead
 \emph on
 Front-End
 \emph default
-, por ejemplo, usa un potente motor para el análisis de los archivos HDL
+.
+ Por ejemplo, usa un potente motor para el análisis de los archivos HDL
  en el diseño, también puede trabajar con netlist previamente sintetizados
  y resultados de implementación, además de poder crear diferentes versiones
  de implementación, con lo que se pueden explorar múltiples optimizaciones
@@ -4343,21 +4285,15 @@ Front-End
 \end_layout
 
 \begin_layout Standard
-En este documento se utilizará 
-\emph on
-PlanAhead
-\emph default
+En este documento se utilizará PlanAhead
 \lang spanish
 ®
 \emph on
 \lang spanish-mexico
  
 \emph default
-sobre 
-\emph on
-Project Navigator
-\emph default
- por las ventajas ya mencionadas, además de que, Xilinx
+sobre Project Navigator por las ventajas ya mencionadas, además de que,
+ Xilinx
 \lang spanish
 ®
 \lang spanish-mexico
@@ -4380,10 +4316,7 @@ Project Navigator
 \end_layout
 
 \begin_layout Standard
-
-\emph on
 PlanAhead
-\emph default
 \lang spanish
 ®
 \lang spanish-mexico

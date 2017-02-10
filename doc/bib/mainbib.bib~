@@ -330,3 +330,15 @@
 	year = {2015}
 }
 
+@book{power_tips,
+	author = {Stavinov, Evgeni},
+	chapter = {7.Xilinx FPGA Build Process},
+	edition = {I},
+	isbn = {978-1-4507-7598-4},
+	month = apr,
+	organization = {OutputLogic.com},
+	pages = {29--31},
+	title = {{100 Power Tips for FPGA Designers}},
+	year = {2011}
+}
+

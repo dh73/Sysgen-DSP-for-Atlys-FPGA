@@ -203,6 +203,7 @@ En muchas aplicaciones de procesamiento de señales se requiere una velocidad
  de procesamiento elevada, por ejemplo, en el procesamiento de video.
  Los dispositivos FPGA ofrecen procesamiento orientado al paralelismo, haciéndol
 os aptos para ser utilizados en dichas aplicaciones de alto rendimiento
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "kehtarnavaz_digital_2010"
@@ -427,9 +428,9 @@ textregistered{
 \align block
 
 \lang spanish
-Diseñar las propiedades intelectuales (IPs) más comunes en el tratamiento
- de señales tales como bloques de filtros FIR, y convoluciones, utilizando
- los entornos de programación de Matlab
+Diseñar las propiedades intelectuales más comunes en el tratamiento de señales
+ tales como bloques de filtros FIR, y convoluciones, utilizando los entornos
+ de programación de Matlab
 \lang spanish-mexico
 
 \begin_inset ERT
@@ -466,6 +467,15 @@ textregistered{
 .
 \end_layout
 
+\begin_layout Standard
+
+\lang spanish
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Itemize
 \noindent
 \align block
@@ -481,9 +491,9 @@ Sysgen, sobre la tarjeta de desarrollo Atlys.
 \align block
 
 \lang spanish
-Justificar el uso de Matlab®, Simulink® y Xilinx/ISE® para el diseño e implement
-ación de algoritmos complejos en contraste con el uso tradicional de HDL
- puro.
+Justificar el uso de Matlab®, Simulink® y Xilinx®/ISE® para el diseño e
+ implementación de algoritmos complejos en contraste con el uso tradicional
+ de HDL puro.
 \end_layout
 
 \begin_layout Standard

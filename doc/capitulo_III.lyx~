@@ -210,12 +210,8 @@ textregistered
 \end_layout
 
 \begin_layout Standard
-Existe una señal de entrada a nuestro sistema 
-\begin_inset Formula $F_{DSP}$
-\end_inset
-
- cuya entrada está representada por la suma de dos señales senoidales de
- 
+Existe una señal de entrada a nuestro sistema cuya entrada está representada
+ por la suma de dos señales senoidales de 
 \begin_inset Formula $f_{senBase}=1KHz$
 \end_inset
 
@@ -229,11 +225,8 @@ Existe una señal de entrada a nuestro sistema
 \end_layout
 
 \begin_layout Standard
-El sistema 
-\begin_inset Formula $F_{DSP}$
-\end_inset
-
- debe ser capaz de eliminar señales por encima de 
+El sistema debe ser capaz de eliminar señales por encima de una frecuencia
+ de corte 
 \begin_inset Formula $f_{corte}=7KHz$
 \end_inset
 
@@ -402,15 +395,8 @@ name "fig:Gráfica-derivada-de"
 \end_deeper
 \begin_layout Enumerate
 Para el diseño del filtro FIR, se usará el método de ventana de Hamming
- por la facilidad de implementación discutida en la 
-\series bold
-sección 3.2.2
-\series default
- 
-\series bold
-Filtros FIR
-\series default
-, de este documento.
+ por la facilidad de implementación discutida en la sección 3.2.2 Filtros
+ FIR, de este documento.
  La ecuación del filtro de ventana de Hamming queda como sigue:
 \begin_inset Formula 
 \begin{equation}
@@ -432,11 +418,8 @@ y=x(t)*W(t)
 
 \begin_layout Enumerate
 Para efecto de simplificar la implementación y demostrar la versatilidad
- de los lenguajes de alto nivel, se utilizará la función 
-\series bold
-fir1(n, Wn)
-\series default
- incluida en el 
+ de los lenguajes de alto nivel, se utilizará la función fir1(n, Wn) incluida
+ en el 
 \emph on
 Signal Processing Toolbox
 \emph default
@@ -458,15 +441,7 @@ es un elemento entre 0 y 1 correspondiente a la frecuencia de Nyquist.
 Wn
 \series default
 , necesitamos normalizar la frecuencia de corte para cumplir con el teorema
- de muestreo discutido en la subsección 
-\series bold
-3.1.1
-\series default
- 
-\series bold
-Teorema de Muestreo
-\series default
-,
+ de muestreo discutido en la subsección 3.1.1 Teorema de Muestreo,
 \series bold
  
 \series default
@@ -580,7 +555,7 @@ status open
 
 \begin_layout Plain Layout
 Respuesta en magnitud del filtro FIR diseñado, donde se puede observar la
- atenuación de frecuencias mayores a 
+ atenuación de frecuencias mayores a una frecuencia de corte 
 \begin_inset Formula $f_{c}$
 \end_inset
 
@@ -707,11 +682,8 @@ Para ejecutar Sysgen, no se abre Matlab
 ®
 \lang spanish-mexico
 .
- La forma de hacerlo es ir a la barra de 
-\series bold
-Inicio > Todos los programas > Xilinx Design Tools > ISE > System Generator
-\series default
-.
+ La forma de hacerlo es ir a la barra de Inicio > Todos los programas >
+ Xilinx Design Tools > ISE > System Generator.
  Esto invocará a Sysgen con el toolbox habilitado con la leyenda mostrada
  en la Figura 
 \begin_inset CommandInset ref
@@ -812,18 +784,14 @@ Dar clic en el ícono
 ®
 \lang spanish-mexico
  se encuentran listados en la pestaña de 
-\series bold
+\emph on
 Bibliotecas
-\series default
- con los nombres de 
+\emph default
+ con los nombres de 'Xilinx Blockset', 'Xilinx Reference Blockset'
 \series bold
-'Xilinx Blockset', 'Xilinx Reference Blockset' 
+ 
 \series default
-y 
-\series bold
-'Xilinx XtremeDSP Kit'
-\series default
-.
+y 'Xilinx XtremeDSP Kit'.
  
 \end_layout
 
@@ -841,11 +809,15 @@ Dentro de esta nueva ventana, el primer paso que siempre se debe realizar
 \emph on
 'Sysgen token' 
 \emph default
-desde 
+desde Xilinx
 \series bold
-Xilinx Blockset > Basic Elements
+ 
 \series default
-, como se muestra en la Figura 
+Blockset
+\series bold
+ 
+\series default
+> Basic Elements, como se muestra en la Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Instanciación-del-System"
@@ -931,17 +903,8 @@ Aquí es necesario resaltar algunas reglas importantes para hacer uso del
  a datos que la FPGA pueda comprender.
  Además, este bloque contiene la información del proyecto que estamos modelando,
  es decir, aquí se puede definir como el diseño va a ser transformado acorde
- a los flujos discutidos en la 
-\series bold
-sección
-\series default
- 
-\series bold
-5.5.2
-\series default
- 
-\series bold
-Co-Diseño de Hardware/Software en el Ambiente de Xilinx
+ a los flujos discutidos en la sección 5.5.2 Co-Diseño de Hardware/Software
+ en el Ambiente de Xilinx
 \lang spanish
 ®
 \lang spanish-mexico
@@ -949,9 +912,7 @@ Co-Diseño de Hardware/Software en el Ambiente de Xilinx
 \lang spanish
 ®
 \lang spanish-mexico
- for DSP
-\series default
-.
+ for DSP.
 \end_layout
 
 \end_deeper
@@ -966,57 +927,57 @@ se abrirá una ventana donde podremos definir los parámetros de implementación
 
 \begin_deeper
 \begin_layout Itemize
-
+Compilation:
 \series bold
-Compilation: 
+ 
 \series default
 Hardware Co-Simulation > Atlys > JTAG.
 \end_layout
 
 \begin_layout Itemize
-
+Synthesis tool:
 \series bold
-Synthesis tool: 
+ 
 \series default
 XST.
 \end_layout
 
 \begin_layout Itemize
-
+Hardware Description Language:
 \series bold
-Hardware Description Language: 
+ 
 \series default
 Verilog.
 \end_layout
 
 \begin_layout Itemize
-
+Project type:
 \series bold
-Project type: 
+ 
 \series default
 PlanAhead.
 \end_layout
 
 \begin_layout Itemize
-
+Synthesis strategy:
 \series bold
-Synthesis strategy: 
+ 
 \series default
 PlanAhead Defaults.
 \end_layout
 
 \begin_layout Itemize
-
+Implementation Strategy:
 \series bold
-Implementation Strategy: 
+ 
 \series default
 ISE Defaults.
 \end_layout
 
 \begin_layout Itemize
-
+Clocking > Simulink system period:
 \series bold
-Clocking > Simulink system period: 
+ 
 \series default
 2.0833e-05 (1/48e3), este parámetro es el más importante puesto que si es
  agregado con un valor incorrecto, el sistema no responderá como se espera.
@@ -1103,37 +1064,57 @@ Este bloque se configura de la siguiente manera:
 \end_layout
 
 \begin_layout Itemize
-
+Output
 \series bold
-Output type:
+ 
 \series default
- Fixed point.
+type: Fixed point.
 \end_layout
 
 \begin_layout Itemize
-
+Arithmetic
 \series bold
-Arithmetic type: 
+ 
+\series default
+type:
+\series bold
+ 
 \series default
 Signed (2's comp).
 \end_layout
 
 \begin_layout Itemize
-
+Fixed-point
 \series bold
-Fixed-point Precision > Number of bits:
+ 
 \series default
- 16, 
+Precision
 \series bold
-Binary point:
+ 
 \series default
- 14.
+> Number
+\series bold
+ 
+\series default
+of
+\series bold
+ 
+\series default
+bits: 16, Binary
+\series bold
+ 
+\series default
+point: 14.
 \end_layout
 
 \begin_layout Itemize
-
+Sample
 \series bold
-Sample period: 
+ 
+\series default
+period:
+\series bold
+ 
 \series default
 2.0833e-05.
 \end_layout
@@ -1146,9 +1127,29 @@ Como se utilizó en el algoritmo de Matlab, será necesario generar la señal
 \lang spanish
 ®
 \lang spanish-mexico
-, ubicados en 
+, ubicados en Simulink
 \series bold
-Simulink > Sources > Sine Wave, 
+ 
+\series default
+>
+\series bold
+ 
+\series default
+Sources
+\series bold
+ 
+\series default
+>
+\series bold
+ 
+\series default
+Sine
+\series bold
+ 
+\series default
+Wave
+\series bold
+, 
 \series default
 como se muestra en la Figura
 \series bold
@@ -1227,17 +1228,17 @@ Señal base:
 
 \begin_deeper
 \begin_layout Itemize
-
+Amplitude
 \series bold
-Amplitude: 
+: 
 \series default
 1.
 \end_layout
 
 \begin_layout Itemize
-
+Frequency
 \series bold
-Frequency:
+:
 \series default
  
 \begin_inset Formula $f_{senBase}*2pi=1e3*2*pi$
@@ -1247,9 +1248,13 @@ Frequency:
 \end_layout
 
 \begin_layout Itemize
-
+Sample
 \series bold
-Sample time: 
+ 
+\series default
+time
+\series bold
+: 
 \begin_inset Formula $1/Fs=1/48e3$
 \end_inset
 
@@ -1303,17 +1308,17 @@ Señal a filtrar:
 
 \begin_deeper
 \begin_layout Itemize
-
+Amplitude
 \series bold
-Amplitude: 
+: 
 \series default
 0.5.
 \end_layout
 
 \begin_layout Itemize
-
+Frequency
 \series bold
-Frequency:
+:
 \series default
  
 \begin_inset Formula $f_{senRuido}*2pi=15e3*2*pi$
@@ -1323,9 +1328,13 @@ Frequency:
 \end_layout
 
 \begin_layout Itemize
-
+Sample
 \series bold
-Sample time: 
+ 
+\series default
+time
+\series bold
+: 
 \begin_inset Formula $1/Fs=1/48e3$
 \end_inset
 
@@ -1376,9 +1385,9 @@ Parámetros de configuración para la componente de ruido de entrada al sistema
 \end_deeper
 \begin_layout Enumerate
 También se necesitará un sumador de señales para mezclar ambas funciones
- senoidales, el cual se encuentra en 
+ senoidales, el cual se encuentra en Simulink > Math Operations > Sum:
 \series bold
-Simulink > Math Operations > Sum: 
+ 
 \begin_inset Graphics
 	filename img/sum_simulink.png
 	scale 40
@@ -1389,22 +1398,31 @@ Simulink > Math Operations > Sum:
 \end_layout
 
 \begin_layout Enumerate
-El bloque que se encargará de filtrar la señal se encuentra en 
-\series bold
-Xilinx Blockset > DSP > FIR Compiler 5.0
-\series default
-, se debe configurar con los siguientes parámetros:
+El bloque que se encargará de filtrar la señal se encuentra en Xilinx Blockset
+ > DSP > FIR Compiler 5.0, se debe configurar con los siguientes parámetros:
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-
+Coefficient
 \series bold
-Coefficient Vector = 
+ 
+\series default
+Vector
+\series bold
+ 
+\series default
+=
+\series bold
+ 
 \begin_inset Formula $fir1(orden,Wn)$
 \end_inset
 
- = 
+ 
+\series default
+=
+\series bold
+ 
 \series default
 [0.0016,0.0013,-0.0005,-0.0037,-0.0055,-0.0018,0.0084,0.0175,0.0133,-0.0103,-0.0406,-0.0482,
 -0.0053,0.0900,0.2034,0.2804,0.2804,0.2034,0.0900,-0.0053,-0.0482,-0.0406,-0.0103,0.0133,0.01
@@ -1412,9 +1430,29 @@ Coefficient Vector =
 \end_layout
 
 \begin_layout Itemize
-
+Hardware
 \series bold
-Hardware Oversampling Specification > Sample Format: 
+ 
+\series default
+Oversampling
+\series bold
+ 
+\series default
+Specification
+\series bold
+ 
+\series default
+>
+\series bold
+ 
+\series default
+Sample
+\series bold
+ 
+\series default
+Format:
+\series bold
+ 
 \series default
 Sample_period
 \series bold
@@ -1423,59 +1461,93 @@ Sample_period
 
 \begin_deeper
 \begin_layout Itemize
-
+Sample
 \series bold
-Sample Period
+ 
 \series default
-: 1.
+Period: 1.
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
-
+Implementation
 \series bold
-Implementation > Filter Architecture
+ 
 \series default
-: Distributed_Arithmetic.
+>
+\series bold
+ 
+\series default
+Filter
+\series bold
+ 
+\series default
+Architecture: Distributed_Arithmetic.
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-
+Coefficient
 \series bold
-Coefficient Options > Coefficient Structure:
+ 
 \series default
- Inferred.
+Options
+\series bold
+ 
+\series default
+>
+\series bold
+ 
+\series default
+Coefficient
+\series bold
+ 
+\series default
+Structure: Inferred.
 \end_layout
 
 \begin_layout Itemize
-
+Coefficient
 \series bold
-Coefficient Type: 
+ 
+\series default
+Type:
+\series bold
+ 
 \series default
 Signed.
 \end_layout
 
 \begin_layout Itemize
-
+Quantization:
 \series bold
-Quantization: 
+ 
 \series default
 Quantize_Only.
 \end_layout
 
 \begin_layout Itemize
-
+Coefficient
 \series bold
-Coefficient Width:
+ 
 \series default
- 16.
+Width: 16.
 \end_layout
 
 \begin_layout Itemize
-Seleccionar la opción 
+Seleccionar la opción Best
 \series bold
-Best Precision Fraction Length.
+ 
+\series default
+Precision
+\series bold
+ 
+\series default
+Fraction
+\series bold
+ 
+\series default
+Length.
 \end_layout
 
 \end_deeper
@@ -1729,9 +1801,9 @@ Al dar doble clic sobre
 
 \begin_deeper
 \begin_layout Itemize
-
+Compilation
 \series bold
-Compilation: 
+: 
 \series default
 Hardware Co-Simulation > Atlys > JTAG.
 \end_layout
@@ -1885,6 +1957,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename img/output_from_fir_I.png
 	scale 30
@@ -1934,7 +2007,7 @@ La traducción de este filtro FIR a hardware se hizo mediante la utilización
 \emph on
 netlist > hwcosim > nombre_del_proyecto.ppr
 \emph default
- con PlanAhead.
+ con PlanAhead®.
 \end_layout
 
 \begin_deeper
@@ -2071,9 +2144,9 @@ El efecto de eco es uno de los más utilizados en el procesamiento de señales
 
 \begin_layout Standard
 Esta implementación está basada en la utilización del filtro FIR conocido
- como 
+ como tipo peine
 \series bold
-tipo peine 
+ 
 \series default
 o 
 \emph on
@@ -2102,11 +2175,8 @@ y_{n}=x_{n}+g*x_{n-M}
 \end_layout
 
 \begin_layout Standard
-Si trasladamos la ecuación 
-\series bold
-7.1
-\series default
- a un diagrama de bloques, nos queda como se muestra en la Figura 
+Si trasladamos la ecuación 7.1 a un diagrama de bloques, nos queda como se
+ muestra en la Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Comb_filter"
@@ -2322,11 +2392,8 @@ A partir de tener el nuevo espacio de trabajo en Simulink
 \lang spanish
 ®
 \lang spanish-mexico
- (se pueden seguir los pasos 1 a 4 de la subsección 
-\series bold
-6.3 Simulación del Sistema en Sysgen
-\series default
-), el bloque 
+ (se pueden seguir los pasos 1 a 4 de la subsección 6.3 Simulación del Sistema
+ en Sysgen), el bloque 
 \emph on
 Sysgen Token
 \emph default
@@ -2335,77 +2402,69 @@ Sysgen Token
 
 \begin_deeper
 \begin_layout Itemize
-
+Compilation:
 \series bold
-Compilation: 
+ 
 \series default
 HDL Netlist.
 \end_layout
 
 \begin_layout Itemize
-
+Part:
 \series bold
-Part: 
+ 
 \series default
 Sparnta6 xc6lx45-3csg324
 \end_layout
 
 \begin_layout Itemize
-
+Synthesis tool:
 \series bold
-Synthesis tool: 
+ 
 \series default
-XST, 
-\series bold
-Language:
-\series default
- Verilog.
+XST, Language: Verilog.
 \end_layout
 
 \begin_layout Itemize
-
+Project Type:
 \series bold
-Project Type: 
+ 
 \series default
 PlanAhead.
 \end_layout
 
 \begin_layout Itemize
-
+Synthesis Strategy:
 \series bold
-Synthesis Strategy: 
+ 
 \series default
 TimingWithIOBPacking
 \end_layout
 
 \begin_layout Itemize
-
+Implementation Strategy:
 \series bold
-Implementation Strategy: 
+ 
 \series default
 ParHighEffort.
 \end_layout
 
 \begin_layout Itemize
-
-\series bold
-Clocking Tab > FPGA clock period (ns):
-\series default
- 10.
+Clocking Tab > FPGA clock period (ns): 10.
 \end_layout
 
 \begin_layout Itemize
-
+Multirate implementation:
 \series bold
-Multirate implementation: 
+ 
 \series default
 Clock Enables.
 \end_layout
 
 \begin_layout Itemize
-
+Simulink system period:
 \series bold
-Simulink system period: 
+ 
 \series default
 
 \begin_inset Formula $\nicefrac{1}{48KHz}=2.0833e-05$
@@ -2416,18 +2475,18 @@ Simulink system period:
 
 \end_deeper
 \begin_layout Enumerate
-Añadir el bloque 
+Añadir el bloque DSP System Toolbox > From Multimedia File
 \series bold
-DSP System Toolbox > From Multimedia File 
+ 
 \series default
 y configurarlo como sigue:
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-
+File name:
 \series bold
-File name: 
+ 
 \series default
 En este documento se proporciona el archivo partita_e_major.wav
 \begin_inset Foot
@@ -2456,33 +2515,27 @@ http://www.music.helsinki.fi/tmt/opetus/uusmedia/esim/index-e.html
 \end_layout
 
 \begin_layout Itemize
-Seleccionar el recuadro 
-\series bold
-Inherit sample time from file.
+Seleccionar el recuadro Inherit sample time from file.
 \end_layout
 
 \begin_layout Itemize
-
+Number of times to play the file:
 \series bold
-Number of times to play the file: 
+ 
 \series default
 1.
 \end_layout
 
 \begin_layout Itemize
-
+Outputs > Samples per audio channel:
 \series bold
-Outputs > Samples per audio channel: 
+ 
 \series default
 1.
 \end_layout
 
 \begin_layout Itemize
-
-\series bold
-Outputs > Audio output sampling mode:
-\series default
- Sample based.
+Outputs > Audio output sampling mode: Sample based.
 \end_layout
 
 \begin_layout Standard
@@ -2540,15 +2593,8 @@ y
 \emph on
 'Unbuffer'
 \emph default
-, ubicados en 
-\series bold
-Simulink > Math Operations 
-\series default
-y 
-\series bold
-DSP System Toolbox > Signal Management > Buffers
-\series default
- respectivamente.
+, ubicados en Simulink > Math Operations y DSP System Toolbox > Signal Managemen
+t > Buffers respectivamente.
  
 \end_layout
 
@@ -2562,57 +2608,42 @@ con los parámetros siguientes:
 
 \begin_deeper
 \begin_layout Itemize
-
-\series bold
-Output type: 
-\series default
-Fixed point.
+Output type: Fixed point.
 \end_layout
 
 \begin_layout Itemize
-
+Arithmetic type:
 \series bold
-Arithmetic type: 
+ 
 \series default
 Signed (2's comp).
 \end_layout
 
 \begin_layout Itemize
-
-\series bold
-Fixed-point Precision: 
-\series default
-Number of bits = 16, Binary point = 14.
+Fixed-point Precision: Number of bits = 16, Binary point = 14.
 \end_layout
 
 \begin_layout Itemize
-
+Overflow:
 \series bold
-Overflow: 
+ 
 \series default
 Saturate.
 \end_layout
 
 \begin_layout Itemize
-
+Sample period:
 \series bold
-Sample period: 
+ 
 \series default
 2.0833e-05.
 \end_layout
 
 \begin_layout Itemize
-Es necesario nombrar ambos puertos como 
-\series bold
-AudioLeftIn
-\series default
- y 
-\series bold
-AudioRightIn
-\series default
- respectivamente, cuidando de siempre mantener los mismos nombres o de lo
- contrario, el archivo NCG del controlador del codificador marcará un error
- al intentar utilizar el netlist de Sysgen.
+Es necesario nombrar ambos puertos como AudioLeftIn y AudioRightIn respectivamen
+te, cuidando de siempre mantener los mismos nombres o de lo contrario, el
+ archivo NCG del controlador del codificador marcará un error al intentar
+ utilizar el netlist de Sysgen.
  Se deben configurar como se muestra en la Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2673,12 +2704,9 @@ name "fig:Configuración-del-tipo"
 
 \end_deeper
 \begin_layout Enumerate
-Como se mostró al principio de la 
-\series bold
-subsección 7.1 Filtros FIR peine o 
+Como se mostró al principio de la subsección 7.1 Filtros FIR peine o 
 \emph on
 comb filter
-\series default
 \emph default
 , ahora será necesario construir el filtro comb, siguiendo el bloque de
  la Figura 
@@ -2757,10 +2785,8 @@ delay
 \emph default
  de 4500 unidades de retraso (cada una de estas unidades representa un flipflop
  en términos de recursos de FPGA) y un subsistema de ganancia nombrado 
-\series bold
 \emph on
 gain2
-\series default
 \emph default
 , el cual se muestra a más detalle en la Figura 
 \begin_inset CommandInset ref
@@ -2822,9 +2848,10 @@ name "fig:Parámetros-de-la"
 
 \begin_layout Standard
 Los bloques que le preceden al sumador 
-\series bold
 \emph on
-AddSub1 
+AddSub1
+\series bold
+ 
 \series default
 \emph default
 son necesarios debido a que, durante el flujo de información a través de
@@ -2841,10 +2868,8 @@ La ganancia de retroalimentación es utilizada para estabilizar la salida
  del filtro, con el fin de remover lo más posible, ruido inferido por las
  modificaciones aplicadas a la señal de audio.
  Dicha ganancia esta elaborada por el subsistema 
-\series bold
 \emph on
 gain1
-\series default
 \emph default
 , el cual se muestra a mayor detalle en la Figura 
 \begin_inset CommandInset ref
@@ -2867,7 +2892,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename img/gain1_subsystem.png
-	scale 30
+	scale 20
 
 \end_inset
 
@@ -2905,21 +2930,17 @@ name "fig:Ganancia-de-retroalimentación"
 
 \begin_layout Standard
 Por último, el bloque 
-\series bold
 \emph on
 Delay5
-\series default
 \emph default
  es utilizado para sincronizar los sumadores 
-\series bold
 \emph on
-AddSub 
+AddSub
+\series bold
+ 
 \series default
 \emph default
-y 
-\series bold
-AddSub1
-\series default
+y AddSub1
 \emph on
  
 \emph default
@@ -3006,31 +3027,55 @@ Como paso final, se deberán arrastrar dos
 \emph on
 'Gateway Out' 
 \emph default
-al espacio de trabajo de Simulink, y nombrarlos 
+al espacio de trabajo de Simulink, y nombrarlos AudioLeftOut
 \series bold
-AudioLeftOut 
+ 
 \series default
-y 
+y AudioRightIn
 \series bold
-AudioRightIn 
+ 
 \series default
 respectivamente, así como un bloque 
 \emph on
 'Mux' 
 \emph default
-(
+(Simulink
 \series bold
-Simulink > Commonly Used Blocks
+ 
 \series default
-) y un bloque 
+>
+\series bold
+ 
+\series default
+Commonly
+\series bold
+ 
+\series default
+Used
+\series bold
+ 
+\series default
+Blocks) y un bloque 
 \emph on
 'To Multimedia File' 
 \emph default
-(
+(DSP
 \series bold
-DSP System Toolbox > Sinks
+ 
 \series default
-), y conectarlos como se muestra en la Figura 
+System
+\series bold
+ 
+\series default
+Toolbox
+\series bold
+ 
+\series default
+>
+\series bold
+ 
+\series default
+Sinks), y conectarlos como se muestra en la Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Interconección-del-sistema"
@@ -3038,9 +3083,9 @@ reference "fig:Interconección-del-sistema"
 \end_inset
 
 .
- El recuadro gris nombrado 
+ El recuadro gris nombrado Audio_algoritmo
 \series bold
-Audio_algoritmo 
+ 
 \series default
 representa ambos filtros desarrollados.
  
@@ -3107,11 +3152,7 @@ Para hacer la simulación de este modelo, utilizaremos un valor menor a la
 ®
 \lang spanish-mexico
 .
- El efecto es perfectamente audible utilizando el valor de 
-\series bold
-10.0(s)
-\series default
-.
+ El efecto es perfectamente audible utilizando el valor de 10.0(s).
  El efecto de eco puede ser analizado reproduciendo el archivo generado
  por el bloque '
 \emph on
@@ -3222,42 +3263,25 @@ Se añade un proyecto previamente configurado y funcionando con este documento,
 
 \end_inset
 
- (véase 
-\series bold
-Apéndice D:
-\series default
- 
-\series bold
-Creación de Proyectos usando PlanAhead
+ (véase Apéndice D: Creación de Proyectos usando PlanAhead
 \lang spanish
 ®
-\series default
 \lang spanish-mexico
  para más detalles).
- Se deben agregar primeramente los archivos 
+ Se deben agregar primeramente los archivos ac97cmd.v, ac97cmd.ngc, ac97.v,
+ ac97.ngc,
 \series bold
-ac97cmd.v
+ 
 \series default
-, 
+ac97_constraints.ucf
 \series bold
-ac97cmd.ngc
-\series default
-, 
-\series bold
-ac97.v
-\series default
-, 
-\series bold
-ac97.ngc, ac97_constraints.ucf 
+ 
 \series default
 y 
-\series bold
 \emph on
 rt_audio_controller.v
-\series default
-
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Estos archivos se encuentran adjuntos en el proyecto de referencia.
@@ -3330,17 +3354,13 @@ lstparams "language=Verilog,basicstyle={\\mlttfamily\\scriptsize},commentstyle={
 \end_deeper
 \begin_layout Itemize
 La instanciación de la IP de audio se hace como se muestra a continuación.
- Se necesitan los archivos 
+ Se necesitan los archivos ac97cmd.v, ac97cmd.ngc, ac97.v
 \series bold
-ac97cmd.v
+ 
 \series default
-, 
+y ac97.ngc
 \series bold
-ac97cmd.ngc
-\series default
-, 
-\series bold
-ac97.v y ac97.ngc 
+ 
 \series default
 para ser utilizada.
  Además, sólo funciona para la familia de FPGAs utilizada en el kit Atlys.
@@ -3465,7 +3485,8 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Vista jerárquica de los códigos fuente utilizadas para el proyecto.
+Vista jerárquica de los códigos fuente utilizadas para la generación del
+ bitfile que ejecuta el algoritmo de eco.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -3492,32 +3513,15 @@ name "fig:Vista-jerárjica-de"
 
 \begin_layout Standard
 Como se puede observar, el netlist del algoritmo de eco aparece como faltante.
- Para agregar estas dependencias, basta con dar clic sobre 
+ Para agregar estas dependencias, basta con dar clic sobre Add sources >
+ Add or Create Design Sources, en la columna Project Manager, y seleccionar
+ Add Files.
+ En la ventana que aparece, seleccionar el directorio netlist/sysgen para
+ añadir los archivos Verilog algodev.v
 \series bold
-Add sources > Add or Create Design Sources
+ 
 \series default
-, en la columna 
-\series bold
-Project Manager
-\series default
-, y seleccionar 
-\series bold
-Add Files
-\series default
-.
- En la ventana que aparece, seleccionar el directorio 
-\series bold
-netlist/sysgen
-\series default
- para añadir los archivos Verilog 
-\series bold
-algodev.v 
-\series default
-y 
-\series bold
-algodev_cw.v
-\series default
-, como se muestra en la Figura 
+y algodev_cw.v, como se muestra en la Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Archivos-de-Verilog"
@@ -3578,11 +3582,7 @@ name "fig:Archivos-de-Verilog"
 \end_deeper
 \begin_layout Enumerate
 Ahora, se puede ir a través de todo el flujo de implementación en FPGA dando
- clic sobre 
-\series bold
-Program and Debug > Generate Bitstream
-\series default
-.
+ clic sobre Program and Debug > Generate Bitstream.
  Esto ejecutará el proceso de Síntesis, Place and Route y generará el 
 \emph on
 bitfile
@@ -3894,7 +3894,7 @@ La detección de bordes mediante la implementación del filtro Sobel es una
  Este algoritmo es utilizado para la extracción de características de imágenes
  en 2D a escala de grises
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Se utilizan imágenes a escala de grises y de dimensiones pequeñas para diseñar
@@ -3910,11 +3910,7 @@ den a los bordes.
 
 \begin_layout Standard
 El principio de implementación se basa en utilizar dos operadores de convolución
- matriciales o 
-\series bold
-kernels
-\series default
-, mostrados en la Ecuación 8.1.
+ matriciales o kernels, mostrados en la Ecuación 8.1.
  Estos operadores son matrices de diferente tamaño a la imagen (generalmente
  más pequeñas) pero de igual dimensión que dan como resultado, la estimación
  de la primera derivada vertical y horizontalmente con respecto a la cuadrícula
@@ -4003,11 +3999,8 @@ En un nuevo modelo de Simulink
 \emph on
 'Image From File' 
 \emph default
-que se encuentra en 
-\series bold
-Computer Vision System > Sources
-\series default
-, con las configuraciones mostradas en la Figura 
+que se encuentra en Computer Vision System > Sources, con las configuraciones
+ mostradas en la Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Parámetros-de-configuración"
@@ -4068,11 +4061,7 @@ name "fig:Parámetros-de-configuración"
 \end_layout
 
 \begin_layout Standard
-El tipo de dato se deja en 
-\series bold
-double
-\series default
-, en la pestaña 
+El tipo de dato se deja en double, en la pestaña 
 \emph on
 'Data types'
 \emph default
@@ -4337,57 +4326,53 @@ con los siguientes parámetros:
 
 \begin_deeper
 \begin_layout Itemize
-
+Compilation:
 \series bold
-Compilation: 
+ 
 \series default
 Hardware Co-Simulation > Atlys > JTAG.
 \end_layout
 
 \begin_layout Itemize
-
-\series bold
-Synthesis tool: 
-\series default
-XST.
+Synthesis tool: XST.
 \end_layout
 
 \begin_layout Itemize
-
+Hardware Description Language:
 \series bold
-Hardware Description Language: 
+ 
 \series default
 Verilog.
 \end_layout
 
 \begin_layout Itemize
-
+Project type:
 \series bold
-Project type: 
+ 
 \series default
 PlanAhead.
 \end_layout
 
 \begin_layout Itemize
-
+Synthesis strategy:
 \series bold
-Synthesis strategy: 
+ 
 \series default
 PlanAhead Defaults.
 \end_layout
 
 \begin_layout Itemize
-
+Implementation Strategy:
 \series bold
-Implementation Strategy: 
+ 
 \series default
 ISE Defaults.
 \end_layout
 
 \begin_layout Itemize
-
+Clocking > Simulink system period:
 \series bold
-Clocking > Simulink system period: 
+ 
 \series default
 5.0863e-06.
 \end_layout
@@ -4463,20 +4448,12 @@ Para efectos de rendimiento, se sugiere añadir un bloque
 'Register' 
 \emph default
 a cada una de las entradas, como se muestra a continuación.
- Esto agrega un flujo de 
+ Esto agrega un flujo de cañería,
 \series bold
-cañería, 
-\series default
-mejor conocido como 
-\series bold
-pipeline
-\series default
-, que transforma un sólo proceso en varias fases para evitar problemas de
  
-\series bold
-timing
 \series default
-.
+mejor conocido como pipeline, que transforma un sólo proceso en varias fases
+ para evitar problemas de timing.
 \end_layout
 
 \begin_deeper
@@ -4528,11 +4505,7 @@ La Ecuación 8.4 utiliza operadores como la suma y la multiplicación por cada
 \emph on
 'CMult'
 \emph default
- (
-\series bold
-Xilinx Blockset > Floating-Point
-\series default
-)
+ (Xilinx Blockset > Floating-Point)
 \series bold
  
 \series default
@@ -4601,12 +4574,8 @@ Así mismo, dos bloques
 \emph on
 'AddSub' 
 \emph default
-(
-\series bold
-Xilinx Blockset > Floating-Point
-\series default
-) son necesarios para obtener la suma de los valores calculados en el Paso
- 4.
+(Xilinx Blockset > Floating-Point) son necesarios para obtener la suma de
+ los valores calculados en el Paso 4.
  Los parámetros de estos dos bloques no se modifican.
 \end_layout
 
@@ -4897,16 +4866,9 @@ Operador Sobel usando Filtros FIR.
 \end_layout
 
 \begin_layout Standard
-Como se mencionó en la subsección 
-\series bold
-8.2 Algoritmo del filtro Sobel
-\series default
-, serán necesarios dos kernels que realicen el filtrado de la imagen construida
- en la subsección 
-\series bold
-8.4 Modelo de conversión RGB a escala de grises
-\series default
-.
+Como se mencionó en la subsección 8.2 Algoritmo del filtro Sobel, serán necesario
+s dos kernels que realicen el filtrado de la imagen construida en la subsección
+ 8.4 Modelo de conversión RGB a escala de grises.
 \end_layout
 
 \begin_layout Standard
@@ -4926,11 +4888,7 @@ Se deben arrastrar dos bloques
 \emph default
 al espacio de trabajo donde se generó el modelo de conversión RGB a escala
  de grises.
- Dichos bloques se encuentran en 
-\series bold
-Xilinx Blockset > DSP
-\series default
-.
+ Dichos bloques se encuentran en Xilinx Blockset > DSP.
 \end_layout
 
 \begin_layout Enumerate
@@ -5169,9 +5127,9 @@ te equivalente.
 
 \begin_deeper
 \begin_layout Standard
-En primer lugar, se deben sumar ambas salidas 
+En primer lugar, se deben sumar ambas salidas dout
 \series bold
-dout 
+ 
 \series default
 de los filtros FIR, lo que supone utilizar el bloque 
 \emph on
@@ -5242,34 +5200,26 @@ reference "fig:Adición-de-los"
 \end_inset
 
 , e invertir el signo de todo aquel valor negativo, mediante el uso de un
- selector, en donde el puerto de 
+ selector, en donde el puerto de sel sea el bit más significativo del dato
+ (el cual es el signo), el puerto d0
 \series bold
-sel
-\series default
- sea el bit más significativo del dato (el cual es el signo), el puerto
  
-\series bold
-d0 
 \series default
 se active cuando el dato sea positivo (sin ningún cambio), pero el puerto
- 
+ d1
 \series bold
-d1 
+ 
 \series default
 por el contrario, cuando el dato sea negativo.
- A la entrada del puerto 
+ A la entrada del puerto d1
 \series bold
-d1 
+ 
 \series default
 se agregará un bloque 
 \emph on
 'Negate'
 \emph default
- el cual se puede encontrar en 
-\series bold
-Xilinx Blockset > Math
-\series default
-.
+ el cual se puede encontrar en Xilinx Blockset > Math.
  Todo esto se ilustra en la Figura 
 \begin_inset CommandInset ref
 LatexCommand ref

@@ -184,9 +184,15 @@ o de voz para determinar quién es la persona que habla; para determinar,
 \align block
 El procesamiento de señales involucra la realización de operaciones matemáticas
  sobre las señales, las cuales son llevadas por sistemas cuya única función
- es precisamente el llevar a cabo esas operaciones, los procesadores digitales
- de señales (DSP por sus siglas en Inglés) y la matriz de compuertas programable
-s en campo (FPGA por sus siglas en Inglés) son los encargados de ello.
+ es precisamente el llevar a cabo esas operaciones, los 
+\emph on
+procesadores digitales de señales
+\emph default
+ (DSP por sus siglas en Inglés) y la 
+\emph on
+matriz de compuertas programables en campo
+\emph default
+ (FPGA por sus siglas en Inglés) son los encargados de ello.
  
 \end_layout
 
@@ -197,6 +203,7 @@ En muchas aplicaciones de procesamiento de señales se requiere una velocidad
  de procesamiento elevada, por ejemplo, en el procesamiento de video.
  Los dispositivos FPGA ofrecen procesamiento orientado al paralelismo, haciéndol
 os aptos para ser utilizados en dichas aplicaciones de alto rendimiento
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "kehtarnavaz_digital_2010"
@@ -421,9 +428,9 @@ textregistered{
 \align block
 
 \lang spanish
-Diseñar las propiedades intelectuales (IPs) más comunes en el tratamiento
- de señales tales como bloques de filtros FIR, y convoluciones, utilizando
- los entornos de programación de Matlab
+Diseñar las propiedades intelectuales más comunes en el tratamiento de señales
+ tales como bloques de filtros FIR, y convoluciones, utilizando los entornos
+ de programación de Matlab
 \lang spanish-mexico
 
 \begin_inset ERT
@@ -475,9 +482,9 @@ Sysgen, sobre la tarjeta de desarrollo Atlys.
 \align block
 
 \lang spanish
-Justificar el uso de Matlab®, Simulink® y Xilinx/ISE® para el diseño e implement
-ación de algoritmos complejos en contraste con el uso tradicional de HDL
- puro.
+Justificar el uso de Matlab®, Simulink® y Xilinx®/ISE® para el diseño e
+ implementación de algoritmos complejos en contraste con el uso tradicional
+ de HDL puro.
 \end_layout
 
 \begin_layout Standard

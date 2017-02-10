@@ -224,8 +224,8 @@ Técnicas avanzadas de diseño de sistemas DSP con Sysgen fueron implementadas
  real.
  Se pudo implementar correctamente el modelo con resultados satisfactorios,
  aún cuando existían diferentes dominios de reloj necesarios tanto para
- el controlador del códec, como para la ejecución del modelo de Sysgen y
- el filtro peine.
+ el controlador del codificador, como para la ejecución del modelo de Sysgen
+ y el filtro peine.
 \end_layout
 
 \begin_layout Itemize
@@ -302,8 +302,9 @@ A pesar de que Sysgen brinda al usuario la capacidad de crear modelos con
 Por experiencia, uno de los problemas más comunes se encuentra al utilizar
  diferentes dominios de reloj para un mismo sistema.
  Por ejemplo, al realizar el algoritmo de procesamiento de audio, la frecuencia
- principal del controlador del códec AC97 era de 100MHz, no así la velocidad
- de procesamiento de los archivos .wav que debía ser estrictamente de 48KHz.
+ principal del controlador del codificador AC97 era de 100MHz, no así la
+ velocidad de procesamiento de los archivos .wav que debía ser estrictamente
+ de 48KHz.
  Al tratar de implementar ambos modelos desde Sysgen, la única salida en
  los puertos de audio era una señal de ruido constante.
  Se pueden realizar diferentes técnicas para resolver estos detalles con
@@ -329,11 +330,11 @@ y
 \emph on
 'Simulink system period
 \emph default
- (ns)', 
+ (ns)',
 \series bold
-siempre y cuando el modelo se vaya a exportar como netlist en HDL
+ 
 \series default
-.
+siempre y cuando el modelo se vaya a exportar como netlist en HDL.
  Esto obligará a la herramienta a insertar lógica adicional para cumplir
  los requerimientos, en lugar de cargar esta tarea al diseñador.
 \end_layout
@@ -456,8 +457,8 @@ Procesamiento de Audio.
 
 \begin_layout Itemize
 Desarrollar un algoritmo diferente al de eco, por ejemplo, reverberación,
- y ejecutarlo en tiempo real con la IP del códec AC97 facilitada por el
- autor.
+ y ejecutarlo en tiempo real con la IP del codificador AC97 facilitada por
+ el autor.
 \end_layout
 
 \begin_layout Itemize

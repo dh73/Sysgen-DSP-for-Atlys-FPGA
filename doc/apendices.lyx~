@@ -148,9 +148,9 @@ Un ADC tiene una tensión o corriente analógica de referencia utilizada para
  Esto hace que los dispositivos ADC sean conocidos también como divisores.
  La conversión A/D utiliza la cuantización, muestreo y codificación binaria
  como parte del proceso de transformación.
- dichos procesos se ilustran en la sección 
+ dichos procesos se ilustran en la sección 3 Procesamiento Digital de Señales
 \series bold
-3 Procesamiento Digital de Señales.
+.
 \end_layout
 
 \begin_layout Standard
@@ -223,7 +223,19 @@ name "fig:Función-de-salida"
 En otras palabras, todos los A/D trabajan bajo el mismo principio de encontrar
  la secuencia de bits bN-1, bN-2, ...
  b0, que representa el valor analógico de Vin, como se muestra en la Ecuación
- A.1.
+ A.1, donde 
+\begin_inset Formula $V_{in}$
+\end_inset
+
+ es el voltaje de entrada, 
+\begin_inset Formula $b_{n}N$
+\end_inset
+
+ es la secuencia de bits que representa el valor del voltaje, 
+\begin_inset Formula $V_{ref}$
+\end_inset
+
+ es el voltaje de referencia para comparar.
 \end_layout
 
 \begin_layout Standard
@@ -420,7 +432,7 @@ Aliasing
 \emph on
 anti-aliasing 
 \emph default
-de por medio, muestreando a una frecuencia mayor a la actual
+de por medio, muestreando a una frecuencia mayor a la actual 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "EECS_247"
@@ -549,7 +561,7 @@ name "fig:Representación-gráfica-de-1"
 Hay diferentes formas de implementar estas conversiones D/A utilizando component
 es electrónicos discretos y circuitos integrados, por ejemplo
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Para obtener más información sobre este tema, se puede referir a 
@@ -568,9 +580,9 @@ key "binary_dacs_analogdev"
 \end_layout
 
 \begin_layout Itemize
-
+Ponderación binaria:
 \series bold
-Ponderación binaria: 
+ 
 \series default
 Este DAC basado en resistores en modo voltaje es usualmente la implementación
  más simple utilizada como referencia en los libros de texto (véase Figura
@@ -624,7 +636,7 @@ key "ad_resistive_one"
 
 \end_inset
 
-
+.
 \end_layout
 
 \end_inset
@@ -638,9 +650,9 @@ key "ad_resistive_one"
 \end_layout
 
 \begin_layout Itemize
-
+Ponderación binaria capacitiva en aproximación sucesiva:
 \series bold
-Ponderación binaria capacitiva en aproximación sucesiva: 
+ 
 \series default
 El uso de una redistribución de carga capacitiva ofrece la ventaja de comportars
 e como un circuito de muestreo y retención (SHA, por sus siglas en inglés),
@@ -696,9 +708,9 @@ Estructura de un DAC capacitivo de ponderación binaria.
 \end_layout
 
 \begin_layout Itemize
-
+R-2R:
 \series bold
-R-2R: 
+ 
 \series default
 Una de las estructuras más comunes de DACs es la muy conocida escalera R-2R,
  la cual consiste en una red de resistores de sólo dos diferentes valores,
@@ -906,11 +918,8 @@ lstparams "style={Matlab-editor},basicstyle={\\mlttfamily\\scriptsize}"
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Ilustración interactiva de la convolución, usada en la subsección 
-\series bold
-3.2.1 Convolución
-\series default
-.
+Ilustración interactiva de la convolución, usada en la subsección 3.2.1 Convolució
+n.
  
 \end_layout
 
@@ -1010,11 +1019,7 @@ Se abrirá una nueva ventana llamada
 'Default Part'
 \emph default
 , donde se debe especificar la matrícula de la FPGA, en el caso del kit
- Atlys es 
-\series bold
-XC6SLX45CSG324-3
-\series default
-.
+ Atlys es XC6SLX45CSG324-3.
  Se puede poner esta matrícula en el apartado 
 \emph on
 'Search' 
@@ -1098,9 +1103,9 @@ Seleccionar la opción
 \emph on
 'Create Sub-Design'
 \emph default
- y definir el nombre del módulo principal, por ejemplo 
+ y definir el nombre del módulo principal, por ejemplo lab1_sysgen
 \series bold
-lab1_sysgen.
+.
 \end_layout
 
 \begin_layout Enumerate
