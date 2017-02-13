@@ -187,6 +187,34 @@ thispagestyle{empty}
 \align block
 \begin_inset External
 	template PDFPages
+	filename pdf/autorizacion_a.pdf
+	display false
+	rotateAngle 270
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align block
+\begin_inset External
+	template PDFPages
+	filename pdf/autorizacion_c.pdf
+	display false
+	rotateAngle 270
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align block
+\begin_inset External
+	template PDFPages
 	filename pdf/description.pdf
 	display false
 
